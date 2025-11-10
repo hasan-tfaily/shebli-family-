@@ -1,4 +1,3 @@
-"use client";
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
@@ -15,11 +14,11 @@ import { MenuLink } from "@/types/menuLink";
 
 export default function Nav() {
   const pathname = usePathname();
+
   const isMenuActive = (link: MenuLink) => {
     const currentPath = pathname?.split("/")[1];
     const hrefPath = link.href?.split("/")[1];
     const onePagePath = link.onePage?.split("/")[1];
-
     return hrefPath === currentPath || onePagePath === currentPath;
   };
 
@@ -73,14 +72,13 @@ export default function Nav() {
           </ul>
         </div>
       </li>
+
       <li
         className={`menu-item menu-item-has-children position-relative   ${
           isMenuParentActive(serviceLinks) ? "current-menu-item" : ""
         } `}
       >
-        <a href="#" className="item-link">
-          Services
-        </a>
+        <a href="#" className="item-link">Services</a>
         <ul className="sub-menu">
           {serviceLinks.map((item, index) => (
             <li
@@ -96,14 +94,13 @@ export default function Nav() {
           ))}
         </ul>
       </li>
+
       <li
         className={`menu-item menu-item-has-children position-relative   ${
           isMenuParentActive(caseStudyLinks) ? "current-menu-item" : ""
         } `}
       >
-        <a href="#" className="item-link">
-          Case
-        </a>
+        <a href="#" className="item-link">Case</a>
         <ul className="sub-menu">
           {caseStudyLinks.map((item, index) => (
             <li
@@ -119,14 +116,13 @@ export default function Nav() {
           ))}
         </ul>
       </li>
+
       <li
         className={`menu-item menu-item-has-children position-relative   ${
           isMenuParentActive(aboutLinks) ? "current-menu-item" : ""
         } `}
       >
-        <a href="#" className="item-link">
-          Pages
-        </a>
+        <a href="#" className="item-link">Pages</a>
         <ul className="sub-menu">
           {aboutLinks.map((item, index) => (
             <li
@@ -142,14 +138,25 @@ export default function Nav() {
           ))}
         </ul>
       </li>
+
+      
+      <li
+        className={`menu-item ${
+          isMenuActive({ href: "/about-us" } as MenuLink) ? "current-menu-item" : ""
+        } `}
+      >
+        <Link href="/about-us" className="item-link">
+          About Us
+        </Link>
+      </li>
+      
+
       <li
         className={`menu-item menu-item-has-children position-relative   ${
           isMenuParentActive(productLinks) ? "current-menu-item" : ""
         } `}
       >
-        <a href="#" className="item-link">
-          Our Store
-        </a>
+        <a href="#" className="item-link">Our Store</a>
         <ul className="sub-menu">
           {productLinks.map((item, index) => (
             <li
@@ -165,14 +172,13 @@ export default function Nav() {
           ))}
         </ul>
       </li>
+
       <li
         className={`menu-item menu-item-has-children position-relative   ${
           isMenuParentActive(blogLinks) ? "current-menu-item" : ""
         } `}
       >
-        <a href="#" className="item-link">
-          Blog{" "}
-        </a>
+        <a href="#" className="item-link">Blog </a>
         <ul className="sub-menu">
           {blogLinks.map((item, index) => (
             <li
@@ -188,12 +194,13 @@ export default function Nav() {
           ))}
         </ul>
       </li>
+
       <li
-        className={`menu-item   ${
-          isMenuActive({ href: "/contact-us" }) ? "current-menu-item" : ""
+        className={`menu-item ${
+          isMenuActive({ href: "/contact-us" } as MenuLink) ? "current-menu-item" : ""
         } `}
       >
-        <Link href={`/contact-us`} className={`item-link `}>
+        <Link href="/contact-us" className={`item-link `}>
           Contact
         </Link>
       </li>
