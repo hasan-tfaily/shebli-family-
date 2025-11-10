@@ -17,8 +17,8 @@ export default function Features() {
                 </a>
               </div>
               <h3 className="title-section mb-12 text-anime-wave-1">
-                We Drive Growth Through <br />
-                Tailored Solutions.
+              Building the Future  <br />
+               of Learning and Play
               </h3>
             </div>
           </div>
@@ -33,12 +33,11 @@ export default function Features() {
                 <div className="box-content">
                   <h5 className="wow fadeInUp">
                     <a href="#" className="title-box">
-                      Customized IT Strategies
+                      Our Brands & Ventures
                     </a>
                   </h5>
                   <div className="sub-title wow fadeInUp">
-                    Tailored solutions to meet your unique IT needs, ensuring
-                    alignment with business objectives.
+                   Discover our portfolio of pioneering family and entertainment ventures designed to educate, engage, and inspire.
                   </div>
                 </div>
               </div>
@@ -49,12 +48,11 @@ export default function Features() {
                 <div className="box-content">
                   <h5 className="wow fadeInUp">
                     <a href="#" className="title-box">
-                      Advanced Cybersecurity Measures
+                      Investor Relations
                     </a>
                   </h5>
                   <div className="sub-title wow fadeInUp">
-                    Protect your digital assets with cutting-edge security
-                    solutions and proactive threat management.
+                    A transparent investment platform driving sustainable growth and community impact.
                   </div>
                 </div>
               </div>
@@ -86,12 +84,11 @@ export default function Features() {
                 <div className="box-content">
                   <h5 className="wow fadeInUp" data-wow-delay=".3s">
                     <a href="#" className="title-box">
-                      Streamlined Cloud Integration
+                      Franchise & Partnership
                     </a>
                   </h5>
                   <div className="sub-title wow fadeInUp" data-wow-delay=".3s">
-                    Enhance efficiency with seamless cloud migration and
-                    optimized cloud-based operations.
+                    Join a trusted brand with proven success across the region. Partner with us to build new learning cities for kids.
                   </div>
                 </div>
               </div>
@@ -105,12 +102,11 @@ export default function Features() {
                 <div className="box-content">
                   <h5 className="wow fadeInUp" data-wow-delay=".3s">
                     <a href="#" className="title-box">
-                      Future-Ready IT Systems"
+                      CSR & Impact
                     </a>
                   </h5>
                   <div className="sub-title wow fadeInUp" data-wow-delay=".3s">
-                    Leverage scalable technologies and innovative solutions to
-                    support long-term growth &amp; adaptability.
+                    Empowering youth through education, community action, and sustainability programs.
                   </div>
                 </div>
               </div>

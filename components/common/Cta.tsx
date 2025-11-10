@@ -10,16 +10,16 @@ export default function Cta() {
             <div className="cta-inner style-2">
               <div className="cta-content">
                 <h4 className="title-content">
-                  Ready To Take Your Business To The Next Level? Let’s Build
-                  Your
+                 Have a project or idea to bring to life? Let’s create it <br />
+                  
                   <br />
-                  Success Together Today!
+                  together
                 </h4>
                 <Link
                   href={`/contact-us`}
                   className="tf-btn style-1 bg-white text-center"
                 >
-                  <span> Schedule A Consultation </span>
+                  <span> Request a Quote </span>
                 </Link>
               </div>
             </div>

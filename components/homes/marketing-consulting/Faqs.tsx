@@ -40,7 +40,7 @@ export default function Faqs() {
                       data-bs-toggle="collapse"
                       className="title-according collapsed"
                     >
-                      What services do you offer?
+                      What is Kidz Holding?
                       <span />
                     </a>
                   </h5>
@@ -51,8 +51,7 @@ export default function Faqs() {
                   >
                     <div className="according-content">
                       <p>
-                        We identify growth opportunities, optimize strategies,
-                        and enhance customer engagement for increased revenue.
+                        Kidz Holding is the corporate group behind the KidzMondo edutainment brand, focused on learning through play and youth development across the MENA region.
                       </p>
                     </div>
                   </div>
@@ -64,7 +63,7 @@ export default function Faqs() {
                       data-bs-toggle="collapse"
                       className="title-according"
                     >
-                      How Can Marketing Consulting Help?
+                      What does “edutainment” mean?
                       <span />
                     </a>
                   </h5>
@@ -75,8 +74,7 @@ export default function Faqs() {
                   >
                     <div className="according-content">
                       <p>
-                        We identify growth opportunities, optimize strategies,
-                        and enhance customer engagement for increased revenue.
+                        Edutainment combines education and entertainment, creating immersive experiences that teach life skills in fun, engaging ways.
                       </p>
                     </div>
                   </div>
@@ -88,7 +86,7 @@ export default function Faqs() {
                       data-bs-toggle="collapse"
                       className="title-according collapsed"
                     >
-                      What’s the Duration of a Project?
+                    How can I invest or open a franchise?
                       <span />
                     </a>
                   </h5>
@@ -99,8 +97,7 @@ export default function Faqs() {
                   >
                     <div className="according-content">
                       <p>
-                        We identify growth opportunities, optimize strategies,
-                        and enhance customer engagement for increased revenue.
+                       Visit our Franchise & Partnership page to learn about available territories and submit an inquiry.
                       </p>
                     </div>
                   </div>
@@ -112,7 +109,7 @@ export default function Faqs() {
                       data-bs-toggle="collapse"
                       className="title-according collapsed"
                     >
-                      How Do You Measure Success?
+                      Where are you currently operating?
                       <span />
                     </a>
                   </h5>
@@ -123,8 +120,7 @@ export default function Faqs() {
                   >
                     <div className="according-content">
                       <p>
-                        We identify growth opportunities, optimize strategies,
-                        and enhance customer engagement for increased revenue.
+                       We operate in Beirut and Doha, with expansion plans in Saudi Arabia, Egypt, and the UAE.
                       </p>
                     </div>
                   </div>
@@ -136,7 +132,7 @@ export default function Faqs() {
                       data-bs-toggle="collapse"
                       className="title-according collapsed"
                     >
-                      Do You Work with All Business Sizes?
+                     How do schools partner with you?
                       <span />
                     </a>
                   </h5>
@@ -147,8 +143,7 @@ export default function Faqs() {
                   >
                     <div className="according-content">
                       <p>
-                        We identify growth opportunities, optimize strategies,
-                        and enhance customer engagement for increased revenue.
+                        Schools can organize curriculum‑linked trips through the Contact page or directly via our Education team.
                       </p>
                     </div>
                   </div>

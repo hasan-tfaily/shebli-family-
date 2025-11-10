@@ -15,10 +15,9 @@ export default function Blogs() {
                   READ OUR BLOG
                 </a>
               </div>
-              <h3 className="text-anime-wave-1 mb-12">Insights &amp; Ideas</h3>
+              <h3 className="text-anime-wave-1 mb-12">Insights From the World of Edutainment</h3>
               <div className="sub-title body-2 text-anime-wave-1">
-                Get the latest insights, expert tips, and updates to stay
-                informed and inspired.
+                 Explore articles, interviews, and updates from the Kidz Holding community—where innovation in learning and play comes to life.
               </div>
             </div>
             <div className="row rg-30">

@@ -1,170 +1,115 @@
 @use "../abstracts/mixin";
 
 .tf-btn {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: max-content;
+
+  /* NEW: visible border by default */
+  border: 1px solid var(--on-suface-container);
+
+  /* NEW: ensure overlay follows the same rounding as the button */
+  &::before { border-radius: inherit; }
+
+  span {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
     position: relative;
-    overflow: hidden;
-    display: block;
-    width: max-content;
+    z-index: 2;
+    @include mixin.transition3();
+  }
 
-    span {
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 24px;
-        position: relative;
-        z-index: 2;
-        @include mixin.transition3();
-    }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 100%;
+    background-color: var(--primary);
+    z-index: 1;
+    @include mixin.transition3();
+  }
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 50%;
-        width: 0;
-        height: 100%;
-        background-color: var(--primary);
-        z-index: 1;
-        @include mixin.transition3();
-    }
+  &:hover {
+    span { color: var(--white); }
+    &::before { left: 0; width: 100%; }
+  }
 
+  &.bg-on-suface-container {
+    background-color: var(--on-suface-container);
+    color: var(--white);
+    /* border visible pre-hover */
+    border-color: var(--on-suface-container);
+
+    &::before { height: 100%; background-color: var(--primary); }
+    &:hover { span { color: var(--white); } }
+  }
+
+  &.bg-white {
+    background-color: var(--white) !important;
+    color: var(--on-suface-container);
+    /* border visible pre-hover */
+    border-color: var(--on-suface-container);
+
+    &::before { height: 100%; background-color: var(--on-suface-container); }
     &:hover {
-        span {
-            color: var(--white);
-        }
-
-        &::before {
-            left: 0;
-            width: 100%;
-        }
+      /* keep same color system */
+      background-color: var(--on-suface-container) !important;
+      span { color: var(--white); }
     }
 
-    &.bg-on-suface-container {
-        background-color: var(--on-suface-container);
-        color: var(--white);
-
-        &::before {
-            height: 100%;
-            background-color: var(--primary);
-        }
-
-        &:hover {
-            span {
-                color: var(--white);
-            }
-        }
+    &.bg-white-style-2 {
+      /* used to only show on hover — make it visible always */
+      border-color: var(--white);
+      &:hover { border-color: var(--white); }
     }
+  }
 
-    &.bg-white {
-        background-color: var(--white) !important;
-        color: var(--on-suface-container);
+  &.bg-color-primary {
+    background-color: var(--primary);
+    /* border visible pre-hover (primary edge) */
+    border-color: var(--primary);
 
-        &::before {
-            height: 100%;
-            background-color: var(--on-suface-container);
-        }
+    span { color: var(--white); }
+    &::before { height: 100%; background-color: var(--on-suface-container); }
+    &:hover { span { color: var(--white); } }
+  }
 
-        &:hover {
-            border-color: var(--on-suface-container);
-            background-color: var(--on-suface-container) !important;
+  &.style-border {
+    /* already an outlined look; keep it explicit */
+    border: 1px solid var(--primary);
+    span { color: var(--on-suface-container); }
+    &:hover { span { color: var(--white); } }
+  }
 
-            span {
-                color: var(--white);
-            }
-        }
+  &.style-1 {
+    padding: 15px 40px;
+    border-radius: 999px;
+  }
+  &.style-2 {
+    border-radius: 999px;
+    padding: 12px 0;
+  }
+  &.style-3 {
+    border-radius: 999px;
+    padding: 8px 0;
+  }
+  &.style-4 {
+    border-radius: 999px;
+    padding: 12px 40px;
+  }
 
-        &.bg-white-style-2 {
-            border: 1px solid transparent;
+  &.w-full { width: 100%; }
 
-            &:hover {
-                border-color: var(--white);
-            }
-        }
-    }
-
-    &.bg-color-primary {
-        background-color: var(--primary);
-
-        span {
-            color: var(--white);
-        }
-
-        &::before {
-            height: 100%;
-            background-color: var(--on-suface-container);
-        }
-
-        &:hover {
-            span {
-                color: var(--white);
-            }
-        }
-    }
-
-    &.style-border {
-        border: 1px solid var(--primary);
-
-        span {
-            color: var(--on-suface-container);
-        }
-
-        &:hover {
-            span {
-                color: var(--white);
-            }
-        }
-    }
-
-    &.style-1 {
-        padding: 15px 40px;
-        border-radius: 999px;
-
-        &::before {
-            border-radius: 26px;
-        }
-    }
-
-    &.style-2 {
-        border-radius: 999px;
-        padding: 12px 0;
-
-        &::before {
-            border-radius: 26px;
-        }
-    }
-
-    &.style-3 {
-        border-radius: 999px;
-        padding: 8px 0;
-
-        &::before {
-            border-radius: 26px;
-        }
-    }
-
-    &.style-4 {
-        border-radius: 999px;
-        padding: 12px 40px;
-
-        &::before {
-            border-radius: 26px;
-        }
-    }
-
-    &.w-full {
-        width: 100%;
-    }
-
-    &.hover-bg-primary {
-        &::before {
-            height: 100%;
-            background-color: var(--primary);
-        }
-
-        &:hover {
-            background-color: var(--primary) !important;
-        }
-    }
+  &.hover-bg-primary {
+    &::before { height: 100%; background-color: var(--primary); }
+    &:hover { background-color: var(--primary) !important; }
+  }
 }
+
 
 .default-btn {
     font-weight: 500;
@@ -343,4 +288,117 @@
         background-color: var(--primary);
         color: var(--white);
     }
+}
+
+
+
+
+.tf-btnN {
+  /* THEME VARS (set by modifier classes) */
+  --btn-bg: transparent;
+  --btn-fg: var(--on-surface-container, var(--on-suface-container));
+  --btn-fill: var(--primary);
+  --btn-hover-fg: var(--white);
+
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: max-content;
+  background-color: var(--btn-bg);
+  color: var(--btn-fg);
+  border: 1px solid transparent;
+
+  span {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    position: relative;
+    z-index: 2;
+    @include mixin.transition3();
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 100%;
+    background-color: var(--btn-fill); /* hover fill mirrors the target color */
+    z-index: 1;
+    @include mixin.transition3();
+  }
+
+  &:hover {
+    /* on hover, the before fills under the text; just switch text color */
+    span { color: var(--btn-hover-fg); }
+    &::before { left: 0; width: 100%; }
+  }
+
+  /* ====== THEMES (just set variables) ====== */
+
+  /* Was: .bg-on-suface-container (typo). Keep both for safety. */
+  &.bg-on-surface-container,
+  &.bg-on-suface-container {
+    --btn-bg: var(--on-surface-container, var(--on-suface-container));
+    --btn-fg: var(--white);
+    --btn-fill: var(--primary);        /* hover moves to primary */
+    --btn-hover-fg: var(--white);
+  }
+
+  &.bg-white {
+    --btn-bg: var(--white);
+    --btn-fg: var(--on-surface-container, var(--on-suface-container));
+    --btn-fill: var(--on-surface-container, var(--on-suface-container)); /* fill mirrors text/border */
+    --btn-hover-fg: var(--white);
+    border-color: var(--on-surface-container, var(--on-suface-container));
+  }
+
+  &.bg-color-primary {
+    --btn-bg: var(--primary);
+    --btn-fg: var(--white);
+    --btn-fill: var(--on-surface-container, var(--on-suface-container)); /* invert on hover */
+    --btn-hover-fg: var(--white);
+  }
+
+  &.style-border {
+    --btn-bg: transparent;
+    --btn-fg: var(--on-surface-container, var(--on-suface-container));
+    --btn-fill: var(--primary);   /* hover fills with primary */
+    --btn-hover-fg: var(--white);
+    border: 1px solid var(--primary);
+  }
+
+  &.hover-bg-primary {
+    --btn-fill: var(--primary);   /* force primary as the hover fill */
+    /* base/other vars inherit from whatever theme it’s combined with */
+  }
+
+  /* ====== SIZES / RADII ====== */
+
+  &.style-1 {
+    padding: 15px 40px;
+    border-radius: 999px;
+    &::before { border-radius: 26px; }
+  }
+
+  &.style-2 {
+    border-radius: 999px;
+    padding: 12px 0;
+    &::before { border-radius: 26px; }
+  }
+
+  &.style-3 {
+    border-radius: 999px;
+    padding: 8px 0;
+    &::before { border-radius: 26px; }
+  }
+
+  &.style-4 {
+    border-radius: 999px;
+    padding: 12px 40px;
+    &::before { border-radius: 26px; }
+  }
+
+  &.w-full { width: 100%; }
 }

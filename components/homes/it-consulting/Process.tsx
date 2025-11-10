@@ -155,16 +155,15 @@ export default function Process() {
                   </a>
                 </div>
                 <h3 className="title-section mb-12 text-anime-wave">
-                  How Does It Work?
+                  Build the Future With Us
                 </h3>
                 <div className="sub-title body-2 text-anime-wave">
-                  Follow our proven steps to achieve your goals and drive your
-                  business to success.
+                  Join a passionate team shaping the future of learning, creativity, and family entertainment across the MENA region. Together, we build experiences that matter.
                 </div>
               </div>
               <div className="text-anime-wave-2">
                 <Link href={`/contact-us`} className="tf-btn style-1 bg-white">
-                  <span>Schedule A Consultation</span>
+                  <span>Open Roles</span>
                 </Link>
               </div>
             </div>

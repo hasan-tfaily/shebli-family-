@@ -13,7 +13,7 @@ export default function About() {
             <div className="about-left mr-10">
               <div className="image item-1 tf-animate-1">
                 <Image
-                  src="/image/section/about1.png"
+                  src="/image/section/section-about-h5-1.jpg"
                   alt="Team collaborating"
                   className="lazyload"
                   width={450}
@@ -22,7 +22,7 @@ export default function About() {
               </div>
               <div className="image item item-2 tf-animate-3">
                 <Image
-                  src="/image/section/about2.png"
+                  src="/image/section/section-about-h5-2.jpg"
                   alt="Analytics dashboard"
                   className="lazyload"
                   width={320}
@@ -57,14 +57,11 @@ export default function About() {
                   </a>
                 </div>
                 <h3 className="title-section mb-20 wow fadeInUp">
-                  Empowering Your Business <br />
-                  Success
+                  Trusted by Families, Schools & Cities <br />
+                  Across the Region
                 </h3>
                 <div className="sub-title color-text-2 wow fadeInUp">
-                  At FinWice, we empower businesses with tailored strategies,
-                  innovative solutions, and expert consulting. Our industry
-                  professionals drive growth and guide you through challenges to
-                  achieve success.
+                  Kidz Holding is the regional pioneer in edutainment and family leisure. Through innovation, safety, and collaboration, we create meaningful spaces where children learn by doing, partners grow with purpose, and investors build lasting impact.
                 </div>
               </div>
 
@@ -74,7 +71,7 @@ export default function About() {
                     <i className="icon-checkbox" />
                   </div>
                   <div className="title wow fadeInUp" data-wow-delay=".1s">
-                    Highly Experienced, Skilled Team
+                    Expanding footprints across leading MENA capitals
                   </div>
                 </div>
                 <div className="benefit-items style-small mb-16">
@@ -82,7 +79,7 @@ export default function About() {
                     <i className="icon-checkbox" />
                   </div>
                   <div className="title wow fadeInUp" data-wow-delay=".1s">
-                    Competitive, Transparent Pricing
+                    Building trusted partnerships with schools and municipalities
                   </div>
                 </div>
                 <div className="benefit-items style-small">
@@ -90,30 +87,33 @@ export default function About() {
                     <i className="icon-checkbox" />
                   </div>
                   <div className="title wow fadeInUp" data-wow-delay=".1s">
-                    Fast Turnaround, Minimal Disruption
+                    Delivering measurable social, educational, and economic value
                   </div>
                 </div>
               </div>
 
               <div className="bottom">
-                <div className="wow fadeInUp">
-                  <Link href="/about-us" className="tf-btn style-1 bg-on-surface-container">
-                    <span>About Us</span>
+                <div className="wow fadeInUp" >
+                  <Link href="/about-us" className="tf-btnN style-1 bg-on-surface-container">
+                    <span>Our Brands</span>
                   </Link>
                 </div>
 
+
+
+
+
                 <div className="tf-phone no-border style-2">
-                  <a href="tel:15556788888" className="icon wow fadeInUp" data-wow-delay=".1s">
-                    <i className="icon-PhoneCall" />
-                  </a>
-                  <div className="content wow fadeInUp" data-wow-delay=".2s">
-                    <p className="caption-1">Have any Question?</p>
-                    <h5>
-                      <a href="tel:15556788888">1-555-678-8888</a>
-                    </h5>
+                  <div className="bottom">
+                    <div className="wow fadeInUp">
+                      <Link href="/contact-us" className="tf-btn style-1 bg-on-surface-container">
+                        <span>Contact Us</span>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
