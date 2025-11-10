@@ -7,15 +7,15 @@ export const boxIconItems = [
   },
   {
     iconClass: "icon-investment",
-    title: "Cutting-Edge Solutions",
+    title: " Mission",
     description:
-      "Leverage the latest technological advancements with our innovative consulting services that keep your business ahead of the curve.",
+      "To design safe, innovative, and purpose‑driven spaces that blend education with entertainment, empowering children to explore the world through hands‑on experiences.",
   },
   {
     iconClass: "icon-financial",
-    title: "Tailored Industry Insights",
+    title: "Vision",
     description:
-      "Our deep industry knowledge allows us to provide specialized insights and customized strategies that fit your specific business needs.",
+      "To be the most trusted and inspiring edutainment group in the Middle East, transforming how children learn, play, and imagine their future.",
   },
   {
     iconClass: "icon-tax",

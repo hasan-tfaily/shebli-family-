@@ -1,32 +1,32 @@
 export const timelineItems = [
   {
     year: "2010",
-    title: "Founded",
+    title: "Innovation: ",
     description:
-      "Established with a mission to provide innovative financial and business consulting services.",
+      "We continuously reinvent the learning experience to inspire curiosity and creativity.",
   },
   {
     year: "2013",
-    title: "Industry Recognition",
+    title: " Integrity: ",
     description:
-      "Received our first major award, marking a reputation for excellence in tailored business solutions.",
+      "We operate with transparency and accountability in every partnership.",
   },
   {
-    year: "2018",
+    year: " Collaboration:",
     title: "Major Milestone",
     description:
-      "Achieved a significant milestone, reaching over 1,000 clients across multiple industries.",
+      "We grow through teamwork: with families, schools, and partners.",
   },
   {
     year: "2024",
-    title: "Global Reach",
+    title: "Safety",
     description:
-      "Successfully expanded our services internationally, now serving clients in over 15 countries.",
+      "We protect every child’s wellbeing as our top priority.",
   },
   {
     year: "2025",
-    title: "Global Reach",
+    title: " Impact: ",
     description:
-      "Successfully expanded our services internationally, now serving clients in over 15 countries.",
+      "Every project we build serves a greater educational and social purpose.",
   },
 ];

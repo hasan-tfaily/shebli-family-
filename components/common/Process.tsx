@@ -18,11 +18,10 @@ export default function Process() {
                   </a>
                 </div>
                 <h3 className="title-section mb-12 text-anime-wave">
-                  Pathway to Success
+                  Corporate Structure
                 </h3>
                 <div className="sub-title body-2 text-anime-wave">
-                  Follow our proven steps to achieve your goals and drive your
-                  business to success.
+                 Kidz Holding operates through a robust corporate framework designed to balance creativity, operational excellence, and investor trust.
                 </div>
               </div>
               <div className="text-anime-wave-2">
@@ -47,12 +46,11 @@ export default function Process() {
               <div className="process-content">
                 <h5>
                   <a href="#" className="name-process">
-                    Discovery &amp; Analysis
+                    Holding Framework: 
                   </a>
                 </h5>
                 <div className="desc">
-                  We assess your business and industry to identify challenges
-                  and opportunities.
+                Strategic oversight and governance for all brands and franchises under one unified vision.
                 </div>
               </div>
             </div>
@@ -68,12 +66,11 @@ export default function Process() {
               <div className="process-content">
                 <h5>
                   <a href="#" className="name-process">
-                    Strategic Planning
+                    Subsidiaries & Business Units: 
                   </a>
                 </h5>
                 <div className="desc">
-                  We create a tailored strategy with actionable steps and clear
-                  objectives.
+                   Specialized divisions handling operations, marketing, education, and innovation.
                 </div>
               </div>
             </div>
@@ -89,12 +86,11 @@ export default function Process() {
               <div className="process-content">
                 <h5>
                   <a href="#" className="name-process">
-                    Execution &amp; Monitoring
+                     Corporate Governance
                   </a>
                 </h5>
                 <div className="desc">
-                  We implement the plan, track progress, and adjust as needed to
-                  achieve your goals.
+                  Transparent, accountable leadership ensuring sustainable growth and stakeholder confidence.
                 </div>
               </div>
             </div>

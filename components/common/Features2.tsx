@@ -36,15 +36,14 @@ export default function Features({
                   </a>
                 </div>
                 <h3 className="title-section wow fadeInUp mb-12">
-                  We Drive Growth Through
-                  <br />
-                  Tailored Solutions.
+                 Our Key Success Factors
+                 
                 </h3>
-                <div className="sub-title body-2 wow fadeInUp">
+                {/* <div className="sub-title body-2 wow fadeInUp">
                   Choose us for unparalleled expertise, tailored solutions, and
                   a commitment to your success. We deliver exceptional results
                   through a strategic and collaborative approach.
-                </div>
+                </div> */}
               </div>
               <div className="benefit-lists">
                 <div className="benefit-items">
@@ -52,7 +51,7 @@ export default function Features({
                     <i className="icon-checkbox" />
                   </div>
                   <div className="title wow fadeInUp" data-wow-delay=".1s">
-                    In-depth knowledge across sectors for specialized insights.
+                   Strategic Partnerships
                   </div>
                 </div>
                 <div className="benefit-items">
@@ -60,8 +59,7 @@ export default function Features({
                     <i className="icon-checkbox" />
                   </div>
                   <div className="title wow fadeInUp" data-wow-delay=".1s">
-                    Customized strategies addressing unique challenges and
-                    goals.
+                    Cultural Adaptation
                   </div>
                 </div>
                 <div className="benefit-items">
@@ -69,7 +67,7 @@ export default function Features({
                     <i className="icon-checkbox" />
                   </div>
                   <div className="title wow fadeInUp" data-wow-delay=".1">
-                    Proven success delivering impactful results to clients.
+                    Focus on Customer Satisfaction
                   </div>
                 </div>
                 <div className="benefit-items">
@@ -77,7 +75,7 @@ export default function Features({
                     <i className="icon-checkbox" />
                   </div>
                   <div className="title wow fadeInUp" data-wow-delay=".1s">
-                    Collaborative partnership ensuring effective implementation.
+                    Business Scalability
                   </div>
                 </div>
                 <div className="benefit-items">
@@ -85,7 +83,7 @@ export default function Features({
                     <i className="icon-checkbox" />
                   </div>
                   <div className="title wow fadeInUp" data-wow-delay=".1s">
-                    Ongoing support to adjust and refine strategies.
+                    Access to expert training and marketing resources.
                   </div>
                 </div>
               </div>
@@ -93,7 +91,7 @@ export default function Features({
                 href={`/contact-us`}
                 className="tf-btn style-1 bg-on-suface-container wow fadeInUp"
               >
-                <span> Schedule A Consultation </span>
+                <span> Request a Quote </span>
               </Link>
             </div>
           </div>

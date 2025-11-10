@@ -10,6 +10,7 @@ import Cta from "@/components/common/Cta2";
 import Awards from "@/components/common/Awards";
 import Breadcumb from "@/components/common/Breadcumb";
 import { Metadata } from "next";
+import Process from "@/components/common/Process";
 export const metadata: Metadata = {
   title:
     "About us || FinWice - Business & Finance Consulting - React Nextjs Template",
@@ -25,22 +26,25 @@ export default function page() {
             <Breadcumb pageName="About Us" />
             <h2 className="title-page-title">About Us</h2>
             <div className="sub-title body-2">
-              Discover our mission to empower clients with expert solutions for
-              confident,
+             Discover the story behind the region’s leading edutainment group shaping 
               <br />
-              sustainable growth and success.
+             the future of learning through play.
             </div>
           </div>
         </div>
       </div>
       <div className="main-content">
         <Benefits />
-        <About />
+        {/* <About /> */}
         <History />
         <Features hasBorder parentClass="section-why-choose h-2 page-about" />
-        <Testimonials />
+       
+        <Process/>
+
+ {/* <Testimonials /> */}
         <Cta />
-        <Awards />
+        {/* <Awards /> */}
+
       </div>
     </>
   );

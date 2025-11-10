@@ -21,11 +21,10 @@ export default function History() {
                 </a>
               </div>
               <h3 className="title-section mb-12 text-anime-wave-1">
-                Our Journey So Far
+                Values & Operating Principles
               </h3>
               <div className="sub-title body-2 text-anime-wave-1">
-                Explore the milestones that have shaped our growth and
-                commitment to excellence.
+                Explore the values and principles that shape our  work.
               </div>
             </div>
             <div className="wg-time-line">
@@ -66,7 +65,7 @@ export default function History() {
                       >
                         <div className="time-line-content">
                           <div className="heading">
-                            <div className="label">{item.year}</div>
+                            {/* <div className="label">{item.year}</div> */}
                             <h5 className="title-content">{item.title}</h5>
                           </div>
                           <div className="desc">{item.description}</div>
