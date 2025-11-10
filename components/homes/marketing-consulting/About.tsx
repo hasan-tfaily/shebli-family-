@@ -1,31 +1,20 @@
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
-<<<<<<< HEAD
 import { counters3 } from "@/data/cta";
-
-=======
->>>>>>> 634877ba86339f675030fbca08701d1c1c46c7f1
 import OdometerComponent from "@/components/common/OdometerComponent";
 
 export default function About() {
   return (
-    <section
-      className="section-about h-5 tf-spacing-2 section-one-page"
-      id="about"
-    >
+    <section className="section-about h-5 tf-spacing-2 section-one-page" id="about">
       <div className="tf-container position-relative">
         <div className="row">
           <div className="col-lg-6">
             <div className="about-left mr-10">
               <div className="image item-1 tf-animate-1">
                 <Image
-<<<<<<< HEAD
                   src="/image/section/about1.png"
-=======
-                  src="/image/section/section-about-h5-1.jpg"
->>>>>>> 634877ba86339f675030fbca08701d1c1c46c7f1
-                  alt=""
+                  alt="Team collaborating"
                   className="lazyload"
                   width={450}
                   height={600}
@@ -33,12 +22,8 @@ export default function About() {
               </div>
               <div className="image item item-2 tf-animate-3">
                 <Image
-<<<<<<< HEAD
                   src="/image/section/about2.png"
-=======
-                  src="/image/section/section-about-h5-2.jpg"
->>>>>>> 634877ba86339f675030fbca08701d1c1c46c7f1
-                  alt=""
+                  alt="Analytics dashboard"
                   className="lazyload"
                   width={320}
                   height={320}
@@ -62,6 +47,7 @@ export default function About() {
               </div>
             </div>
           </div>
+
           <div className="col-lg-6">
             <div className="section-content ml-40">
               <div className="heading-section mb-32">
@@ -81,6 +67,7 @@ export default function About() {
                   achieve success.
                 </div>
               </div>
+
               <div className="benefit-lists mb-32">
                 <div className="benefit-items style-small mb-16">
                   <div className="icon wow fadeInUp">
@@ -107,76 +94,55 @@ export default function About() {
                   </div>
                 </div>
               </div>
+
               <div className="bottom">
                 <div className="wow fadeInUp">
-                  <Link
-                    href={`/about-us`}
-                    className="tf-btn style-1 bg-on-suface-container"
-                  >
+                  <Link href="/about-us" className="tf-btn style-1 bg-on-surface-container">
                     <span>About Us</span>
                   </Link>
                 </div>
+
                 <div className="tf-phone no-border style-2">
-                  <a
-                    href="#"
-                    className="icon wow fadeInUp"
-                    data-wow-delay=".1s"
-                  >
+                  <a href="tel:15556788888" className="icon wow fadeInUp" data-wow-delay=".1s">
                     <i className="icon-PhoneCall" />
                   </a>
                   <div className="content wow fadeInUp" data-wow-delay=".2s">
                     <p className="caption-1">Have any Question?</p>
                     <h5>
-                      <a href="#">1-555-678-8888</a>
+                      <a href="tel:15556788888">1-555-678-8888</a>
                     </h5>
                   </div>
                 </div>
-<<<<<<< HEAD
-
-
-           
-
-
-
-
-=======
->>>>>>> 634877ba86339f675030fbca08701d1c1c46c7f1
               </div>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-        
       </div>
-           <section className="section-why-choose h-7 bg-surface tf-spacing-31" style={{marginTop: "100px"}}>
-      <div className="tf-container position-relative">
-        <div className="row">
-          <div className="col-12">
-            <div className="wg-counter justify-content-between">
-              {counters3.map((c, i) => (
-                <div className="counter-item style-3" key={i}>
-                  <div className="counter">
-                    <div className="number-counter">
-                      <h2 className="number odometer">
-                        <OdometerComponent max={c.value} />
-                      </h2>
-                      <h2 className="plus">+</h2>
+
+      {/* Counters section */}
+      <section className="section-why-choose h-7 bg-surface tf-spacing-31" style={{ marginTop: "100px" }}>
+        <div className="tf-container position-relative">
+          <div className="row">
+            <div className="col-12">
+              <div className="wg-counter justify-content-between">
+                {counters3.map((c, i) => (
+                  <div className="counter-item style-3" key={i}>
+                    <div className="counter">
+                      <div className="number-counter">
+                        <h2 className="number odometer">
+                          <OdometerComponent max={c.value} />
+                        </h2>
+                        <h2 className="plus">+</h2>
+                      </div>
+                      <h6 className="text" dangerouslySetInnerHTML={{ __html: c.label }} />
                     </div>
-                    <h6
-                      className="text"
-                      dangerouslySetInnerHTML={{ __html: c.label }}
-                    />
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-=======
-      </div>
->>>>>>> 634877ba86339f675030fbca08701d1c1c46c7f1
+      </section>
     </section>
   );
 }

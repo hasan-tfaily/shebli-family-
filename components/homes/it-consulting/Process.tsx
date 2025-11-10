@@ -2,6 +2,8 @@
 import Link from "next/link";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+
 const processSteps = [
   {
     step: "Step 1",
@@ -166,30 +168,19 @@ export default function Process() {
                 </Link>
               </div>
             </div>
-<<<<<<< HEAD
-            {/* <Swiper
-=======
+
             <Swiper
->>>>>>> 634877ba86339f675030fbca08701d1c1c46c7f1
               className="sw-case-studies swiper sw-layout"
               spaceBetween={10}
               dir="ltr"
               breakpoints={{
                 0: { slidesPerView: 1 },
-                575: {
-                  slidesPerView: 2,
-                },
-                768: {
-                  slidesPerView: 3,
-                  spaceBetween: 20,
-                },
-                1200: {
-                  slidesPerView: 4,
-                  spaceBetween: 20,
-                },
+                575: { slidesPerView: 2 },
+                768: { slidesPerView: 3, spaceBetween: 20 },
+                1200: { slidesPerView: 4, spaceBetween: 20 },
               }}
             >
-              {processSteps.map((item, index) => (
+              {/* {processSteps.map((item, index) => (
                 <SwiperSlide className="swiper-slide" key={index}>
                   <div className="process-item bg-1 bg-1-style-2 step-hover">
                     <div className="process-top">
@@ -208,12 +199,8 @@ export default function Process() {
                     </div>
                   </div>
                 </SwiperSlide>
-              ))}
-<<<<<<< HEAD
-            </Swiper> */}
-=======
+              ))} */}
             </Swiper>
->>>>>>> 634877ba86339f675030fbca08701d1c1c46c7f1
           </div>
         </div>
       </div>

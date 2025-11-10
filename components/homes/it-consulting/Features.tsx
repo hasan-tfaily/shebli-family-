@@ -66,11 +66,7 @@ export default function Features() {
               data-delay=".2s"
             >
               <Image
-<<<<<<< HEAD
                 src="/image/section/happy-family-white-background 1.png"
-=======
-                src="/image/section/img-section-why-h8.png"
->>>>>>> 634877ba86339f675030fbca08701d1c1c46c7f1
                 alt=""
                 className="lazyload"
                 width={410}
