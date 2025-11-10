@@ -1,8 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
+<<<<<<< HEAD
 import { counters3 } from "@/data/cta";
 
+=======
+>>>>>>> 634877ba86339f675030fbca08701d1c1c46c7f1
 import OdometerComponent from "@/components/common/OdometerComponent";
 
 export default function About() {
@@ -17,7 +20,11 @@ export default function About() {
             <div className="about-left mr-10">
               <div className="image item-1 tf-animate-1">
                 <Image
+<<<<<<< HEAD
                   src="/image/section/about1.png"
+=======
+                  src="/image/section/section-about-h5-1.jpg"
+>>>>>>> 634877ba86339f675030fbca08701d1c1c46c7f1
                   alt=""
                   className="lazyload"
                   width={450}
@@ -26,7 +33,11 @@ export default function About() {
               </div>
               <div className="image item item-2 tf-animate-3">
                 <Image
+<<<<<<< HEAD
                   src="/image/section/about2.png"
+=======
+                  src="/image/section/section-about-h5-2.jpg"
+>>>>>>> 634877ba86339f675030fbca08701d1c1c46c7f1
                   alt=""
                   className="lazyload"
                   width={320}
@@ -120,6 +131,7 @@ export default function About() {
                     </h5>
                   </div>
                 </div>
+<<<<<<< HEAD
 
 
            
@@ -127,10 +139,13 @@ export default function About() {
 
 
 
+=======
+>>>>>>> 634877ba86339f675030fbca08701d1c1c46c7f1
               </div>
             </div>
           </div>
         </div>
+<<<<<<< HEAD
         
       </div>
            <section className="section-why-choose h-7 bg-surface tf-spacing-31" style={{marginTop: "100px"}}>
@@ -159,6 +174,9 @@ export default function About() {
         </div>
       </div>
     </section>
+=======
+      </div>
+>>>>>>> 634877ba86339f675030fbca08701d1c1c46c7f1
     </section>
   );
 }

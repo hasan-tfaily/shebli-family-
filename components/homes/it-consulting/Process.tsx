@@ -166,7 +166,11 @@ export default function Process() {
                 </Link>
               </div>
             </div>
+<<<<<<< HEAD
             {/* <Swiper
+=======
+            <Swiper
+>>>>>>> 634877ba86339f675030fbca08701d1c1c46c7f1
               className="sw-case-studies swiper sw-layout"
               spaceBetween={10}
               dir="ltr"
@@ -205,7 +209,11 @@ export default function Process() {
                   </div>
                 </SwiperSlide>
               ))}
+<<<<<<< HEAD
             </Swiper> */}
+=======
+            </Swiper>
+>>>>>>> 634877ba86339f675030fbca08701d1c1c46c7f1
           </div>
         </div>
       </div>

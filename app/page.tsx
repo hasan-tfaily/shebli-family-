@@ -47,12 +47,18 @@ import About from "@/components/homes/marketing-consulting/About";
 import Brands from "@/components/common/Brands";
 import Hero from "@/components/homes/marketing-consulting/Hero";
 import React from "react";
+<<<<<<< HEAD
+=======
+import Features from "@/components/homes/marketing-consulting/Features";
+import Process from "@/components/common/Process2";
+>>>>>>> 634877ba86339f675030fbca08701d1c1c46c7f1
 import Services from "@/components/common/Services3";
 import Faqs from "@/components/homes/marketing-consulting/Faqs";
 import Team from "@/components/common/Team";
 import Blogs from "@/components/homes/marketing-consulting/Blogs";
 import Cta from "@/components/common/Cta";
 import Footer2 from "@/components/footers/Footer2";
+<<<<<<< HEAD
 
 // ✅ alias the two different Features components
 import MCFeatures from "@/components/homes/marketing-consulting/Features";
@@ -64,14 +70,21 @@ import Process from "@/components/homes/it-consulting/Process";
 import { Metadata } from "next";
 import Footer1 from "@/components/footers/Footer1";
 
+=======
+import { Metadata } from "next";
+>>>>>>> 634877ba86339f675030fbca08701d1c1c46c7f1
 export const metadata: Metadata = {
   title:
     "Marketing Consulting || FinWice - Business & Finance Consulting - React Nextjs Template",
   description:
     "FinWice - Business & Finance Consulting - React Nextjs Template",
 };
+<<<<<<< HEAD
 
 export default function Page() {
+=======
+export default function page() {
+>>>>>>> 634877ba86339f675030fbca08701d1c1c46c7f1
   return (
     <>
       <Header5 />
@@ -79,6 +92,7 @@ export default function Page() {
       <div className="main-content">
         <About />
         <Brands />
+<<<<<<< HEAD
         {/* <MCFeatures />   */}
         {/* <Services1 /> */}
         <ITFeatures />   
@@ -93,6 +107,18 @@ export default function Page() {
         <Cta />
       </div>
       <Footer1 />
+=======
+        <Services1 />
+        <Features />
+        <Process />
+        <Services />
+        <Faqs />
+        <Team />
+        <Blogs />
+        <Cta />
+      </div>
+      <Footer2 />
+>>>>>>> 634877ba86339f675030fbca08701d1c1c46c7f1
     </>
   );
 }
