@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
+import { counters3 } from "@/data/cta";
+
 import OdometerComponent from "@/components/common/OdometerComponent";
 
 export default function About() {
@@ -15,7 +17,7 @@ export default function About() {
             <div className="about-left mr-10">
               <div className="image item-1 tf-animate-1">
                 <Image
-                  src="/image/section/section-about-h5-1.jpg"
+                  src="/image/section/about1.png"
                   alt=""
                   className="lazyload"
                   width={450}
@@ -24,7 +26,7 @@ export default function About() {
               </div>
               <div className="image item item-2 tf-animate-3">
                 <Image
-                  src="/image/section/section-about-h5-2.jpg"
+                  src="/image/section/about2.png"
                   alt=""
                   className="lazyload"
                   width={320}
@@ -118,11 +120,45 @@ export default function About() {
                     </h5>
                   </div>
                 </div>
+
+
+           
+
+
+
+
               </div>
             </div>
           </div>
         </div>
+        
       </div>
+           <section className="section-why-choose h-7 bg-surface tf-spacing-31" style={{marginTop: "100px"}}>
+      <div className="tf-container position-relative">
+        <div className="row">
+          <div className="col-12">
+            <div className="wg-counter justify-content-between">
+              {counters3.map((c, i) => (
+                <div className="counter-item style-3" key={i}>
+                  <div className="counter">
+                    <div className="number-counter">
+                      <h2 className="number odometer">
+                        <OdometerComponent max={c.value} />
+                      </h2>
+                      <h2 className="plus">+</h2>
+                    </div>
+                    <h6
+                      className="text"
+                      dangerouslySetInnerHTML={{ __html: c.label }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     </section>
   );
 }

@@ -47,22 +47,31 @@ import About from "@/components/homes/marketing-consulting/About";
 import Brands from "@/components/common/Brands";
 import Hero from "@/components/homes/marketing-consulting/Hero";
 import React from "react";
-import Features from "@/components/homes/marketing-consulting/Features";
-import Process from "@/components/common/Process2";
 import Services from "@/components/common/Services3";
 import Faqs from "@/components/homes/marketing-consulting/Faqs";
 import Team from "@/components/common/Team";
 import Blogs from "@/components/homes/marketing-consulting/Blogs";
 import Cta from "@/components/common/Cta";
 import Footer2 from "@/components/footers/Footer2";
+
+// ✅ alias the two different Features components
+import MCFeatures from "@/components/homes/marketing-consulting/Features";
+import ITFeatures from "@/components/homes/it-consulting/Features";
+
+import Process from "@/components/homes/it-consulting/Process";
+// import Process from "@/components/common/Process2";
+
 import { Metadata } from "next";
+import Footer1 from "@/components/footers/Footer1";
+
 export const metadata: Metadata = {
   title:
     "Marketing Consulting || FinWice - Business & Finance Consulting - React Nextjs Template",
   description:
     "FinWice - Business & Finance Consulting - React Nextjs Template",
 };
-export default function page() {
+
+export default function Page() {
   return (
     <>
       <Header5 />
@@ -70,16 +79,20 @@ export default function page() {
       <div className="main-content">
         <About />
         <Brands />
-        <Services1 />
-        <Features />
-        <Process />
-        <Services />
-        <Faqs />
-        <Team />
+        {/* <MCFeatures />   */}
+        {/* <Services1 /> */}
+        <ITFeatures />   
+
+        {/* <Process /> */}
+        {/* <Services /> */}
         <Blogs />
+        {/* <Team /> */}
+       <Process /> 
+      
+        <Faqs />  
         <Cta />
       </div>
-      <Footer2 />
+      <Footer1 />
     </>
   );
 }
