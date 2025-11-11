@@ -15,24 +15,24 @@ export default function About() {
             <div className="heading-section about-content-left">
               <div className="text-anime-wave">
                 <a href="#" className="tag label text-btn-uppercase">
-                  WE ARE FinWice
+                  Business Model
                 </a>
               </div>
               <h3 className="text-color-change mb-40">
-                Explore the Passion and Vision Behind
+                Kidz Holding offers a franchise model built for scalability and long‑term profitability. Franchisees receive operational manuals, brand support, and continuous training to maintain global standards.
                 <br />
-                Our Consulting Firm, Dedicated to <br />
-                Transforming Your Business Goals
+                <br />
+
               </h3>
               <Link
-                href={`/about-us`}
+                href={`/contact-us`}
                 className="tf-btn style-1 bg-on-suface-container"
               >
-                <span> About Us </span>
+                <span> Contact Us </span>
               </Link>
             </div>
           </div>
-          <div className="col-lg-4">
+          {/* <div className="col-lg-4">
             <div className="about-content-right p-0">
               <div className="counter-item">
                 <div className="counter">
@@ -110,7 +110,7 @@ export default function About() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

@@ -34,7 +34,7 @@ export default function Services() {
                 </div>
                 <h6>
                   <a href="#" className="name-industry">
-                    Financial Services
+                    KidzMondo
                   </a>
                 </h6>
               </div>
@@ -52,7 +52,7 @@ export default function Services() {
                 </div>
                 <h6>
                   <a href="#" className="name-industry">
-                    Healthcare
+                    The Escape Park & Resort
                   </a>
                 </h6>
               </div>
@@ -98,7 +98,7 @@ export default function Services() {
                 </div>
                 <h6>
                   <a href="#" className="name-industry">
-                    Technology
+                    Karnavali
                   </a>
                 </h6>
               </div>
@@ -116,7 +116,7 @@ export default function Services() {
                 </div>
                 <h6>
                   <a href="#" className="name-industry">
-                    Energy
+                    Star District
                   </a>
                 </h6>
               </div>
@@ -134,7 +134,7 @@ export default function Services() {
                 </div>
                 <h6>
                   <a href="#" className="name-industry">
-                    Logistics
+                    Kidz Academy
                   </a>
                 </h6>
               </div>
@@ -152,7 +152,7 @@ export default function Services() {
                 </div>
                 <h6>
                   <a href="#" className="name-industry">
-                    Manufacturing
+                    KM Innovation Center
                   </a>
                 </h6>
               </div>
@@ -170,7 +170,7 @@ export default function Services() {
                 </div>
                 <h6>
                   <a href="#" className="name-industry">
-                    Real Estate
+                    Urban Village
                   </a>
                 </h6>
               </div>
@@ -188,7 +188,7 @@ export default function Services() {
                 </div>
                 <h6>
                   <a href="#" className="name-industry">
-                    Retail
+                    BOWL N ROCK
                   </a>
                 </h6>
               </div>
@@ -198,7 +198,7 @@ export default function Services() {
               </div>
             </div>
           </div>
-          <div className="col-lg-4 col-md-6">
+          {/* <div className="col-lg-4 col-md-6">
             <div className="industry-item style-2">
               <div className="top">
                 <div className="icon">
@@ -255,7 +255,7 @@ export default function Services() {
                 research, development, and market success.
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

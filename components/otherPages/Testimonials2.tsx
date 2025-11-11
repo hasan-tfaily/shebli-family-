@@ -20,9 +20,9 @@ export default function Testimonials2() {
         <div className="row">
           <div className="col-12">
             <div className="heading-section text-center">
-              <a href="#" className="tag label text-btn-uppercase">
+              {/* <a href="#" className="tag label text-btn-uppercase">
                 Testimonials
-              </a>
+              </a> */}
               <h3 className="title-section mb-12">
                  Our Ventures
               </h3>

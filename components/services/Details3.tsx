@@ -12,7 +12,7 @@ export default function Details3() {
     <div className="tf-container position-relative tf-spacing-2">
       <div className="row justify-content-center">
         <div className="col-lg-10">
-          <div className="overflow-auto">
+          {/* <div className="overflow-auto">
             <ul className="menu-sidebar-tab style-2 mb-60" role="tablist">
               <li className="nav-tab-item" role="presentation">
                 <h6>
@@ -48,11 +48,11 @@ export default function Details3() {
                 </h6>
               </li>
             </ul>
-          </div>
+          </div> */}
           <div className="tab-content">
             <div className="tab-pane active show" id="tab-1" role="tabpanel">
               <div className="service-details-content">
-                <div className="image-details image mb-60">
+                {/* <div className="image-details image mb-60">
                   <Image
                     src="/image/section/img-details-service-1.jpg"
                     alt=""
@@ -60,7 +60,7 @@ export default function Details3() {
                     width={850}
                     height={512}
                   />
-                </div>
+                </div> */}
                 <div className="detalis-content mb-60" id="menu-sidebar-1">
                   <Solutions />
                 </div>

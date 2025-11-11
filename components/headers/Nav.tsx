@@ -84,7 +84,7 @@ export default function Nav() {
         </ul>
       </li>
 
-      <li
+      {/* <li
         className={`menu-item menu-item-has-children position-relative ${
           isMenuParentActive(caseStudyLinks) ? "current-menu-item" : ""
         }`}
@@ -100,7 +100,7 @@ export default function Nav() {
             </li>
           ))}
         </ul>
-      </li>
+      </li> */}
 
       <li
         className={`menu-item menu-item-has-children position-relative ${
@@ -128,6 +128,30 @@ export default function Nav() {
       >
         <Link href="/testimonials" className="item-link">Our Ventures</Link>
       </li>
+
+      <li
+  className={`menu-item ${
+    isMenuActive({ href: "/industries" } as MenuLink) ? "current-menu-item" : ""
+  }`}
+>
+  <Link href="/industries" className="item-link">Our Project</Link>
+</li>
+
+{/* ✅ NEW: Franchise & Partnership -> /services-details-3 */}
+<li
+  className={`menu-item ${
+    isMenuActive({ href: "/services-details-3" } as MenuLink)
+      ? "current-menu-item"
+      : ""
+  }`}
+>
+  <Link href="/services-details-3" className="item-link">
+    Franchise &amp; Partnership
+  </Link>
+</li>
+
+
+
 
       <li
         className={`menu-item menu-item-has-children position-relative ${

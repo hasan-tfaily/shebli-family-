@@ -20,21 +20,44 @@ export default function page() {
         <div className="tf-container">
           <div className="page-title-content">
             <Breadcumb pageName="Industries" />
-            <h2 className="title-page-title">Industries</h2>
+            <h2 className="title-page-title">Our Projects</h2>
             <div className="sub-title body-2">
-              Explore success stories from businesses that achieved growth
-              through our tailored
-              <br />
-              strategies and solutions.
+              Creating Parks of Imagination, Edutainment Fun
+            
             </div>
           </div>
         </div>
       </div>
       <div className="main-content">
         <Services />
-        <Contact />
-        <Awards parentClass="section-awards h-1 tf-spacing-18" />
-        <Cta />
+        {/* <Contact /> */}
+        {/* <Awards parentClass="section-awards h-1 tf-spacing-18" /> */}
+        {/* <Cta /> */}
+
+
+
+        <section className="section-cta h-2 section-one-page" id="cta">
+      <div className="tf-container">
+        <div className="row">
+          <div className="col-12">
+            <div className="cta-inner style-2">
+              <div className="cta-content">
+                <h4 className="title-content">
+                 Start your journey with us 
+                </h4>
+                <Link
+                  href={`/contact-us`}
+                  className="tf-btn style-1 bg-white text-center"
+                >
+                  <span> Franchise Opportunities </span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
       </div>
     </>
   );

@@ -20,18 +20,19 @@ export default function Features() {
               />
             </div>
           </div>
+
           <div className="col-xl-6">
             <div className="section-content ml-15">
               <div className="heading-section">
                 <div className="wow fadeInUp">
                   <a href="#" className="tag label text-btn-uppercase bg-white">
-                    Why Choose us?
+                    Partnership
                   </a>
                 </div>
-                <h3 className="wow fadeInUp mb-12">
-                  Why Choose Us for Your <br />
-                  Digital Transformation?
-                </h3>
+
+                <h3 className="wow fadeInUp mb-12">Why Partner With Us</h3>
+
+                {/* 
                 <div className="sub-title body-2 wow fadeInUp">
                   We offer unparalleled expertise and tailored solutions to
                   navigate your digital journey. Our team combines deep industry
@@ -39,7 +40,9 @@ export default function Features() {
                   results. Partner with us to experience innovation, efficiency,
                   and sustainable growth.
                 </div>
+                */}
               </div>
+
               <div className="cols g-10 mb-36">
                 <div className="benefit-lists">
                   <div className="benefit-items">
@@ -47,27 +50,72 @@ export default function Features() {
                       <i className="icon-checkbox" />
                     </div>
                     <div className="title wow fadeInUp" data-wow-delay=".1s">
-                      Expert Team Top professionals
-                      <br />
-                      in digital transformation
+                      Proven operational success in MENA.
                     </div>
                   </div>
+
                   <div className="benefit-items">
                     <div className="icon wow fadeInUp">
                       <i className="icon-checkbox" />
                     </div>
                     <div className="title wow fadeInUp" data-wow-delay=".1s">
-                      Innovative Tech Cutting-edge technology for results
+                      High-return franchise model with CSR value.
                     </div>
                   </div>
-                </div>
-                <div className="benefit-lists">
+
+                  <div className="benefit-items">
+                    <div className="icon wow fadeInUp">
+                      <i className="icon-checkbox" />
+                    </div>
+                    <div className="title wow fadeInUp" data-wow-delay=".1s">
+                      Comprehensive training and launch support.
+                    </div>
+                  </div>
+
+                  <div className="benefit-items">
+                    <div className="icon wow fadeInUp">
+                      <i className="icon-checkbox" />
+                    </div>
+                    <div className="title wow fadeInUp" data-wow-delay=".1s">
+                      Strategic partnerships and sponsorship potential.
+                    </div>
+                  </div>
+
+                  <div className="benefit-items">
+                    <div className="icon wow fadeInUp">
+                      <i className="icon-checkbox" />
+                    </div>
+                    <div className="title wow fadeInUp" data-wow-delay=".1s">
+                      Turnkey setup process and design guidance.
+                    </div>
+                  </div>
+
+                  <div className="benefit-items">
+                    <div className="icon wow fadeInUp">
+                      <i className="icon-checkbox" />
+                    </div>
+                    <div className="title wow fadeInUp" data-wow-delay=".1s">
+                      End‑to‑end marketing and performance tools.
+                    </div>
+                  </div>
+
+                  {/* item 6 (kept as requested) */}
+                  <div className="benefit-items">
+                    <div className="icon wow fadeInUp">
+                      <i className="icon-checkbox" />
+                    </div>
+                    <div className="title wow fadeInUp" data-wow-delay=".1s">
+                      High-return franchise model with CSR value.
+                    </div>
+                  </div>
+
+                  {/*
                   <div className="benefit-items">
                     <div className="icon wow fadeInUp" data-wow-delay=".2s">
                       <i className="icon-checkbox" />
                     </div>
                     <div className="title wow fadeInUp" data-wow-delay=".3s">
-                      Custom Solutions Strategies tailored to your needs
+                      Comprehensive training and launch support.
                     </div>
                   </div>
                   <div className="benefit-items">
@@ -75,26 +123,21 @@ export default function Features() {
                       <i className="icon-checkbox" />
                     </div>
                     <div className="title wow fadeInUp" data-wow-delay=".3s">
-                      Proven Success Track record
-                      <br />
-                      of driving growth
+                      Strategic partnerships and sponsorship potential.
                     </div>
                   </div>
+                  */}
                 </div>
               </div>
-              <div className="wow fadeInUp">
-                <Link
-                  href={`/contact-us`}
-                  className="tf-btn style-1 bg-on-suface-container"
-                >
-                  <span> Schedule A Consultation </span>
-                </Link>
-              </div>
+
+              
             </div>
           </div>
         </div>
       </div>
-      <div className="tf-container position-relative">
+
+      {/* Counters */}
+      {/* <div className="tf-container position-relative">
         <div className="row">
           <div className="col-12">
             <div className="wg-counter justify-content-between">
@@ -117,7 +160,7 @@ export default function Features() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }
