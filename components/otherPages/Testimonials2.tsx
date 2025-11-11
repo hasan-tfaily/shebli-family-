@@ -11,7 +11,7 @@ export default function Testimonials2() {
     if (isLoadedMore) {
       setFilteres(testimonials4);
     } else {
-      setFilteres(testimonials4.slice(0, 9));
+      setFilteres(testimonials4.slice(0, 3));
     }
   }, [isLoadedMore]);
   return (
@@ -24,11 +24,10 @@ export default function Testimonials2() {
                 Testimonials
               </a>
               <h3 className="title-section mb-12">
-                Proven Results You Can See
+                 Our Ventures
               </h3>
               <div className="sub-title body-2">
-                See the impact of our solutions through clear, measurable
-                results.
+                Where imagination and education unite to build tomorrow’s thinkers.
               </div>
             </div>
           </div>
@@ -40,19 +39,19 @@ export default function Testimonials2() {
                 <div className="testimonial-top">
                   <div className="counter-item">
                     <div className="counter">
-                      <div className="number-counter">
+                      {/* <div className="number-counter">
                         <h4 className="number odometer color-primary">
                           <OdometerComponent max={item.percentage} />
                         </h4>
                         <h4 className="plus color-primary">%</h4>
-                      </div>
+                      </div> */}
                       <h5 className="text">{item.label}</h5>
                     </div>
                   </div>
                 </div>
                 <div className="item-content">
                   <div className="text">{item.text}</div>
-                  <div className="info-user">
+                  {/* <div className="info-user">
                     <div className="image">
                       <Image
                         src={item.imgSrc}
@@ -70,13 +69,13 @@ export default function Testimonials2() {
                         {item.position}
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
           ))}
         </div>
-        {!isLoadedMore ? (
+        {/* {!isLoadedMore ? (
           <div className="row">
             <div className="col-12">
               <div
@@ -91,7 +90,7 @@ export default function Testimonials2() {
           </div>
         ) : (
           ""
-        )}
+        )} */}
       </div>
     </section>
   );

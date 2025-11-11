@@ -120,13 +120,13 @@ export default function Nav() {
         </ul>
       </li>
 
-      {/* Top-level About Us */}
+      {/* ✅ NEW: top-level Our Ventures -> /testimonials */}
       <li
         className={`menu-item ${
-          isMenuActive({ href: "/about-us" } as MenuLink) ? "current-menu-item" : ""
+          isMenuActive({ href: "/testimonials" } as MenuLink) ? "current-menu-item" : ""
         }`}
       >
-        <Link href="/about-us" className="item-link">About Us</Link>
+        <Link href="/testimonials" className="item-link">Our Ventures</Link>
       </li>
 
       <li
@@ -163,6 +163,14 @@ export default function Nav() {
             </li>
           ))}
         </ul>
+      </li>
+
+      <li
+        className={`menu-item ${
+          isMenuActive({ href: "/about-us" } as MenuLink) ? "current-menu-item" : ""
+        }`}
+      >
+        <Link href="/about-us" className="item-link">About Us</Link>
       </li>
 
       <li

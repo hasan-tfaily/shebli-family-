@@ -5,6 +5,7 @@ import Testimonials2 from "@/components/otherPages/Testimonials2";
 import React from "react";
 import Breadcumb from "@/components/common/Breadcumb";
 import { Metadata } from "next";
+import About from "@/components/homes/insurance-consultancy/About";
 export const metadata: Metadata = {
   title:
     "Testimonials || FinWice - Business & Finance Consulting - React Nextjs Template",
@@ -30,7 +31,8 @@ export default function page() {
       </div>
       <div className="main-content">
         <Testimonials2 />
-        <Contact />
+        {/* <Contact /> */}
+        <About/>
       </div>
     </>
   );
