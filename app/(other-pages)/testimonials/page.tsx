@@ -20,12 +20,11 @@ export default function page() {
         <div className="tf-container">
           <div className="page-title-content">
             <Breadcumb pageName="Testimonials" />
+            <h2 className="title-page-title">Our Ventures</h2>
             {/* <h2 className="title-page-title">Testimonials</h2> */}
             <div className="sub-title body-2">
-              Hear from our clients and discover how our financial solutions
-              have made a
+              Where imagination and education unite to build tomorrow’s thinkers.
               <br />
-              positive impact on their businesses and success stories.
             </div>
           </div>
         </div>
@@ -35,7 +34,7 @@ export default function page() {
         <About/>
 
          <section className="section-cta h-2 section-one-page" id="cta">
-              <div className="tf-container">
+              {/* <div className="tf-container">
                 <div className="row">
                   <div className="col-12">
                     <div className="cta-inner style-2">
@@ -53,7 +52,7 @@ export default function page() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </section>
         
       </div>

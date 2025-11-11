@@ -29,7 +29,7 @@ export default function Nav() {
 
   return (
     <>
-      <li
+      {/* <li
         className={`menu-item menu-item-has-children ${
           isMenuParentActive(homeItems) ? "current-menu-item" : ""
         }`}
@@ -64,9 +64,16 @@ export default function Nav() {
             ))}
           </ul>
         </div>
+      </li> */}
+       <li
+        className={`menu-item ${
+          isMenuActive({ href: "/" } as MenuLink) ? "current-menu-item" : ""
+        }`}
+      >
+        <Link href="/" className="item-link">Home</Link>
       </li>
 
-      <li
+      {/* <li
         className={`menu-item menu-item-has-children position-relative ${
           isMenuParentActive(serviceLinks) ? "current-menu-item" : ""
         }`}
@@ -82,7 +89,7 @@ export default function Nav() {
             </li>
           ))}
         </ul>
-      </li>
+      </li> */}
 
       {/* <li
         className={`menu-item menu-item-has-children position-relative ${
@@ -102,7 +109,7 @@ export default function Nav() {
         </ul>
       </li> */}
 
-      <li
+      {/* <li
         className={`menu-item menu-item-has-children position-relative ${
           isMenuParentActive(aboutLinks) ? "current-menu-item" : ""
         }`}
@@ -118,7 +125,7 @@ export default function Nav() {
             </li>
           ))}
         </ul>
-      </li>
+      </li> */}
 
       {/* ✅ NEW: top-level Our Ventures -> /testimonials */}
       <li
@@ -153,7 +160,7 @@ export default function Nav() {
 
 
 
-      <li
+      {/* <li
         className={`menu-item menu-item-has-children position-relative ${
           isMenuParentActive(productLinks) ? "current-menu-item" : ""
         }`}
@@ -169,9 +176,9 @@ export default function Nav() {
             </li>
           ))}
         </ul>
-      </li>
+      </li> */}
 
-      <li
+      {/* <li
         className={`menu-item menu-item-has-children position-relative ${
           isMenuParentActive(blogLinks) ? "current-menu-item" : ""
         }`}
@@ -187,7 +194,7 @@ export default function Nav() {
             </li>
           ))}
         </ul>
-      </li>
+      </li> */}
 
       <li
         className={`menu-item ${
