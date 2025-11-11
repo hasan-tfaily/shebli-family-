@@ -28,18 +28,19 @@ export default function Details2({ blog }: Details2Props) {
         <div className="row">
           <div className="col-12">
             <div className="blog-content blog-details-2-content blog-details-content">
-              <div className="blog-details-top">
-                <a href="#" className="tag label text-btn-uppercase">
+              <div className="blog-details-top" style={{backgroundColor: '#FFD4D4', margin:'0px 60px 0px 60px',}}>
+                {/* <a href="#" className="tag label text-btn-uppercase">
                   Finance
-                </a>
-                <h2>
-                  {blog.title?.split(" ").slice(0, 4).join(" ") ??
+                </a> */}
+                <h2 style={{color: '#000000', fontFamily: 'Arial, Helvetica, sans-serif', fontSize: '32px', fontWeight: 'bold', textAlign: 'center', padding: '20px 0', margin: 0}}>
+                  {/* {blog.title?.split(" ").slice(0, 4).join(" ") ??
                     "How to Effectively Manage"}{" "}
                   <br />
                   {blog.title?.split(" ").slice(4).join(" ") ??
-                    "Business Cash Flow"}
+                    "Business Cash Flow"} */}
+                    KidzMondo
                 </h2>
-                <div className="meta">
+                {/* <div className="meta">
                   <a href="#" className="meta-content">
                     <div className="icon">
                       <i className="icon-calendarBlank" />
@@ -52,7 +53,7 @@ export default function Details2({ blog }: Details2Props) {
                     </div>
                     <div className="text body-2">Tony Nguyen</div>
                   </a>
-                </div>
+                </div> */}
               </div>
               <div className="image-blog">
                 <Image
