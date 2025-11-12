@@ -1,4 +1,4 @@
-// KidzMondo
+//KidzAcademy
 
 import Image from "next/image";
 import React from "react";
@@ -14,7 +14,7 @@ interface Details2Props {
   blog: Blog;
 }
 
-export default function Details2({ blog }: Details2Props) {
+export default function KidzAcademy({ blog }: Details2Props) {
   return (
     <>
       <div className="image img-top">
@@ -66,7 +66,7 @@ export default function Details2({ blog }: Details2Props) {
                   height={512}
                 />
               </div>
-              <div className="desc-blog" >
+              <div className="desc-blog">
                 <p className="body-2">
                   In today's rapidly changing economic landscape, volatility is
                   the new normal. Markets are affected by global events,

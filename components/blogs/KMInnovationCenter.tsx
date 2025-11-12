@@ -1,5 +1,3 @@
-// KidzMondo
-
 import Image from "next/image";
 import React from "react";
 import CommentForm from "./CommentForm";
@@ -14,7 +12,7 @@ interface Details2Props {
   blog: Blog;
 }
 
-export default function Details2({ blog }: Details2Props) {
+export default function KMInnovationCenter({ blog }: Details2Props) {
   return (
     <>
       <div className="image img-top">
@@ -30,7 +28,7 @@ export default function Details2({ blog }: Details2Props) {
         <div className="row">
           <div className="col-12">
             <div className="blog-content blog-details-2-content blog-details-content">
-              <div className="blog-details-top" >
+              <div className="blog-details-top">
                 {/* <a href="#" className="tag label text-btn-uppercase">
                   Finance
                 </a> */}
@@ -66,7 +64,7 @@ export default function Details2({ blog }: Details2Props) {
                   height={512}
                 />
               </div>
-              <div className="desc-blog" >
+              <div className="desc-blog">
                 <p className="body-2">
                   In today's rapidly changing economic landscape, volatility is
                   the new normal. Markets are affected by global events,

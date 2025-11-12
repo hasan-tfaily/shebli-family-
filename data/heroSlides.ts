@@ -18,22 +18,22 @@ export const slides = [
 
 export const slides2 = [
   {
-    title: "Transform Your\nBrand Today",
+    title: "Shaping the Future of\nEdutainment & Family\nLeisure",
     subtitle:
-      "Revitalize your brand with innovative strategies that\ncaptivate your audience",
-    buttonText: "View All Services",
+    "Delivering impact for families, partners,\nand investors across MENA.",
+    buttonText: "Our brands",
   },
   {
-    title: "Reimagine Your\nBrand Today",
+    title: "Where Learning\nMeets Play",
     subtitle:
-      "Refresh your brand with smart strategies designed to connect with\naudiences and achieve results.",
-    buttonText: "View All Services",
+    "Building cities that inspire imagination,\nteamwork, and discovery in every child.",
+    buttonText: "Franchise",
   },
   {
-    title: "Ignite Your\nBrand’s Potential",
+    title: "Empowering the Next\nGeneration",
     subtitle:
-      "Transform your brand using bold ideas that inspire your audience and\ngenerate measurable success.",
-    buttonText: "View All Services",
+      "We create environments where curiosity\ngrows and dreams take flight.",
+    buttonText: "Investor Relations",
   },
 ];
 

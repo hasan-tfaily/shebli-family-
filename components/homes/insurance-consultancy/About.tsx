@@ -19,11 +19,11 @@ export default function About() {
         </div>
         <div className="section-about-content">
           <div className="heading-section style-color-white mb-60">
-            <div className="wow fadeInUp">
+            {/* <div className="wow fadeInUp">
               <a href="#" className="tag label text-btn-uppercase bg-white">
                 WE ARE FinWice
               </a>
-            </div>
+            </div> */}
             <h2 className="mb-28 title-section wow fadeInUp">
               Empowering Your Business Success
             </h2>
@@ -33,14 +33,15 @@ export default function About() {
               professionals drive growth and guide you through challenges to
               achieve success.
             </div>
-            <div className="wow fadeInUp">
+           
+            {/* <div className="wow fadeInUp">
               <Link
                 href={`/about-us`}
                 className="tf-btn style-1 bg-white bg-white-style-2"
               >
                 <span> About Us </span>
               </Link>
-            </div>
+            </div> */}
           </div>
           <div className="wg-counter justify-content-between">
             {counters2.map((counter, index) => (

@@ -1,9 +1,10 @@
 "use client";
-import { slides2 } from "@/data/heroSlides";
+import { slides2} from "@/data/heroSlides";
 import Link from "next/link";
 import React from "react";
 import { Autoplay, EffectFade, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+
 
 export default function Hero() {
   return (
@@ -54,7 +55,7 @@ export default function Hero() {
                         href={`/our-services-1`}
                         className="tf-btn style-1 bg-white"
                       >
-                        <span>View All Services</span>
+                        <span>{slide.buttonText}</span>
                       </Link>
                     </div>
                   </div>
@@ -70,3 +71,4 @@ export default function Hero() {
     </Swiper>
   );
 }
+
