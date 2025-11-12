@@ -197,6 +197,13 @@ export default function Nav() {
       </li> */}
       <li
   className={`menu-item ${
+    isMenuActive({ href: "/services" } as MenuLink) ? "current-menu-item" : ""
+  }`}
+>
+  <Link href="/services" className="item-link">services</Link>
+</li>
+      <li
+  className={`menu-item ${
     isMenuActive({ href: "/blog" } as MenuLink) ? "current-menu-item" : ""
   }`}
 >
