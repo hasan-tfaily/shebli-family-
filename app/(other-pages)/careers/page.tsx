@@ -6,6 +6,8 @@ import Map from "@/components/otherPages/Map";
 import React from "react";
 import Breadcumb from "@/components/common/Breadcumb";
 import { Metadata } from "next";
+import Services2 from "@/components/homes/digital-transformation/Services2";
+import Career from "@/components/otherPages/Career";
 export const metadata: Metadata = {
   title:
     "Contact Us || FinWice - Business & Finance Consulting - React Nextjs Template",
@@ -18,20 +20,22 @@ export default function page() {
       <div className="page-title style-1 bg-img-13">
         <div className="tf-container position-relative">
           <div className="page-title-content">
-            <Breadcumb pageName="Contact Us" />
-            <h2 className="title-page-title">Contact Us</h2>
+            <Breadcumb pageName="Carrer" />
+            <h2 className="title-page-title">Join Our Team</h2>
             <div className="sub-title body-2">
-              Let’s Build the Future Together
+              Build the Future of Learning and Play
               <br />
-              strategies and solutions.
+              
             </div>
           </div>
         </div>
       </div>
       <div className="main-content">
-        <Contact />
+        <Services2/>
+        <Career />
+        {/* <Contact />
         <Map />
-        <Locations />
+        <Locations /> */}
       </div>
     </>
   );

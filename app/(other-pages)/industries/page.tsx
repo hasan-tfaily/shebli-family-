@@ -23,7 +23,7 @@ export default function page() {
             <h2 className="title-page-title">Our Projects</h2>
             <div className="sub-title body-2">
               Creating Parks of Imagination, Edutainment Fun
-            
+
             </div>
           </div>
         </div>

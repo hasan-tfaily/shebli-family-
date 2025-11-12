@@ -25,11 +25,9 @@ export default function Contact() {
                     Get in Touch with Us
                   </h3>
                   <div className="sub-title body-2 color-on-suface-container wow fadeInUp">
-                    Reach out today to discuss how we can support your business
-                    goals. Our team is
+                    Whether you’re a parent, partner, or investor, we’d love to hear from you. 
                     <br />
-                    ready to provide answers, offer solutions, and start your
-                    journey toward success.
+                     Select your topic below and our team will respond promptly.
                   </div>
                 </div>
                 <div className="cols">

@@ -9,16 +9,14 @@ export default function Career() {
             <div className="heading-section text-center">
               <div className="text-anime-wave-1">
                 <a href="#" className="tag label text-btn-uppercase bg-white">
-                  READ OUR BLOG
+                  Careers
                 </a>
               </div>
               <h3 className="text-anime-wave-1 mb-12">
                 Explore Career Opportunities
               </h3>
               <div className="sub-title body-2 text-anime-wave-1">
-                We’re expanding our team and looking for talented individuals
-                like you! Join us and contribute <br />
-                to a dynamic, growth-focused environment.
+                Didn’t find a role that fits? Send us your profile and we’ll get in touch.
               </div>
             </div>
             <div className="wg-according" id="According1">

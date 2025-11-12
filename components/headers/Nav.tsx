@@ -195,6 +195,30 @@ export default function Nav() {
           ))}
         </ul>
       </li> */}
+      <li
+  className={`menu-item ${
+    isMenuActive({ href: "/blog" } as MenuLink) ? "current-menu-item" : ""
+  }`}
+>
+  <Link href="/blog" className="item-link">Blog</Link>
+</li>
+      <li
+  className={`menu-item ${
+    isMenuActive({ href: "/Investor-Relations" } as MenuLink) ? "current-menu-item" : ""
+  }`}
+>
+  <Link href="/Investor-Relations" className="item-link">Investor Relations</Link>
+</li>
+
+
+<li
+  className={`menu-item ${
+    isMenuActive({ href: "/careers" } as MenuLink) ? "current-menu-item" : ""
+  }`}
+>
+  <Link href="/careers" className="item-link">Careers</Link>
+</li>
+
 
       <li
         className={`menu-item ${

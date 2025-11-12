@@ -193,13 +193,15 @@ export const caseStudiesData = [
     imgSrc: "/image/section/section-services-1.jpg",
     imgWidth: 585,
     imgHeight: 439,
-    title: "Retirement Planning",
+    title: "Why Kids Holding",
     description:
       "The financial sector, including banking and insurance, leverages digital technology to optimize transaction processes, enhance data security, and improve customer experiences.",
     benefits: [
-      "25% Higher Retention: Personalized solutions.",
-      "40% Efficiency Boost: Streamlined operations.",
-      "20% Revenue Growth: Data-driven results.",
+      "A culture built on creativity and collaboration.",
+      "Opportunities for professional growth and impact.",
+      "Meaningful work that shapes children’s futures.",
+      "Diverse and inclusive environment.",
+
     ],
     isActive: true,
   },

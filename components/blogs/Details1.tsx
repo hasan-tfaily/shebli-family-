@@ -205,15 +205,14 @@ export default function Details1() {
                 <div className="top-content">
                   <h5>
                     <a href="#" className="name">
-                      Tony Nguyen
+                      Kidz Holding Editorial Team
                     </a>
                   </h5>
                   <div className="number-follower">200 Follower</div>
                 </div>
               </div>
               <div className="introduce">
-                Tony Nguyen (@Jessie_ng) is a writer who draws. He’s the
-                Bestselling author of “Number of The Year”.
+                 Written by the Kidz Holding Editorial Team — passionate about creating spaces where children imagine, play, and become.
               </div>
               <div className="info-social">
                 <ul className="tf-social radius-50 style-border g-12 color-on-suface-container">
@@ -255,7 +254,7 @@ export default function Details1() {
                 </ul>
               </div>
             </div>
-            <div className="sidebar-item sidebar-content sidebar-categories">
+            {/* <div className="sidebar-item sidebar-content sidebar-categories">
               <h6 className="title-content">Categories</h6>
               <ul className="list">
                 <li className="item">
@@ -283,7 +282,7 @@ export default function Details1() {
                   <p>(32)</p>
                 </li>
               </ul>
-            </div>
+            </div> */}
             <div className="sidebar-item sidebar-content sidebar-recent-posts">
               <h6 className="title-content">Recent posts</h6>
               {postListItems.map((post, i) => (
@@ -310,11 +309,11 @@ export default function Details1() {
                 </div>
               ))}
             </div>
-            <div className="sidebar-item sidebar-content sidebar-newsletter">
+            {/* <div className="sidebar-item sidebar-content sidebar-newsletter">
               <h6 className="title-content">Subscribe Newsletter</h6>
               <NewsLetterForm placeholder="Email address" />
-            </div>
-            <div className="sidebar-item sidebar-content sidebar-tags">
+            </div> */}
+            {/* <div className="sidebar-item sidebar-content sidebar-tags">
               <h6 className="title-content">Tags</h6>
               <div className="tabs-list">
                 <a href="#" className="tabs-item caption-1">
@@ -345,7 +344,7 @@ export default function Details1() {
                   Consulting
                 </a>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -23,46 +23,31 @@ export default function Details1() {
               />
             </div>
             <div className="detalis-content mb-40">
-              <h4 className="title-content mb-16">Project Overview</h4>
+              <h4 className="title-content mb-16">Executive Summary:</h4>
               <div className="desc mb-16 body-2">
-                Our team worked with a mid-sized manufacturing client aiming to
-                streamline operations and boost efficiency across its production
-                processes. Faced with costly delays and resource allocation
-                challenges, the company sought a structured approach to reduce
-                bottlenecks and optimize output.
+                Kidz Holding bridges education and entertainment to create sustainable, profitable experiences for families and investors alike. Our portfolio continues to expand across the GCC and Levant with a clear roadmap toward new markets.
               </div>
             </div>
             <div className="detalis-content mb-40">
-              <h4 className="title-content mb-16">Our Approach</h4>
+              <h4 className="title-content mb-16">Performance Metrics:</h4>
               <div className="desc mb-20 body-2">
-                We conducted an in-depth operational audit to identify key areas
-                for improvement, analyzing workflow patterns and resource usage.
-                Our team introduced a combination of process automation,
-                employee retraining programs, and data-driven workflow
-                management tools. Additionally, we implemented real-time
-                tracking systems to monitor productivity and adjust operations
-                dynamically.
+                Attendance growth, revenue diversification, and school partnerships demonstrate long‑term stability and scalability.
               </div>
               <div className="mb-20">
-                <h6 className="mb-8">1. Comprehensive Operational Audit</h6>
+                <h6 className="mb-8">Governance & Board: </h6>
                 <div className="body-2 desc">
-                  We started with a thorough analysis of the client's production
-                  workflows to identify inefficiencies, bottlenecks, and areas
-                  for improvement. This step provided us with actionable
-                  insights into resource usage and process flow.
+                 Led by experienced industry professionals and advisors who ensure accountability, transparency, and strategic alignment.
                 </div>
               </div>
               <div className="mb-20">
                 <h6 className="mb-8">
-                  2. Process Optimization and Employee Training
+                  Pipeline & Expansion:
                 </h6>
                 <div className="body-2 desc">
-                  We implemented automation solutions to streamline repetitive
-                  tasks and introduced targeted training programs for employees,
-                  ensuring they adapted smoothly to the new workflows.
+                  New projects under evaluation in Riyadh, Cairo, and Abu Dhabi, supported by feasibility studies and local partnerships.
                 </div>
               </div>
-              <div className="mb-20">
+              {/* <div className="mb-20">
                 <h6 className="mb-8">
                   3. Real-Time Tracking and Workflow Management
                 </h6>
@@ -72,9 +57,9 @@ export default function Details1() {
                   the client to monitor productivity closely and optimize
                   resource allocation effectively.
                 </div>
-              </div>
+              </div> */}
             </div>
-            <div className="detalis-content mb-40">
+            {/* <div className="detalis-content mb-40">
               <h4 className="title-content mb-16">Growth Metrics Overview</h4>
               <div className="wg-box-chart">
                 <div className="top-wg-box-char">
@@ -131,10 +116,10 @@ export default function Details1() {
                     </div>
                   </div>
                 </div>
-                <AreaLineChart />
+                 <AreaLineChart /> 
               </div>
-            </div>
-            <div className="detalis-content mb-34">
+            </div> */}
+            {/* <div className="detalis-content mb-34">
               <h4 className="title-content mb-16">Results Achieved</h4>
               <div className="benefit-lists">
                 <div className="benefit-items">
@@ -183,8 +168,8 @@ export default function Details1() {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="pre-next-blog">
+            </div> */}
+            {/* <div className="pre-next-blog">
               <div className="pre pre-next-blog-item">
                 <a href="#" className="pre-next-btn">
                   PREVIOUS
@@ -210,38 +195,44 @@ export default function Details1() {
                   </a>
                 </h6>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="col-lg-4">
           <div className="tf-sidebar sidebar-details ml-50">
             <div className="sideber-details">
               <div className="case-details-box mb-40">
-                <h5 className="color-on-suface-container">Case Details</h5>
+                <h5 className="color-on-suface-container">Downloads:</h5>
                 <div className="box-item client flex justify-content-between align-items-center">
-                  <span className="color-on-suface-variant-1">Client:</span>
-                  <span className="text-btn color-on-suface-container">
+                  <span className="color-on-suface-variant-1">Investor Deck</span>
+                  {/* <span className="text-btn color-on-suface-container">
                     Avitex Company
-                  </span>
+                  </span> */}
                 </div>
                 <div className="box-item flex justify-content-between align-items-center">
-                  <span className="color-on-suface-variant-1">Tag:</span>
-                  <span className="text-btn color-on-suface-container">
+                  <span className="color-on-suface-variant-1">Annual Reports</span>
+                  {/* <span className="text-btn color-on-suface-container">
                     Planning, Estate
-                  </span>
+                  </span> */}
                 </div>
                 <div className="box-item flex justify-content-between align-items-center">
-                  <span className="color-on-suface-variant-1">Start Day:</span>
-                  <span className="text-btn color-on-suface-container">
+                  <span className="color-on-suface-variant-1">Press Releases</span>
+                  {/* <span className="text-btn color-on-suface-container">
                     10/26/2024
-                  </span>
+                  </span> */}
                 </div>
-                <div className="box-item flex justify-content-between align-items-center">
+                 <Link
+                  href={`/contact-us`}
+                  className="tf-btnN style-1 bg-white bg-white-style-2 w-full text-center"
+                >
+                  <span> Download Now </span>
+                </Link>
+                {/* <div className="box-item flex justify-content-between align-items-center">
                   <span className="color-on-suface-variant-1">Duration:</span>
                   <span className="text-btn color-on-suface-container number-month">
                     1 Month
                   </span>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="sidebar-contact sidebar-details">
@@ -251,7 +242,7 @@ export default function Details1() {
                     href={`/contact-us`}
                     className="tag label text-btn-uppercase color-white mb-16"
                   >
-                    Contact US
+                    Contact Us
                   </Link>
                   <h4 className="title-section mb-1">Get In Touch</h4>
                   <div className="sub-title caption-1">
@@ -259,8 +250,9 @@ export default function Details1() {
                     <br />
                     support your business goals.
                   </div>
+                 
                 </div>
-                <div className="list-box-contact style-column mb-28">
+                {/* <div className="list-box-contact style-column mb-28">
                   <div className="box-contact-item">
                     <div className="icon">
                       <i className="icon-MapPin" />
@@ -354,12 +346,12 @@ export default function Details1() {
                       </a>
                     </div>
                   </div>
-                </div>
+                </div> */}
                 <Link
                   href={`/contact-us`}
                   className="tf-btn style-1 bg-white bg-white-style-2 w-full text-center"
                 >
-                  <span> Contact Us </span>
+                  <span> Contact IR </span>
                 </Link>
               </div>
             </div>
