@@ -126,23 +126,26 @@ export default function Services() {
           </div>
 
           {/* Star District */}
-          <div className="col-lg-4 col-md-6">
-            <div className="industry-item style-2">
-              <div className="top">
-                <div className="icon">
-                  <i className="icon-LightbulbFilament" />
-                </div>
-                <h6>
-                  <span className="name-industry">Star District</span>
-                </h6>
-              </div>
-              <div className="desc">
-                An interactive entertainment center where young talents discover
-                their passion for art, music, fashion, and performance in a
-                world built for stars.
-              </div>
-            </div>
-          </div>
+         <div className="col-lg-4 col-md-6">
+  <Link
+    href="/projects/StarDistrict"
+    className="industry-item style-2 block no-underline"
+  >
+    <div className="top">
+      <div className="icon">
+        <i className="icon-LightbulbFilament" />
+      </div>
+      <h6>
+        <span className="name-industry">Star District</span>
+      </h6>
+    </div>
+    <div className="desc">
+      An interactive entertainment center where young talents discover
+      their passion for art, music, fashion, and performance in a
+      world built for stars.
+    </div>
+  </Link>
+</div>
 
           {/* Kidz Academy */}
           <div className="col-lg-4 col-md-6">

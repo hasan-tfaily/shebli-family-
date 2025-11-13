@@ -3,17 +3,8 @@ import Image from "next/image";
 import React from "react";
 
 
-interface Blog {
-  title?: string;
-  // Add other properties as needed
-}
 
-interface Details2Props {
-  blog: Blog;
-}
-
-export default function Karnavali({ blog }: Details2Props) {
-  return (
+export default function KarnavaliPage() {  return (
     <>
       <div className="image img-top">
         <Image
