@@ -1,7 +1,7 @@
+
 import Image from "next/image";
 import React from "react";
-import CommentForm from "./CommentForm";
-import Comments from "./Comments";
+
 
 interface Blog {
   title?: string;
@@ -12,7 +12,7 @@ interface Details2Props {
   blog: Blog;
 }
 
-export default function KidzMondo({ blog }: Details2Props) {
+export default function Karnavali({ blog }: Details2Props) {
   return (
     <>
       <div className="image img-top">

@@ -34,40 +34,40 @@ export default function About() {
               achieve success.
             </div>
 
-             <div className="benefit-lists mb-32">
-                <div className="benefit-items style-small mb-16">
-                  <div className="icon wow fadeInUp">
-                    <i className="icon-checkbox" />
-                  </div>
-                  <div className="title wow fadeInUp" data-wow-delay=".1s" style={{color: "white"}}>
-                    Operational excellence and quality assurance
-                  </div>
+            <div className="benefit-lists mb-32">
+              <div className="benefit-items style-small mb-16">
+                <div className="icon wow fadeInUp">
+                  <i className="icon-checkbox" />
                 </div>
-                <div className="benefit-items style-small mb-16">
-                  <div className="icon wow fadeInUp">
-                    <i className="icon-checkbox" />
-                  </div>
-                  <div className="title wow fadeInUp" data-wow-delay=".1s" style={{color: "white"}}>
-                    Safety and compliance leadership
-                  </div>
-                </div>
-                <div className="benefit-items style-small mb-16">
-                  <div className="icon wow fadeInUp">
-                    <i className="icon-checkbox" />
-                  </div>
-                  <div className="title wow fadeInUp" data-wow-delay=".1s" style={{color: "white"}}>
-                    Certified educational curriculum
-                  </div>
-                </div>
-                <div className="benefit-items style-small mb-16">
-                  <div className="icon wow fadeInUp">
-                    <i className="icon-checkbox" />
-                  </div>
-                  <div className="title wow fadeInUp" data-wow-delay=".1s" style={{color: "white"}}>
-                    Strategic partnerships and sponsorship opportunities
-                  </div>
+                <div className="title wow fadeInUp" data-wow-delay=".1s" style={{ color: "white" }}>
+                  Operational excellence and quality assurance
                 </div>
               </div>
+              <div className="benefit-items style-small mb-16">
+                <div className="icon wow fadeInUp">
+                  <i className="icon-checkbox" />
+                </div>
+                <div className="title wow fadeInUp" data-wow-delay=".1s" style={{ color: "white" }}>
+                  Safety and compliance leadership
+                </div>
+              </div>
+              <div className="benefit-items style-small mb-16">
+                <div className="icon wow fadeInUp">
+                  <i className="icon-checkbox" />
+                </div>
+                <div className="title wow fadeInUp" data-wow-delay=".1s" style={{ color: "white" }}>
+                  Certified educational curriculum
+                </div>
+              </div>
+              <div className="benefit-items style-small mb-16">
+                <div className="icon wow fadeInUp">
+                  <i className="icon-checkbox" />
+                </div>
+                <div className="title wow fadeInUp" data-wow-delay=".1s" style={{ color: "white" }}>
+                  Strategic partnerships and sponsorship opportunities
+                </div>
+              </div>
+            </div>
             {/* <div className="wow fadeInUp">
               <Link
                 href={`/about-us`}
@@ -77,25 +77,25 @@ export default function About() {
               </Link>
             </div> */}
           </div>
-      <div className="wg-counter justify-content-between">
-  {counters2.map((counter, index) => (
-    <React.Fragment key={index}>
-      <div className="counter-item style-2">
-        <div className="counter">
-          <div className="number-counter">
-            <h3 className="number odometer" style={{ display: "flex", alignItems: "baseline", gap: 6 }}>
-              <OdometerComponent max={counter.value} />
-              {counter.suffix && <span className="suffix">{counter.suffix}</span>}
-            </h3>
-            <h3 className="plus">+</h3> {/* shows the plus for all, including the 5 m */}
+          <div className="wg-counter justify-content-between">
+            {counters2.map((counter, index) => (
+              <React.Fragment key={index}>
+                <div className="counter-item style-2">
+                  <div className="counter">
+                    <div className="number-counter">
+                      <h3 className="number odometer" style={{ display: "flex", alignItems: "baseline", gap: 6 }}>
+                        <OdometerComponent max={counter.value} />
+                        {counter.suffix && <span className="suffix">{counter.suffix}</span>}
+                      </h3>
+                      <h3 className="plus">+</h3> {/* shows the plus for all, including the 5 m */}
+                    </div>
+                    <p className="text text-btn-uppercase label">{counter.label}</p>
+                  </div>
+                </div>
+                {index !== counters2.length - 1 && <div className="line" />}
+              </React.Fragment>
+            ))}
           </div>
-          <p className="text text-btn-uppercase label">{counter.label}</p>
-        </div>
-      </div>
-      {index !== counters2.length - 1 && <div className="line" />}
-    </React.Fragment>
-  ))}
-</div>
 
         </div>
       </div>

@@ -1,19 +1,10 @@
+//Star District
 
 import Image from "next/image";
 import React from "react";
-import CommentForm from "./CommentForm";
-import Comments from "./Comments";
 
-interface Blog {
-  title?: string;
-  // Add other properties as needed
-}
 
-interface Details2Props {
-  blog: Blog;
-}
-
-export default function Karnavali({ blog }: Details2Props) {
+export default function StarDistrict({ blog }: Details2Props) {
   return (
     <>
       <div className="image img-top">
@@ -29,7 +20,7 @@ export default function Karnavali({ blog }: Details2Props) {
         <div className="row">
           <div className="col-12">
             <div className="blog-content blog-details-2-content blog-details-content">
-              <div className="blog-details-top" >
+              <div className="blog-details-top">
                 {/* <a href="#" className="tag label text-btn-uppercase">
                   Finance
                 </a> */}

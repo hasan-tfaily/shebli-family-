@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 export default function Services() {
   return (
@@ -8,9 +9,10 @@ export default function Services() {
           <div className="col-12">
             <div className="heading-section text-center">
               <div className="text-anime-wave-1">
-                <a href="#" className="tag label text-btn-uppercase">
+                {/* changed to span to avoid useless # link */}
+                <span className="tag label text-btn-uppercase">
                   industries we help
-                </a>
+                </span>
               </div>
               <h3 className="title-section text-anime-wave-1 mb-12">
                 Risk &amp; Compliance services tailored to
@@ -24,44 +26,61 @@ export default function Services() {
           </div>
         </div>
       </div>
+
       <div className="tf-container position-relative">
         <div className="row rg-20">
+          {/* KidzMondo */}
           <div className="col-lg-4 col-md-6">
-            <div className="industry-item style-2">
+            <Link
+              href="/projects/KidzMondo"
+              className="industry-item style-2 block no-underline"
+            >
               <div className="top">
                 <div className="icon">
                   <i className="icon-Bank" />
                 </div>
                 <h6>
-                  <a href="#" className="name-industry">
-                    KidzMondo
-                  </a>
+                  <span className="name-industry">KidzMondo</span>
                 </h6>
               </div>
               <div className="desc">
-                A child-sized city where learning meets play, empowering kids to explore real-world roles, earn, spend, and grow through hands-on discovery.
+                A child-sized city where learning meets play, empowering kids to
+                explore real-world roles, earn, spend, and grow through
+                hands-on discovery.
               </div>
-            </div>
+            </Link>
           </div>
+
+          {/* The Escape Park & Resort */}
           <div className="col-lg-4 col-md-6">
-            <div className="industry-item style-2">
+            <Link
+              href="/projects/TheEscapeParkandResort"
+              className="industry-item style-2 block no-underline"
+            >
               <div className="top">
                 <div className="icon">
                   <i className="icon-FirstAidKit" />
                 </div>
                 <h6>
-                  <a href="#" className="name-industry">
-                    The Escape Park & Resort
-                  </a>
+                  <span className="name-industry">
+                    The Escape Park &amp; Resort
+                  </span>
                 </h6>
               </div>
               <div className="desc">
-                A family destination blending leisure, education, and adventure offering multi-sensory nature experiences that inspire wellness and togetherness.
+                A family destination blending leisure, education, and adventure,
+                offering multi-sensory nature experiences that inspire wellness
+                and togetherness.
               </div>
-            </div>
+            </Link>
           </div>
+
+          {/* Karnavali */}
           <div className="col-lg-4 col-md-6">
-            <div className="industry-item style-2">
+            <Link
+              href="/projects/Karnavali"
+              className="industry-item style-2 block no-underline"
+            >
               <div className="top">
                 <div className="icon">
                   <svg
@@ -88,23 +107,25 @@ export default function Services() {
                       />
                     </g>
                     <defs>
-                      <clipPath>
+                      <clipPath id="clip0_9360_11765">
                         <rect width={32} height={32} fill="white" />
                       </clipPath>
                     </defs>
                   </svg>
                 </div>
                 <h6>
-                  <a href="#" className="name-industry">
-                    Karnavali
-                  </a>
+                  <span className="name-industry">Karnavali</span>
                 </h6>
               </div>
               <div className="desc">
-                A dynamic indoor carnival offering multi-activity entertainment that combines creativity, challenge, and pure fun for every family member.
+                A dynamic indoor carnival offering multi-activity entertainment
+                that combines creativity, challenge, and pure fun for every
+                family member.
               </div>
-            </div>
+            </Link>
           </div>
+
+          {/* Star District */}
           <div className="col-lg-4 col-md-6">
             <div className="industry-item style-2">
               <div className="top">
@@ -112,16 +133,18 @@ export default function Services() {
                   <i className="icon-LightbulbFilament" />
                 </div>
                 <h6>
-                  <a href="#" className="name-industry">
-                    Star District
-                  </a>
+                  <span className="name-industry">Star District</span>
                 </h6>
               </div>
               <div className="desc">
-                An interactive entertainment center where young talents discover their passion for art, music, fashion, and performance in a world built for stars.
+                An interactive entertainment center where young talents discover
+                their passion for art, music, fashion, and performance in a
+                world built for stars.
               </div>
             </div>
           </div>
+
+          {/* Kidz Academy */}
           <div className="col-lg-4 col-md-6">
             <div className="industry-item style-2">
               <div className="top">
@@ -129,16 +152,17 @@ export default function Services() {
                   <i className="icon-AirplaneTakeoff" />
                 </div>
                 <h6>
-                  <a href="#" className="name-industry">
-                    Kidz Academy
-                  </a>
+                  <span className="name-industry">Kidz Academy</span>
                 </h6>
               </div>
               <div className="desc">
-                A space where movement meets learning, helping children grow stronger, more confident, and creatively inspired.
+                A space where movement meets learning, helping children grow
+                stronger, more confident, and creatively inspired.
               </div>
             </div>
           </div>
+
+          {/* KM Innovation Center */}
           <div className="col-lg-4 col-md-6">
             <div className="industry-item style-2">
               <div className="top">
@@ -146,16 +170,17 @@ export default function Services() {
                   <i className="icon-Wrench" />
                 </div>
                 <h6>
-                  <a href="#" className="name-industry">
-                    KM Innovation Center
-                  </a>
+                  <span className="name-industry">KM Innovation Center</span>
                 </h6>
               </div>
               <div className="desc">
-                A tech-driven zone where kids explore coding, robotics, and design thinking through creative hands-on learning
+                A tech-driven zone where kids explore coding, robotics, and
+                design thinking through creative hands-on learning.
               </div>
             </div>
           </div>
+
+          {/* Urban Village */}
           <div className="col-lg-4 col-md-6">
             <div className="industry-item style-2">
               <div className="top">
@@ -163,16 +188,18 @@ export default function Services() {
                   <i className="icon-Warehouse" />
                 </div>
                 <h6>
-                  <a href="#" className="name-industry">
-                    Urban Village
-                  </a>
+                  <span className="name-industry">Urban Village</span>
                 </h6>
               </div>
               <div className="desc">
-                An integrated family complex where families, kids, and young adults come together to play, dine, shop, and unwind in one connected community.
+                An integrated family complex where families, kids, and young
+                adults come together to play, dine, shop, and unwind in one
+                connected community.
               </div>
             </div>
           </div>
+
+          {/* BOWL N ROCK */}
           <div className="col-lg-4 col-md-6">
             <div className="industry-item style-2">
               <div className="top">
@@ -180,74 +207,16 @@ export default function Services() {
                   <i className="icon-Basket" />
                 </div>
                 <h6>
-                  <a href="#" className="name-industry">
-                    BOWL N ROCK
-                  </a>
+                  <span className="name-industry">BOWL N ROCK</span>
                 </h6>
               </div>
               <div className="desc">
-                A child-sized city where learning meets play, empowering kids to explore real-world roles, earn, spend, and grow through hands-on discovery.
+                A child-sized city where learning meets play, empowering kids to
+                explore real-world roles, earn, spend, and grow through
+                hands-on discovery.
               </div>
             </div>
           </div>
-          {/* <div className="col-lg-4 col-md-6">
-            <div className="industry-item style-2">
-              <div className="top">
-                <div className="icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={33}
-                    height={32}
-                    viewBox="0 0 33 32"
-                    fill="none"
-                  >
-                    <g clipPath="url(#clip0_9360_14522)">
-                      <path
-                        d="M18.8431 5.65691L6.15582 18.3442C3.94692 20.5531 3.94692 24.1344 6.15582 26.3433L6.15671 26.3442C8.36561 28.5531 11.9469 28.5531 14.1559 26.3442L26.8431 13.6569C29.052 11.448 29.052 7.8667 26.8431 5.6578L26.8422 5.65691C24.6333 3.44801 21.052 3.44801 18.8431 5.65691Z"
-                        stroke="#24283E"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                      <path
-                        d="M12.5 12L20.5 20"
-                        stroke="#24283E"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                      <path
-                        d="M20.5 14L23.5 11"
-                        stroke="#24283E"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath>
-                        <rect
-                          width={32}
-                          height={32}
-                          fill="white"
-                          transform="translate(0.5)"
-                        />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </div>
-                <h6>
-                  <a href="#" className="name-industry">
-                    Pharmaceuticals
-                  </a>
-                </h6>
-              </div>
-              <div className="desc">
-                Supporting pharmaceutical companies with solutions that advance
-                research, development, and market success.
-              </div>
-            </div>
-          </div> */}
         </div>
       </div>
     </section>
