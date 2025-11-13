@@ -1,20 +1,8 @@
-//KidzAcademy
-
 import Image from "next/image";
 import React from "react";
-import CommentForm from "./CommentForm";
-import Comments from "./Comments";
 
-interface Blog {
-  title?: string;
-  // Add other properties as needed
-}
 
-interface Details2Props {
-  blog: Blog;
-}
-
-export default function KidzAcademy({ blog }: Details2Props) {
+export default function BowlNRock() {
   return (
     <>
       <div className="image img-top">
@@ -30,7 +18,7 @@ export default function KidzAcademy({ blog }: Details2Props) {
         <div className="row">
           <div className="col-12">
             <div className="blog-content blog-details-2-content blog-details-content">
-              <div className="blog-details-top" >
+              <div className="blog-details-top" style={{backgroundColor: '#FFD4D4', margin:'0px 60px 0px 60px',}}>
                 {/* <a href="#" className="tag label text-btn-uppercase">
                   Finance
                 </a> */}
@@ -66,7 +54,7 @@ export default function KidzAcademy({ blog }: Details2Props) {
                   height={512}
                 />
               </div>
-              <div className="desc-blog">
+              <div className="desc-blog" style={{backgroundColor: '#FFD4D4'}}>
                 <p className="body-2">
                   In today's rapidly changing economic landscape, volatility is
                   the new normal. Markets are affected by global events,
@@ -103,7 +91,7 @@ export default function KidzAcademy({ blog }: Details2Props) {
                   />
                 </div>
               </div>
-              <div className="list-desc">
+              <div className="list-desc" style={{backgroundColor: '#FFD4D4'}}>
                 <div className="desc-blog">
                   <h5 className="title-desc">
                     1. Conduct a Comprehensive Risk Assessment
