@@ -45,20 +45,17 @@ export default function Features() {
                 <div className="heading-section">
                   <div className="wow fadeInUp">
                     <a href="#" className="tag label text-btn-uppercase">
-                      Why Choose Us?
+                      Investor Deck Glimpse
                     </a>
                   </div>
                   <h3 className="title-section mb-12 wow fadeInUp">
-                    Why Choose Us FinWice?
+                   Why Investors Choose Kidz Holding
                   </h3>
                   <div className="sub-title body-2 color-on-suface-variant-1 wow fadeInUp">
-                    Our expert team delivers tailored, data-driven strategies
-                    that align with your unique business goals. With a proven
-                    track record, we ensure sustainable growth and enhanced
-                    brand visibility in a competitive market.
+                    With over a decade of successful operations and an expanding footprint across the MENA region, Kidz Holding represents a scalable, value‑driven opportunity in the growing family entertainment and education sector.
                   </div>
                 </div>
-                <div className="benefit-lists mb-30">
+                {/* <div className="benefit-lists mb-30">
                   <div className="benefit-items">
                     <div className="icon wow fadeInUp">
                       <i className="icon-checkbox" />
@@ -91,13 +88,13 @@ export default function Features() {
                       Collaborative Partnership for Shared Success
                     </div>
                   </div>
-                </div>
+                </div> */}
                 <div className="wow fadeInUp">
                   <Link
                     href={`/contact-us`}
                     className="tf-btn style-1 bg-on-suface-container"
                   >
-                    <span>Schedule A Consultation</span>
+                    <span>Download Investor Deck</span>
                   </Link>
                 </div>
               </div>

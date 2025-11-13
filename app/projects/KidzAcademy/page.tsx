@@ -46,19 +46,18 @@ export default function KidzAcademyPage() {
               </div>
 
               <div className="desc-blog">
+                <h5 className={"title-desc"}>Concept</h5>
                 <p className="body-2">
-                  KidzAcademy is the educational heart of Kidz Holding — a
-                  dedicated space where children learn by doing. Through
-                  hands-on workshops, interactive classes, and project-based
-                  activities, kids build confidence, creativity, and real-world
-                  skills in a fun, safe environment.
+                  Kidz Academy is a dance and movement center that brings kids together around dance and sports. This center is a destination that meets the physical interests of each of your children, be it sports, dance, or gymnastics. 
+                  <br/><br/>Kidz Academy offers cool extracurricular activities including dance classes, Taekwondo, MMA, gymnastics and even yoga for kids from age four to fifteen in a multitude of styles.
+                  <br/><br/>Children and teenagers who want something other than homework to look forward to in the afternoon can sign up for afternoon classes. They can also enroll for condensed programs during holidays and vacations.
                 </p>
-                <p className="body-2">
+                {/* <p className="body-2">
                   From science and technology to arts, languages, and life
                   skills, every experience at KidzAcademy is designed to spark
                   curiosity and nurture each child’s unique talents, while
                   helping them collaborate, communicate, and think critically.
-                </p>
+                </p> */}
               </div>
 
               <div className="cols-img">
@@ -85,17 +84,21 @@ export default function KidzAcademyPage() {
               <div className="list-desc">
                 <div className="desc-blog">
                   <h5 className="title-desc">
-                    1. Skill-Based Learning Experiences
+                    Benefits
                   </h5>
                   <p className="body-2">
-                    Children participate in workshops that focus on real skills:
-                    communication, problem-solving, creativity, and teamwork.
-                    Whether they’re coding, presenting, building, or performing,
-                    each activity is structured with clear learning outcomes.
+                    Classes at Kidz Academy help develop a healthy lifestyle and incorporate fitness as 
+                    a natural part of children's lives by making fitness fun. Classes incorporate key 
+                    childhood development elements like leadership, respect, team work, confidence, 
+                    self-esteem, memory, creativity, coordination, cultural awareness.
+                    <br/><br/>
+                    Kidz Academy provides children with a chance to spend their valuable time 
+                    productively, having fun while at the same time reaping physical and educational 
+                    benefits. 
                   </p>
                 </div>
 
-                <div className="desc-blog">
+                {/* <div className="desc-blog">
                   <h5 className="title-desc">
                     2. Balanced Focus on STEAM & Life Skills
                   </h5>
@@ -117,7 +120,7 @@ export default function KidzAcademyPage() {
                     welcoming and safe, allowing kids to explore freely while
                     parents feel confident and reassured.
                   </p>
-                </div>
+                </div> */}
               </div>
 
             </div>

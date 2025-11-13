@@ -27,183 +27,183 @@ export default function Page() {
       </div>
 
       <div className="main-content">
-        <section className="section-industry page-industry tf-spacing-2">
-          <div className="tf-container position-relative">
-            <div className="row">
-              <div className="col-12">
-                <div className="heading-section text-center">
-                  <div className="text-anime-wave-1">
-                    <a href="#" className="tag label text-btn-uppercase">
-                      industries we help
-                    </a>
-                  </div>
-                  <h3 className="title-section text-anime-wave-1 mb-12">
-                    Risk &amp; Compliance services tailored to
-                    <br />
-                    each industry.
-                  </h3>
-                  <div className="sub-title body-2 color-on-suface-container text-anime-wave-1">
-                    Tailored solutions to drive your business growth and
-                    success.
-                  </div>
-                </div>
-              </div>
-            </div>
+       <section className="section-industry page-industry tf-spacing-2">
+  <div className="tf-container position-relative">
+    <div className="row">
+      <div className="col-12">
+        <div className="heading-section text-center">
+          <div className="text-anime-wave-1">
+            <a href="#" className="tag label text-btn-uppercase">
+              industries we help
+            </a>
           </div>
-
-          <div className="tf-container position-relative">
-            <div className="row rg-20">
-              <div className="col-lg-4 col-md-6">
-                <div className="industry-item style-2">
-                  <div className="top">
-                    <div className="icon">
-                      <i className="icon-Bank" />
-                    </div>
-                    <h6>
-                      <a href="#" className="name-industry">
-                        Leisure Architecture
-                      </a>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-lg-4 col-md-6">
-                <div className="industry-item style-2">
-                  <div className="top">
-                    <div className="icon">
-                      <i className="icon-FirstAidKit" />
-                    </div>
-                    <h6>
-                      <a href="#" className="name-industry">
-                        Hospitality and Leisure Resort
-                      </a>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-lg-4 col-md-6">
-                <div className="industry-item style-2">
-                  <div className="top">
-                    <div className="icon">
-                      <svg
-                        width={32}
-                        height={32}
-                        viewBox="0 0 32 32"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true"
-                      >
-                        <g clipPath="url(#clip0_9360_11765)">
-                          <path
-                            d="M6 24L26 24C27.1046 24 28 23.1046 28 22L28 8C28 6.89543 27.1046 6 26 6L6 6C4.89543 6 4 6.89543 4 8L4 22C4 23.1046 4.89543 24 6 24Z"
-                            stroke="#24283E"
-                            strokeWidth="1.5"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                          <path
-                            d="M20 28H12"
-                            stroke="#24283E"
-                            strokeWidth="1.5"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </g>
-                        <defs>
-                          <clipPath id="clip0_9360_11765">
-                            <rect width="32" height="32" />
-                          </clipPath>
-                        </defs>
-                      </svg>
-                    </div>
-                    <h6>
-                      <a href="#" className="name-industry">
-                        Urban Realm and Leisure Landscape
-                      </a>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-lg-4 col-md-6">
-                <div className="industry-item style-2">
-                  <div className="top">
-                    <div className="icon">
-                      <i className="icon-LightbulbFilament" />
-                    </div>
-                    <h6>
-                      <a href="#" className="name-industry">
-                        Family Leisure Destinations
-                      </a>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-lg-4 col-md-6">
-                <div className="industry-item style-2">
-                  <div className="top">
-                    <div className="icon">
-                      <i className="icon-AirplaneTakeoff" />
-                    </div>
-                    <h6>
-                      <a href="#" className="name-industry">
-                        Shopping and Mixed-Use Environment
-                      </a>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-lg-4 col-md-6">
-                <div className="industry-item style-2">
-                  <div className="top">
-                    <div className="icon">
-                      <i className="icon-Wrench" />
-                    </div>
-                    <h6>
-                      <a href="#" className="name-industry">
-                        Education and Working Environment
-                      </a>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-lg-4 col-md-6">
-                <div className="industry-item style-2">
-                  <div className="top">
-                    <div className="icon">
-                      <i className="icon-Warehouse" />
-                    </div>
-                    <h6>
-                      <a href="#" className="name-industry">
-                        Food Court Living
-                      </a>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-lg-4 col-md-6">
-                <div className="industry-item style-2">
-                  <div className="top">
-                    <div className="icon">
-                      <i className="icon-Basket" />
-                    </div>
-                    <h6>
-                      <a href="#" className="name-industry">
-                        Playful Attractions
-                      </a>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <h3 className="title-section text-anime-wave-1 mb-12">
+            Risk &amp; Compliance services tailored to
+            <br />
+            each industry.
+          </h3>
+          <div className="sub-title body-2 color-on-suface-container text-anime-wave-1">
+            Tailored solutions to drive your business growth and success.
           </div>
-        </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div className="tf-container position-relative">
+    <div className="row rg-20">
+      <div className="col-lg-4 col-md-6">
+        <div className="industry-item style-2">
+          <div className="top">
+            <div className="icon">
+              <i className="icon-Bank" />
+            </div>
+            <h6>
+              <a href="#" className="name-industry">
+                Leisure Architecture
+              </a>
+            </h6>
+          </div>
+        </div>
+      </div>
+
+      <div className="col-lg-4 col-md-6">
+        <div className="industry-item style-2">
+          <div className="top">
+            <div className="icon">
+              <i className="icon-FirstAidKit" />
+            </div>
+            <h6>
+              <a href="#" className="name-industry">
+                Hospitality and<br />Leisure Resort
+              </a>
+            </h6>
+          </div>
+        </div>
+      </div>
+
+      <div className="col-lg-4 col-md-6">
+        <div className="industry-item style-2">
+          <div className="top">
+            <div className="icon">
+              <svg
+                width={32}
+                height={32}
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <g clipPath="url(#clip0_9360_11765)">
+                  <path
+                    d="M6 24L26 24C27.1046 24 28 23.1046 28 22L28 8C28 6.89543 27.1046 6 26 6L6 6C4.89543 6 4 6.89543 4 8L4 22C4 23.1046 4.89543 24 6 24Z"
+                    stroke="#24283E"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M20 28H12"
+                    stroke="#24283E"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_9360_11765">
+                    <rect width="32" height="32" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <h6>
+              <a href="#" className="name-industry">
+                Urban Realm and<br />Leisure Landscape
+              </a>
+            </h6>
+          </div>
+        </div>
+      </div>
+
+      <div className="col-lg-4 col-md-6">
+        <div className="industry-item style-2">
+          <div className="top">
+            <div className="icon">
+              <i className="icon-LightbulbFilament" />
+            </div>
+            <h6>
+              <a href="#" className="name-industry">
+                Family Leisure<br />Destinations
+              </a>
+            </h6>
+          </div>
+        </div>
+      </div>
+
+      <div className="col-lg-4 col-md-6">
+        <div className="industry-item style-2">
+          <div className="top">
+            <div className="icon">
+              <i className="icon-AirplaneTakeoff" />
+            </div>
+            <h6>
+              <a href="#" className="name-industry">
+                Shopping and Mixed-Use<br />Environment
+              </a>
+            </h6>
+          </div>
+        </div>
+      </div>
+
+      <div className="col-lg-4 col-md-6">
+        <div className="industry-item style-2">
+          <div className="top">
+            <div className="icon">
+              <i className="icon-Wrench" />
+            </div>
+            <h6>
+              <a href="#" className="name-industry">
+                Education and<br />Working Environment
+              </a>
+            </h6>
+          </div>
+        </div>
+      </div>
+
+      <div className="col-lg-4 col-md-6">
+        <div className="industry-item style-2">
+          <div className="top">
+            <div className="icon">
+              <i className="icon-Warehouse" />
+            </div>
+            <h6>
+              <a href="#" className="name-industry">
+                Food Court Living
+              </a>
+            </h6>
+          </div>
+        </div>
+      </div>
+
+      <div className="col-lg-4 col-md-6">
+        <div className="industry-item style-2">
+          <div className="top">
+            <div className="icon">
+              <i className="icon-Basket" />
+            </div>
+            <h6>
+              <a href="#" className="name-industry">
+                Playful Attractions
+              </a>
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
 
@@ -239,7 +239,7 @@ export default function Page() {
                   <div className="sub-title body-2 wow fadeInUp">
                     We apply a design and leisure thinking approach. We focus on our guests' expectations, the technological trends, and the market change. Our innovative and immersive experiences make us unique. Each project responds to the singular opportunities of the context, culture and characteristics of the community.
                   </div>
-                  <div className="cols g-10 mb-36">
+                  <div className="cols g-10 mb-36" style={{marginTop: "50px"}}>
                     <div className="benefit-lists">
                       <div className="benefit-items">
                         <div className="icon wow fadeInUp">

@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Brands() {
   return (
-    <section className="section-brand h-7 section-one-page" id="cta">
+    <section className="section-brand h-7 section-one-page" id="cta" style={{marginTop: "100px"}}>
       <div className="tf-container">
         <div className="row">
           <div className="col-12">

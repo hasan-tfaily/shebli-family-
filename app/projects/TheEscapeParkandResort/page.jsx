@@ -46,18 +46,27 @@ export default function TheEscapeParkandResort() {
               </div>
 
               <div className="desc-blog">
+                <h5 className="title-desc">Introduction</h5>
                 <p className="body-2">
-                  The Escape Park &amp; Resort is a hybrid destination that
-                  combines outdoor adventure, immersive storytelling, and family
-                  relaxation. Guests can enjoy interactive challenges, themed
-                  zones, and nature-inspired experiences in a safe and engaging
-                  environment.
+                  A green refuge, The Escape Park and Resort will transport you
+                  to a wonderland of greenery for some much-needed peace and
+                  relaxation for the entire family.
+                  <br />
+                  This concept is built with the intention of immersing
+                  children, adults and parents alike in a multi-sensory nature
+                  bonding experience, taking you away from the rush and buzz of
+                  a fast-paced technology oriented world.
                 </p>
+                <h5 className="title-desc">Objective</h5>
                 <p className="body-2">
-                  From escape-style missions and activity trails to leisure
-                  corners and dining options, the resort is designed to offer
-                  something for every family member while encouraging teamwork,
-                  creativity, and exploration.
+                  The Escape Park and Resort will allow your children a chance
+                  to participate in their favorite activities while playing
+                  outdoors, with all the health benefits associated with
+                  physical activity and engaging in nature. 
+                  <br />
+                  Research shows that when nature elements are incorporated into
+                  playgrounds, kids have more fun, are more active and utilize
+                  more motor skills.
                 </p>
               </div>
 
@@ -84,38 +93,82 @@ export default function TheEscapeParkandResort() {
 
               <div className="list-desc">
                 <div className="desc-blog">
-                  <h5 className="title-desc">1. Adventure-Focused Experiences</h5>
+                  <h5 className="title-desc">The Facility</h5>
                   <p className="body-2">
-                    Guests explore themed challenges and missions across the
-                    park, from puzzle-based escape routes to physical
-                    activities. Each zone is crafted to balance fun, suspense,
-                    and safe exploration.
+                    The Escape Park and Resort is a nature retreat filled with
+                    trees, a pond, flowers, gazebos, a man-made river, an indoor
+                    and outdoor lunch area, birthday and events venue, private
+                    rental spots for family barbecues and camping trips,
+                    enclosures for different kinds of animals, and a resort area
+                    with bungalows and a swimming pool.
+                    <br />
+                    <br />
+                    In a beautifully serene atmosphere, families can enjoy a
+                    peaceful lunch by the pond, observing the bird enclosures
+                    spread throughout the grounds, while their kids ride ponies,
+                    play in the outdoor playground, complete an obstacle course
+                    up in the trees; fathers and sons can go fishing together on
+                    the river.   
+                    <br />
+                    <br />
+                    Uphill of the pond is a luxurious restaurant offering
+                    refined cuisine and a sunset view in both an indoor and an
+                    outdoor seating area. 
+                    <br />
+                    <br />
+                    At the same level of the restaurant is the botanical zone,
+                    containing green houses, fruit tree orchards, and small open
+                    air agricultural grounds.
+                    <br />
+                    <br />
+                    This level also contains an oval amphitheater serving as a
+                    platform for performances, shows, and kids' birthday
+                    parties.  
+                    <br />
+                    <br />
+                    The level further below will feature the adventure zone with
+                    fun outdoor sports activities for the entire family.
+                    <br />
+                    <br />
+                    Finally, the lowermost level holds the camping and barbeque
+                    gear for private rentals. 
                   </p>
                 </div>
 
                 <div className="desc-blog">
-                  <h5 className="title-desc">2. Family-Centered Design</h5>
+                  <h5 className="title-desc">Activities</h5>
                   <p className="body-2">
-                    The resort is built with families in mind, offering shared
-                    experiences that bring parents and children together in
-                    cooperative games, storytelling paths, and relaxing rest
-                    areas.
+                    <li>
+                      The Escape Park and Resort is equipped with outdoor play
+                      equipment, interactive games and other mentally and
+                      physically stimulating activities including:
+                      <ul> Ropes course</ul>
+                      <ul> Archery</ul>
+                      <ul> Honey making</ul>
+                      <ul> Zipline</ul>
+                      <ul> Underground maze and jewel extraction  </ul>
+                      <ul> Fishing</ul>
+                      <ul> Biking</ul>
+                      <ul> Animal exploration</ul>
+                      <ul> Gardening</ul>
+                      <ul> Truck and barrel rides</ul>
+                      <ul> And many more...</ul>
+                    </li>
                   </p>
                 </div>
 
-                <div className="desc-blog">
+                {/* <div className="desc-blog">
                   <h5 className="title-desc">3. Immersive Storytelling</h5>
                   <p className="body-2">
                     The park&apos;s narrative-driven design transforms each
                     visit into a memorable story. Guests are not just visitors,
                     but active characters in an unfolding adventure.
                   </p>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </>
   );

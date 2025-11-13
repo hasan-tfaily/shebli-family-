@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import React from "react";
 
@@ -49,18 +48,30 @@ export default function StarDistrict() {
 
               {/* Intro description */}
               <div className="desc-blog">
+                <h5 className="title-desc">Concept</h5>
                 <p className="body-2">
-                  Star District is an interactive entertainment center where
-                  young talents discover their passion for art, music, fashion,
-                  and performance in a world built for stars. Every corner is
-                  designed to inspire creativity, confidence, and self-expression.
+                  Star  District is  the  ideal platform  for  children  and 
+                  teenagers who want to experience  stardom.
+                  <br />
+                  <br />
+                  It is a one stop family entertainment center where mothers can
+                  take their toddlers to play, children and teenagers can have
+                  their fifteen minutes of fame and shine in the spotlight,
+                  where mothers and their daughters can bond over girly
+                  activities, and where teenagers can hang out and have fun.
+                  <br />
+                  <br />
+                  It is a forum where children and teenagers can interact with
+                  different international brands through engaging in sponsored
+                  activities and enjoying a unique Hollywood-esque shopping
+                  experience.
                 </p>
-                <p className="body-2">
+                {/* <p className="body-2">
                   Through immersive studios, themed zones, and guided activities,
                   children and teens get the chance to step into the spotlight,
                   experiment with different roles, and build skills that stay
                   with them long after the visit.
-                </p>
+                </p> */}
               </div>
 
               {/* Two side images */}
@@ -88,30 +99,65 @@ export default function StarDistrict() {
               {/* Sections */}
               <div className="list-desc">
                 <div className="desc-blog">
-                  <h5 className="title-desc">
-                    1. Creative Performance Zones
-                  </h5>
+                  <h5 className="title-desc">Overview</h5>
                   <p className="body-2">
-                    From music studios and fashion runways to mini theaters,
-                    Star District offers dedicated spaces where kids can sing,
-                    act, dance, and present. Each zone is built to nurture
-                    talent and boost stage confidence in a fun, supportive way.
+                    Star District is a venue aimed at helping children and teens
+                    become the stars they have always dreamed of becoming.
+                    <br />
+                    <br />
+                    There is so much more to being a star than meets the eye. A
+                    star needs to look, walk, talk, and act the part. At this
+                    center for the arts, young boys and girls, as well as teens
+                    are introduced to all the necessary skills needed to become
+                    a star.
+                    <br />
+                    <br />A crew of  professionals  at  Star  District helps
+                    children discover, explore, and expand their talents,
+                    whether they are singing, acting, dancing, presenting,
+                    design, or any other talent.
+                    <br />
+                    <br />
+                    They will be given continuous opportunities to perform and
+                    display their talents and what they have learned. All kinds
+                    of props will be available to  them  so  they  may  fully
+                    experience  their moment in the spotlight.
                   </p>
                 </div>
 
                 <div className="desc-blog">
-                  <h5 className="title-desc">
-                    2. Learn-by-Doing Experiences
-                  </h5>
+                  <h5 className="title-desc">The Experiences</h5>
                   <p className="body-2">
-                    Children don&apos;t just watch—they participate. Guided
-                    workshops, role-play sessions, and hands-on activities help
-                    them understand the basics of performance, collaboration,
-                    and creative production.
+                    <li>
+                      Guests can choose between a wide range of activities to
+                      include:
+                      <ul>Singing</ul>
+                      <ul>Dancing</ul>
+                      <ul>Acting</ul>
+                      <ul>Music</ul>
+                      <ul>Modeling</ul>
+                      <ul>TV Presenter</ul>
+                      <ul>Djing</ul>
+                      <ul>Photography</ul>
+                      <ul>Fashion Designer</ul>
+                      <ul>Jewelry Designer</ul>
+                      <ul>Handbag Designer</ul>
+                      <ul>Footballer</ul>
+                      <ul>Car Racer</ul>
+                      <ul>Shoe Designer</ul>
+                      <ul>Perfume Making</ul>
+                      <ul>And much more...</ul>
+                    </li>
+                    <li>
+                      At the same time, Guests can also benefit from a variety
+                      of services to include:
+                      <ul>SPA</ul>
+                      <ul>Beauty Salon</ul>
+                      <ul>Birthday Venues</ul>
+                    </li>
                   </p>
                 </div>
 
-                <div className="desc-blog">
+                {/* <div className="desc-blog">
                   <h5 className="title-desc">
                     3. Confidence & Self-Expression
                   </h5>
@@ -121,7 +167,7 @@ export default function StarDistrict() {
                     every child gets the chance to shine, try something new, and
                     celebrate their unique personality.
                   </p>
-                </div>
+                </div> */}
               </div>
 
               {/* end content */}

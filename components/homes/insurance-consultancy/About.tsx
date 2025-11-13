@@ -27,12 +27,12 @@ export default function About() {
             <h2 className="mb-28 title-section wow fadeInUp">
               Operating Advantages:
             </h2>
-            <div className="sub-title mb-32 wow fadeInUp">
+            {/* <div className="sub-title mb-32 wow fadeInUp">
               At FinWice, we empower businesses with tailored strategies,
               innovative solutions, and expert consulting. Our industry
               professionals drive growth and guide you through challenges to
               achieve success.
-            </div>
+            </div> */}
 
             <div className="benefit-lists mb-32">
               <div className="benefit-items style-small mb-16">
@@ -77,7 +77,7 @@ export default function About() {
               </Link>
             </div> */}
           </div>
-          <div className="wg-counter justify-content-between">
+          {/* <div className="wg-counter justify-content-between">
             {counters2.map((counter, index) => (
               <React.Fragment key={index}>
                 <div className="counter-item style-2">
@@ -87,7 +87,7 @@ export default function About() {
                         <OdometerComponent max={counter.value} />
                         {counter.suffix && <span className="suffix">{counter.suffix}</span>}
                       </h3>
-                      <h3 className="plus">+</h3> {/* shows the plus for all, including the 5 m */}
+                      <h3 className="plus">+</h3> 
                     </div>
                     <p className="text text-btn-uppercase label">{counter.label}</p>
                   </div>
@@ -95,7 +95,7 @@ export default function About() {
                 {index !== counters2.length - 1 && <div className="line" />}
               </React.Fragment>
             ))}
-          </div>
+          </div> */}
 
         </div>
       </div>

@@ -98,9 +98,8 @@ export default function Page() {
 
         {/* ===== Contact (right) + FAQs (left) ===== */}
         {/* ===== Contact (LEFT) + FAQs (RIGHT) — INLINE ONLY ===== */}
-<section className="section-faqs h-5 tf-spacing-2">
+{/* <section className="section-faqs h-5 tf-spacing-2">
   <div className="tf-container position-relative">
-    {/* Force 2 columns with inline CSS Grid (overrides col-* stacking) */}
     <div
       style={{
         display: "grid",
@@ -109,30 +108,20 @@ export default function Page() {
         alignItems: "start",
       }}
     >
-      {/* LEFT: Contact */}
       <div>
-        {/* Optional external title to align with FAQ title */}
         <h3 style={{ margin: "0 0 16px 0" }}>Get in Touch</h3>
         <ContactForm />
       </div>
 
-      {/* RIGHT: FAQs */}
       <div>
         <div style={{ margin: "0 0 16px 0" }}>
-          {/* <a
-            href="#"
-            className="tag label text-btn-uppercase"
-            style={{ display: "inline-block" }}
-          >
-            FAQs
-          </a> */}
+          
           <h3 style={{ margin: 0 }}>
             Find Answers to Your <br /> Question
           </h3>
         </div>
 
         <div id="According">
-          {/* Reusable inline style for each FAQ row to keep same height */}
           {(() => {
             const box = {
               display: "flex",
@@ -282,7 +271,29 @@ export default function Page() {
       </div>
     </div>
   </div>
-</section>
+</section> */}
+
+ <section className="section-cta h-2 section-one-page" id="cta">
+      <div className="tf-container">
+        <div className="row">
+          <div className="col-12">
+            <div className="cta-inner style-2">
+              <div className="cta-content">
+                <h4 className="title-content">
+                 Have a project or idea to bring to life? Let’s create it together
+                </h4>
+                <Link
+                  href={`/contact-us`}
+                  className="tf-btn style-1 bg-white text-center"
+                >
+                  <span> Request a Quote </span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
         {/* ===== /Contact + FAQs ===== */}
       </div>

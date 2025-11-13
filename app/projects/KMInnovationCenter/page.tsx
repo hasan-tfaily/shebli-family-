@@ -52,16 +52,15 @@ export default function KMInnovationCenterPage() {
               {/* INTRO SECTION */}
               <div className="desc-blog">
                 <p className="body-2">
-                  The KM Innovation Center is where imagination, technology, and
-                  creativity meet. It is a dedicated hub inside KidzMondo where
-                  children experiment with new ideas, explore future careers, and
-                  discover the power of innovation through play-based learning.
+                  The village-like compound will cater to a variety of needs and bring together the community in a way which enables every person to meet his own personal needs in a joint setting. 
+                  <br/> <br/>
+                  The facility will be composed of different sections targeted at different audiences and providing different services experiences:
                 </p>
-                <p className="body-2">
+                {/* <p className="body-2">
                   From coding and robotics to interactive design and problem-
                   solving challenges, every experience is designed to help kids
                   think like innovators: curious, bold, and solution-oriented.
-                </p>
+                </p> */}
               </div>
 
               {/* TWO SIDE IMAGES */}
@@ -90,40 +89,38 @@ export default function KMInnovationCenterPage() {
               <div className="list-desc">
                 <div className="desc-blog">
                   <h5 className="title-desc">
-                    1. Hands-On Innovation Labs
+                    Tech Education
                   </h5>
                   <p className="body-2">
-                    Children participate in guided activities such as building
-                    prototypes, experimenting with simple robotics, and creating
-                    digital or physical projects. Every lab is designed to turn
-                    ideas into something tangible and exciting.
+                    Mothers who want to provide entertainment for their young children, or want an activity to keep their children engaged while they shop in the department store or have lunch or a coffee with friends may do so here. 
+                    <br/><br/>
+                    Known for their physical benefits as well as their ability to keep young kids having fun for hours, this area will be a large soft play zone including slides, bouncy houses, trampolines, monkey bars, a jungle gym, a low climbing wall, and a ball pit.
                   </p>
                 </div>
 
                 <div className="desc-blog">
                   <h5 className="title-desc">
-                    2. Future Skills for the Next Generation
+                    Some of the activities available will include: 
+
                   </h5>
                   <p className="body-2">
-                    The KM Innovation Center focuses on key future skills:
-                    critical thinking, collaboration, creativity, and basic
-                    technology literacy. Kids learn how to ask questions, test
-                    solutions, and iterate — just like real innovators and
-                    entrepreneurs.
+                    <li>
+                      <ul>Entrepreneurship</ul>
+                      <ul>Design thinking</ul>
+                      <ul>Coding</ul>
+                      <ul>Robotics</ul>
+                      <ul>Artificial Intelligence</ul>
+                      <ul>Augmented and Virtual Reality</ul>
+                      <ul>Cyber Safety</ul>
+                      <ul>Gaming</ul>
+                    </li>
+                    <p>
+These technologies make the experience more stimulating and attractive to children 
+and teenagers up until the age of 15.</p>
                   </p>
                 </div>
 
-                <div className="desc-blog">
-                  <h5 className="title-desc">
-                    3. Safe, Inspiring Environment
-                  </h5>
-                  <p className="body-2">
-                    Spaces are designed to be safe, colorful, and inspiring,
-                    with trained facilitators who support kids at every step.
-                    Parents can feel confident while children explore, build,
-                    and experiment in a structured yet playful setting.
-                  </p>
-                </div>
+                
               </div>
 
               {/* /.content end */}
