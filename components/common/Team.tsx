@@ -20,7 +20,7 @@ export default function TeamCircle() {
                       href="#"
                       className="tag label text-btn-uppercase bg-white"
                     >
-                      Join Our TEam
+                      Join Our Team
                     </a>
                   </div>
                   <h3 className="wow fadeInUp mb-12">

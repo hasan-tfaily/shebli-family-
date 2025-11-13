@@ -151,7 +151,7 @@ export default function Process() {
                     href="#"
                     className="tag label text-btn-uppercase color-white"
                   >
-                    steps to success
+                    Careers
                   </a>
                 </div>
                 <h3 className="title-section mb-12 text-anime-wave">
@@ -161,12 +161,12 @@ export default function Process() {
                   Join a passionate team shaping the future of learning, creativity, and family entertainment across the MENA region. Together, we build experiences that matter.
                 </div>
               </div>
+            </div>
               <div className="text-anime-wave-2">
                 <Link href={`/contact-us`} className="tf-btn style-1 bg-white">
                   <span>Open Roles</span>
                 </Link>
               </div>
-            </div>
 
             <Swiper
               className="sw-case-studies swiper sw-layout"
