@@ -29,7 +29,7 @@ export default function About() {
                   height={320}
                 />
               </div>
-              <div className="item item-3 number-year text-center tf-animate-2">
+              {/* <div className="item item-3 number-year text-center tf-animate-2">
                 <div className="counter-item">
                   <div className="counter">
                     <div className="number-counter mb-0">
@@ -44,16 +44,16 @@ export default function About() {
                   Year Of <br />
                   Experience
                 </p>
-              </div>
+              </div> */}
             </div>
-          </div>
+          </div> 
 
           <div className="col-lg-6">
             <div className="section-content ml-40">
               <div className="heading-section mb-32">
                 <div className="wow fadeInUp">
                   <a href="#" className="tag label text-btn-uppercase mb-16">
-                    Leading the Way in Data Analytics
+                    Empowering Future Generations
                   </a>
                 </div>
                 <h3 className="title-section mb-20 wow fadeInUp">
