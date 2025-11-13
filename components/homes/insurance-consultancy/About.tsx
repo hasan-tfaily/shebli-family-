@@ -77,26 +77,26 @@ export default function About() {
               </Link>
             </div> */}
           </div>
-          <div className="wg-counter justify-content-between">
-            {counters2.map((counter, index) => (
-              <React.Fragment key={index}>
-                <div className="counter-item style-2">
-                  <div className="counter">
-                    <div className="number-counter">
-                      <h3 className="number odometer">
-                        <OdometerComponent max={counter.value} />
-                      </h3>
-                      <h3 className="plus">+</h3>
-                    </div>
-                    <p className="text text-btn-uppercase label">
-                      {counter.label}
-                    </p>
-                  </div>
-                </div>
-                {index !== counters2.length - 1 && <div className="line" />}
-              </React.Fragment>
-            ))}
+      <div className="wg-counter justify-content-between">
+  {counters2.map((counter, index) => (
+    <React.Fragment key={index}>
+      <div className="counter-item style-2">
+        <div className="counter">
+          <div className="number-counter">
+            <h3 className="number odometer" style={{ display: "flex", alignItems: "baseline", gap: 6 }}>
+              <OdometerComponent max={counter.value} />
+              {counter.suffix && <span className="suffix">{counter.suffix}</span>}
+            </h3>
+            <h3 className="plus">+</h3> {/* shows the plus for all, including the 5 m */}
           </div>
+          <p className="text text-btn-uppercase label">{counter.label}</p>
+        </div>
+      </div>
+      {index !== counters2.length - 1 && <div className="line" />}
+    </React.Fragment>
+  ))}
+</div>
+
         </div>
       </div>
     </section>

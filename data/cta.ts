@@ -13,24 +13,16 @@ export const counters = [
   },
 ];
 
-export const counters2 = [
-  {
-    value: 15,
-    label: "Years experiences",
-  },
-  {
-    value: 3600,
-    label: "Happy customers",
-  },
-  {
-    value: 900,
-    label: "Project completed",
-  },
-  {
-    value: 30,
-    label: "Awards & Recognitions",
-  },
+// types (optional)
+type Counter = { value: number; label: string; suffix?: string; noPlus?: boolean };
+
+export const counters2: Counter[] = [
+  { value: 10, label: "cities" },
+  { value: 5, label: "visits", suffix: " M" }, // → 5 M
+  { value: 200, label: "school partners" },
 ];
+
+
 
 export const counters4 = [
   {

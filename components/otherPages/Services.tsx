@@ -39,8 +39,7 @@ export default function Services() {
                 </h6>
               </div>
               <div className="desc">
-                Empowering financial institutions with data-driven insights and
-                tailored solutions for sustainable growth.
+                A child-sized city where learning meets play, empowering kids to explore real-world roles, earn, spend, and grow through hands-on discovery.
               </div>
             </div>
           </div>
@@ -57,8 +56,7 @@ export default function Services() {
                 </h6>
               </div>
               <div className="desc">
-                Enhancing healthcare systems through innovative strategies that
-                improve patient outcomes and operational efficiency.
+                A family destination blending leisure, education, and adventure offering multi-sensory nature experiences that inspire wellness and togetherness.
               </div>
             </div>
           </div>
@@ -103,8 +101,7 @@ export default function Services() {
                 </h6>
               </div>
               <div className="desc">
-                Driving digital transformation and scalable growth for tech
-                companies in a rapidly evolving landscape.
+                A dynamic indoor carnival offering multi-activity entertainment that combines creativity, challenge, and pure fun for every family member.
               </div>
             </div>
           </div>
@@ -121,8 +118,7 @@ export default function Services() {
                 </h6>
               </div>
               <div className="desc">
-                Supporting energy providers with strategies for efficiency,
-                sustainability, and navigating industry challenges.
+                An interactive entertainment center where young talents discover their passion for art, music, fashion, and performance in a world built for stars.
               </div>
             </div>
           </div>
@@ -139,8 +135,7 @@ export default function Services() {
                 </h6>
               </div>
               <div className="desc">
-                Streamlining logistics operations with solutions that enhance
-                supply chain efficiency and cost-effectiveness.
+                A space where movement meets learning, helping children grow stronger, more confident, and creatively inspired.
               </div>
             </div>
           </div>
@@ -157,8 +152,7 @@ export default function Services() {
                 </h6>
               </div>
               <div className="desc">
-                Optimizing manufacturing processes for increased productivity,
-                innovation, and long-term growth.
+                A tech-driven zone where kids explore coding, robotics, and design thinking through creative hands-on learning
               </div>
             </div>
           </div>
@@ -175,8 +169,7 @@ export default function Services() {
                 </h6>
               </div>
               <div className="desc">
-                Providing insights and strategies to maximize returns and drive
-                success in real estate investments.
+                An integrated family complex where families, kids, and young adults come together to play, dine, shop, and unwind in one connected community.
               </div>
             </div>
           </div>
@@ -193,8 +186,7 @@ export default function Services() {
                 </h6>
               </div>
               <div className="desc">
-                Enabling retailers to adapt to consumer trends and increase
-                profitability through strategic planning.
+                A child-sized city where learning meets play, empowering kids to explore real-world roles, earn, spend, and grow through hands-on discovery.
               </div>
             </div>
           </div>
