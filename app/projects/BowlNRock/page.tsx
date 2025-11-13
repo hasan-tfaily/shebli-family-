@@ -28,7 +28,7 @@ export default function BowlNRock() {
                   <br />
                   {blog.title?.split(" ").slice(4).join(" ") ??
                     "Business Cash Flow"} */}
-                    KidzMondo
+                    BOWl N ROCK
                 </h2>
                 {/* <div className="meta">
                   <a href="#" className="meta-content">
@@ -55,21 +55,22 @@ export default function BowlNRock() {
                 />
               </div>
               <div className="desc-blog" style={{backgroundColor: '#FFD4D4'}}>
+                <h5 className="title-desc">Overview</h5>
                 <p className="body-2">
-                  In today's rapidly changing economic landscape, volatility is
-                  the new normal. Markets are affected by global events,
-                  technological advancements, and shifting consumer behaviors.
-                  For businesses, this means that risks are inevitable—but they
-                  can also be managed effectively. The key is to develop a
-                  proactive risk management strategy that allows your business
-                  to thrive even in uncertain conditions.
+                  Bowl N Rock is the newest experiential social entertainment hub offering Bowling, Immersive sports games, retro 
+                  games, retro art installations, eateries, mini golf and much more. 
+<br/><br/>
+Featuring 10 Lane bowling alleys, Sports Simulators, retro arcade games, pool and snooker tables, Karaoke stage, 
+Virtual Reality, BOWL N ROCK  is an extraordinary ‘eatertainment’ venue with live music, where food and 
+entertainment have been merged into one space and interactive games integrated on each dining table savour the 
+experience. 
                 </p>
-                <p className="body-2">
+                {/* <p className="body-2">
                   Test your crisis management plan with regular simulations to
                   ensure that your team knows what to do if an emergency arises.
                   A well-prepared team can minimize downtime and protect your
                   reputation.
-                </p>
+                </p> */}
               </div>
               <div className="cols-img">
                 <div className="image-blog">
@@ -94,32 +95,37 @@ export default function BowlNRock() {
               <div className="list-desc" style={{backgroundColor: '#FFD4D4'}}>
                 <div className="desc-blog">
                   <h5 className="title-desc">
-                    1. Conduct a Comprehensive Risk Assessment
+                    Experience
                   </h5>
                   <p className="body-2">
-                    The first step in managing risk is to understand what risks
-                    your business faces. This includes both internal and
-                    external risks such as financial instability, supply chain
-                    disruptions, cybersecurity threats, and market fluctuations.
-                    Conduct a thorough risk assessment to identify and
-                    categorize risks based on their potential impact and
-                    likelihood of occurrence.
+                    
+BOWL N ROCK provides a mix of experiences that span all age groups starting the age of 15 into one 
+vibrant space, thus having a tremendous impact on retail demography. 
+<br/><br/>
+Its hospitality and wider offerings are evident in the leather-clad reception, where visitors enter via a 
+laundry tunnel, a unique experience.
+<br/><br/>
+A retro and industrial-themed interior space creates a nostalgic connection with visitors. Every nook 
+and corner is equipped with games such as pinball, shuffle boards, and dart flight clubs that are 
+prominently displayed.
+
                   </p>
                 </div>
                 <div className="desc-blog">
                   <h5 className="title-desc">
-                    2. Diversify Your Business Operations
+                    Attraction Mix
                   </h5>
                   <p className="body-2">
-                    Diversification is one of the most effective ways to
-                    mitigate risk. By expanding your products, services, or
-                    markets, you reduce your dependency on a single source of
-                    revenue. In a volatile market, diversification provides a
-                    safety net, as declines in one area can be offset by growth
-                    in another.
+                   <li>
+                     <ul>Retro arcade games</ul>
+                     <ul>Billiard Tables</ul>
+                     <ul>Bowling Arena</ul>
+                     <ul>Eatery Arena</ul>
+                     <ul>Virtual Reality</ul>
+                   </li>
                   </p>
                 </div>
-                <div className="desc-blog">
+                {/* <div className="desc-blog">
                   <h5 className="title-desc">
                     3. Build a Strong Financial Buffer
                   </h5>
@@ -131,7 +137,7 @@ export default function BowlNRock() {
                     This might mean reducing non-essential spending or setting
                     up an emergency fund.
                   </p>
-                </div>
+                </div> */}
               </div>
               {/* <div className="desc-blog">
                 <h5 className="title-desc">Conclusion</h5>

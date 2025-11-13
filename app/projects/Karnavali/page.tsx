@@ -29,7 +29,7 @@ export default function KarnavaliPage() {  return (
                   <br />
                   {blog.title?.split(" ").slice(4).join(" ") ??
                     "Business Cash Flow"} */}
-                    KidzMondo
+                    Karnavali
                 </h2>
                 {/* <div className="meta">
                   <a href="#" className="meta-content">
@@ -56,21 +56,20 @@ export default function KarnavaliPage() {  return (
                 />
               </div>
               <div className="desc-blog">
-                <p className="body-2">
-                  In today's rapidly changing economic landscape, volatility is
-                  the new normal. Markets are affected by global events,
-                  technological advancements, and shifting consumer behaviors.
-                  For businesses, this means that risks are inevitable—but they
-                  can also be managed effectively. The key is to develop a
-                  proactive risk management strategy that allows your business
-                  to thrive even in uncertain conditions.
-                </p>
-                <p className="body-2">
+                <h5 className="title-desc">
+                    Concept
+                </h5>
+                  <p className="body-2">
+                   Karnavali aims to provide a one-of-a-kind entertainment venue to children and 
+                   teens which will provide diversified activities catering to different tastes and  
+                   interests, all while giving them the lovely experience of visiting the carnival. 
+                  </p>
+                {/* <p className="body-2">
                   Test your crisis management plan with regular simulations to
                   ensure that your team knows what to do if an emergency arises.
                   A well-prepared team can minimize downtime and protect your
                   reputation.
-                </p>
+                </p> */}
               </div>
               <div className="cols-img">
                 <div className="image-blog">
@@ -95,32 +94,39 @@ export default function KarnavaliPage() {  return (
               <div className="list-desc">
                 <div className="desc-blog">
                   <h5 className="title-desc">
-                    1. Conduct a Comprehensive Risk Assessment
+                    Overview
                   </h5>
                   <p className="body-2">
-                    The first step in managing risk is to understand what risks
-                    your business faces. This includes both internal and
-                    external risks such as financial instability, supply chain
-                    disruptions, cybersecurity threats, and market fluctuations.
-                    Conduct a thorough risk assessment to identify and
-                    categorize risks based on their potential impact and
-                    likelihood of occurrence.
+                    Karnavali is an indoor multiple anchor attraction combined with impulse items of rides and games that make your head spin, and simulators that seem magical and appealing to a broader age range of family members. 
+                    <br/><br/>In between activities, guests can munch on typical carnival snacks including hot dog, popcorn, cotton candy, caramelized apples and pretzels. 
+                    <br/><br/>Toddlers can enjoy face painting, balloon sculpting, arts and crafts, and a carnival themes soft play area catered to their delight. 
+                    Older kids have a wild array or activities to choose from designed to suit their diversified interests, including an arcade with family rides, simulators, laser maze, wall climbing etc...
+                    <br/><br/>Redemption Zone catering for all ages with interactive and skill based novelty games rewarding players with fun and prizes. 
+                    Active Zone with the latest and best loved video games, kiddy rides, driving simulators, sports games and dancing games. 
                   </p>
                 </div>
                 <div className="desc-blog">
                   <h5 className="title-desc">
-                    2. Diversify Your Business Operations
+                   Entertainment
                   </h5>
                   <p className="body-2">
-                    Diversification is one of the most effective ways to
-                    mitigate risk. By expanding your products, services, or
-                    markets, you reduce your dependency on a single source of
-                    revenue. In a volatile market, diversification provides a
-                    safety net, as declines in one area can be offset by growth
-                    in another.
+                   <li>Children can choose between a wide range of activities, including: 
+                       <ul>Rides</ul>
+                       <ul>Climbing Wall</ul>
+                       <ul>Arcade . Simulators (sports, movie)</ul>
+                       <ul>Sky Trail . Ropes course </ul>
+                       <ul>Laser Tag</ul>
+                       <ul>Mirror Maze</ul>
+                       <ul>Zero Gravity</ul>
+                       <ul>Car Racing</ul>
+                       <ul>Indoor Roller Coaster</ul>
+                       <ul>
+Circus zone (face painting, balloon sculpting, soft play, arts and crafts)</ul>
+                   
+                   </li>
                   </p>
                 </div>
-                <div className="desc-blog">
+                {/* <div className="desc-blog">
                   <h5 className="title-desc">
                     3. Build a Strong Financial Buffer
                   </h5>
@@ -132,7 +138,7 @@ export default function KarnavaliPage() {  return (
                     This might mean reducing non-essential spending or setting
                     up an emergency fund.
                   </p>
-                </div>
+                </div> */}
               </div>
               {/* <div className="desc-blog">
                 <h5 className="title-desc">Conclusion</h5>

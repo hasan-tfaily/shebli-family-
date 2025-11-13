@@ -14,7 +14,7 @@ export default function Process() {
                     href="#"
                     className="tag label text-btn-uppercase color-white"
                   >
-                    steps to success
+                    A Framework of Growth and Trust
                   </a>
                 </div>
                 <h3 className="title-section mb-12 text-anime-wave">
@@ -24,11 +24,11 @@ export default function Process() {
                  Kidz Holding operates through a robust corporate framework designed to balance creativity, operational excellence, and investor trust.
                 </div>
               </div>
-              <div className="text-anime-wave-2">
+              {/* <div className="text-anime-wave-2">
                 <Link href={`/contact-us`} className="tf-btn style-1 bg-white">
                   <span> Schedule A Consultation </span>
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

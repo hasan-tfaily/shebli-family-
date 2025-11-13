@@ -48,16 +48,16 @@ export default function KidzMondoPage() {
 
               {/* INTRO SECTION */}
               <div className="desc-blog">
+               <p className={'bodytitle'}>Overall Concept</p>
                 <p className="body-2">
-                  KidzMondo is a child-sized city where learning meets play.
-                  Children explore real-world professions, earn and spend their
-                  own currency, and develop social and practical skills through
-                  immersive role play.
+                  
+                  KidzMondo is a replica of a real-life city which provides children between the ages of 2 to 14 with role play activities that
+                  are designed to be fun and pedagogical, based on the ‘edutainment’ or playful learning concept. 
                 </p>
+                <p className={'bodytitle'}>Objective</p>
                 <p className="body-2">
-                  Each visit is designed to be both fun and educational,
-                  empowering kids to understand how a city functions while
-                  discovering their own interests and talents.
+                  KidzMondo aims to compliment local school curricula and seeks to teach children basic citizenship values and rules,
+                  enlightening them about the society they live in today.
                 </p>
               </div>
 
@@ -86,30 +86,39 @@ export default function KidzMondoPage() {
               {/* BULLET SECTIONS */}
               <div className="list-desc">
                 <div className="desc-blog">
-                  <h5 className="title-desc">1. Real-World Role Play</h5>
+                  <h5 className="title-desc">Education</h5>
                   <p className="body-2">
-                    Kids can experience a variety of professions—such as doctor,
-                    pilot, chef, journalist, and more—in safe, child-sized
-                    environments. Each activity is guided and designed to build
-                    confidence and curiosity.
+                    It is an established fact that children learn best through play and experiencing real hands-on activities. 
+                    <br/> <br/>The range of playful activities inside KidzMondo is exclusively created and constructed to help, encourage and advance physical growth while stimulating intellectual growth. 
+                    <br/> <br/>The KidzMondo Educational Curriculum improves the development of skills and attitudes while also motivating creative thinking and enhancing self-esteem and self-confidence levels. 
+                    <br/> <br/>KidzMondo also teaches financial literacy by establishing its own economy, where kids exchange Kidlars, the local city currency, learning about money and how to utilize it.
                   </p>
                 </div>
 
                 <div className="desc-blog">
-                  <h5 className="title-desc">2. Learn Through Edutainment</h5>
+                  <h5 className="title-desc">Entertainment</h5>
                   <p className="body-2">
-                    Every activity combines fun with learning outcomes: teamwork,
-                    responsibility, problem-solving, and basic financial literacy
-                    through KidzMondo’s own currency system.
+                    Children can choose between 120+ different professions which are practiced
+                    in replica of the most representative establishments in an actual city; an
+                    airport, a bank, factories, a theater, shops, a police station, a fire department, a newspaper publisher, a hotel, a TV studio, a radio station, a gas station, a
+                    racetrack and many more…
                   </p>
                 </div>
 
                 <div className="desc-blog">
-                  <h5 className="title-desc">3. Safe & Structured Environment</h5>
+                  <h5 className="title-desc">
+Edutainment Competencies</h5>
                   <p className="body-2">
-                    The city is designed for children’s safety and comfort, with
-                    clear routes, supervised zones, and structured experiences
-                    that allow parents to relax while kids explore and grow.
+                   <li>
+                    <ul>Cognitive Development</ul>
+                    <ul>Emotional Intelligence</ul>
+                    <ul>Psychomotor Development</ul>
+                    <ul>Social Development</ul>
+                    <ul>Financial Literacy </ul>
+                    <ul>Currency and Bills</ul>
+                    <ul>Bank</ul>
+                    <ul>Kidlar Store</ul>
+                   </li> 
                   </p>
                 </div>
               </div>

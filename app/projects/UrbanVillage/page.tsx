@@ -29,7 +29,7 @@ export default function UrbanVillage() {
                   <br />
                   {blog.title?.split(" ").slice(4).join(" ") ??
                     "Business Cash Flow"} */}
-                    KidzMondo
+                    Urban Village
                 </h2>
                 {/* <div className="meta">
                   <a href="#" className="meta-content">
@@ -56,21 +56,21 @@ export default function UrbanVillage() {
                 />
               </div>
               <div className="desc-blog">
+                <h5 className="title-desc">Facility</h5>
                 <p className="body-2">
-                  In today's rapidly changing economic landscape, volatility is
-                  the new normal. Markets are affected by global events,
-                  technological advancements, and shifting consumer behaviors.
-                  For businesses, this means that risks are inevitable—but they
-                  can also be managed effectively. The key is to develop a
-                  proactive risk management strategy that allows your business
-                  to thrive even in uncertain conditions.
+                  
+The village-like compound will cater to a variety of needs and bring together the community in a way which enables 
+every person to meet his own personal needs in a joint setting. 
+<br/><br/>
+The facility will be composed of different sections targeted at different audiences and providing different services 
+experiences:
                 </p>
-                <p className="body-2">
+                {/* <p className="body-2">
                   Test your crisis management plan with regular simulations to
                   ensure that your team knows what to do if an emergency arises.
                   A well-prepared team can minimize downtime and protect your
                   reputation.
-                </p>
+                </p> */}
               </div>
               <div className="cols-img">
                 <div className="image-blog">
@@ -95,42 +95,72 @@ export default function UrbanVillage() {
               <div className="list-desc">
                 <div className="desc-blog">
                   <h5 className="title-desc">
-                    1. Conduct a Comprehensive Risk Assessment
+                    1. Toddlers and young kids – Large soft play area
                   </h5>
                   <p className="body-2">
-                    The first step in managing risk is to understand what risks
-                    your business faces. This includes both internal and
-                    external risks such as financial instability, supply chain
-                    disruptions, cybersecurity threats, and market fluctuations.
-                    Conduct a thorough risk assessment to identify and
-                    categorize risks based on their potential impact and
-                    likelihood of occurrence.
+                    Mothers who want to provide entertainment for their young children, or want an activity to keep their 
+                    children engaged while they shop in the department store or have lunch or a coffee with friends may do 
+                    so here. 
+<br/><br/>
+Known for their physical benefits as well as their ability to keep young kids having fun for hours, this area 
+will be a large soft play zone including slides, bouncy houses, trampolines, monkey bars, a jungle gym, a 
+low climbing wall, and a ball pit.
                   </p>
                 </div>
                 <div className="desc-blog">
                   <h5 className="title-desc">
-                    2. Diversify Your Business Operations
+                    2. Kids
                   </h5>
                   <p className="body-2">
-                    Diversification is one of the most effective ways to
-                    mitigate risk. By expanding your products, services, or
-                    markets, you reduce your dependency on a single source of
-                    revenue. In a volatile market, diversification provides a
-                    safety net, as declines in one area can be offset by growth
-                    in another.
+                    KidzMondo is an edutainment indoor theme park based on the concept of vocational role play. It caters 
+                    for kids aged 4 to 14, bridging the gap between toddlers and teens. 
+<br/><br/>
+KidzMondo Ville will offer young guests simultaneously informative and entertainment experiences to 
+keep them busy from a few hours up to a full day. 
                   </p>
                 </div>
                 <div className="desc-blog">
                   <h5 className="title-desc">
-                    3. Build a Strong Financial Buffer
+                    3. Preteens and Teenagers– Food court and hangout area / Escape rooms / Outdoor sports courts 
+                    (football, basketball, skate rink, parkour zone)
                   </h5>
                   <p className="body-2">
-                    Cash flow is the lifeblood of any business, and during
-                    volatile periods, having a strong financial buffer is
-                    critical. Ensure your business has access to adequate
-                    working capital to cover unforeseen expenses or downturns.
-                    This might mean reducing non-essential spending or setting
-                    up an emergency fund.
+                   <br/><br/>
+Teens and young adults want a place to hang out where they can feel independent and relaxed. At the same time, parents want to know that they are safe at all times and making healthy dietary and recreational choices. 
+<br/><br/>
+Here, they will be offered a secured food court offering plenty of meal options to meet different tastes, as well as fun, structured, and physically and mentally stimulating activities like escape rooms and outdoor sports. 
+                  </p>
+                </div>
+                <div className="desc-blog">
+                  <h5 className="title-desc">
+                    4. 
+Families and extended groups– Restaurant / International cuisine / Cafés
+                  </h5>
+                  <p className="body-2">
+                  Whether to have coffee with friends during a busy weekday, a business lunch, or a family Sunday, adults and families will have available to them a variety of F&B choices catering to different needs and occasions. 
+                  <br/><br/>
+Additionally, the facility will have an eatertainment concept, wherein adults as well as their kids will be able to enjoy a meal while playing some games and having fun. 
+<br/><br/>
+For adults, this will include a sports bar concept, offering bowling, darts, baby foot, billiards, and such games.
+                  </p>
+                </div>
+                <div className="desc-blog">
+                  <h5 className="title-desc">
+                    5. Young adults and adults– Gym and Spa
+                  </h5>
+                  <p className="body-2">
+                   
+To attract the widest range of audience and open up the facility to daily visitors, a gym and spa 
+installment will offer guests monthly memberships as well as varied body treatments. 
+                  </p>
+                </div>
+                <div className="desc-blog">
+                  <h5 className="title-desc">
+                    6. Shoppers– Department store
+                  </h5>
+                  <p className="body-2">
+                   An open area department store will offer casual shoppers fun shopping experiences close to home, or 
+                   while they wait for their kids to finish playing.
                   </p>
                 </div>
               </div>

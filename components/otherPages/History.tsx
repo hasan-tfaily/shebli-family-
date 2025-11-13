@@ -17,7 +17,7 @@ export default function History() {
                   href="#"
                   className="tag label text-btn-uppercase color-white"
                 >
-                  Our History
+                  Our Values
                 </a>
               </div>
               <h3 className="title-section mb-12 text-anime-wave-1">
