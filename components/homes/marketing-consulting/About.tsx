@@ -120,7 +120,7 @@ export default function About() {
       </div>
 
       {/* Counters section */}
-      <section className="section-why-choose h-7 bg-surface tf-spacing-31" style={{ marginTop: "100px" }}>
+      {/* <section className="section-why-choose h-7 bg-surface tf-spacing-31" style={{ marginTop: "100px" }}>
         <div className="tf-container position-relative">
           <div className="row">
             <div className="col-12">
@@ -142,7 +142,7 @@ export default function About() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </section>
   );
 }

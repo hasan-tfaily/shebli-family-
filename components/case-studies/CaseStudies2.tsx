@@ -23,7 +23,7 @@ export default function CaseStudies2() {
     } else {
       setFilteres(
         smallCaseStudies
-          .slice(0, 6)
+          .slice(0, 3)
           .filter((elm) => elm.categories.includes(activeTab))
       );
     }
@@ -35,7 +35,7 @@ export default function CaseStudies2() {
         <div className="row">
           <div className="col-12">
             <div className="flat-animate-tab">
-              <div className="wg-tab style-2 mb-60">
+              {/* <div className="wg-tab style-2 mb-60">
                 <ul className="tab-product" role="tablist">
                   {tabItems.map((tab) => (
                     <li className="nav-tab-item" key={tab.id}>
@@ -54,7 +54,7 @@ export default function CaseStudies2() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </div> */}
               <div className="tab-content">
                 <div
                   className="tab-pane active show"
@@ -82,9 +82,9 @@ export default function CaseStudies2() {
                           />
                         </div>
                         <div className="tf-grid-post-content">
-                          <div className="position label text-btn-uppercase">
+                          {/* <div className="position label text-btn-uppercase">
                             {item.label}
-                          </div>
+                          </div> */}
                           <h5 className="title-post">
                             <Link href={`/case-studies-details`}>
                               {item.title}
@@ -95,7 +95,7 @@ export default function CaseStudies2() {
                       </div>
                     ))}
                   </div>
-                  {!isLoadedMore ? (
+                  {/* {!isLoadedMore ? (
                     <div
                       onClick={() => setIsLoadedMore(true)}
                       className="btn-load-more text-center view-more-button"
@@ -106,7 +106,7 @@ export default function CaseStudies2() {
                     </div>
                   ) : (
                     ""
-                  )}
+                  )} */}
                 </div>
               </div>
             </div>

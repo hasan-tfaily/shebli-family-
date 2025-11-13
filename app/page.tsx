@@ -78,18 +78,17 @@ export default function Page() {
       <Hero />
       <div className="main-content">
         <About />
+        <ITFeatures />
+        <MCFeatures />
         <Brands />
-        {/* <MCFeatures />   */}
         {/* <Services1 /> */}
-        <ITFeatures />   
-
         {/* <Process /> */}
         {/* <Services /> */}
         <Blogs />
         {/* <Team /> */}
-       <Process /> 
-      
-        <Faqs />  
+        <Process />
+
+        <Faqs />
         <Cta />
       </div>
       <Footer1 />

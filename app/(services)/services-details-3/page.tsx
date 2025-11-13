@@ -8,7 +8,7 @@ import Features from "@/components/homes/tax-advisory/Features";
 import About from "@/components/homes/strategy-consulting/About";
 import Steps from "@/components/services/Steps";
 import ContactForm from "@/components/otherPages/ContactForm";
-
+import Process from "@/components/homes/insurance-consultancy/Process";
 export const metadata: Metadata = {
   title:
     "Service Details 03 || FinWice - Business & Finance Consulting - React Nextjs Template",
@@ -85,14 +85,16 @@ export default function Page() {
         <Features />
         <About />
 
-        <div className="tf-container position-relative tf-spacing-2">
+        {/* <div className="tf-container position-relative tf-spacing-2">
           <div className="row justify-content-center">
             <div className="col-lg-10"></div>
             <div className="detalis-content mb-60" id="menu-sidebar-3">
               <Steps />
             </div>
           </div>
-        </div>
+        </div> */}
+
+        <Process/>
 
         {/* ===== Contact (right) + FAQs (left) ===== */}
         {/* ===== Contact (LEFT) + FAQs (RIGHT) — INLINE ONLY ===== */}

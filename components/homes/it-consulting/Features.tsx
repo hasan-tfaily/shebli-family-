@@ -13,7 +13,7 @@ export default function Features() {
                   href="#"
                   className="tag label text-btn-uppercase bg-white mb-12"
                 >
-                  Why Choose us?
+                  Redefining the Edutainment Experience
                 </a>
               </div>
               <h3 className="title-section mb-12 text-anime-wave-1">

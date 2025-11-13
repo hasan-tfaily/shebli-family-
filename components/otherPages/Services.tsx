@@ -8,20 +8,18 @@ export default function Services() {
         <div className="row">
           <div className="col-12">
             <div className="heading-section text-center">
-              <div className="text-anime-wave-1">
-                {/* changed to span to avoid useless # link */}
+              {/* <div className="text-anime-wave-1">
                 <span className="tag label text-btn-uppercase">
                   industries we help
                 </span>
-              </div>
+              </div> */}
               <h3 className="title-section text-anime-wave-1 mb-12">
-                Risk &amp; Compliance services tailored to
+                Discover our Projects
                 <br />
                 each industry.
               </h3>
               <div className="sub-title body-2 color-on-suface-container text-anime-wave-1">
-                Tailored solutions to drive your business growth and success.
-              </div>
+                See how our vision turns imagination into real-world experiences              </div>
             </div>
           </div>
         </div>

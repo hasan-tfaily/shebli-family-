@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Cta() {
   return (
-    <section className="section-cta h-1 tf-spacing-3 section-one-page" id="cta">
+    <section className="section-cta h-1 tf-spacing-3 section-one-page" id="cta" style={{marginTop: "100px"}}>
       <div className="tf-container">
         <div className="row">
           <div className="col-12">

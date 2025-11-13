@@ -6,6 +6,7 @@ import React from "react";
 import Breadcumb from "@/components/common/Breadcumb";
 import { Metadata } from "next";
 import About from "@/components/homes/insurance-consultancy/About";
+import CaseStudies2 from "@/components/case-studies/CaseStudies2";
 
 export const metadata: Metadata = {
   title:
@@ -30,7 +31,8 @@ export default function page() {
         </div>
       </div>
       <div className="main-content">
-        <Testimonials2 />
+        {/* <Testimonials2 /> */}
+        <CaseStudies2/>
         <About/>
 
          <section className="section-cta h-2 section-one-page" id="cta">
@@ -46,7 +48,7 @@ export default function page() {
                           href={`/contact-us`}
                           className="tf-btn style-1 bg-white text-center"
                         >
-                          <span> Request a Quote </span>
+                          <span> Franchise Opportunities </span>
                         </Link>
                       </div>
                     </div>
