@@ -126,99 +126,119 @@ export default function Services() {
           </div>
 
           {/* Star District */}
-         <div className="col-lg-4 col-md-6">
-  <Link
-    href="/projects/StarDistrict"
-    className="industry-item style-2 block no-underline"
-  >
-    <div className="top">
-      <div className="icon">
-        <i className="icon-LightbulbFilament" />
-      </div>
-      <h6>
-        <span className="name-industry">Star District</span>
-      </h6>
-    </div>
-    <div className="desc">
-      An interactive entertainment center where young talents discover
-      their passion for art, music, fashion, and performance in a
-      world built for stars.
-    </div>
-  </Link>
-</div>
-
-          {/* Kidz Academy */}
           <div className="col-lg-4 col-md-6">
-            <div className="industry-item style-2">
+            <Link
+              href="/projects/StarDistrict"
+              className="industry-item style-2 block no-underline"
+            >
               <div className="top">
                 <div className="icon">
-                  <i className="icon-AirplaneTakeoff" />
+                  <i className="icon-LightbulbFilament" />
                 </div>
                 <h6>
-                  <span className="name-industry">Kidz Academy</span>
+                  <span className="name-industry">Star District</span>
                 </h6>
               </div>
               <div className="desc">
-                A space where movement meets learning, helping children grow
-                stronger, more confident, and creatively inspired.
+                An interactive entertainment center where young talents discover
+                their passion for art, music, fashion, and performance in a
+                world built for stars.
               </div>
-            </div>
+            </Link>
+          </div>
+
+          {/* Kidz Academy */}
+          <div className="col-lg-4 col-md-6">
+            <Link
+              href="/projects/KidzAcademy"
+            // className="industry-item style-2 block no-underline"
+            >
+              <div className="industry-item style-2">
+                <div className="top">
+                  <div className="icon">
+                    <i className="icon-AirplaneTakeoff" />
+                  </div>
+                  <h6>
+                    <span className="name-industry">Kidz Academy</span>
+                  </h6>
+                </div>
+                <div className="desc">
+                  A space where movement meets learning, helping children grow
+                  stronger, more confident, and creatively inspired.
+                </div>
+              </div>
+            </Link>
           </div>
 
           {/* KM Innovation Center */}
           <div className="col-lg-4 col-md-6">
-            <div className="industry-item style-2">
-              <div className="top">
-                <div className="icon">
-                  <i className="icon-Wrench" />
+            <Link
+              href="/projects/KMInnovationCenter"
+            // className="industry-item style-2 block no-underline"
+            >
+              <div className="industry-item style-2">
+                <div className="top">
+                  <div className="icon">
+                    <i className="icon-Wrench" />
+                  </div>
+                  <h6>
+                    <span className="name-industry">KM Innovation Center</span>
+                  </h6>
                 </div>
-                <h6>
-                  <span className="name-industry">KM Innovation Center</span>
-                </h6>
+                <div className="desc">
+                  A tech-driven zone where kids explore coding, robotics, and
+                  design thinking through creative hands-on learning.
+                </div>
               </div>
-              <div className="desc">
-                A tech-driven zone where kids explore coding, robotics, and
-                design thinking through creative hands-on learning.
-              </div>
-            </div>
+            </Link>
           </div>
 
           {/* Urban Village */}
           <div className="col-lg-4 col-md-6">
-            <div className="industry-item style-2">
-              <div className="top">
-                <div className="icon">
-                  <i className="icon-Warehouse" />
+            <Link
+              href="/projects/UrbanVillage"
+            // className="industry-item style-2 block no-underline"
+            >
+              <div className="industry-item style-2">
+                <div className="top">
+                  <div className="icon">
+                    <i className="icon-Warehouse" />
+                  </div>
+                  <h6>
+                    <span className="name-industry">Urban Village</span>
+                  </h6>
                 </div>
-                <h6>
-                  <span className="name-industry">Urban Village</span>
-                </h6>
+                <div className="desc">
+                  An integrated family complex where families, kids, and young
+                  adults come together to play, dine, shop, and unwind in one
+                  connected community.
+                </div>
               </div>
-              <div className="desc">
-                An integrated family complex where families, kids, and young
-                adults come together to play, dine, shop, and unwind in one
-                connected community.
-              </div>
-            </div>
+            </Link>
           </div>
 
           {/* BOWL N ROCK */}
           <div className="col-lg-4 col-md-6">
-            <div className="industry-item style-2">
-              <div className="top">
-                <div className="icon">
-                  <i className="icon-Basket" />
+            <Link
+              href="/projects/BowlNRock"
+            // className="industry-item style-2 block no-underline"
+            >
+              <div className="industry-item style-2">
+                <div className="top">
+                  <div className="icon">
+                    <i className="icon-Basket" />
+                  </div>
+                  <h6>
+                    <span className="name-industry">BOWL N ROCK</span>
+                  </h6>
                 </div>
-                <h6>
-                  <span className="name-industry">BOWL N ROCK</span>
-                </h6>
+                <div className="desc">
+                  A child-sized city where learning meets play, empowering kids to
+                  explore real-world roles, earn, spend, and grow through
+                  hands-on discovery.
+                </div>
               </div>
-              <div className="desc">
-                A child-sized city where learning meets play, empowering kids to
-                explore real-world roles, earn, spend, and grow through
-                hands-on discovery.
-              </div>
-            </div>
+            </Link>
           </div>
         </div>
       </div>

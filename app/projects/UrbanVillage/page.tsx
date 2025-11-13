@@ -1,20 +1,9 @@
-// The Escape Park & Resort
 
 import Image from "next/image";
 import React from "react";
-import CommentForm from "./CommentForm";
-import Comments from "./Comments";
 
-interface Blog {
-  title?: string;
-  // Add other properties as needed
-}
 
-interface Details2Props {
-  blog: Blog;
-}
-
-export default function UrbanVillage({ blog }: Details2Props) {
+export default function UrbanVillage() {
   return (
     <>
       <div className="image img-top">
