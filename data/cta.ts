@@ -5,7 +5,7 @@ export const counters = [
   },
   {
     value: 3600,
-    label: "Happy customers",
+    label: "city",
   },
   {
     value: 900,
@@ -44,20 +44,22 @@ export const counters4 = [
 ];
 
 export const counters3 = [
+   
   {
-    value: 15,
-    label: "Years<br />Experiences",
+    value: 10,
+    label: "cities",
   },
   {
-    value: 3600,
-    label: "Happy<br />Customers",
+    value: 5,
+    label: "visits",
+    suffix: "M",
   },
   {
-    value: 900,
-    label: "Project<br />Completed",
+    value: 200,
+    label: "school partners",
   },
-  {
-    value: 40,
-    label: "Awards &amp;<br />Recognitions",
-  },
+  // {
+  //   value: 40,
+  //   label: "Awards &amp;<br />Recognitions",
+  // },
 ];

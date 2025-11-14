@@ -31,7 +31,7 @@ export default function page() {
       <div className="main-content">
         <Contact />
         <Map />
-        <Locations />
+        {/* <Locations /> */}
       </div>
     </>
   );

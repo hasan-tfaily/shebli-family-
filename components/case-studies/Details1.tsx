@@ -34,15 +34,14 @@ export default function Details1() {
                 Attendance growth, revenue diversification, and school partnerships demonstrate long‑term stability and scalability.
               </div>
               <div className="mb-20">
-                <h6 className="mb-8">Governance & Board: </h6>
+                <h4 className="title-content mb-16">Governance & Board: </h4>
                 <div className="body-2 desc">
-                 Led by experienced industry professionals and advisors who ensure accountability, transparency, and strategic alignment.
+                  Led by experienced industry professionals and advisors who ensure accountability, transparency, and strategic alignment.
                 </div>
               </div>
               <div className="mb-20">
-                <h6 className="mb-8">
-                  Pipeline & Expansion:
-                </h6>
+                <h4 className="title-content mb-16">Pipeline & Expansion:</h4>
+
                 <div className="body-2 desc">
                   New projects under evaluation in Riyadh, Cairo, and Abu Dhabi, supported by feasibility studies and local partnerships.
                 </div>
@@ -221,7 +220,7 @@ export default function Details1() {
                     10/26/2024
                   </span> */}
                 </div>
-                 <Link
+                <Link
                   href={`/contact-us`}
                   className="tf-btnN style-1 bg-white bg-white-style-2 w-full text-center"
                 >
@@ -250,7 +249,7 @@ export default function Details1() {
                     <br />
                     support your business goals.
                   </div>
-                 
+
                 </div>
                 {/* <div className="list-box-contact style-column mb-28">
                   <div className="box-contact-item">

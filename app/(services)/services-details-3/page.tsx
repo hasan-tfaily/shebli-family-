@@ -69,7 +69,7 @@ export default function Page() {
             </div>
           </div>
 
-          <div className="wow fadeInUp">
+          <div className="wow fadeInUp" style={{marginTop: "60px", marginBottom:"-30px"}}>
             <Link
               href={`/contact-us`}
               className="tf-btn style-1 bg-on-suface-container"

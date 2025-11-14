@@ -27,7 +27,7 @@ export default function Page() {
       </div>
 
       <div className="main-content">
-       <section className="section-industry page-industry tf-spacing-2">
+      <section className="section-industry page-industry tf-spacing-2">
   <div className="tf-container position-relative">
     <div className="row">
       <div className="col-12">
@@ -52,8 +52,15 @@ export default function Page() {
 
   <div className="tf-container position-relative">
     <div className="row rg-20">
-      <div className="col-lg-4 col-md-6">
-        <div className="industry-item style-2">
+      {/* 1 */}
+      <div
+        className="col-lg-4 col-md-6"
+        style={{ display: "flex" }} // flex column wrapper
+      >
+        <div
+          className="industry-item style-2"
+          style={{ flex: 1, width: "100%" }} // stretch to same height
+        >
           <div className="top">
             <div className="icon">
               <i className="icon-Bank" />
@@ -67,23 +74,38 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="col-lg-4 col-md-6">
-        <div className="industry-item style-2">
+      {/* 2 */}
+      <div
+        className="col-lg-4 col-md-6"
+        style={{ display: "flex" }}
+      >
+        <div
+          className="industry-item style-2"
+          style={{ flex: 1, width: "100%" }}
+        >
           <div className="top">
             <div className="icon">
               <i className="icon-FirstAidKit" />
             </div>
             <h6>
               <a href="#" className="name-industry">
-                Hospitality and<br />Leisure Resort
+                Hospitality and<br />
+                Leisure Resort
               </a>
             </h6>
           </div>
         </div>
       </div>
 
-      <div className="col-lg-4 col-md-6">
-        <div className="industry-item style-2">
+      {/* 3 */}
+      <div
+        className="col-lg-4 col-md-6"
+        style={{ display: "flex" }}
+      >
+        <div
+          className="industry-item style-2"
+          style={{ flex: 1, width: "100%" }}
+        >
           <div className="top">
             <div className="icon">
               <svg
@@ -119,60 +141,92 @@ export default function Page() {
             </div>
             <h6>
               <a href="#" className="name-industry">
-                Urban Realm and<br />Leisure Landscape
+                Urban Realm and<br />
+                Leisure Landscape
               </a>
             </h6>
           </div>
         </div>
       </div>
 
-      <div className="col-lg-4 col-md-6">
-        <div className="industry-item style-2">
+      {/* 4 */}
+      <div
+        className="col-lg-4 col-md-6"
+        style={{ display: "flex" }}
+      >
+        <div
+          className="industry-item style-2"
+          style={{ flex: 1, width: "100%" }}
+        >
           <div className="top">
             <div className="icon">
               <i className="icon-LightbulbFilament" />
             </div>
             <h6>
               <a href="#" className="name-industry">
-                Family Leisure<br />Destinations
+                Family Leisure<br />
+                Destinations
               </a>
             </h6>
           </div>
         </div>
       </div>
 
-      <div className="col-lg-4 col-md-6">
-        <div className="industry-item style-2">
+      {/* 5 */}
+      <div
+        className="col-lg-4 col-md-6"
+        style={{ display: "flex" }}
+      >
+        <div
+          className="industry-item style-2"
+          style={{ flex: 1, width: "100%" }}
+        >
           <div className="top">
             <div className="icon">
               <i className="icon-AirplaneTakeoff" />
             </div>
             <h6>
               <a href="#" className="name-industry">
-                Shopping and Mixed-Use<br />Environment
+                Shopping and Mixed-Use<br />
+                Environment
               </a>
             </h6>
           </div>
         </div>
       </div>
 
-      <div className="col-lg-4 col-md-6">
-        <div className="industry-item style-2">
+      {/* 6 */}
+      <div
+        className="col-lg-4 col-md-6"
+        style={{ display: "flex" }}
+      >
+        <div
+          className="industry-item style-2"
+          style={{ flex: 1, width: "100%" }}
+        >
           <div className="top">
             <div className="icon">
               <i className="icon-Wrench" />
             </div>
             <h6>
               <a href="#" className="name-industry">
-                Education and<br />Working Environment
+                Education and<br />
+                Working Environment
               </a>
             </h6>
           </div>
         </div>
       </div>
 
-      <div className="col-lg-4 col-md-6">
-        <div className="industry-item style-2">
+      {/* 7 */}
+      <div
+        className="col-lg-4 col-md-6"
+        style={{ display: "flex" }}
+      >
+        <div
+          className="industry-item style-2"
+          style={{ flex: 1, width: "100%" }}
+        >
           <div className="top">
             <div className="icon">
               <i className="icon-Warehouse" />
@@ -186,8 +240,15 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="col-lg-4 col-md-6">
-        <div className="industry-item style-2">
+      {/* 8 */}
+      <div
+        className="col-lg-4 col-md-6"
+        style={{ display: "flex" }}
+      >
+        <div
+          className="industry-item style-2"
+          style={{ flex: 1, width: "100%" }}
+        >
           <div className="top">
             <div className="icon">
               <i className="icon-Basket" />
@@ -203,6 +264,8 @@ export default function Page() {
     </div>
   </div>
 </section>
+
+
 
 
 

@@ -120,29 +120,40 @@ export default function About() {
       </div>
 
       {/* Counters section */}
-      {/* <section className="section-why-choose h-7 bg-surface tf-spacing-31" style={{ marginTop: "100px" }}>
-        <div className="tf-container position-relative">
-          <div className="row">
-            <div className="col-12">
-              <div className="wg-counter justify-content-between">
-                {counters3.map((c, i) => (
-                  <div className="counter-item style-3" key={i}>
-                    <div className="counter">
-                      <div className="number-counter">
-                        <h2 className="number odometer">
-                          <OdometerComponent max={c.value} />
-                        </h2>
-                        <h2 className="plus">+</h2>
-                      </div>
-                      <h6 className="text" dangerouslySetInnerHTML={{ __html: c.label }} />
-                    </div>
-                  </div>
-                ))}
+      <section
+  className="section-why-choose h-7 bg-surface tf-spacing-31"
+  style={{ marginTop: "100px" }}
+>
+  <div className="tf-container position-relative">
+    <div className="row">
+      <div className="col-12">
+        <div className="wg-counter justify-content-between">
+          {counters3.map((c, i) => (
+            <div className="counter-item style-3" key={i}>
+              <div className="counter">
+                <div className="number-counter">
+                  <h2 className="number odometer">
+                    <OdometerComponent max={c.value} />
+                    {c.suffix && (
+                      <span style={{ marginLeft: "4px" }}>{c.suffix}</span>
+                    )}
+                  </h2>
+                  <h2 className="plus">+</h2>
+                </div>
+
+                <h6
+                  className="text"
+                  dangerouslySetInnerHTML={{ __html: c.label }}
+                />
               </div>
             </div>
-          </div>
+          ))}
         </div>
-      </section> */}
+      </div>
+    </div>
+  </div>
+</section>
+
     </section>
   );
 }
