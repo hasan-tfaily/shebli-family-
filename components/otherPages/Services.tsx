@@ -11,17 +11,17 @@ export default function Services() {
               <div className="text-anime-wave-1">
                 {/* changed to span to avoid useless # link */}
                 <span className="tag label text-btn-uppercase">
-                  industries we help
+                  Industries we serve
                 </span>
               </div>
               <h3 className="title-section text-anime-wave-1 mb-12">
-                Risk &amp; Compliance services tailored to
+                {/* Risk &amp; Compliance services tailored to
                 <br />
-                each industry.
+                each industry. */}
+                Designing Experiences Across Every Leisure and Lifestyle Industry
               </h3>
-              <div className="sub-title body-2 color-on-suface-container text-anime-wave-1">
-                Tailored solutions to drive your business growth and success.
-              </div>
+              {/* <div className="sub-title body-2 color-on-suface-container text-anime-wave-1">
+              </div> */}
             </div>
           </div>
         </div>
