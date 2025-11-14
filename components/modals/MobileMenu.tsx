@@ -2,31 +2,52 @@
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
-import {
-  aboutLinks,
-  blogLinks,
-  caseStudyLinks,
-  homeItems,
-  productLinks,
-  serviceLinks,
-} from "@/data/menu";
 import { usePathname } from "next/navigation";
 import { MenuLink } from "@/types/menuLink";
 
 export default function MobileMenu() {
   const pathname = usePathname();
+
+  // 🔹 Same active logic as Nav
   const isMenuActive = (link: MenuLink) => {
-    return link.href?.split("/")[1] == pathname.split("/")[1];
+    const currentPath = pathname?.split("/")[1] ?? "";
+    const hrefPath = link.href?.split("/")[1];
+    const onePagePath = link.onePage?.split("/")[1];
+    return hrefPath === currentPath || onePagePath === currentPath;
   };
+
   const isMenuParentActive = (menu: MenuLink[]) => {
     return menu.some((elm) => isMenuActive(elm));
   };
+
+  // Partnership dropdown items (same as Nav)
+  const partnershipLinks: MenuLink[] = [
+    { href: "/Investor-Relations", title: "Investor Relations" },
+    { href: "/services-details-3", title: "Franchise & Partnership" },
+  ];
+
+  // Our Projects dropdown items (same as Nav)
+  const projectLinks: MenuLink[] = [
+    { href: "/projects/KidzMondo", title: "KidzMondo" },
+    {
+      href: "/projects/TheEscapeParkandResort",
+      title: "The Escape Park & Resort",
+    },
+    { href: "/projects/Karnavali", title: "Karnavali" },
+    { href: "/projects/StarDistrict", title: "Star District" },
+    { href: "/projects/KidzAcademy", title: "Kidz Academy" },
+    { href: "/projects/KMInnovationCenter", title: "KM Innovation Center" },
+    { href: "/projects/UrbanVillage", title: "Urban Village" },
+    { href: "/projects/BowlNRock", title: "BOWL N ROCK" },
+  ];
+
   return (
     <div
       className="offcanvas offcanvas-start mobile-nav-wrap"
       id="canvasMobile"
     >
       <div className="inner-mobile-nav">
+        {/* -------- TOP HEADER (logo + close) ---------- */}
         <div className="top-header-mobi">
           <div className="logo-mobile">
             <Link href={`/`}>
@@ -61,210 +82,178 @@ export default function MobileMenu() {
             </svg>
           </button>
         </div>
+
+        {/* -------------- MENU ---------------- */}
         <nav className="mobile-main-nav">
           <ul id="menu-mobile" className="menu">
-            <li
-              className={`menu-item menu-item-has-children-mobile ${
-                isMenuParentActive(homeItems) ? "current-menu-mobile-item" : ""
-              } `}
-            >
-              <a
-                href="#dropdown-menu-1"
-                data-bs-toggle="collapse"
-                className="collapsed"
-              >
-                Home
-              </a>
-              <div
-                id="dropdown-menu-1"
-                className="collapse"
-                data-bs-parent="#menu-mobile"
-              >
-                <ul className="sub-menu-mobile">
-                  {homeItems.map((link, i) => (
-                    <li
-                      key={i}
-                      className={`menu-item ${
-                        isMenuActive(link) ? "current-menu-mobile-item" : ""
-                      } `}
-                    >
-                      <Link href={link.href}>{link.title}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </li>
-            <li
-              className={`menu-item menu-item-has-children-mobile ${
-                isMenuParentActive(serviceLinks)
-                  ? "current-menu-mobile-item"
-                  : ""
-              } `}
-            >
-              <a
-                href="#dropdown-menu-2"
-                data-bs-toggle="collapse"
-                className="collapsed"
-              >
-                Services
-              </a>
-              <div
-                id="dropdown-menu-2"
-                className="collapse"
-                data-bs-parent="#menu-mobile"
-              >
-                <ul className="sub-menu-mobile">
-                  {serviceLinks.map((link, i) => (
-                    <li
-                      key={i}
-                      className={`menu-item ${
-                        isMenuActive(link) ? "current-menu-mobile-item" : ""
-                      } `}
-                    >
-                      <Link href={link.href}>{link.title}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </li>
-            <li
-              className={`menu-item menu-item-has-children-mobile ${
-                isMenuParentActive(caseStudyLinks)
-                  ? "current-menu-mobile-item"
-                  : ""
-              } `}
-            >
-              <a
-                href="#dropdown-menu-3"
-                data-bs-toggle="collapse"
-                className="collapsed"
-              >
-                Case
-              </a>
-              <div
-                id="dropdown-menu-3"
-                className="collapse"
-                data-bs-parent="#menu-mobile"
-              >
-                <ul className="sub-menu-mobile">
-                  {caseStudyLinks.map((link, i) => (
-                    <li
-                      key={i}
-                      className={`menu-item ${
-                        isMenuActive(link) ? "current-menu-mobile-item" : ""
-                      } `}
-                    >
-                      <Link href={link.href}>{link.title}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </li>
-            <li
-              className={`menu-item menu-item-has-children-mobile ${
-                isMenuParentActive(aboutLinks) ? "current-menu-mobile-item" : ""
-              } `}
-            >
-              <a
-                href="#dropdown-menu-4"
-                data-bs-toggle="collapse"
-                className="collapsed"
-              >
-                Pages
-              </a>
-              <div
-                id="dropdown-menu-4"
-                className="collapse"
-                data-bs-parent="#menu-mobile"
-              >
-                <ul className="sub-menu-mobile">
-                  {aboutLinks.map((link, i) => (
-                    <li
-                      key={i}
-                      className={`menu-item ${
-                        isMenuActive(link) ? "current-menu-mobile-item" : ""
-                      } `}
-                    >
-                      <Link href={link.href}>{link.title}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </li>
-            <li
-              className={`menu-item menu-item-has-children-mobile ${
-                isMenuParentActive(productLinks)
-                  ? "current-menu-mobile-item"
-                  : ""
-              } `}
-            >
-              <a
-                href="#sub-product-5"
-                data-bs-toggle="collapse"
-                className="collapsed"
-              >
-                Our Store
-              </a>
-              <div
-                id="sub-product-5"
-                className="collapse"
-                data-bs-parent="#menu-mobile"
-              >
-                <ul className="sub-menu-mobile">
-                  {productLinks.map((link, i) => (
-                    <li
-                      key={i}
-                      className={`menu-item ${
-                        isMenuActive(link) ? "current-menu-mobile-item" : ""
-                      } `}
-                    >
-                      <Link href={link.href}>{link.title}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </li>
-            <li
-              className={`menu-item menu-item-has-children-mobile ${
-                isMenuParentActive(blogLinks) ? "current-menu-mobile-item" : ""
-              } `}
-            >
-              <a
-                href="#dropdown-menu-6"
-                data-bs-toggle="collapse"
-                className="collapsed"
-              >
-                Blog
-              </a>
-              <div
-                id="dropdown-menu-6"
-                className="collapse"
-                data-bs-parent="#menu-mobile"
-              >
-                <ul className="sub-menu-mobile">
-                  {blogLinks.map((link, i) => (
-                    <li
-                      key={i}
-                      className={`menu-item ${
-                        isMenuActive(link) ? "current-menu-mobile-item" : ""
-                      } `}
-                    >
-                      <Link href={link.href}>{link.title}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </li>
+            {/* HOME */}
             <li
               className={`menu-item ${
-                isMenuActive({ href: "/contact-us" })
+                isMenuActive({ href: "/" } as MenuLink)
                   ? "current-menu-mobile-item"
                   : ""
-              } `}
+              }`}
             >
-              <Link href={`/contact-us`}>Contact Us</Link>
+              <Link href="/" className="item-link">
+                Home
+              </Link>
             </li>
+
+            {/* ABOUT US */}
+            <li
+              className={`menu-item ${
+                isMenuActive({ href: "/about-us" } as MenuLink)
+                  ? "current-menu-mobile-item"
+                  : ""
+              }`}
+            >
+              <Link href="/about-us" className="item-link">
+                About Us
+              </Link>
+            </li>
+
+            {/* PARTNERSHIP (dropdown) */}
+            <li
+              className={`menu-item menu-item-has-children-mobile ${
+                isMenuParentActive(partnershipLinks)
+                  ? "current-menu-mobile-item"
+                  : ""
+              }`}
+            >
+              <a
+                href="#mobile-partnership"
+                data-bs-toggle="collapse"
+                className="collapsed"
+              >
+                Partnership
+              </a>
+              <div
+                id="mobile-partnership"
+                className="collapse"
+                data-bs-parent="#menu-mobile"
+              >
+                <ul className="sub-menu-mobile">
+                  {partnershipLinks.map((link, i) => (
+                    <li
+                      key={i}
+                      className={`menu-item ${
+                        isMenuActive(link)
+                          ? "current-menu-mobile-item"
+                          : ""
+                      }`}
+                    >
+                      <Link href={link.href}>{link.title}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </li>
+
+            {/* OUR VENTURES */}
+            <li
+              className={`menu-item ${
+                isMenuActive({ href: "/testimonials" } as MenuLink)
+                  ? "current-menu-mobile-item"
+                  : ""
+              }`}
+            >
+              <Link href="/testimonials" className="item-link">
+                Our Ventures
+              </Link>
+            </li>
+
+            {/* OUR PROJECTS (dropdown, same children as Nav) */}
+            <li
+              className={`menu-item menu-item-has-children-mobile ${
+                isMenuParentActive(projectLinks)
+                  ? "current-menu-mobile-item"
+                  : ""
+              }`}
+            >
+              <a
+                href="#mobile-projects"
+                data-bs-toggle="collapse"
+                className="collapsed"
+              >
+                Our Projects
+              </a>
+              <div
+                id="mobile-projects"
+                className="collapse"
+                data-bs-parent="#menu-mobile"
+              >
+                <ul className="sub-menu-mobile">
+                  {projectLinks.map((link, i) => (
+                    <li
+                      key={i}
+                      className={`menu-item ${
+                        isMenuActive(link)
+                          ? "current-menu-mobile-item"
+                          : ""
+                      }`}
+                    >
+                      <Link href={link.href}>{link.title}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </li>
+
+            {/* SERVICES */}
+            <li
+              className={`menu-item ${
+                isMenuActive({ href: "/services" } as MenuLink)
+                  ? "current-menu-mobile-item"
+                  : ""
+              }`}
+            >
+              <Link href="/services" className="item-link">
+                Services
+              </Link>
+            </li>
+
+            {/* BLOGS */}
+            <li
+              className={`menu-item ${
+                isMenuActive({ href: "/blog" } as MenuLink)
+                  ? "current-menu-mobile-item"
+                  : ""
+              }`}
+            >
+              <Link href="/blog" className="item-link">
+                Blogs
+              </Link>
+            </li>
+
+            {/* If you later want Careers / Contact in mobile too, just uncomment: */}
+            {/*
+            <li
+              className={`menu-item ${
+                isMenuActive({ href: "/careers" } as MenuLink)
+                  ? "current-menu-mobile-item"
+                  : ""
+              }`}
+            >
+              <Link href="/careers" className="item-link">
+                Careers
+              </Link>
+            </li>
+
+            <li
+              className={`menu-item ${
+                isMenuActive({ href: "/contact-us" } as MenuLink)
+                  ? "current-menu-mobile-item"
+                  : ""
+              }`}
+            >
+              <Link href="/contact-us" className="item-link">
+                Contact
+              </Link>
+            </li>
+            */}
           </ul>
+
+          {/* -------- CONTACT INFO (kept same) -------- */}
           <div className="contact-mobile">
             <h6 className="title-contact-mobile">Contact Info</h6>
             <div className="content-contact-moblile">

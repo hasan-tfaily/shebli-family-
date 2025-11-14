@@ -412,7 +412,7 @@ export default function Nav() {
       </li>
 
       {/* CAREERS */}
-      <li
+      {/* <li
         className={`menu-item ${
           isMenuActive({ href: "/careers" } as MenuLink)
             ? "current-menu-item"
@@ -422,10 +422,10 @@ export default function Nav() {
         <Link href="/careers" className="item-link">
           Careers
         </Link>
-      </li>
+      </li> */}
 
       {/* CONTACT */}
-      <li
+      {/* <li
         className={`menu-item ${
           isMenuActive({ href: "/contact-us" } as MenuLink)
             ? "current-menu-item"
@@ -435,7 +435,7 @@ export default function Nav() {
         <Link href="/contact-us" className="item-link">
           Contact
         </Link>
-      </li>
+      </li> */}
     </>
   );
 }

@@ -61,14 +61,14 @@ export default function Header1({ onepage = false }) {
                     href={`/contact-us`}
                     className="tf-btn bg-white style-1 hover-bg-primary"
                   >
-                    <span>Schedule A Consultation</span>
+                    <span>Contact Us</span>
                   </Link>
                 </div>
                 <div className="nav-icon">
-                  <div className="nav-search">
+                  {/* <div className="nav-search">
                     <SearchButton />
-                  </div>
-                  <div className="nav-cart">
+                  </div> */}
+                  {/* <div className="nav-cart">
                     <Link href={`/shopping-cart`}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -115,7 +115,7 @@ export default function Header1({ onepage = false }) {
                         <CartLength />
                       </span>
                     </Link>
-                  </div>
+                  </div> */}
                   <div className="canvas-btn">
                     <a href="#canvnasMegamenu" data-bs-toggle="offcanvas">
                       <svg
