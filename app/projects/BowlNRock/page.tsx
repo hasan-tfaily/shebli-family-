@@ -18,7 +18,7 @@ export default function BowlNRock() {
         <div className="row">
           <div className="col-12">
             <div className="blog-content blog-details-2-content blog-details-content">
-              <div className="blog-details-top" style={{backgroundColor: '#FFD4D4', margin:'0px 60px 0px 60px',}}>
+              <div className="blog-details-top" >
                 {/* <a href="#" className="tag label text-btn-uppercase">
                   Finance
                 </a> */}
@@ -54,7 +54,7 @@ export default function BowlNRock() {
                   height={512}
                 />
               </div>
-              <div className="desc-blog" style={{backgroundColor: '#FFD4D4'}}>
+              <div className="desc-blog" >
                 <h5 className="title-desc">Overview</h5>
                 <p className="body-2">
                   Bowl N Rock is the newest experiential social entertainment hub offering Bowling, Immersive sports games, retro 
@@ -92,7 +92,7 @@ experience. 
                   />
                 </div>
               </div>
-              <div className="list-desc" style={{backgroundColor: '#FFD4D4'}}>
+              <div className="list-desc" >
                 <div className="desc-blog">
                   <h5 className="title-desc">
                     Experience
