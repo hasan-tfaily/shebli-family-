@@ -105,14 +105,14 @@ export default function KMInnovationCenterPage() {
                   </h5>
                   <p className="body-2">
                     <li>
-                      <ul>Entrepreneurship</ul>
-                      <ul>Design thinking</ul>
-                      <ul>Coding</ul>
-                      <ul>Robotics</ul>
-                      <ul>Artificial Intelligence</ul>
-                      <ul>Augmented and Virtual Reality</ul>
-                      <ul>Cyber Safety</ul>
-                      <ul>Gaming</ul>
+                      <ul>• Entrepreneurship</ul>
+                      <ul>• Design thinking</ul>
+                      <ul>• Coding</ul>
+                      <ul>• Robotics</ul>
+                      <ul>• Artificial Intelligence</ul>
+                      <ul>• Augmented and Virtual Reality</ul>
+                      <ul>• Cyber Safety</ul>
+                      <ul>• Gaming</ul>
                     </li>
                     <p>
 These technologies make the experience more stimulating and attractive to children 

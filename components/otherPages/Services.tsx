@@ -8,18 +8,14 @@ export default function Services() {
         <div className="row">
           <div className="col-12">
             <div className="heading-section text-center">
-              {/* <div className="text-anime-wave-1">
-                <span className="tag label text-btn-uppercase">
-                  industries we help
-                </span>
-              </div> */}
               <h3 className="title-section text-anime-wave-1 mb-12">
                 Discover our Projects
                 <br />
-                each industry.
+                Designing Experiences Across Every Leisure and Lifestyle Industry
               </h3>
               <div className="sub-title body-2 color-on-suface-container text-anime-wave-1">
-                See how our vision turns imagination into real-world experiences              </div>
+                See how our vision turns imagination into real-world experiences
+              </div>
             </div>
           </div>
         </div>
@@ -149,21 +145,19 @@ export default function Services() {
           <div className="col-lg-4 col-md-6">
             <Link
               href="/projects/KidzAcademy"
-            // className="industry-item style-2 block no-underline"
+              className="industry-item style-2 block no-underline"
             >
-              <div className="industry-item style-2">
-                <div className="top">
-                  <div className="icon">
-                    <i className="icon-AirplaneTakeoff" />
-                  </div>
-                  <h6>
-                    <span className="name-industry">Kidz Academy</span>
-                  </h6>
+              <div className="top">
+                <div className="icon">
+                  <i className="icon-AirplaneTakeoff" />
                 </div>
-                <div className="desc">
-                  A space where movement meets learning, helping children grow
-                  stronger, more confident, and creatively inspired.
-                </div>
+                <h6>
+                  <span className="name-industry">Kidz Academy</span>
+                </h6>
+              </div>
+              <div className="desc">
+                A space where movement meets learning, helping children grow
+                stronger, more confident, and creatively inspired.
               </div>
             </Link>
           </div>
@@ -172,21 +166,19 @@ export default function Services() {
           <div className="col-lg-4 col-md-6">
             <Link
               href="/projects/KMInnovationCenter"
-            // className="industry-item style-2 block no-underline"
+              className="industry-item style-2 block no-underline"
             >
-              <div className="industry-item style-2">
-                <div className="top">
-                  <div className="icon">
-                    <i className="icon-Wrench" />
-                  </div>
-                  <h6>
-                    <span className="name-industry">KM Innovation Center</span>
-                  </h6>
+              <div className="top">
+                <div className="icon">
+                  <i className="icon-Wrench" />
                 </div>
-                <div className="desc">
-                  A tech-driven zone where kids explore coding, robotics, and
-                  design thinking through creative hands-on learning.
-                </div>
+                <h6>
+                  <span className="name-industry">KM Innovation Center</span>
+                </h6>
+              </div>
+              <div className="desc">
+                A tech-driven zone where kids explore coding, robotics, and
+                design thinking through creative hands-on learning.
               </div>
             </Link>
           </div>
@@ -195,22 +187,20 @@ export default function Services() {
           <div className="col-lg-4 col-md-6">
             <Link
               href="/projects/UrbanVillage"
-            // className="industry-item style-2 block no-underline"
+              className="industry-item style-2 block no-underline"
             >
-              <div className="industry-item style-2">
-                <div className="top">
-                  <div className="icon">
-                    <i className="icon-Warehouse" />
-                  </div>
-                  <h6>
-                    <span className="name-industry">Urban Village</span>
-                  </h6>
+              <div className="top">
+                <div className="icon">
+                  <i className="icon-Warehouse" />
                 </div>
-                <div className="desc">
-                  An integrated family complex where families, kids, and young
-                  adults come together to play, dine, shop, and unwind in one
-                  connected community.
-                </div>
+                <h6>
+                  <span className="name-industry">Urban Village</span>
+                </h6>
+              </div>
+              <div className="desc">
+                An integrated family complex where families, kids, and young
+                adults come together to play, dine, shop, and unwind in one
+                connected community.
               </div>
             </Link>
           </div>
@@ -219,22 +209,20 @@ export default function Services() {
           <div className="col-lg-4 col-md-6">
             <Link
               href="/projects/BowlNRock"
-            // className="industry-item style-2 block no-underline"
+              className="industry-item style-2 block no-underline"
             >
-              <div className="industry-item style-2">
-                <div className="top">
-                  <div className="icon">
-                    <i className="icon-Basket" />
-                  </div>
-                  <h6>
-                    <span className="name-industry">BOWL N ROCK</span>
-                  </h6>
+              <div className="top">
+                <div className="icon">
+                  <i className="icon-Basket" />
                 </div>
-                <div className="desc">
-                  A child-sized city where learning meets play, empowering kids to
-                  explore real-world roles, earn, spend, and grow through
-                  hands-on discovery.
-                </div>
+                <h6>
+                  <span className="name-industry">BOWL N ROCK</span>
+                </h6>
+              </div>
+              <div className="desc">
+                A child-sized city where learning meets play, empowering kids to
+                explore real-world roles, earn, spend, and grow through
+                hands-on discovery.
               </div>
             </Link>
           </div>

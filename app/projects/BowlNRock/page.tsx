@@ -117,11 +117,11 @@ prominently displayed.
                   </h5>
                   <p className="body-2">
                    <li>
-                     <ul>Retro arcade games</ul>
-                     <ul>Billiard Tables</ul>
-                     <ul>Bowling Arena</ul>
-                     <ul>Eatery Arena</ul>
-                     <ul>Virtual Reality</ul>
+                     <ul>• Retro arcade games</ul>
+                     <ul>• Billiard Tables</ul>
+                     <ul>• Bowling Arena</ul>
+                     <ul>• Eatery Arena</ul>
+                     <ul>• Virtual Reality</ul>
                    </li>
                   </p>
                 </div>

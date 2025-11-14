@@ -130,29 +130,29 @@ export default function StarDistrict() {
                     <li>
                       Guests can choose between a wide range of activities to
                       include:
-                      <ul>Singing</ul>
-                      <ul>Dancing</ul>
-                      <ul>Acting</ul>
-                      <ul>Music</ul>
-                      <ul>Modeling</ul>
-                      <ul>TV Presenter</ul>
-                      <ul>Djing</ul>
-                      <ul>Photography</ul>
-                      <ul>Fashion Designer</ul>
-                      <ul>Jewelry Designer</ul>
-                      <ul>Handbag Designer</ul>
-                      <ul>Footballer</ul>
-                      <ul>Car Racer</ul>
-                      <ul>Shoe Designer</ul>
-                      <ul>Perfume Making</ul>
-                      <ul>And much more...</ul>
+                      <ul>• Singing</ul>
+                      <ul>• Dancing</ul>
+                      <ul>• Acting</ul>
+                      <ul>• Music</ul>
+                      <ul>• Modeling</ul>
+                      <ul>• TV Presenter</ul>
+                      <ul>• Djing</ul>
+                      <ul>• Photography</ul>
+                      <ul>• Fashion Designer</ul>
+                      <ul>• Jewelry Designer</ul>
+                      <ul>• Handbag Designer</ul>
+                      <ul>• Footballer</ul>
+                      <ul>• Car Racer</ul>
+                      <ul>• Shoe Designer</ul>
+                      <ul>• Perfume Making</ul>
+                      <ul>• And much more...</ul>
                     </li>
                     <li>
                       At the same time, Guests can also benefit from a variety
                       of services to include:
-                      <ul>SPA</ul>
-                      <ul>Beauty Salon</ul>
-                      <ul>Birthday Venues</ul>
+                      <ul>• SPA</ul>
+                      <ul>• Beauty Salon</ul>
+                      <ul>• Birthday Venues</ul>
                     </li>
                   </p>
                 </div>
