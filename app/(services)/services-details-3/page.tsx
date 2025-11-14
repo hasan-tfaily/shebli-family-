@@ -9,6 +9,7 @@ import About from "@/components/homes/strategy-consulting/About";
 import Steps from "@/components/services/Steps";
 import ContactForm from "@/components/otherPages/ContactForm";
 import Process from "@/components/homes/insurance-consultancy/Process";
+import Benefits from "@/components/homes/it-consulting/Benefits";
 export const metadata: Metadata = {
   title:
     "Service Details 03 || FinWice - Business & Finance Consulting - React Nextjs Template",
@@ -95,7 +96,7 @@ export default function Page() {
         </div> */}
 
         <Process/>
-
+<Benefits/>
         {/* ===== Contact (right) + FAQs (left) ===== */}
         {/* ===== Contact (LEFT) + FAQs (RIGHT) — INLINE ONLY ===== */}
 {/* <section className="section-faqs h-5 tf-spacing-2">

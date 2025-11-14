@@ -11,12 +11,11 @@ export default function Benefits() {
           <div className="box-content">
             <h5>
               <a href="#" className="title-box">
-                Tailored Business Strategies
+                Operations
               </a>
             </h5>
             <div className="sub-title">
-              Customized solutions that align with your specific business goals,
-              driving long-term success.
+              From day one, franchisees receive complete operational guidance  from site setup and staff training to daily management and quality assurance  ensuring smooth and consistent performance across every location.
             </div>
           </div>
         </div>
@@ -28,12 +27,11 @@ export default function Benefits() {
             <h5>
               <a href="#" className="title-box">
                 {" "}
-                Expert Market Insights{" "}
+                Safety{" "}
               </a>
             </h5>
             <div className="sub-title">
-              Gain access to in-depth market analysis and trends, helping you
-              make informed decisions.
+             Our comprehensive safety programs guarantee that every facility operates according to international standards, with strict protocols covering child security, equipment maintenance, and emergency procedures.
             </div>
           </div>
         </div>
@@ -45,12 +43,11 @@ export default function Benefits() {
             <h5>
               <a href="#" className="title-box">
                 {" "}
-                Operational Efficiency{" "}
+                Marketing{" "}
               </a>
             </h5>
             <div className="sub-title">
-              Improve processes and optimize resources for better performance
-              and cost-effectiveness.
+              Franchisees gain access to ready-to-launch marketing strategies, digital assets, and promotional campaigns designed to build visibility, attract families, and strengthen brand presence in each market.
             </div>
           </div>
         </div>
@@ -62,12 +59,11 @@ export default function Benefits() {
             <h5>
               <a href="#" className="title-box">
                 {" "}
-                Sustainable Growth{" "}
+                CRM{" "}
               </a>
             </h5>
             <div className="sub-title">
-              Achieve steady, sustainable growth through innovative strategies
-              designed for future scalability.
+              We provide a tailored Customer Relationship Management system that helps monitor visitor data, enhance customer engagement, and improve retention through personalized experiences and loyalty programs.
             </div>
           </div>
         </div>
