@@ -17,8 +17,8 @@ export default function Features() {
                 </a>
               </div>
               <h3 className="title-section mb-12 text-anime-wave-1">
-              Building the Future  <br />
-               of Learning and Play
+                Building the Future  <br />
+                of Learning and Play
               </h3>
             </div>
           </div>
@@ -28,8 +28,14 @@ export default function Features() {
             <div className="list-box-icon">
               <div className="box-icon">
                 <div className="icon color-primary wow fadeInUp">
-                  <i className="icon-customized" />
+                  <Image
+                    src="/image/icon/OurBrands&Ventures.svg" 
+                    alt="Our Brands & Ventures"
+                    width={64}
+                    height={64}
+                  />
                 </div>
+
                 <div className="box-content">
                   <h5 className="wow fadeInUp">
                     <a href="#" className="title-box">
@@ -37,14 +43,19 @@ export default function Features() {
                     </a>
                   </h5>
                   <div className="sub-title wow fadeInUp">
-                   Discover our portfolio of pioneering family and entertainment ventures designed to educate, engage, and inspire.
+                    Discover our portfolio of pioneering family and entertainment ventures designed to educate, engage, and inspire.
                   </div>
                 </div>
               </div>
               <div className="box-icon">
                 <div className="icon color-primary wow fadeInUp">
-                  <i className="icon-advanced" />
-                </div>
+  <Image
+    src="/image/icon/investorRelations.svg" 
+    alt="Our Brands & Ventures"
+    width={64}
+    height={64}
+  />
+</div>
                 <div className="box-content">
                   <h5 className="wow fadeInUp">
                     <a href="#" className="title-box">
@@ -76,11 +87,17 @@ export default function Features() {
             <div className="list-box-icon">
               <div className="box-icon">
                 <div
-                  className="icon color-primary wow fadeInUp"
-                  data-wow-delay=".3s"
-                >
-                  <i className="icon-streamlined" />
-                </div>
+  className="icon cFranchise&Partnership.svgolor-primary wow fadeInUp"
+  data-wow-delay=".3s"
+>
+  <Image
+    src="/image/icon/Franchise&Partnership.svg"
+    alt="Franchise & Partnership"
+    width={64}
+    height={64}
+  />
+</div>
+
                 <div className="box-content">
                   <h5 className="wow fadeInUp" data-wow-delay=".3s">
                     <a href="#" className="title-box">
@@ -93,12 +110,17 @@ export default function Features() {
                 </div>
               </div>
               <div className="box-icon">
-                <div
-                  className="icon color-primary wow fadeInUp"
-                  data-wow-delay=".3s"
-                >
-                  <i className="icon-future" />
-                </div>
+                     <div
+  className="icon cFranchise&Partnership.svgolor-primary wow fadeInUp"
+  data-wow-delay=".3s"
+>
+  <Image
+    src="/image/icon/CSR&Impact.svg" 
+    alt="Franchise & Partnership"
+    width={64}
+    height={64}
+  />
+</div>
                 <div className="box-content">
                   <h5 className="wow fadeInUp" data-wow-delay=".3s">
                     <a href="#" className="title-box">
