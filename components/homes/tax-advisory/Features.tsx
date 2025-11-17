@@ -12,7 +12,7 @@ export default function Features() {
           <div className="col-xl-6">
             <div className="image mr-15">
               <Image
-                src="/image/section/img-section-why-choose-h7.jpg"
+                src="/image/section/franshise1.png"
                 alt=""
                 className="lazyload"
                 width={615}

@@ -1,12 +1,12 @@
 "use client";
 import Link from "next/link";
-
 import React, { useState } from "react";
 import OdometerComponent from "../common/OdometerComponent";
 import ModalVideo from "../common/ModalVideo";
 
 export default function About() {
   const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
       <section className="section-about h-1 page-career tf-spacing-27">
@@ -33,6 +33,7 @@ export default function About() {
                 </Link>
               </div>
             </div>
+
             <div className="col-lg-4">
               <div className="about-content-right">
                 <div className="counter-item">
@@ -48,6 +49,7 @@ export default function About() {
                     </p>
                   </div>
                 </div>
+
                 <div className="flat-animate-tab">
                   <div className="wg-tab style-small">
                     <ul className="tab-product min-w-366" role="tablist">
@@ -65,20 +67,29 @@ export default function About() {
                       </li>
                       <li className="nav-tab-item" role="presentation">
                         <h6>
-                          <a href="#innovation" data-bs-toggle="tab" role="tab">
+                          <a
+                            href="#innovation"
+                            data-bs-toggle="tab"
+                            role="tab"
+                          >
                             Innovation
                           </a>
                         </h6>
                       </li>
                       <li className="nav-tab-item" role="presentation">
                         <h6>
-                          <a href="#commitment" data-bs-toggle="tab" role="tab">
+                          <a
+                            href="#commitment"
+                            data-bs-toggle="tab"
+                            role="tab"
+                          >
                             Commitment
                           </a>
                         </h6>
                       </li>
                     </ul>
                   </div>
+
                   <div className="tab-content">
                     <div
                       className="tab-pane active show"
@@ -92,6 +103,7 @@ export default function About() {
                         support on your path to success.
                       </p>
                     </div>
+
                     <div className="tab-pane" id="innovation" role="tabpanel">
                       <p className="text">
                         Our team of experts delivers tailored insights and
@@ -100,6 +112,7 @@ export default function About() {
                         support on your path to success.
                       </p>
                     </div>
+
                     <div className="tab-pane" id="commitment" role="tabpanel">
                       <p className="text">
                         Our team of experts delivers tailored insights and
@@ -113,24 +126,52 @@ export default function About() {
               </div>
             </div>
           </div>
+
+          {/* FULL-BG IMAGE BLOCK */}
           <div className="row">
             <div className="col-12">
-              <div className="wg-video w-full img-2 mb-40">
-                <a
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setIsOpen(true);
-                  }}
-                  className="popup-youtube"
-                >
-                  <div className="icon">
-                    <i className="icon-Play" />
-                  </div>
-                  <div className="wave" />
-                  <div className="wave" />
-                  <div className="wave" />
-                </a>
+              <div
+                className="wg-video w-full img-2 mb-40"
+                style={{
+                  backgroundImage:
+                    'url("/image/page-title/careers.png")',
+                  // or, if your file is here:
+                  // backgroundImage: 'url("/image/Kidz academy/careers.png")',
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                }}
+              >
+                {/*
+                  OLD VIDEO CLICK AREA (KEPT, JUST COMMENTED)
+
+                  <a
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setIsOpen(true);
+                    }}
+                    className="popup-youtube"
+                  >
+                    <div className="icon">
+                      <i className="icon-Play" />
+                    </div>
+                    <div className="wave" />
+                    <div className="wave" />
+                    <div className="wave" />
+                  </a>
+                */}
+
+                {/*
+                  INLINE IMAGE (NO LONGER NEEDED AS CHILD, BUT KEPT)
+
+                  <img
+                    src="/image/page-title/careers.png"
+                    alt="FinWice Careers"
+                    className="w-100"
+                  />
+                */}
               </div>
+
               <h5 className="text-center">
                 Explore the diverse expertise of our licensed professionals,
                 dedicated to delivering tailored financial <br />
@@ -140,11 +181,15 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      {/* MODAL KEPT, BUT NO TRIGGER ABOVE */}
+      {/*
       <ModalVideo
         videoId={"XHOmBV4js_E"}
         isOpen={isOpen}
         setIsOpen={setIsOpen}
       />
+      */}
     </>
   );
 }
