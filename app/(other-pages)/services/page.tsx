@@ -18,7 +18,7 @@ export default function Page() {
         <div className="tf-container">
           <div className="page-title-content">
             <Breadcumb pageName="Industries" />
-            <h2 className="title-page-title">Our Projects</h2>
+            <h2 className="title-page-title">Our </h2>
             <div className="sub-title body-2">
               Creating Parks of Imagination, Edutainment Fun
             </div>

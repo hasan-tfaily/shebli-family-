@@ -53,7 +53,7 @@ export default function MobileMenu() {
             <Link href={`/`}>
               <Image
                 alt=""
-                src="/image/logo/logo-2.svg"
+                src="/image/logo/darklogo.svg"
                 width={169}
                 height={40}
               />

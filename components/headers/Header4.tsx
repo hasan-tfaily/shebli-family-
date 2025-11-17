@@ -121,7 +121,7 @@ export default function Header4({ onepage = false }) {
                   <Link href={`/digital-transformation`}>
                     <Image
                       alt=""
-                      src="/image/logo/logo.svg"
+                      src="/image/logo/kidzLogo.svg"
                       width={169}
                       height={40}
                     />
