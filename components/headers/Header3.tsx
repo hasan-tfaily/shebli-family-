@@ -42,7 +42,7 @@ export default function Header3({
                     <a href="#">
                       <Image
                         alt=""
-                        src="/image/logo/logo-3.svg"
+                        src="/image/logo/kidzLogo2.svg"
                         width={170}
                         height={40}
                       />

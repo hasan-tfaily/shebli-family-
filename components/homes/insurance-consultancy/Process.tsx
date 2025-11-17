@@ -38,7 +38,7 @@ export default function Process() {
           <div className="process-list style-column hover-active-step">
             {/* 1. Site Selection */}
             <div className="process-item style-color-white style-3 step-hover">
-              <div className="title number-process wow fadeInUp">1</div>
+              <div className="title number-process wow fadeInUp" style={{backgroundColor: "white"}}>1</div>
               <div className="process-content">
                 <h5 className="wow fadeInUp" data-wow-delay=".1s">
                   <a href="#" className="name-process mb-10">
@@ -56,7 +56,7 @@ export default function Process() {
 
             {/* 2. Design & Layout */}
             <div className="process-item style-color-white style-3 step-hover">
-              <div className="title number-process wow fadeInUp">2</div>
+              <div className="title number-process wow fadeInUp" style={{backgroundColor: "white"}}>2</div>
               <div className="circle wow fadeInUp" />
               <div className="process-content">
                 <h5 className="wow fadeInUp" data-wow-delay=".1s">
@@ -74,7 +74,7 @@ export default function Process() {
 
             {/* 3. Construction & Fit-Out */}
             <div className="process-item style-color-white style-3 step-hover">
-              <div className="title number-process wow fadeInUp">3</div>
+              <div className="title number-process wow fadeInUp" style={{backgroundColor: "white"}}>3</div>
               <div className="circle wow fadeInUp" />
               <div className="process-content">
                 <h5 className="wow fadeInUp" data-wow-delay=".1s">
@@ -92,7 +92,7 @@ export default function Process() {
 
             {/* 4. Recruitment & Training */}
             <div className="process-item style-color-white style-3 step-hover">
-              <div className="title number-process wow fadeInUp">4</div>
+              <div className="title number-process wow fadeInUp" style={{backgroundColor: "white"}}>4</div>
               <div className="circle wow fadeInUp" />
               <div className="process-content">
                 <h5 className="wow fadeInUp" data-wow-delay=".1s">
@@ -111,7 +111,7 @@ export default function Process() {
 
             {/* 5. Pre-Launch Marketing */}
             <div className="process-item style-color-white style-3 step-hover">
-              <div className="title number-process wow fadeInUp">5</div>
+              <div className="title number-process wow fadeInUp" style={{backgroundColor: "white"}}>5</div>
               <div className="circle wow fadeInUp" />
               <div className="process-content">
                 <h5 className="wow fadeInUp" data-wow-delay=".1s">
@@ -129,7 +129,7 @@ export default function Process() {
 
             {/* 6. Grand Opening & Ongoing Support */}
             <div className="process-item style-color-white style-3 step-hover">
-              <div className="title number-process wow fadeInUp">6</div>
+              <div className="title number-process wow fadeInUp" style={{backgroundColor: "white"}}>6</div>
               <div className="circle wow fadeInUp" />
               <div className="process-content">
                 <h5 className="wow fadeInUp" data-wow-delay=".1s">
