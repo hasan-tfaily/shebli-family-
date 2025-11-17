@@ -6,7 +6,7 @@ export default function TheEscapeParkandResort() {
     <>
       <div className="image img-top">
         <Image
-          src="/image/page-title/page-title-4.jpg"
+          src="/image/projects/ourprojects.png"
           alt="The Escape Park & Resort Hero"
           className="lazyload"
           width={1920}

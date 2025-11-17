@@ -8,7 +8,7 @@ export default function KarnavaliPage() {  return (
     <>
       <div className="image img-top">
         <Image
-          src="/image/page-title/page-title-4.jpg"
+          src="/image/projects/ourprojects.png"
           alt=""
           className="lazyload"
           width={1920}

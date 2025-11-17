@@ -7,7 +7,7 @@ export default function KidzAcademyPage() {
     <>
       <div className="image img-top">
         <Image
-          src="/image/page-title/page-title-4.jpg"
+          src="/image/projects/ourprojects.png"
           alt="KidzAcademy Hero"
           className="lazyload"
           width={1920}
@@ -37,7 +37,7 @@ export default function KidzAcademyPage() {
 
               <div className="image-blog">
                 <Image
-                  src="/image/blog/image-blog-4.jpg"
+                  src="/image/Kidz academy/kidz-academy.png"
                   alt="KidzAcademy learning environment"
                   className="lazyload"
                   width={910}
@@ -63,7 +63,7 @@ export default function KidzAcademyPage() {
               <div className="cols-img">
                 <div className="image-blog">
                   <Image
-                    src="/image/blog/image-blog-5.jpg"
+                    src="/image/Kidz academy/kidz-academy2.png"
                     alt="KidzAcademy creative workshop"
                     className="lazyload"
                     width={444}
@@ -72,7 +72,7 @@ export default function KidzAcademyPage() {
                 </div>
                 <div className="image-blog">
                   <Image
-                    src="/image/blog/image-blog-6.jpg"
+                    src="/image/Kidz academy/kidz-academy3.png"
                     alt="KidzAcademy STEM activity"
                     className="lazyload"
                     width={444}
