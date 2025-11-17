@@ -32,7 +32,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className={`counter-scroll popup-loader`}>
         <div className="wrapper">
           <Context>
-            <RtlToggler />
+            {/* <RtlToggler /> */}
             {children}
             <MobileMenu />
             <Quickview />

@@ -83,33 +83,43 @@ export default function Footer1({ parentClass = "footer" }) {
               <div className="footer-center">
                 <div className="footer-content our-services footer-col-block">
                   <div className="title-mobile label text-btn-uppercase">
-                    Categories
+                    Our Projects
                     <i className="icon-arrow-51" />
                   </div>
                   <div className="tf-collapse-content">
                     <ul>
                       <li className="support-item-footer caption-1">
-                        <Link href={`/strategy-consulting`}>
-                          Strategy Consulting
+                        <Link href={`/projects/BowlNRock`}>
+                          Bowi N Rock
                         </Link>
                       </li>
                       <li className="support-item-footer caption-1">
-                        <Link href={`/`}>Financial Advisory</Link>
+                        <Link href={`/projects/Karnavali`}>Karnavali</Link>
                       </li>
                       <li className="support-item-footer caption-1">
-                        <Link href={`/services-details-1`}>Operational </Link>
+                        <Link href={`/projects/KidzAcademy`}>Kidz Academy </Link>
                       </li>
                       <li className="support-item-footer caption-1">
-                        <Link href={`/services-details-2`}>Improvement</Link>
+                        <Link href={`/projects/KidzMondo`}>Kidz Mondo</Link>
                       </li>
                       <li className="support-item-footer caption-1">
-                        <Link href={`/marketing-consulting`}>
-                          Marketing Strategy
+                        <Link href={`/projects/KMInnovationCenter`}>
+                          KM Innovation Center
                         </Link>
                       </li>
                       <li className="support-item-footer caption-1">
-                        <Link href={`/digital-transformation`}>
-                          Digital Transformation
+                        <Link href={`/projects/StarDistrict`}>
+                          Star District
+                        </Link>
+                      </li>
+                      <li className="support-item-footer caption-1">
+                        <Link href={`/projects/TheEscapeParkandResort`}>
+                          The Escape Park & Resort
+                        </Link>
+                      </li>
+                      <li className="support-item-footer caption-1">
+                        <Link href={`/projects/UrbanVillage`}>
+                          Urban Village
                         </Link>
                       </li>
                     </ul>
@@ -123,19 +133,28 @@ export default function Footer1({ parentClass = "footer" }) {
                   <div className="tf-collapse-content">
                     <ul>
                       <li className="support-item-footer caption-1">
+                        <Link href={`/`}>Home</Link>
+                      </li>
+                      <li className="support-item-footer caption-1">
                         <Link href={`/about-us`}>About Us</Link>
                       </li>
                       <li className="support-item-footer caption-1">
-                        <Link href={`/our-teams`}>Our Team</Link>
+                        <Link href={`/Investor-Relations`}>Investor Relations</Link>
                       </li>
                       <li className="support-item-footer caption-1">
-                        <a href="#">My Account</a>
+                        <a href="/services-details-3">Franchise & Partnership</a>
                       </li>
                       <li className="support-item-footer caption-1">
-                        <Link href={`/blog-left-sidebar`}>Blog</Link>
+                        <Link href={`/testimonials`}>Our Ventures</Link>
                       </li>
                       <li className="support-item-footer caption-1">
-                        <Link href={`/case-studies-1`}>Case studies</Link>
+                        <Link href={`/services`}>Services</Link>
+                      </li>
+                       <li className="support-item-footer caption-1">
+                        <Link href={`/blog`}>Blogs</Link>
+                      </li>
+                      <li className="support-item-footer caption-1">
+                        <Link href={`/careers`}>Carrer</Link>
                       </li>
                       <li className="support-item-footer caption-1">
                         <Link href={`/contact-us`}>Contact</Link>
@@ -207,7 +226,7 @@ export default function Footer1({ parentClass = "footer" }) {
               <div className="footer-bottom-inner">
                 <div className="left">
                   <div className="text caption-1">
-                    ©2025 FinWice. All Rights Reserved.
+                    ©2025 Kidz Holding. All Rights Reserved.
                   </div>
                 </div>
                 <div className="right">
