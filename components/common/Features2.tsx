@@ -19,7 +19,7 @@ export default function Features({
           <div className="col-lg-6">
             <div className="image mr-15 tf-animate-1">
               <Image
-                src="/image/section/img-section-why-choose-h2.jpg"
+                src="/image/section/WhyChooseUsAbout.png"
                 alt=""
                 className="lazyload"
                 width={615}

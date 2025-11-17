@@ -11,7 +11,7 @@ export default function Cta() {
             <div className="cta-inner">
               <div className="image tf-animate-1">
                 <Image
-                  src="/image/section/img-cta-1.png"
+                  src="/image/section/women-in-about-us.png"
                   alt=""
                   className="lazyload"
                   width={344}

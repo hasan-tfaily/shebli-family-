@@ -508,21 +508,21 @@
 
       &.img-h5-1 {
         &::before {
-          background-image: url("/public/images/page-title/Hero-Banner-1.png");
+          background-image: url("/image/section/Hero-Banner-1.jpg");
           opacity: 0.5;
         }
       }
 
       &.img-h5-2 {
         &::before {
-          background-image: url("/public/images/page-title/Hero-Banner-2.jpg");
+          background-image: url("/image/section/Hero-Banner-2.jpg");
           opacity: 0.5;
         }
       }
 
       &.img-h5-3 {
         &::before {
-          background-image: url("/public/images/page-title/Hero-Banner-3.jpg");
+          background-image: url("/image/section/Hero-Banner-3.jpg");
           opacity: 0.5;
         }
       }
@@ -1173,7 +1173,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url(/image/section/bg-section-cta-1.jpg);
+        background-image: url(/image/section/behind-woman.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -1397,7 +1397,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: url("/images/section/bg-section-process-h8.jpg");
+      background-image: url("/images/kidz/carer.png");
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -1405,6 +1405,7 @@
       opacity: 0.5;
     }
   }
+  
 
   &.page-our-services-2 {
     .process-item {

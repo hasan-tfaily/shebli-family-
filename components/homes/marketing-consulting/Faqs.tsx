@@ -10,7 +10,7 @@ export default function Faqs() {
             <div className="section-faqs-left mr-15">
               <div className="image tf-animate-1">
                 <Image
-                  src="/image/section/img-section-fqa-h5.jpg"
+                  src="/image/section/Home - 5 FAQ.png"
                   alt=""
                   className="lazyloaded"
                   width={615}
