@@ -38,7 +38,7 @@ export default function KidzMondoPage() {
               {/* MAIN IMAGE */}
               <div className="image-blog">
                 <Image
-                  src="/image/blog/image-blog-4.jpg"
+                  src="/image/kidzMondo/Kidz-mondo-1.png"
                   alt="KidzMondo"
                   className="lazyload"
                   width={910}
@@ -65,7 +65,7 @@ export default function KidzMondoPage() {
               <div className="cols-img">
                 <div className="image-blog">
                   <Image
-                    src="/image/blog/image-blog-5.jpg"
+                    src="/image/kidzMondo/kidzMondo2.png"
                     alt="KidzMondo Activity 1"
                     className="lazyload"
                     width={444}
@@ -74,7 +74,7 @@ export default function KidzMondoPage() {
                 </div>
                 <div className="image-blog">
                   <Image
-                    src="/image/blog/image-blog-6.jpg"
+                    src="/image/kidzMondo/kidzMondo3.png"
                     alt="KidzMondo Activity 2"
                     className="lazyload"
                     width={444}

@@ -37,7 +37,7 @@ export default function TheEscapeParkandResort() {
               {/* MAIN IMAGE */}
               <div className="image-blog">
                 <Image
-                  src="/image/blog/image-blog-4.jpg"
+                  src="/image/resortAndPark/resort pic 1.jpg"
                   alt="The Escape Park & Resort"
                   className="lazyload"
                   width={910}
@@ -73,7 +73,7 @@ export default function TheEscapeParkandResort() {
               <div className="cols-img">
                 <div className="image-blog">
                   <Image
-                    src="/image/blog/image-blog-5.jpg"
+                    src="/image/resortAndPark/resort pic 2.jpg"
                     alt="Escape Park Activity 1"
                     className="lazyload"
                     width={444}
@@ -82,7 +82,7 @@ export default function TheEscapeParkandResort() {
                 </div>
                 <div className="image-blog">
                   <Image
-                    src="/image/blog/image-blog-6.jpg"
+                    src="/image/resortAndPark/resort pic 3.jpg"
                     alt="Escape Park Activity 2"
                     className="lazyload"
                     width={444}
