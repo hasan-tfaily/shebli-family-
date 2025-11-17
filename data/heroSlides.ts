@@ -18,7 +18,7 @@ export const slides = [
 
 export const slides2 = [
   {
-    title: "Shaping the Future of\nEdutainment & Family\nLeisure",
+    title: "Shaping the Future of\nEdutainment & Family Leisure",
     subtitle:
     "Delivering impact for families, partners,\nand investors across MENA.",
     buttonText: "Our brands",
