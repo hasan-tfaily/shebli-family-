@@ -6,9 +6,9 @@ import Breadcumb from "@/components/common/Breadcumb";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title:
-    "Faqs || FinWice - Business & Finance Consulting - React Nextjs Template",
+    "Faqs || Kidz Holding - Franchise & Corporate Website",
   description:
-    "FinWice - Business & Finance Consulting - React Nextjs Template",
+    "Kidz Holding - Franchise & Corporate Website",
 };
 export default function page() {
   return (

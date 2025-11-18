@@ -13,9 +13,9 @@ import { Metadata } from "next";
 import Process from "@/components/common/Process";
 export const metadata: Metadata = {
   title:
-    "About us || FinWice - Business & Finance Consulting - React Nextjs Template",
+    "About us || Kidz Holding - Franchise & Corporate Website",
   description:
-    "FinWice - Business & Finance Consulting - React Nextjs Template",
+    "Kidz Holding - Franchise & Corporate Website",
 };
 export default function page() {
   return (

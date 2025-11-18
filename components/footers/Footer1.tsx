@@ -142,10 +142,10 @@ export default function Footer1({ parentClass = "footer" }) {
                         <Link href={`/Investor-Relations`}>Investor Relations</Link>
                       </li>
                       <li className="support-item-footer caption-1">
-                        <a href="/services-details-3">Franchise & Partnership</a>
+                        <a href="/Franchise-Partnership">Franchise & Partnership</a>
                       </li>
                       <li className="support-item-footer caption-1">
-                        <Link href={`/testimonials`}>Our Ventures</Link>
+                        <Link href={`/Our-Ventures`}>Our Ventures</Link>
                       </li>
                       <li className="support-item-footer caption-1">
                         <Link href={`/services`}>Services</Link>

@@ -15,7 +15,7 @@ import { rtlInitScript } from "@/lib/rtl-init";
 
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "FinWice - Business & Finance Consulting - React Nextjs Template",
+  title: "Kidz Holding - Franchise & Corporate Website",
 };
 import { ReactNode } from "react";
 

@@ -16,9 +16,9 @@ import Header3 from "@/components/headers/Header3";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title:
-    "Stratagy Consulting || FinWice - Business & Finance Consulting - React Nextjs Template",
+    "Stratagy Consulting || Kidz Holding - Franchise & Corporate Website",
   description:
-    "FinWice - Business & Finance Consulting - React Nextjs Template",
+    "Kidz Holding - Franchise & Corporate Website",
 };
 export default function page() {
   return (

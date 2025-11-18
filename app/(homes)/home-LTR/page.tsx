@@ -16,9 +16,9 @@ import RtlHandler from "@/components/homes/home-1/RtlHandler";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title:
-    "Home RTL || FinWice - Business & Finance Consulting - React Nextjs Template",
+    "Home RTL || Kidz Holding - Franchise & Corporate Website",
   description:
-    "FinWice - Business & Finance Consulting - React Nextjs Template",
+    "Kidz Holding - Franchise & Corporate Website",
 };
 export default function Home() {
   return (

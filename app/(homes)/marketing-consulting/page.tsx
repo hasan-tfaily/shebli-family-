@@ -15,9 +15,9 @@ import Footer2 from "@/components/footers/Footer2";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title:
-    "Marketing Consulting || FinWice - Business & Finance Consulting - React Nextjs Template",
+    "Marketing Consulting || Kidz Holding - Franchise & Corporate Website",
   description:
-    "FinWice - Business & Finance Consulting - React Nextjs Template",
+    "Kidz Holding - Franchise & Corporate Website",
 };
 export default function page() {
   return (

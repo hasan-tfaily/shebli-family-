@@ -6,9 +6,9 @@ import Brands from "@/components/homes/tax-advisory/Brands";
 
 export const metadata: Metadata = {
   title:
-    "Services || FinWice - Business & Finance Consulting - React Nextjs Template",
+    "Services || Kidz Holding - Franchise & Corporate Website",
   description:
-    "FinWice - Business & Finance Consulting - React Nextjs Template",
+    "Kidz Holding - Franchise & Corporate Website",
 };
 
 export default function Page() {

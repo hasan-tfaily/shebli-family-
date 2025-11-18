@@ -10,9 +10,9 @@ import Services2 from "@/components/homes/digital-transformation/Services2";
 import Career from "@/components/otherPages/Career";
 export const metadata: Metadata = {
   title:
-    "Contact Us || FinWice - Business & Finance Consulting - React Nextjs Template",
+    "Career || Kidz Holding - Franchise & Corporate Website",
   description:
-    "FinWice - Business & Finance Consulting - React Nextjs Template",
+    "Kidz Holding - Franchise & Corporate Website",
 };
 export default function page() {
   return (

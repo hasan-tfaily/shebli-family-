@@ -16,9 +16,9 @@ import Footer1 from "@/components/footers/Footer1";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title:
-    "Consulting Agency One Page || FinWice - Business & Finance Consulting - React Nextjs Template",
+    "Consulting Agency One Page || Kidz Holding - Franchise & Corporate Website",
   description:
-    "FinWice - Business & Finance Consulting - React Nextjs Template",
+    "Kidz Holding - Franchise & Corporate Website",
 };
 export default function page() {
   return (

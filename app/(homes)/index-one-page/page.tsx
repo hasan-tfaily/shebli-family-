@@ -15,9 +15,9 @@ import Testimonials from "@/components/homes/home-1/Testimonials";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title:
-    "Home One page || FinWice - Business & Finance Consulting - React Nextjs Template",
+    "Home One page || Kidz Holding - Franchise & Corporate Website",
   description:
-    "FinWice - Business & Finance Consulting - React Nextjs Template",
+    "Kidz Holding - Franchise & Corporate Website",
 };
 export default function Home() {
   return (

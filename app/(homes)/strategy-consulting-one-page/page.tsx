@@ -17,9 +17,9 @@ import { navItemsStratagy } from "@/data/menu";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title:
-    "Stratagy Consulting One Page || FinWice - Business & Finance Consulting - React Nextjs Template",
+    "Stratagy Consulting One Page || Kidz Holding - Franchise & Corporate Website",
   description:
-    "FinWice - Business & Finance Consulting - React Nextjs Template",
+    "Kidz Holding - Franchise & Corporate Website",
 };
 export default function page() {
   return (

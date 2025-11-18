@@ -24,14 +24,14 @@ export async function generateMetadata({
 
   return {
     title:
-      "Blog Details || FinWice - Business & Finance Consulting - React Nextjs Template",
+      "Blog Details || Kidz Holding - Franchise & Corporate Website",
     description:
-      "FinWice - Business & Finance Consulting - React Nextjs Template",
+      "Kidz Holding - Franchise & Corporate Website",
     openGraph: {
       title:
-        "Blog Details || FinWice - Business & Finance Consulting - React Nextjs Template",
+        "Blog Details || Kidz Holding - Franchise & Corporate Website",
       description:
-        "FinWice - Business & Finance Consulting - React Nextjs Template",
+        "Kidz Holding - Franchise & Corporate Website",
       type: "article",
       url: `/blog-details-1/${post.id}`,
     },

@@ -14,9 +14,9 @@ import React from "react";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title:
-    "Tax Advisory || FinWice - Business & Finance Consulting - React Nextjs Template",
+    "Tax Advisory || Kidz Holding - Franchise & Corporate Website",
   description:
-    "FinWice - Business & Finance Consulting - React Nextjs Template",
+    "Kidz Holding - Franchise & Corporate Website",
 };
 export default function page() {
   return (

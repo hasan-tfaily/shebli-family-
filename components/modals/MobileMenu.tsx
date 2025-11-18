@@ -23,7 +23,7 @@ export default function MobileMenu() {
   // Partnership dropdown items (same as Nav)
   const partnershipLinks: MenuLink[] = [
     { href: "/Investor-Relations", title: "Investor Relations" },
-    { href: "/services-details-3", title: "Franchise & Partnership" },
+    { href: "/Franchise-Partnership", title: "Franchise & Partnership" },
   ];
 
   // Our Projects dropdown items (same as Nav)
@@ -152,12 +152,12 @@ export default function MobileMenu() {
             {/* OUR VENTURES */}
             <li
               className={`menu-item ${
-                isMenuActive({ href: "/Our Ventures" } as MenuLink)
+                isMenuActive({ href: "/Our-Ventures" } as MenuLink)
                   ? "current-menu-mobile-item"
                   : ""
               }`}
             >
-              <Link href="/testimonials" className="item-link">
+              <Link href="/Our-Ventures" className="item-link">
                 Our Ventures
               </Link>
             </li>

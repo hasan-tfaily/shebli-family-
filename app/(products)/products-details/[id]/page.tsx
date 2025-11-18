@@ -17,15 +17,15 @@ export async function generateMetadata({
   return {
     title:
       product.title +
-      " || FinWice - Business & Finance Consulting - React Nextjs Template",
+      " || Kidz Holding - Franchise & Corporate Website",
     description:
-      "FinWice - Business & Finance Consulting - React Nextjs Template",
+      "Kidz Holding - Franchise & Corporate Website",
     openGraph: {
       title:
         product.title +
-        " || FinWice - Business & Finance Consulting - React Nextjs Template",
+        " || Kidz Holding - Franchise & Corporate Website",
       description:
-        "FinWice - Business & Finance Consulting - React Nextjs Template",
+        "Kidz Holding - Franchise & Corporate Website",
 
       url: `/products-details/${product.id}`,
     },

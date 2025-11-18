@@ -279,7 +279,7 @@ export default function Nav() {
   // Partnership dropdown items
   const partnershipLinks: MenuLink[] = [
     { href: "/Investor-Relations", title: "Investor Relations" },
-    { href: "/services-details-3", title: "Franchise & Partnership" },
+    { href: "/Franchise-Partnership", title: "Franchise & Partnership" },
   ];
 
   // Our Projects dropdown items
@@ -352,12 +352,12 @@ export default function Nav() {
       {/* OUR VENTURES */}
       <li
         className={`menu-item ${
-          isMenuActive({ href: "/Our Ventures" } as MenuLink)
+          isMenuActive({ href: "/Our-Ventures" } as MenuLink)
             ? "current-menu-item"
             : ""
         }`}
       >
-        <Link href="/testimonials" className="item-link">
+        <Link href="/Our-Ventures" className="item-link">
           Our Ventures
         </Link>
       </li>
@@ -368,7 +368,7 @@ export default function Nav() {
           isMenuParentActive(projectLinks) ? "current-menu-item" : ""
         }`}
       >
-        <Link href="/industries" className="item-link">
+        <Link href="/Our-Projects" className="item-link">
           Our Projects
         </Link>
         <ul className="sub-menu">
