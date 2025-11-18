@@ -20,7 +20,7 @@ export default function page() {
       <div className="page-title style-1 bg-img-17">
         <div className="tf-container">
           <div className="page-title-content">
-            <Breadcumb pageName="Testimonials" />
+            <Breadcumb pageName="Our Ventures" />
             <h2 className="title-page-title">Our Ventures</h2>
             {/* <h2 className="title-page-title">Testimonials</h2> */}
             <div className="sub-title body-2">

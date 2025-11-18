@@ -152,7 +152,7 @@ export default function MobileMenu() {
             {/* OUR VENTURES */}
             <li
               className={`menu-item ${
-                isMenuActive({ href: "/testimonials" } as MenuLink)
+                isMenuActive({ href: "/Our Ventures" } as MenuLink)
                   ? "current-menu-mobile-item"
                   : ""
               }`}

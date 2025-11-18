@@ -8,14 +8,18 @@ export default function Services() {
         <div className="row">
           <div className="col-12">
             <div className="heading-section text-center">
+              <div className="text-anime-wave-1">
+                <a href="#" className="tag label text-btn-uppercase">
+                  Discover Our Projects
+                </a>
+              </div>
               <h3 className="title-section text-anime-wave-1 mb-12">
-                Discover our Projects
-                <br />
-                Designing Experiences Across Every Leisure and Lifestyle Industry
+                Designing Experiences Across Every Leisure and Lifestyle <br />
+                Industry
+
               </h3>
               <div className="sub-title body-2 color-on-suface-container text-anime-wave-1">
-                See how our vision turns imagination into real-world experiences
-              </div>
+                See how our vision turns imagination into real-world experiences          </div>
             </div>
           </div>
         </div>
@@ -30,9 +34,9 @@ export default function Services() {
               className="industry-item style-2 block no-underline"
             >
               <div className="top">
-                <div className="icon">
+                {/* <div className="icon">
                   <i className="icon-Bank" />
-                </div>
+                </div> */}
                 <h6>
                   <span className="name-industry">KidzMondo</span>
                 </h6>
@@ -52,9 +56,9 @@ export default function Services() {
               className="industry-item style-2 block no-underline"
             >
               <div className="top">
-                <div className="icon">
+                {/* <div className="icon">
                   <i className="icon-FirstAidKit" />
-                </div>
+                </div> */}
                 <h6>
                   <span className="name-industry">
                     The Escape Park &amp; Resort
@@ -76,7 +80,7 @@ export default function Services() {
               className="industry-item style-2 block no-underline"
             >
               <div className="top">
-                <div className="icon">
+                {/* <div className="icon">
                   <svg
                     width={32}
                     height={32}
@@ -106,7 +110,7 @@ export default function Services() {
                       </clipPath>
                     </defs>
                   </svg>
-                </div>
+                </div> */}
                 <h6>
                   <span className="name-industry">Karnavali</span>
                 </h6>
@@ -126,9 +130,9 @@ export default function Services() {
               className="industry-item style-2 block no-underline"
             >
               <div className="top">
-                <div className="icon">
+                {/* <div className="icon">
                   <i className="icon-LightbulbFilament" />
-                </div>
+                </div> */}
                 <h6>
                   <span className="name-industry">Star District</span>
                 </h6>
@@ -148,9 +152,9 @@ export default function Services() {
               className="industry-item style-2 block no-underline"
             >
               <div className="top">
-                <div className="icon">
+                {/* <div className="icon">
                   <i className="icon-AirplaneTakeoff" />
-                </div>
+                </div> */}
                 <h6>
                   <span className="name-industry">Kidz Academy</span>
                 </h6>
@@ -169,9 +173,9 @@ export default function Services() {
               className="industry-item style-2 block no-underline"
             >
               <div className="top">
-                <div className="icon">
+                {/* <div className="icon">
                   <i className="icon-Wrench" />
-                </div>
+                </div> */}
                 <h6>
                   <span className="name-industry">KM Innovation Center</span>
                 </h6>
@@ -190,9 +194,9 @@ export default function Services() {
               className="industry-item style-2 block no-underline"
             >
               <div className="top">
-                <div className="icon">
+                {/* <div className="icon">
                   <i className="icon-Warehouse" />
-                </div>
+                </div> */}
                 <h6>
                   <span className="name-industry">Urban Village</span>
                 </h6>
@@ -212,9 +216,9 @@ export default function Services() {
               className="industry-item style-2 block no-underline"
             >
               <div className="top">
-                <div className="icon">
+                {/* <div className="icon">
                   <i className="icon-Basket" />
-                </div>
+                </div> */}
                 <h6>
                   <span className="name-industry">BOWL N ROCK</span>
                 </h6>

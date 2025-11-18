@@ -7,7 +7,7 @@ import OdometerComponent from "@/components/common/OdometerComponent";
 export default function Features() {
   return (
     <section className="section-why-choose h-7 bg-surface tf-spacing-31">
-      <div className="tf-container position-relative tf-spacing-3">
+      <div className="tf-container position-relative tf-spacing-3" style={{ paddingBottom: "0px"}}>
         <div className="row rg-60">
           <div className="col-xl-6">
             <div className="image mr-15">

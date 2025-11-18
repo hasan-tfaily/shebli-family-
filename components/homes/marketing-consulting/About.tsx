@@ -6,7 +6,7 @@ import OdometerComponent from "@/components/common/OdometerComponent";
 
 export default function About() {
   return (
-    <section className="section-about h-5 tf-spacing-2 section-one-page" id="about">
+    <section className="section-about h-5 tf-spacing-2 section-one-page" id="about"style={{paddingBottom: "0px"}}>
       <div className="tf-container position-relative">
         <div className="row">
           <div className="col-lg-6">
@@ -122,7 +122,7 @@ export default function About() {
       {/* Counters section */}
       <section
   className="section-why-choose h-7 bg-surface tf-spacing-31"
-  style={{ marginTop: "100px" }}
+  style={{ marginTop: "100px" , backgroundColor: "#232559 !important", paddingTop: "50px", paddingBottom: "50px" }}
 >
   <div className="tf-container position-relative">
     <div className="row">

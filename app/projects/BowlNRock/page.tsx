@@ -28,7 +28,7 @@ export default function BowlNRock() {
                   <br />
                   {blog.title?.split(" ").slice(4).join(" ") ??
                     "Business Cash Flow"} */}
-                    BOWl N ROCK
+                    BOWL N' ROCK
                 </h2>
                 {/* <div className="meta">
                   <a href="#" className="meta-content">
