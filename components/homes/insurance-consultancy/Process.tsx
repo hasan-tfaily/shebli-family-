@@ -8,7 +8,7 @@ export default function Process() {
         {/* LEFT IMAGE */}
         <div className="image tf-animate-1">
           <Image
-            src="/image/section/img-section-process-h6.jpg"
+            src="/image/section/franchise.jpg"
             alt="Kidz Holding project development process"
             className="lazyload"
             width={900}

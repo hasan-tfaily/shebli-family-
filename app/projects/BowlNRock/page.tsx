@@ -47,7 +47,7 @@ export default function BowlNRock() {
               </div>
               <div className="image-blog">
                 <Image
-                  src={"/image/blog/image-blog-4.jpg"}
+                  src={"/image/bowlNRock/Rock N Bowl 1.jpg"}
                   alt=""
                   className="lazyload"
                   width={910}
@@ -75,7 +75,7 @@ experience. 
               <div className="cols-img">
                 <div className="image-blog">
                   <Image
-                    src="/image/blog/image-blog-5.jpg"
+                    src="/image/bowlNRock/Rock N Bowl 2.jpg"
                     alt=""
                     className="lazyload"
                     width={444}
@@ -84,7 +84,7 @@ experience. 
                 </div>
                 <div className="image-blog">
                   <Image
-                    src="/image/blog/image-blog-6.jpg"
+                    src="/image/bowlNRock/Rock N Bowl 3.jpg"
                     alt=""
                     className="lazyload"
                     width={444}

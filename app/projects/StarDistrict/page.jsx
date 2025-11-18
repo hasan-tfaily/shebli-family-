@@ -38,7 +38,7 @@ export default function StarDistrict() {
               {/* Main image */}
               <div className="image-blog">
                 <Image
-                  src={"/image/starDistrict/starDistrict1.jpg"}
+                  src={"/image/starDistrict/star district 1.jpg"}
                   alt="Star District"
                   className="lazyload"
                   width={910}
@@ -78,7 +78,7 @@ export default function StarDistrict() {
               <div className="cols-img">
                 <div className="image-blog">
                   <Image
-                    src="/image/starDistrict/starDistrict2.jpg"
+                    src="/image/starDistrict/star district 2.jpg"
                     alt="Star District Activity 1"
                     className="lazyload"
                     width={444}
@@ -87,7 +87,7 @@ export default function StarDistrict() {
                 </div>
                 <div className="image-blog">
                   <Image
-                    src="/image/starDistrict/starDistrict3.jpg"
+                    src="/image/starDistrict/star district 3.jpg"
                     alt="Star District Activity 2"
                     className="lazyload"
                     width={444}

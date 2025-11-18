@@ -32,7 +32,15 @@ export default function UrbanVillage() {
                   Urban Village
                 </h2>
               </div>
-
+              <div className="image-blog">
+                <Image
+                  src={"/image/UrbanVillage/urban-village 1.jpg"}
+                  alt=""
+                  className="lazyload"
+                  width={910}
+                  height={512}
+                />
+              </div>
               {/* Intro paragraph */}
               <div
                 className="desc-blog"
@@ -56,20 +64,12 @@ export default function UrbanVillage() {
                 </p>
               </div>
 
-              <div className="image-blog">
-                <Image
-                  src={"/image/blog/image-blog-4.jpg"}
-                  alt=""
-                  className="lazyload"
-                  width={910}
-                  height={512}
-                />
-              </div>
+
 
               <div className="cols-img">
                 <div className="image-blog">
                   <Image
-                    src="/image/blog/image-blog-5.jpg"
+                    src="/image/UrbanVillage/urban-village 2.jpg"
                     alt=""
                     className="lazyload"
                     width={444}
@@ -78,7 +78,7 @@ export default function UrbanVillage() {
                 </div>
                 <div className="image-blog">
                   <Image
-                    src="/image/blog/image-blog-6.jpg"
+                    src="/image/UrbanVillage/urban-village 3.jpg"
                     alt=""
                     className="lazyload"
                     width={444}

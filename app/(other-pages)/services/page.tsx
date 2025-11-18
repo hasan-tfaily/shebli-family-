@@ -276,7 +276,7 @@ export default function Page() {
               <div className="col-xl-6">
                 <div className="image mr-15">
                   <Image
-                    src="/image/section/img-section-why-choose-h7.jpg"
+                    src="/image/section/services 1.jpg"
                     alt="Why partner with us"
                     width={615}
                     height={615}
@@ -388,7 +388,7 @@ export default function Page() {
                 <div className="section-faqs-left mr-15">
                   <div className="image tf-animate-1">
                     <Image
-                      src="/image/section/img-section-fqa-h5.jpg"
+                      src="/image/section/services 2.jpg"
                       alt=""
                       className="lazyloaded"
                       width={615}

@@ -48,7 +48,7 @@ export default function KarnavaliPage() {  return (
               </div>
               <div className="image-blog">
                 <Image
-                  src={"/image/blog/image-blog-4.jpg"}
+                  src={"/image/karnavali/karnavali 1.jpg"}
                   alt=""
                   className="lazyload"
                   width={910}
@@ -74,7 +74,7 @@ export default function KarnavaliPage() {  return (
               <div className="cols-img">
                 <div className="image-blog">
                   <Image
-                    src="/image/blog/image-blog-5.jpg"
+                    src="/image/karnavali/karnavali 2.png"
                     alt=""
                     className="lazyload"
                     width={444}
@@ -83,7 +83,7 @@ export default function KarnavaliPage() {  return (
                 </div>
                 <div className="image-blog">
                   <Image
-                    src="/image/blog/image-blog-6.jpg"
+                    src="/image/karnavali/karnavali 3.png"
                     alt=""
                     className="lazyload"
                     width={444}

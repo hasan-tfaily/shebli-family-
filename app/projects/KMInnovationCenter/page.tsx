@@ -41,7 +41,7 @@ export default function KMInnovationCenterPage() {
               {/* MAIN IMAGE */}
               <div className="image-blog">
                 <Image
-                  src="/image/blog/image-blog-4.jpg"
+                  src="/image/KM-innovation/KM 1.jpg"
                   alt="Children exploring at KM Innovation Center"
                   className="lazyload"
                   width={910}
@@ -67,7 +67,7 @@ export default function KMInnovationCenterPage() {
               <div className="cols-img">
                 <div className="image-blog">
                   <Image
-                    src="/image/blog/image-blog-5.jpg"
+                    src="/image/KM-innovation/KM 2.jpg"
                     alt="Kids working on a STEM project"
                     className="lazyload"
                     width={444}
@@ -76,7 +76,7 @@ export default function KMInnovationCenterPage() {
                 </div>
                 <div className="image-blog">
                   <Image
-                    src="/image/blog/image-blog-6.jpg"
+                    src="/image/KM-innovation/KM 3.jpg"
                     alt="Creative lab at KM Innovation Center"
                     className="lazyload"
                     width={444}
