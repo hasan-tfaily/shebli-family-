@@ -18,38 +18,38 @@ export const slides = [
 
 export const slides2 = [
   {
-    title: "Shaping the Future of\nEdutainment & Family Leisure",
+    title: "Shaping the Future of\n Edutainment & Family Leisure",
     subtitle:
-    "Delivering impact for families, partners,\nand investors across MENA.",
+    "Delivering impact for families, partners,\n and investors across MENA.",
     buttonText: "Our brands",
   },
   {
-    title: "Where Learning\nMeets Play",
+    title: "Where Learning\n Meets Play",
     subtitle:
     "Building cities that inspire imagination,\nteamwork, and discovery in every child.",
     buttonText: "Franchise",
   },
   {
-    title: "Empowering the Next\nGeneration",
+    title: "Empowering the \n Next Generation",
     subtitle:
-      "We create environments where curiosity\ngrows and dreams take flight.",
+      "We create environments where curiosity\n grows and dreams take flight.",
     buttonText: "Investor Relations",
   },
 ];
 
 export const slides3 = [
   {
-    title: "Partnership for\neffective results",
+    title: "Partnership for\n effective results",
     subtitle: "Collaborating to create a roadmap for your triumph.",
     buttonText: "View All Services",
   },
   {
-    title: "Collaboration for\nReal Impact",
+    title: "Collaboration for\n Real Impact",
     subtitle: "Building a success roadmap through collaboration.",
     buttonText: "View All Services",
   },
   {
-    title: "Strategic Partnership \nThat Delivers",
+    title: "Strategic Partnership \n That Delivers",
     subtitle: "Working together to design your path to victory.",
     buttonText: "View All Services",
   },
@@ -57,17 +57,17 @@ export const slides3 = [
 
 export const slides4 = [
   {
-    title: "Partnership for\neffective results",
+    title: "Partnership for\n effective results",
     subtitle: "Collaborating to create a roadmap for your triumph.",
     buttonText: "View All Services",
   },
   {
-    title: "Collaboration for\nLasting Results",
+    title: "Collaboration for\n Lasting Results",
     subtitle: "Joining forces to chart a course for your success.",
     buttonText: "View All Services",
   },
   {
-    title: "Strategic Partnership\nThat Works",
+    title: "Strategic Partnership\n That Works",
     subtitle: "Teaming up to design your journey toward triumph.",
     buttonText: "View All Services",
   },

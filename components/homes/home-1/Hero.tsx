@@ -2,7 +2,7 @@
 import Link from "next/link";
 const slides = [
   {
-    title: "Empowering Your<br />Financial Future",
+    title: "Empowering Your<br /> Financial Future",
     subtitle:
       " Unlock your financial potential with personalized planning and expert advice<br>tailored to your goals.",
     buttonText: "View All Services",
