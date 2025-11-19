@@ -33,17 +33,15 @@ export default function Page() {
                 <div className="heading-section text-center">
                   <div className="text-anime-wave-1">
                     <a href="#" className="tag label text-btn-uppercase">
-                      industries we help
+                      industries we serve
                     </a>
                   </div>
                   <h3 className="title-section text-anime-wave-1 mb-12">
-                    Risk &amp; Compliance services tailored to
-                    <br />
-                    each industry.
+                    Designing Experiences Across <br />
+                    Every Leisure and Lifestyle Industry
                   </h3>
                   <div className="sub-title body-2 color-on-suface-container text-anime-wave-1">
-                    Tailored solutions to drive your business growth and success.
-                  </div>
+                    Kidz Holding partners with developers, operators, and destination owners across a diverse range of industries. Our expertise spans entertainment design, operations, master planning, and concept creation, enabling us to deliver meaningful, future-ready experiences tailored to each environment.                  </div>
                 </div>
               </div>
             </div>
@@ -126,8 +124,7 @@ export default function Page() {
                     </div>
                     <h6>
                       <a href="#" className="name-industry">
-                        Urban Realm and<br />
-                        Leisure Landscape
+                       Urban Landscapes
                       </a>
                     </h6>
                   </div>
@@ -182,8 +179,7 @@ export default function Page() {
                     </div>
                     <h6>
                       <a href="#" className="name-industry">
-                        Shopping and Mixed-Use<br />
-                        Environment
+                        Shopping Centers
                       </a>
                     </h6>
                   </div>
@@ -210,8 +206,7 @@ export default function Page() {
                     </div>
                     <h6>
                       <a href="#" className="name-industry">
-                        Education and<br />
-                        Working Environment
+                        Education 
                       </a>
                     </h6>
                   </div>
@@ -238,7 +233,7 @@ export default function Page() {
                     </div>
                     <h6>
                       <a href="#" className="name-industry">
-                        Food Court Living
+                        Real Estate <br></br>Developers & Landlords
                       </a>
                     </h6>
                   </div>

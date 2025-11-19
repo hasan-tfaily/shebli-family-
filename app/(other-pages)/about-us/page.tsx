@@ -26,9 +26,9 @@ export default function page() {
             <Breadcumb pageName="About Us" />
             <h2 className="title-page-title">About Us</h2>
             <div className="sub-title body-2">
-             Discover the story behind the region’s leading edutainment group shaping 
-              <br />
-             the future of learning through play.
+              Kidz Holding: Creating Parks of Imagination, <br />
+              Edutainment and Fun
+
             </div>
           </div>
         </div>
@@ -38,10 +38,10 @@ export default function page() {
         {/* <About /> */}
         <History />
         <Features hasBorder parentClass="section-why-choose h-2 page-about" />
-       
-        <Process/>
 
- {/* <Testimonials /> */}
+        <Process />
+
+        {/* <Testimonials /> */}
         <Cta />
         {/* <Awards /> */}
 

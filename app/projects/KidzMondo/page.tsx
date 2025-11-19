@@ -55,6 +55,10 @@ export default function KidzMondoPage() {
                   that are designed to be fun and pedagogical, based on the
                   ‘edutainment’ or playful learning concept.
                 </p>
+<p className="body-2">
+                  It is an ideal forum where social rules and values are promoted and ingrained in children to prepare them to behave as good adult citizens would in real life.
+                </p>
+
                 <p className={"bodytitle"}>Objective</p>
                 <p className="body-2">
                   KidzMondo aims to compliment local school curricula and seeks

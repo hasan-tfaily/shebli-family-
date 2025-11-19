@@ -45,7 +45,7 @@ export default function TheEscapeParkandResort() {
                 />
               </div>
 
-              <div className="desc-blog">
+              {/* <div className="desc-blog">
                 <h5 className="title-desc">Introduction</h5>
                 <p className="body-2">
                   A green refuge, The Escape Park and Resort will transport you
@@ -68,7 +68,7 @@ export default function TheEscapeParkandResort() {
                   playgrounds, kids have more fun, are more active and utilize
                   more motor skills.
                 </p>
-              </div>
+              </div> */}
 
               <div className="cols-img">
                 <div className="image-blog">
