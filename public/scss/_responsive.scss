@@ -359,13 +359,18 @@
         align-items: center;
         justify-content: center;
 
-        width: 32px;      // smaller button size
+        width: 32px;
         height: 32px;
         padding: 0;
-        border-width: 1px; // optional: thinner border
+        border-width: 1px;
+
+        position: absolute;
+        top: 40%;                  
+        transform: translateY(-500%);
+        z-index: 5;
 
         i {
-          font-size: 12px; // smaller arrow icon
+          font-size: 12px;
         }
       }
 
@@ -379,6 +384,7 @@
     }
   }
 }
+
 
 @media (max-width: 1500px) {
   .page-title-home {

@@ -28,6 +28,8 @@ export default function MobileMenu() {
 
   // Our Projects dropdown items (same as Nav)
   const projectLinks: MenuLink[] = [
+        { href: "/Our-Projects", title: "All Projects" },
+
     { href: "/projects/KidzMondo", title: "KidzMondo" },
     {
       href: "/projects/TheEscapeParkandResort",

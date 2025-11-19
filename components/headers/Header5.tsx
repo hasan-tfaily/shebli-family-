@@ -40,7 +40,7 @@ export default function Header5({ onepage = false }) {
                     <Link href={`/`}>
                       <Image
                         alt=""
-                        src="/image/logo/kidzLogo2.svg"
+                        src="/image/logo/FLogo.svg"
                         width={170}
                         height={40}
                       />
