@@ -48,15 +48,17 @@ export default function KidzMondoPage() {
 
               {/* INTRO SECTION */}
               <div className="desc-blog">
-               <p className={'bodytitle'}>Overall Concept</p>
+                <p className={"bodytitle"}>Overall Concept</p>
                 <p className="body-2">
-                  
-                  KidzMondo is a replica of a real-life city which provides children between the ages of 2 to 14 with role play activities that
-                  are designed to be fun and pedagogical, based on the ‘edutainment’ or playful learning concept. 
+                  KidzMondo is a replica of a real-life city which provides
+                  children between the ages of 2 to 14 with role play activities
+                  that are designed to be fun and pedagogical, based on the
+                  ‘edutainment’ or playful learning concept.
                 </p>
-                <p className={'bodytitle'}>Objective</p>
+                <p className={"bodytitle"}>Objective</p>
                 <p className="body-2">
-                  KidzMondo aims to compliment local school curricula and seeks to teach children basic citizenship values and rules,
+                  KidzMondo aims to compliment local school curricula and seeks
+                  to teach children basic citizenship values and rules,
                   enlightening them about the society they live in today.
                 </p>
               </div>
@@ -88,42 +90,66 @@ export default function KidzMondoPage() {
                 <div className="desc-blog">
                   <h5 className="title-desc">Education</h5>
                   <p className="body-2">
-                    It is an established fact that children learn best through play and experiencing real hands-on activities. 
-                    <br/> <br/>The range of playful activities inside KidzMondo is exclusively created and constructed to help, encourage and advance physical growth while stimulating intellectual growth. 
-                    <br/> <br/>The KidzMondo Educational Curriculum improves the development of skills and attitudes while also motivating creative thinking and enhancing self-esteem and self-confidence levels. 
-                    <br/> <br/>KidzMondo also teaches financial literacy by establishing its own economy, where kids exchange Kidlars, the local city currency, learning about money and how to utilize it.
+                    It is an established fact that children learn best through
+                    play and experiencing real hands-on activities.
+                    <br />
+                    <br />
+                    The range of playful activities inside KidzMondo is
+                    exclusively created and constructed to help, encourage and
+                    advance physical growth while stimulating intellectual
+                    growth.
+                    <br />
+                    <br />
+                    The KidzMondo Educational Curriculum improves the
+                    development of skills and attitudes while also motivating
+                    creative thinking and enhancing self-esteem and
+                    self-confidence levels.
+                    <br />
+                    <br />
+                    KidzMondo also teaches financial literacy by establishing
+                    its own economy, where kids exchange Kidlars, the local city
+                    currency, learning about money and how to utilize it.
                   </p>
                 </div>
 
                 <div className="desc-blog">
                   <h5 className="title-desc">Entertainment</h5>
                   <p className="body-2">
-                    Children can choose between 120+ different professions which are practiced
-                    in replica of the most representative establishments in an actual city; an
-                    airport, a bank, factories, a theater, shops, a police station, a fire department, a newspaper publisher, a hotel, a TV studio, a radio station, a gas station, a
-                    racetrack and many more…
+                    Children can choose between 120+ different professions which
+                    are practiced in replica of the most representative
+                    establishments in an actual city; an airport, a bank,
+                    factories, a theater, shops, a police station, a fire
+                    department, a newspaper publisher, a hotel, a TV studio, a
+                    radio station, a gas station, a racetrack and many more…
                   </p>
                 </div>
 
                 <div className="desc-blog">
-                  <h5 className="title-desc">
-Edutainment Competencies</h5>
+                  <h5 className="title-desc">Edutainment Competencies</h5>
+
+                  {/* Optional intro text */}
                   <p className="body-2">
-                   <ul>
-                    <li>• Cognitive Development</li>
-                    <li>• Emotional Intelligence</li>
-                    <li>• Psychomotor Development</li>
-                    <li>• Social Development</li>
-                    <li>• Financial Literacy 
-                        <li>• Currency and Bills</li>
-                        <li>• Bank</li>
-                        <li>• Kidlar Store</li>
-                    </li>
-                   </ul> 
+                    The KidzMondo experience develops a wide range of
+                    competencies:
                   </p>
+
+                  {/* VALID LIST WITH BULLET POINTS */}
+                  <ul className="body-2">
+                    <li>- Cognitive Development</li>
+                    <li>- Emotional Intelligence</li>
+                    <li>- Psychomotor Development</li>
+                    <li>- Social Development</li>
+                    <li>- Financial Literacy
+                      <ul>
+                        <li>- Currency and Bills</li>
+                        <li>- Bank</li>
+                        <li>- Kidlar Store</li>
+                      </ul>
+                    </li>
+                  </ul>
                 </div>
               </div>
-
+              {/* END CONTENT */}
             </div>
           </div>
         </div>
