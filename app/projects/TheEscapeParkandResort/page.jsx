@@ -138,22 +138,22 @@ export default function TheEscapeParkandResort() {
                 <div className="desc-blog">
                   <h5 className="title-desc">Activities</h5>
                   <p className="body-2">
-                    <li>
+                    <ul>
                       The Escape Park and Resort is equipped with outdoor play
                       equipment, interactive games and other mentally and
                       physically stimulating activities including:
-                      <ul>• Ropes course</ul>
-                      <ul>• Archery</ul>
-                      <ul>• Honey making</ul>
-                      <ul>• Zipline</ul>
-                      <ul>• Underground maze and jewel extraction  </ul>
-                      <ul>• Fishing</ul>
-                      <ul>• Biking</ul>
-                      <ul>• Animal exploration</ul>
-                      <ul>• Gardening</ul>
-                      <ul>• Truck and barrel rides</ul>
-                      <ul>• And many more...</ul>
-                    </li>
+                      <li>• Ropes course</li>
+                      <li>• Archery</li>
+                      <li>• Honey making</li>
+                      <li>• Zipline</li>
+                      <li>• Underground maze and jewel extraction  </li>
+                      <li>• Fishing</li>
+                      <li>• Biking</li>
+                      <li>• Animal exploration</li>
+                      <li>• Gardening</li>
+                      <li>• Truck and barrel rides</li>
+                      <li>• And many more...</li>
+                    </ul>
                   </p>
                 </div>
 

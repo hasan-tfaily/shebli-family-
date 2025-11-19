@@ -127,33 +127,33 @@ export default function StarDistrict() {
                 <div className="desc-blog">
                   <h5 className="title-desc">The Experiences</h5>
                   <p className="body-2">
-                    <li>
+                    <ul>
                       Guests can choose between a wide range of activities to
                       include:
-                      <ul>• Singing</ul>
-                      <ul>• Dancing</ul>
-                      <ul>• Acting</ul>
-                      <ul>• Music</ul>
-                      <ul>• Modeling</ul>
-                      <ul>• TV Presenter</ul>
-                      <ul>• Djing</ul>
-                      <ul>• Photography</ul>
-                      <ul>• Fashion Designer</ul>
-                      <ul>• Jewelry Designer</ul>
-                      <ul>• Handbag Designer</ul>
-                      <ul>• Footballer</ul>
-                      <ul>• Car Racer</ul>
-                      <ul>• Shoe Designer</ul>
-                      <ul>• Perfume Making</ul>
-                      <ul>• And much more...</ul>
-                    </li>
-                    <li>
+                      <li>• Singing</li>
+                      <li>• Dancing</li>
+                      <li>• Acting</li>
+                      <li>• Music</li>
+                      <li>• Modeling</li>
+                      <li>• TV Presenter</li>
+                      <li>• Djing</li>
+                      <li>• Photography</li>
+                      <li>• Fashion Designer</li>
+                      <li>• Jewelry Designer</li>
+                      <li>• Handbag Designer</li>
+                      <li>• Footballer</li>
+                      <li>• Car Racer</li>
+                      <li>• Shoe Designer</li>
+                      <li>• Perfume Making</li>
+                      <li>• And much more...</li>
+                    </ul>
+                    <ul>
                       At the same time, Guests can also benefit from a variety
                       of services to include:
-                      <ul>• SPA</ul>
-                      <ul>• Beauty Salon</ul>
-                      <ul>• Birthday Venues</ul>
-                    </li>
+                      <li>• SPA</li>
+                      <li>• Beauty Salon</li>
+                      <li>• Birthday Venues</li>
+                    </ul>
                   </p>
                 </div>
 

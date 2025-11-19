@@ -116,13 +116,13 @@ prominently displayed.
                     Attraction Mix
                   </h5>
                   <p className="body-2">
-                   <li>
-                     <ul>• Retro arcade games</ul>
-                     <ul>• Billiard Tables</ul>
-                     <ul>• Bowling Arena</ul>
-                     <ul>• Eatery Arena</ul>
-                     <ul>• Virtual Reality</ul>
-                   </li>
+                   <ul>
+                     <li>• Retro arcade games</li>
+                     <li>• Billiard Tables</li>
+                     <li>• Bowling Arena</li>
+                     <li>• Eatery Arena</li>
+                     <li>• Virtual Reality</li>
+                   </ul>
                   </p>
                 </div>
                 {/* <div className="desc-blog">

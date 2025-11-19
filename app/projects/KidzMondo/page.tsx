@@ -109,17 +109,17 @@ export default function KidzMondoPage() {
                   <h5 className="title-desc">
 Edutainment Competencies</h5>
                   <p className="body-2">
-                   <li>
-                    <ul>• Cognitive Development</ul>
-                    <ul>• Emotional Intelligence</ul>
-                    <ul>• Psychomotor Development</ul>
-                    <ul>• Social Development</ul>
+                   <ul>
+                    <li>• Cognitive Development</li>
+                    <li>• Emotional Intelligence</li>
+                    <li>• Psychomotor Development</li>
+                    <li>• Social Development</li>
                     <li>• Financial Literacy 
-                        <ul>• Currency and Bills</ul>
-                        <ul>• Bank</ul>
-                        <ul>• Kidlar Store</ul>
+                        <li>• Currency and Bills</li>
+                        <li>• Bank</li>
+                        <li>• Kidlar Store</li>
                     </li>
-                   </li> 
+                   </ul> 
                   </p>
                 </div>
               </div>
