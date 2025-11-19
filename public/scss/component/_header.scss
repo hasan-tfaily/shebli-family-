@@ -263,6 +263,16 @@
     }
 
 }
+/* Header 5 – solid background instead of transparent */
+.header.style-1.style-absolute.no-bg.header-fixed {
+  background-color: #021b44;   // <-- put the same color as your blue section
+  top: 0;                      // optional: remove any gap at the top
+}
+
+/* Keep same color when it becomes fixed on scroll */
+.header.style-1.style-absolute.no-bg.header-fixed.is-fixed {
+  background-color: #021b44;   // same color
+}
 
 .header {
     position: sticky;
