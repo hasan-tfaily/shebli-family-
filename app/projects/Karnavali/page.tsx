@@ -110,19 +110,19 @@ export default function KarnavaliPage() {  return (
                    Entertainment
                   </h5>
                   <p className="body-2">
-                   <li>Children can choose between a wide range of activities, including: 
-                       <ul>• Rides</ul>
-                       <ul>• Climbing Wall</ul>
-                       <ul>• Arcade . Simulators (sports, movie)</ul>
-                       <ul>• Sky Trail . Ropes course </ul>
-                       <ul>• Laser Tag</ul>
-                       <ul>• Mirror Maze</ul>
-                       <ul>• Zero Gravity</ul>
-                       <ul>• Car Racing</ul>
-                       <ul>• Indoor Roller Coaster</ul>
-                       <ul>• Circus zone (face painting, balloon sculpting, soft play, arts and crafts)</ul>
+                   <ul>Children can choose between a wide range of activities, including: 
+                       <li>• Rides</li>
+                       <li>• Climbing Wall</li>
+                       <li>• Arcade . Simulators (sports, movie)</li>
+                       <li>• Sky Trail . Ropes course </li>
+                       <li>• Laser Tag</li>
+                       <li>• Mirror Maze</li>
+                       <li>• Zero Gravity</li>
+                       <li>• Car Racing</li>
+                       <li>• Indoor Roller Coaster</li>
+                       <li>• Circus zone (face painting, balloon sculpting, soft play, arts and crafts)</li>
                    
-                   </li>
+                   </ul>
                   </p>
                 </div>
                 {/* <div className="desc-blog">
