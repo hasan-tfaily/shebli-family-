@@ -13,9 +13,9 @@ export default function Hero() {
       className="page-title-home h-5 swiper sw-auto style-absolute"
       loop
       autoplay={{
-        delay: 2000,
+        delay: 4000,
       }}
-      speed={1000}
+      speed={2000}
       effect="fade"
       modules={[Autoplay, EffectFade, Navigation]}
       navigation={{

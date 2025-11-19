@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 512 512">
+  <!-- Generator: Adobe Illustrator 30.0.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 123)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #35538a;
+      }
+    </style>
+  </defs>
+  <rect class="st0" x="-292.9" y="56.66" width="70.1" height="109.34"/>
+  <g id="icons">
+    <g>
+      <rect class="st0" x="8" y="397.5" width="496" height="15.5"/>
+      <polygon class="st0" points="504 128.97 495.57 128.97 192.66 75.76 195.34 60.49 496.93 113.47 504 113.47 504 128.97"/>
+      <rect class="st0" x="473" y="72" width="15.5" height="372"/>
+      <polygon class="st0" points="17.79 136.58 8 136.58 8 121.08 13.71 121.08 205.68 12.3 213.32 25.79 17.79 136.58"/>
+      <rect class="st0" x="23.59" y="72" width="15.5" height="372"/>
+      <rect class="st0" x="186.25" y="25.5" width="15.5" height="387.5"/>
+      <rect class="st0" x="8" y="203.75" width="496" height="15.5"/>
+      <rect class="st0" x="8" y="234.75" width="496" height="15.5"/>
+      <rect class="st0" x="248.25" y="296.75" width="232.5" height="15.5"/>
+      <rect class="st0" x="287" y="304.5" width="15.5" height="100.75"/>
+      <rect class="st0" x="349" y="304.5" width="15.5" height="100.75"/>
+      <rect class="st0" x="411" y="304.5" width="15.5" height="100.75"/>
+      <rect class="st0" x="31.25" y="149.5" width="62" height="15.5"/>
+      <rect class="st0" x="85.5" y="87.5" width="15.5" height="124"/>
+      <g>
+        <rect class="st0" x="136.84" y="221.13" width="15.5" height="140.09" transform="translate(-163.55 187.52) rotate(-45)"/>
+        <rect class="st0" x="159.35" y="232.33" width="15.5" height="75.04" transform="translate(-141.87 197.2) rotate(-45)"/>
+        <rect class="st0" x="115.14" y="213.41" width="15.5" height="199.84" transform="translate(-185.56 178.67) rotate(-45)"/>
+        <rect class="st0" x="94.57" y="237.53" width="15.5" height="198.13" transform="translate(-208.03 170.93) rotate(-45)"/>
+        <rect class="st0" x="71" y="288.62" width="15.5" height="136.48" transform="translate(-229.27 160.19) rotate(-45)"/>
+        <rect class="st0" x="50.28" y="344.27" width="15.5" height="71.43" transform="translate(-251.69 152.32) rotate(-45)"/>
+      </g>
+    </g>
+    <g>
+      <circle class="st0" cx="310.25" cy="118.5" r="7.75"/>
+      <circle class="st0" cx="310.25" cy="149.5" r="7.75"/>
+      <circle class="st0" cx="310.25" cy="180.5" r="7.75"/>
+      <circle class="st0" cx="480.75" cy="17.75" r="7.75"/>
+      <circle class="st0" cx="480.75" cy="48.75" r="7.75"/>
+      <circle class="st0" cx="31.25" cy="17.75" r="7.75"/>
+      <circle class="st0" cx="31.25" cy="48.75" r="7.75"/>
+      <circle class="st0" cx="480.75" cy="467.25" r="7.75"/>
+      <circle class="st0" cx="480.75" cy="498.25" r="7.75"/>
+      <circle class="st0" cx="31.25" cy="467.25" r="7.75"/>
+      <circle class="st0" cx="31.25" cy="498.25" r="7.75"/>
+    </g>
+    <rect class="st0" x="217.25" y="296.75" width="15.5" height="15.5"/>
+  </g>
+</svg>

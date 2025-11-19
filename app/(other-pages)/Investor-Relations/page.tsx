@@ -88,7 +88,13 @@ export default function page() {
             <h2 className="title-page-title pb-0">
               Investor Relations
             </h2>
+            <div className="sub-title body-2">
+Investor Relations showcases our growth performance               <br />
+              and future expansion for confident investmen.
+            </div>
           </div>
+
+          
         </div>
       </div>
       <div className="main-content">

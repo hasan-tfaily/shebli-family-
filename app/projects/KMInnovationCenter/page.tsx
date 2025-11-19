@@ -9,7 +9,7 @@ export default function KMInnovationCenterPage() {
       {/* HERO IMAGE */}
       <div className="image img-top">
         <Image
-          src="/image/projects/ourprojects.png"
+          src="/image/page-title/our-ventures (1).png"
           alt="KM Innovation Center Hero"
           className="lazyload"
           width={1920}

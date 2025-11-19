@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <div className="page-title style-1 bg-img-8">
+      <div className="page-title style-1 bg-img-7">
         <div className="tf-container">
           <div className="page-title-content">
             <Breadcumb pageName="Services" />
@@ -54,15 +54,20 @@ export default function Page() {
               {/* 1 */}
               <div
                 className="col-lg-4 col-md-6"
-                style={{ display: "flex" }} // flex column wrapper
+                style={{ display: "flex" }}
               >
                 <div
                   className="industry-item style-2"
-                  style={{ flex: 1, width: "100%" }} // stretch to same height
+                  style={{ flex: 1, width: "100%" }}
                 >
                   <div className="top">
                     <div className="icon">
-                      <i className="icon-Bank" />
+                      <Image
+                        src="/image/icon/architecture.svg"
+                        alt="Leisure Architecture"
+                        width={40}
+                        height={40}
+                      />
                     </div>
                     <h6>
                       <a href="#" className="name-industry">
@@ -84,7 +89,12 @@ export default function Page() {
                 >
                   <div className="top">
                     <div className="icon">
-                      <i className="icon-FirstAidKit" />
+                      <Image
+                        src="/image/icon/hospitality.svg"
+                        alt="Hospitality and Leisure Resort"
+                        width={40}
+                        height={40}
+                      />
                     </div>
                     <h6>
                       <a href="#" className="name-industry">
@@ -107,36 +117,12 @@ export default function Page() {
                 >
                   <div className="top">
                     <div className="icon">
-                      <svg
-                        width={32}
-                        height={32}
-                        viewBox="0 0 32 32"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true"
-                      >
-                        <g clipPath="url(#clip0_9360_11765)">
-                          <path
-                            d="M6 24L26 24C27.1046 24 28 23.1046 28 22L28 8C28 6.89543 27.1046 6 26 6L6 6C4.89543 6 4 6.89543 4 8L4 22C4 23.1046 4.89543 24 6 24Z"
-                            stroke="#24283E"
-                            strokeWidth="1.5"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                          <path
-                            d="M20 28H12"
-                            stroke="#24283E"
-                            strokeWidth="1.5"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </g>
-                        <defs>
-                          <clipPath id="clip0_9360_11765">
-                            <rect width="32" height="32" />
-                          </clipPath>
-                        </defs>
-                      </svg>
+                      <Image
+                        src="/image/icon/landscape.svg"
+                        alt="Urban Realm and Leisure Landscape"
+                        width={40}
+                        height={40}
+                      />
                     </div>
                     <h6>
                       <a href="#" className="name-industry">
@@ -159,7 +145,12 @@ export default function Page() {
                 >
                   <div className="top">
                     <div className="icon">
-                      <i className="icon-LightbulbFilament" />
+                      <Image
+                        src="/image/icon/family.svg"
+                        alt="Family Leisure Destinations"
+                        width={40}
+                        height={40}
+                      />
                     </div>
                     <h6>
                       <a href="#" className="name-industry">
@@ -182,7 +173,12 @@ export default function Page() {
                 >
                   <div className="top">
                     <div className="icon">
-                      <i className="icon-AirplaneTakeoff" />
+                      <Image
+                        src="/image/icon/shopping.svg"
+                        alt="Shopping and Mixed-Use Environment"
+                        width={40}
+                        height={40}
+                      />
                     </div>
                     <h6>
                       <a href="#" className="name-industry">
@@ -205,7 +201,12 @@ export default function Page() {
                 >
                   <div className="top">
                     <div className="icon">
-                      <i className="icon-Wrench" />
+                      <Image
+                        src="/image/icon/education.svg"
+                        alt="Education and Working Environment"
+                        width={40}
+                        height={40}
+                      />
                     </div>
                     <h6>
                       <a href="#" className="name-industry">
@@ -228,7 +229,12 @@ export default function Page() {
                 >
                   <div className="top">
                     <div className="icon">
-                      <i className="icon-Warehouse" />
+                      <Image
+                        src="/image/icon/food.svg"
+                        alt="Food Court Living"
+                        width={40}
+                        height={40}
+                      />
                     </div>
                     <h6>
                       <a href="#" className="name-industry">
@@ -250,7 +256,12 @@ export default function Page() {
                 >
                   <div className="top">
                     <div className="icon">
-                      <i className="icon-Basket" />
+                      <Image
+                        src="/image/icon/play.svg"
+                        alt="Playful Attractions"
+                        width={40}
+                        height={40}
+                      />
                     </div>
                     <h6>
                       <a href="#" className="name-industry">

@@ -5,18 +5,20 @@ export const boxIconItems = [
   //   description:
   //     "We deliver cost-effective consulting solutions that streamline your operations, cut unnecessary expenses, and boost profitability.",
   // },
+  // example: /image/icons/mission.svg & /image/icons/vision.svg
   {
-    iconClass: "icon-investment",
-    title: " Mission",
+    icon: "/image/icon/mission.svg",
+    title: "Mission",
     description:
-      "To design safe, innovative, and purpose‑driven spaces that blend education with entertainment, empowering children to explore the world through hands‑on experiences.",
+      "To design safe, innovative, and purpose-driven spaces that blend education with entertainment, empowering children to explore the world through hands-on experiences.",
   },
   {
-    iconClass: "icon-financial",
+    icon: "/image/icon/vision.svg",
     title: "Vision",
     description:
       "To be the most trusted and inspiring edutainment group in the Middle East, transforming how children learn, play, and imagine their future.",
   },
+
   // {
   //   iconClass: "icon-tax",
   //   title: "Scalable Growth",

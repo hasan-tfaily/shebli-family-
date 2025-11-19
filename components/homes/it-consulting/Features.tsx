@@ -72,7 +72,7 @@ export default function Features() {
           <div className="col-md-4">
             <div
               className="image img-section-why-h-8 tf-animate-2"
-              data-delay=".2s"
+              data-delay=".4s"
             >
               <Image
                 src="/image/section/familyPhoto.png"

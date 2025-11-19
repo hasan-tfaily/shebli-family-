@@ -37,12 +37,12 @@ export default function Process() {
         <div className="row rg-30">
           <div className="col-md-4">
             <div className="process-item bg-1 step-hover">
-              <div className="process-top">
+              {/* <div className="process-top">
                 <div className="icon">
                   <i className="icon-Briefcase" />
                 </div>
                 <span className="label text-btn-uppercase">Step 1</span>
-              </div>
+              </div> */}
               <div className="process-content">
                 <h5>
                   <a href="#" className="name-process">
@@ -57,12 +57,12 @@ export default function Process() {
           </div>
           <div className="col-md-4">
             <div className="process-item bg-1 step-hover">
-              <div className="process-top">
+              {/* <div className="process-top">
                 <div className="icon">
                   <i className="icon-Briefcase" />
                 </div>
                 <span className="label text-btn-uppercase">Step 2</span>
-              </div>
+              </div> */}
               <div className="process-content">
                 <h5>
                   <a href="#" className="name-process">
@@ -77,12 +77,12 @@ export default function Process() {
           </div>
           <div className="col-md-4">
             <div className="process-item bg-1 step-hover">
-              <div className="process-top">
+              {/* <div className="process-top">
                 <div className="icon">
                   <i className="icon-Briefcase" />
                 </div>
                 <span className="label text-btn-uppercase">Step 3</span>
-              </div>
+              </div> */}
               <div className="process-content">
                 <h5>
                   <a href="#" className="name-process">

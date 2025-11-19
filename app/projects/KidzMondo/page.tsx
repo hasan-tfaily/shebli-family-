@@ -6,7 +6,7 @@ export default function KidzMondoPage() {
     <>
       <div className="image img-top">
         <Image
-          src="/image/projects/ourprojects.png"
+          src="/image/page-title/our-ventures (1).png"
           alt="KidzMondo Hero"
           className="lazyload"
           width={1920}

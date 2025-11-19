@@ -15,7 +15,7 @@ export default function Details1() {
           <div className="case-studies-details">
             <div className="image-details image mb-40">
               <Image
-                src="/image/section/InvestorRelations1.png"
+                src="/image/section/indian-businessmen-looking-stock-market.jpg"
                 alt=""
                 className="lazyload"
                 width={850}
