@@ -17,11 +17,9 @@ export default function SideOffcanvas() {
         />
       </div>
       <div className="meag-menu-item">
-        <h4 className="title-content fw-7">Finwice Construction</h4>
+        <h4 className="title-content fw-7">Kidz Holding</h4>
         <p>
-          Nam augue velit, fermentum sed erat non, efficitur interdum lectus.
-          Donec hendrerit lorem a dui euismod tempus. Vivamus auctor blandit
-          tellus et interdum.
+          Kidz Holding is the parent company behind KidzMondo and leading family leisure ventures across MENA creating safe educational edutainment destinations and scalable franchise and investment opportunities.
         </p>
       </div>
       <div className="contact-mega-menu meag-menu-item">
@@ -48,7 +46,7 @@ export default function SideOffcanvas() {
           </li>
         </ul>
       </div>
-      <div className="list-img">
+      {/* <div className="list-img">
         {blogThumbnails.map((item, index) => (
           <Link
             className="me-2"
@@ -64,7 +62,7 @@ export default function SideOffcanvas() {
             />
           </Link>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }
