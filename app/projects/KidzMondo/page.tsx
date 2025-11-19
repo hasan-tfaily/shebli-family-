@@ -124,7 +124,6 @@ Edutainment Competencies</h5>
                 </div>
               </div>
 
-              {/* END CONTENT */}
             </div>
           </div>
         </div>
