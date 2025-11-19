@@ -35,13 +35,13 @@ export default function page() {
         <CaseStudies2/>
         <About/>
 
-         <section className="section-cta h-2 section-one-page" id="cta">
+         <section className="section-cta h-2 section-one-page" id="cta" style={{marginTop:"-40px"}}>
               <div className="tf-container">
                 <div className="row">
                   <div className="col-12">
                     <div className="cta-inner style-2">
                       <div className="cta-content">
-                        <h4 className="title-content">
+                        <h4 className="title-content" >
                          Have a project or idea to bring to life? Let’s create it together
                         </h4>
                         <Link

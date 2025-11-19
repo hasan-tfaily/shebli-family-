@@ -19,6 +19,7 @@ export default function Faqs() {
               </div>
             </div>
           </div>
+
           <div className="col-lg-6">
             <div className="section-content ml-35">
               <div className="heading-section">
@@ -32,13 +33,15 @@ export default function Faqs() {
                   Question
                 </h3>
               </div>
+
               <div className="wg-according style-border" id="According">
+                {/* 1️⃣ First question OPEN by default */}
                 <div className="according-item">
                   <h5>
                     <a
                       href="#according-1"
                       data-bs-toggle="collapse"
-                      className="title-according collapsed"
+                      className="title-according" // removed "collapsed"
                     >
                       What is Kidz Holding?
                       <span />
@@ -46,22 +49,26 @@ export default function Faqs() {
                   </h5>
                   <div
                     id="according-1"
-                    className="collapse"
+                    className="collapse show" // added "show"
                     data-bs-parent="#According"
                   >
                     <div className="according-content">
                       <p>
-                        Kidz Holding is the corporate group behind the KidzMondo edutainment brand, focused on learning through play and youth development across the MENA region.
+                        Kidz Holding is the corporate group behind the KidzMondo
+                        edutainment brand, focused on learning through play and
+                        youth development across the MENA region.
                       </p>
                     </div>
                   </div>
                 </div>
+
+                {/* 2️⃣ Second question CLOSED by default */}
                 <div className="according-item">
                   <h5>
                     <a
                       href="#according-2"
                       data-bs-toggle="collapse"
-                      className="title-according"
+                      className="title-according collapsed" // added "collapsed"
                     >
                       What does “edutainment” mean?
                       <span />
@@ -69,16 +76,20 @@ export default function Faqs() {
                   </h5>
                   <div
                     id="according-2"
-                    className="collapse show"
+                    className="collapse" // removed "show"
                     data-bs-parent="#According"
                   >
                     <div className="according-content">
                       <p>
-                        Edutainment combines education and entertainment, creating immersive experiences that teach life skills in fun, engaging ways.
+                        Edutainment combines education and entertainment,
+                        creating immersive experiences that teach life skills in
+                        fun, engaging ways.
                       </p>
                     </div>
                   </div>
                 </div>
+
+                {/* 3 */}
                 <div className="according-item">
                   <h5>
                     <a
@@ -86,7 +97,7 @@ export default function Faqs() {
                       data-bs-toggle="collapse"
                       className="title-according collapsed"
                     >
-                    How can I invest or open a franchise?
+                      How can I invest or open a franchise?
                       <span />
                     </a>
                   </h5>
@@ -97,11 +108,14 @@ export default function Faqs() {
                   >
                     <div className="according-content">
                       <p>
-                       Visit our Franchise & Partnership page to learn about available territories and submit an inquiry.
+                        Visit our Franchise & Partnership page to learn about
+                        available territories and submit an inquiry.
                       </p>
                     </div>
                   </div>
                 </div>
+
+                {/* 4 */}
                 <div className="according-item">
                   <h5>
                     <a
@@ -109,7 +123,7 @@ export default function Faqs() {
                       data-bs-toggle="collapse"
                       className="title-according collapsed"
                     >
-                      Where are you currently operating?
+                      Where are you currently operating?
                       <span />
                     </a>
                   </h5>
@@ -120,11 +134,14 @@ export default function Faqs() {
                   >
                     <div className="according-content">
                       <p>
-                       We operate in Beirut and Doha, with expansion plans in Saudi Arabia, Egypt, and the UAE.
+                        We operate in Beirut and Doha, with expansion plans in
+                        Saudi Arabia, Egypt, and the UAE.
                       </p>
                     </div>
                   </div>
                 </div>
+
+                {/* 5 */}
                 <div className="according-item">
                   <h5>
                     <a
@@ -132,7 +149,7 @@ export default function Faqs() {
                       data-bs-toggle="collapse"
                       className="title-according collapsed"
                     >
-                     How do schools partner with you?
+                      How do schools partner with you?
                       <span />
                     </a>
                   </h5>
@@ -143,12 +160,14 @@ export default function Faqs() {
                   >
                     <div className="according-content">
                       <p>
-                        Schools can organize curriculum‑linked trips through the Contact page or directly via our Education team.
+                        Schools can organize curriculum-linked trips through the
+                        Contact page or directly via our Education team.
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
+              {/* end wg-according */}
             </div>
           </div>
         </div>

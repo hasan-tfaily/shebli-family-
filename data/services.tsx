@@ -190,7 +190,7 @@ export const caseStudiesData = [
   {
     id: "tab1",
     tabTitle: "Financial Services",
-    imgSrc: "/image/section/section-services-1.jpg",
+    imgSrc: "/image/section/careers.png",
     imgWidth: 585,
     imgHeight: 439,
     title: "Why Kids Holding",

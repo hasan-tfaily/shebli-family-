@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Features() {
   return (
-    <section className="section-why-choose h-8 bg-surface tf-spacing-7">
+    <section className="section-why-choose h-8 bg-surface tf-spacing-7" style={{paddingBottom: "70px"}}>
       <div className="tf-container position-relative">
         <div className="row">
           <div className="col-12">

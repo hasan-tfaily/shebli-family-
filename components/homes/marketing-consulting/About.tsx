@@ -122,7 +122,12 @@ export default function About() {
       {/* Counters section */}
       <section
   className="section-why-choose h-7 bg-surface tf-spacing-31"
-  style={{ marginTop: "100px" , backgroundColor: "#232559 !important", paddingTop: "50px", paddingBottom: "50px" }}
+  style={{
+    marginTop: "100px",
+    backgroundColor: "#232559", // no need !important here
+    paddingTop: "50px",
+    paddingBottom: "50px",
+  }}
 >
   <div className="tf-container position-relative">
     <div className="row">
@@ -132,17 +137,25 @@ export default function About() {
             <div className="counter-item style-3" key={i}>
               <div className="counter">
                 <div className="number-counter">
-                  <h2 className="number odometer">
+                  <h2
+                    className="number odometer"
+                  >
                     <OdometerComponent max={c.value} />
                     {c.suffix && (
-                      <span style={{ marginLeft: "4px" }}>{c.suffix}</span>
+                      <span
+                      >
+                        {c.suffix}
+                      </span>
                     )}
                   </h2>
-                  <h2 className="plus">+</h2>
+                  <h2 className="plus" >
+                    +
+                  </h2>
                 </div>
 
                 <h6
                   className="text"
+                  style={{ color: "white" }} // label text in white too (optional)
                   dangerouslySetInnerHTML={{ __html: c.label }}
                 />
               </div>
@@ -153,6 +166,7 @@ export default function About() {
     </div>
   </div>
 </section>
+
 
     </section>
   );

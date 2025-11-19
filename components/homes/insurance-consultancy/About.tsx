@@ -6,18 +6,18 @@ import OdometerComponent from "@/components/common/OdometerComponent";
 
 export default function About() {
   return (
-    <section className="section-about h-6 mb-40 section-one-page" id="about">
+    <section className="section-about h-6 mb-40 section-one-page" id="about" style={{ marginBottom: "30px" }}>
       <div className="section-about-inner">
         <div className="image tf-animate-1">
           <Image
-            src="/image/section/img-section-about-h3.jpg"
+            src="/image/section/our ventures pic.jpg"
             alt=""
             className="lazyload"
             width={600}
             height={600}
           />
         </div>
-        <div className="section-about-content">
+        <div className="section-about-content" >
           <div className="heading-section style-color-white mb-60">
             {/* <div className="wow fadeInUp">
               <a href="#" className="tag label text-btn-uppercase bg-white">

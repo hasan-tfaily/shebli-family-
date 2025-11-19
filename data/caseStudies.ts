@@ -295,7 +295,7 @@ export const caseStudiesData = [
 export const smallCaseStudies = [
   {
     id: 30,
-    imgSrc: "/image/case-studies-item/case-studies-small-1.jpg",
+    imgSrc: "/image/kidzMondo/Kidz-mondo-1.png",
     title: "KidzMondo",
     label: "Operational Improvement",
     desc: "A miniature city where children learn life skills through immersive role‑play and hands‑on discovery.",
@@ -303,7 +303,7 @@ export const smallCaseStudies = [
   },
   {
     id: 31,
-    imgSrc: "/image/case-studies-item/case-studies-small-2.jpg",
+    imgSrc: "/image/karnavali/karnavali 1.jpg",
     title: "Karnavali",
     label: "Strategy Development",
     desc: "A vibrant carnival concept blending family entertainment, games, and seasonal festivals.",
@@ -311,7 +311,7 @@ export const smallCaseStudies = [
   },
   {
     id: 32,
-    imgSrc: "/image/case-studies-item/case-studies-small-3.jpg",
+    imgSrc: "/image/case-studies-item/kidzmondo vilage.jpg",
     title: "KidzMondo Village",
     label: "Financial Advisory",
     desc: "An edutainment indoor theme park based on the concept of vocational role play.",
