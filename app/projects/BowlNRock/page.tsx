@@ -55,7 +55,7 @@ export default function BowlNRock() {
                 />
               </div>
               <div className="desc-blog" >
-                <h5 className="title-desc">Overview</h5>
+                {/* <h5 className="title-desc">Overview</h5> */}
                 <p className="body-2">
                   Bowl N Rock is the newest experiential social entertainment hub offering Bowling, Immersive sports games, retro 
                   games, retro art installations, eateries, mini golf and much more. 
@@ -99,29 +99,53 @@ experience. 
                   </h5>
                   <p className="body-2">
                     
-BOWL N ROCK provides a mix of experiences that span all age groups starting the age of 15 into one 
-vibrant space, thus having a tremendous impact on retail demography. 
+BOWL N ROCK is a next-generation social entertainment hub where immersive play,<br/>
+retro nostalgia, live entertainment, and elevated dining come together in one dynamic<br/>
+destination. Designed for guests aged 15 and above, the venue blends gaming, music,<br/>
+food, art, and social interaction—creating a vibrant “eatertainment” experience that<br/>
+appeals to teens, young adults, groups, and corporate clients.
 <br/><br/>
-Its hospitality and wider offerings are evident in the leather-clad reception, where visitors enter via a 
-laundry tunnel, a unique experience.
+More than a gaming venue, BOWL N ROCK is a fully immersive lifestyle concept.<br/>
+Retro-industrial interiors, themed zones, and art installations set the tone, while a<br/>
+curated mix of social activities ensures there’s always something to discover around<br/>
+every corner.
 <br/><br/>
-A retro and industrial-themed interior space creates a nostalgic connection with visitors. Every nook 
-and corner is equipped with games such as pinball, shuffle boards, and dart flight clubs that are 
-prominently displayed.
+The experience begins the moment guests walk through the signature themed<br/>
+entrance tunnel before stepping into a world of energy, music, fun, and play.
 
                   </p>
                 </div>
                 <div className="desc-blog">
                   <h5 className="title-desc">
-                    Attraction Mix
+                    Experiences:
+                    
                   </h5>
+                  <h5>Social Bowling and AR Bowling</h5>
                   <p className="body-2">
+                    A high-energy bowling experience designed for social groups and competitive fun,<br/>
+                    enhanced with atmospheric lighting and music
                    <ul>
-                     <li>• Retro arcade games</li>
-                     <li>• Billiard Tables</li>
-                     <li>• Bowling Arena</li>
-                     <li>• Eatery Arena</li>
-                     <li>• Virtual Reality</li>
+                     <h6><li> Retro Arcade Zone</li></h6>
+                     A mix of classic arcade titles and modern hits, delivering nostalgia and excitement for<br/>
+                     all generations.
+
+                     <h6><li> Immersive Gaming & Simulators</li></h6>
+                     Sports simulators, VR games, interactive screens, and digital game experiences<br/>inspired by global entertainment leaders.
+                     <h6><li> Mini Golf & Casual Play</li></h6>
+                     Fun and social mini-golf experiences and table-based games that encourage friendly<br/>
+                     competition.
+                     <h6><li> Karaoke & Live Entertainment Stage</li></h6>
+                     A dedicated performance zone featuring karaoke, DJ sets, live music, and event<br/>
+                     nights.
+                     <h6><li> Interactive Dining Experience</li></h6>
+                     Themed dining areas where food and entertainment merge, complete with interactive<br/>
+                     game tables, vibrant menus, and a lively atmosphere.
+                    <h6><li> Social Pool, Snooker & Darts</li></h6>
+                    Classic social games reimagined with modern ambiance, digital scoring, and themed<br/>
+                    environments.
+                    <h6><li> Retro-Industrial Art Installations</li> </h6>
+                    Nostalgic and visually striking art pieces, neon work, and themed installations that<br/>
+                    elevate the venue’s identity and social media appeal.
                    </ul>
                   </p>
                 </div>

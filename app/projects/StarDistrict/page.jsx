@@ -99,19 +99,31 @@ export default function StarDistrict() {
               {/* Sections */}
               <div className="list-desc">
                 <div className="desc-blog">
-                  <h5 className="title-desc">Overview</h5>
+                  {/* <h5 className="title-desc">Overview</h5> */}
                   <p className="body-2">
-                    Star District is a venue aimed at helping children and teens
-                    become the stars they have always dreamed of becoming.
+                    Star District is the ultimate fame-experience destination
+                    where children and teenagers
+                    <br />
+                    step into the spotlight and live the stardom they dream of.
+                    Designed as an immersive
+                    <br />
+                    activation and entertainment hub, Star District blends
+                    performing arts, creativity,
+                    <br />
+                    fashion, media, and lifestyle experiences into one dazzling
+                    world.
                     <br />
                     <br />
-                    There is so much more to being a star than meets the eye. A
-                    star needs to look, walk, talk, and act the part. At this
-                    center for the arts, young boys and girls, as well as teens
-                    are introduced to all the necessary skills needed to become
-                    a star.
+                    It is a one-stop family entertainment center where toddlers
+                    can play,
                     <br />
-                    <br />A crew of  professionals  at  Star  District helps
+                    kids and teens can shine in their “fifteen minutes of fame,”
+                    mothers and daughters can enjoy bonding
+                    <br />
+                    activities, and teenagers can hang out, create, and express
+                    themselves.
+                    <br />
+                    {/* <br />A crew of  professionals  at  Star  District helps
                     children discover, explore, and expand their talents,
                     whether they are singing, acting, dancing, presenting,
                     design, or any other talent.
@@ -120,32 +132,76 @@ export default function StarDistrict() {
                     They will be given continuous opportunities to perform and
                     display their talents and what they have learned. All kinds
                     of props will be available to  them  so  they  may  fully
-                    experience  their moment in the spotlight.
+                    experience  their moment in the spotlight. */}
                   </p>
                 </div>
-
                 <div className="desc-blog">
-                  <h5 className="title-desc">The Experiences</h5>
+                  <h5 className="title-desc">Where Kids Live the Fame</h5>
+                  <p className="body-2">
+                    Star District invites young guests to experience what it
+                    truly means to be a star.
+                    <br />
+                    Beyond the glamour, they learn how a star looks, walks,
+                    talks, performs, and expresses
+                    <br />
+                    their talent. Through hands-on experiences and professional
+                    guidance, childre
+                    <br />
+                    nand teens explore the skills needed to shine in front of an
+                    audience.
+                    <br />
+                    <br />
+                    A dedicated team of creative coaches helps them discover and
+                    develop their
+                    <r />
+                    talents—whether in music, performing, fashion, design, or
+                    media. With themed sets,
+                    <br />
+                    professional equipment, and endless props, every child gets
+                    a chance to perform,
+                    <br />
+                    create content, and enjoy their moment in the spotlight.
+                  </p>
+                </div>
+                <div className="desc-blog">
+                  <h5 className="title-desc">Experiences</h5>
                   <p className="body-2">
                     <ul>
-                      Guests can choose between a wide range of activities to
-                      include:
-                      <li>• Singing</li>
-                      <li>• Dancing</li>
-                      <li>• Acting</li>
-                      <li>• Music</li>
-                      <li>• Modeling</li>
-                      <li>• TV Presenter</li>
-                      <li>• Djing</li>
-                      <li>• Photography</li>
-                      <li>• Fashion Designer</li>
-                      <li>• Jewelry Designer</li>
-                      <li>• Handbag Designer</li>
-                      <li>• Footballer</li>
-                      <li>• Car Racer</li>
-                      <li>• Shoe Designer</li>
-                      <li>• Perfume Making</li>
-                      <li>• And much more...</li>
+                      <h6>Performance & Stage Arts</h6>
+                      <li>- Singing</li>
+                      <li>- Dancing</li>
+                      <li>- Acting</li>
+                      <li>- Music & instruments</li>
+                      <li>- Djing</li>
+                      <li>- TV Presenter</li>
+                      <li>- Content Creation</li>
+                      <li>- Live Performances</li>
+
+                      <h6>Fashion, Beauty & Design</h6>
+
+                      <li>- Modeling & runway</li>
+                      <li>- Fashion Design</li>
+                      <li>- Jewelry Design</li>
+                      <li>- Handbag Design</li>
+                      <li>- Shoe Design</li>
+                      <li>- Makeup & beauty</li>
+                      <li>- Styling sessions</li>
+                      <li>- Perfume creation</li>
+
+                      <h6>Creative Studios</h6>
+
+                      <li>- Photography studio</li>
+                      <li>- Video production</li>
+                      <li>- Green-screen experiences</li>
+                      <li>- Digital media creation</li>
+                      <li>- Character creation & storytelling</li>
+
+                      <h6>Sports & Lifestyle Fame</h6>
+
+                      <li>- Footballer experience</li>
+                      <li>- Car racer experience</li>
+                      <li>- Active lifestyle challenges</li>
+                      <li>- Celebrity-style fitness moments</li>
                     </ul>
                     <ul>
                       At the same time, Guests can also benefit from a variety

@@ -10,7 +10,7 @@ export const boxIconItems = [
     icon: "/image/icon/mission.svg",
     title: "Mission",
     description:
-      "To design safe, innovative, and purpose-driven spaces that blend education with entertainment, empowering children to explore the world through hands-on experiences.",
+      "To design and operate innovative, story-driven leisure and entertainment experiences that enrich the lives of children and families. We bring imagination to life through purposeful design, experiential learning, operational excellence, and strong community connections.\n\nOur mission is to support governments, developers, and private partners in building impactful entertainment destinations that promote learning, creativity, wellbeing, and family bonding.",
   },
   {
     icon: "/image/icon/vision.svg",
