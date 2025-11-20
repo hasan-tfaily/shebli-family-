@@ -27,7 +27,7 @@ export default function Contact() {
                   <div className="sub-title body-2 color-on-suface-container wow fadeInUp">
                     Whether you’re a parent, partner, or investor, we’d love to hear from you. 
                     <br />
-                     Select your topic below and our team will respond promptly.
+                     Select your topic and our team will respond promptly.
                   </div>
                 </div>
                 <div className="cols">

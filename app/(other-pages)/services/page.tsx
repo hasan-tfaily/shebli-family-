@@ -124,7 +124,7 @@ export default function Page() {
                     </div>
                     <h6>
                       <a href="#" className="name-industry">
-                       Urban Landscapes
+                        Urban Landscapes
                       </a>
                     </h6>
                   </div>
@@ -206,7 +206,7 @@ export default function Page() {
                     </div>
                     <h6>
                       <a href="#" className="name-industry">
-                        Education 
+                        Education
                       </a>
                     </h6>
                   </div>
@@ -225,7 +225,7 @@ export default function Page() {
                   <div className="top">
                     <div className="icon">
                       <Image
-                        src="/image/icon/food.svg"
+                        src="/image/icon/urban village.svg"
                         alt="Food Court Living"
                         width={40}
                         height={40}
@@ -233,7 +233,7 @@ export default function Page() {
                     </div>
                     <h6>
                       <a href="#" className="name-industry">
-                        Real Estate <br></br>Developers & Landlords
+                        Real Estate & Landlords
                       </a>
                     </h6>
                   </div>

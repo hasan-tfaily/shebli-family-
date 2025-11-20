@@ -1115,11 +1115,11 @@
 
     .circle {
       position: absolute;
-      top: -73%;
+      top: -85%;
       left: 20px;
       width: 2px;
       border-left: 2px dashed var(--bg-1);
-      height: 101px;
+      height: 220px;
       @include mixin.transition3();
     }
 

@@ -114,11 +114,11 @@ export default function ContactForm() {
           <fieldset className="item">
             <DropdownSelect
               options={[
-                "Experience",
-                "0–1 years",
-                "2–5 years",
-                "6–10 years",
-                "10+ years",
+                "Topic",
+                "New Venture",
+                "Management Consultation",
+                "Franchise (links to KidzMondo franchise form)", 
+                "Other Inquiries",
               ]}
             />
           </fieldset>
@@ -130,12 +130,10 @@ export default function ContactForm() {
             <DropdownSelect
               options={[
                 "Investment Range",
-                "< $100k",
-                "$100k – $250k",
-                "$250k – $500k",
-                "$500k – $1M",
-                "$1M – $5M",
-                "$5M+",
+                "< $5,000,000",
+                "$5,000 M – $10,000 M",
+                "$10,000 M – $20,000 M",
+                "$20,000 M +",
               ]}
             />
           </fieldset>
