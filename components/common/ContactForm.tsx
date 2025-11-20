@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState } from "react";
 import axios from "axios";
 import DropdownSelect from "../common/DropdownSelect";
@@ -19,6 +20,12 @@ export default function ContactForm({
   const [success, setSuccess] = useState(true);
   const [showMessage, setShowMessage] = useState(false);
 
+  // Controlled dropdown states
+  const [country, setCountry] = useState<string>("Country");
+  const [topic, setTopic] = useState<string>("Topic");
+  const [investmentRange, setInvestmentRange] =
+    useState<string>("Investment Range");
+
   const handleShowMessage = () => {
     setShowMessage(true);
     setTimeout(() => {
@@ -38,21 +45,37 @@ export default function ContactForm({
     elements: ContactFormElements;
   }
 
-  interface SendEmailEvent extends React.FormEvent<ContactFormElement> {}
+  type SendEmailEvent = React.FormEvent<ContactFormElement>;
 
   const sendEmail = async (e: SendEmailEvent): Promise<void> => {
     e.preventDefault();
 
-    const email = e.currentTarget.email.value.trim();
+    const form = e.currentTarget;
+    const email = form.email.value.trim();
 
     try {
       const response = await axios.post(
         "https://express-brevomail.vercel.app/api/contacts",
-        { email }
+        {
+          email,
+          // If later you want to send more data:
+          // name: form.name.value,
+          // phone: form.phone.value,
+          // city: form.city.value,
+          // country,
+          // topic,
+          // investmentRange,
+          // message: form.message.value,
+        }
       );
 
       if ([200, 201].includes(response.status)) {
-        e.currentTarget.reset();
+        form.reset();
+        // Reset dropdowns too if you want
+        setCountry("Country");
+        setTopic("Topic");
+        setInvestmentRange("Investment Range");
+
         setSuccess(true);
         handleShowMessage();
       } else {
@@ -63,6 +86,9 @@ export default function ContactForm({
       setSuccess(false);
       handleShowMessage();
       e.currentTarget.reset();
+      setCountry("Country");
+      setTopic("Topic");
+      setInvestmentRange("Investment Range");
     }
   };
 
@@ -90,7 +116,7 @@ export default function ContactForm({
             <input type="text" name="name" id="name" placeholder=" Name " />
           </fieldset>
           <fieldset className="item">
-            <input type="email" name="email" id="mail" placeholder=" Email" />
+            <input type="email" name="email" id="email" placeholder=" Email" />
           </fieldset>
         </div>
 
@@ -114,6 +140,8 @@ export default function ContactForm({
                 "Egypt",
                 "Turkey",
               ]}
+              selectedValue={country}
+              onChange={(val) => setCountry(val)}
             />
           </fieldset>
         </div>
@@ -132,6 +160,8 @@ export default function ContactForm({
                 "Franchise (links to KidzMondo franchise form)",
                 "Other Inquiries",
               ]}
+              selectedValue={topic}
+              onChange={(val) => setTopic(val)}
             />
           </fieldset>
         </div>
@@ -147,6 +177,8 @@ export default function ContactForm({
                 "$10 M – $20 M",
                 "$20 M +",
               ]}
+              selectedValue={investmentRange}
+              onChange={(val) => setInvestmentRange(val)}
             />
           </fieldset>
           <fieldset className="item">{/* spacer */}</fieldset>

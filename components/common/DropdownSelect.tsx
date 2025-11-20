@@ -93,7 +93,6 @@
 //   );
 // }
 
-
 "use client";
 
 import { useEffect, useRef, useState } from "react";
@@ -104,88 +103,80 @@ interface DropdownSelectProps {
   onChange?: (elm: string) => void;
   options?: string[];
   defaultOption?: string;
-  selectedValue?: string;
-  addtionalParentClass?: string; // ✅ used in Features.tsx
+  selectedValue?: string; // for controlled use from parent
+  addtionalParentClass?: string;
 }
 
 export default function DropdownSelect({
   onChange = () => {},
   options = optionsDefault,
   defaultOption = "",
-  selectedValue = "",
+  selectedValue,
   addtionalParentClass = "",
 }: DropdownSelectProps) {
   const selectRef = useRef<HTMLDivElement | null>(null);
-  const optionsRef = useRef<HTMLUListElement | null>(null);
-  const [selected, setSelected] = useState<string>(options[0]);
+  const [isOpen, setIsOpen] = useState(false);
+  const [internalSelected, setInternalSelected] = useState<string>(
+    defaultOption || options[0]
+  );
+
+  // If parent passes selectedValue ➜ controlled mode
+  const currentValue =
+    selectedValue || internalSelected || defaultOption || options[0];
 
   const toggleDropdown = () => {
-    selectRef.current?.classList.toggle("open");
+    setIsOpen((prev) => !prev);
   };
 
-  // Close dropdown when clicking completely outside
+  // Close when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
         selectRef.current &&
         !selectRef.current.contains(event.target as Node)
       ) {
-        selectRef.current.classList.remove("open");
+        setIsOpen(false);
       }
     };
 
-    document.addEventListener("click", handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener("click", handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
-  // Close dropdown when clicking on the select but not inside the options list
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        selectRef.current &&
-        selectRef.current.contains(event.target as Node) &&
-        optionsRef.current &&
-        !optionsRef.current.contains(event.target as Node)
-      ) {
-        toggleDropdown();
-      }
-    };
-
-    document.addEventListener("click", handleClickOutside);
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-    };
-  }, []);
+  const handleOptionClick = (value: string) => {
+    // Update internal state only if not controlled
+    if (!selectedValue) {
+      setInternalSelected(value);
+    }
+    onChange(value);
+    setIsOpen(false);
+  };
 
   return (
-    <div className={`nice-select ${addtionalParentClass}`} ref={selectRef}>
-      <span className="current">
-        {selectedValue || selected || defaultOption || options[0]}
-      </span>
-      <ul className="list" ref={optionsRef}>
-        {options.map((elm, i) => (
-          <li
-            key={i}
-            onClick={() => {
-              setSelected(elm);
-              onChange(elm);
-              toggleDropdown();
-            }}
-            className={`option ${
-              !selectedValue
-                ? selected === elm
-                  ? "selected"
-                  : ""
-                : selectedValue === elm
-                ? "selected"
-                : ""
-            }  text text-1`}
-          >
-            {elm}
-          </li>
-        ))}
+    <div
+      className={`nice-select ${isOpen ? "open" : ""} ${addtionalParentClass}`}
+      ref={selectRef}
+      onClick={toggleDropdown}
+    >
+      <span className="current">{currentValue}</span>
+      <ul className="list">
+        {options.map((elm, i) => {
+          const isSelected = currentValue === elm;
+          return (
+            <li
+              key={i}
+              className={`option ${isSelected ? "selected" : ""} text text-1`}
+              onClick={(e) => {
+                e.stopPropagation(); // prevent re-toggling from parent onClick
+                handleOptionClick(elm);
+              }}
+            >
+              {elm}
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
