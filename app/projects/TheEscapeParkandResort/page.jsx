@@ -45,30 +45,44 @@ export default function TheEscapeParkandResort() {
                 />
               </div>
 
-              {/* <div className="desc-blog">
-                <h5 className="title-desc">Introduction</h5>
-                <p className="body-2">
-                  A green refuge, The Escape Park and Resort will transport you
-                  to a wonderland of greenery for some much-needed peace and
-                  relaxation for the entire family.
+              <div className="desc-blog">
+                <h5 className="title-desc">
+                  A natural sanctuary designed for families to reconnect,
+                  recharge, and rediscover,
                   <br />
-                  This concept is built with the intention of immersing
-                  children, adults and parents alike in a multi-sensory nature
-                  bonding experience, taking you away from the rush and buzz of
-                  a fast-paced technology oriented world.
-                </p>
-                <h5 className="title-desc">Objective</h5>
+                  the joy of outdoor play.
+                </h5>
                 <p className="body-2">
-                  The Escape Park and Resort will allow your children a chance
-                  to participate in their favorite activities while playing
-                  outdoors, with all the health benefits associated with
-                  physical activity and engaging in nature. 
+                  The Escape Park & Resort is a green refuge that transports
+                  families into a world of lush
                   <br />
-                  Research shows that when nature elements are incorporated into
-                  playgrounds, kids have more fun, are more active and utilize
-                  more motor skills.
+                  landscapes, flowing water, and immersive nature experiences.
+                  Built as a multi-sensory
+                  <br />
+                  destination, it invites children, teens, and adults to step
+                  away from the speed and noise
+                  <br />
+                  of modern life and enjoy meaningful moments together in the
+                  outdoors.
                 </p>
-              </div> */}
+                {/* <h5 className="title-desc">Objective</h5> */}
+                <p className="body-2">
+                  Grounded in the principles of nature-based learning and
+                  wellness, the park offers an
+                  <br />
+                  environment where children can explore, play, and develop
+                  essential motor and
+                  <br />
+                  sensory skills. Studies show that outdoor environments rich in
+                  natural elements
+                  <br />
+                  enhance creativity, boost physical activity, and contribute to
+                  overall emotional and
+                  <br />
+                  mental wellbeing all of which form the cornerstone of this
+                  concept.
+                </p>
+              </div>
 
               <div className="cols-img">
                 <div className="image-blog">
@@ -95,43 +109,71 @@ export default function TheEscapeParkandResort() {
                 <div className="desc-blog">
                   <h5 className="title-desc">The Facility</h5>
                   <p className="body-2">
-                    The Escape Park and Resort is a nature retreat filled with
-                    trees, a pond, flowers, gazebos, a man-made river, an indoor
-                    and outdoor lunch area, birthday and events venue, private
-                    rental spots for family barbecues and camping trips,
-                    enclosures for different kinds of animals, and a resort area
-                    with bungalows and a swimming pool.
+                    Designed as a fully integrated nature retreat, The Escape
+                    Park & Resort features:
+                    <br />
+                    - A scenic pond, surrounded by trees, flowers, and walking
+                    paths
+                    <br />
+                    - Gazebos and shaded relaxation areas
+                    <br />
+                    - A man-made river ideal for family fishing activities
+                    <br />
+                    - Indoor and outdoor dining areas
+                    <br />
+                    - A dedicated birthday and events venue
+                    <br />
+                    - Private rental zones for barbecues, picnics, and camping
+                    <br />
+                    - Animal enclosures for hands-on exploration and learning
+                    <br />
+                    - A resort area with bungalows and a swimming pool
                     <br />
                     <br />
-                    In a beautifully serene atmosphere, families can enjoy a
-                    peaceful lunch by the pond, observing the bird enclosures
-                    spread throughout the grounds, while their kids ride ponies,
-                    play in the outdoor playground, complete an obstacle course
-                    up in the trees; fathers and sons can go fishing together on
-                    the river.   
+                    Families can enjoy a serene lunch by the pond, watch birds
+                    gathered around the
+                    <br />
+                    enclosures, or let children explore the outdoor playground
+                    before attempting the
+                    <br />
+                    elevated obstacle course in the trees. Fathers and sons can
+                    fish together, while
+                    <br />
+                    younger guests enjoy pony rides or nature discovery trails.
                     <br />
                     <br />
-                    Uphill of the pond is a luxurious restaurant offering
-                    refined cuisine and a sunset view in both an indoor and an
-                    outdoor seating area. 
+                    Perched above the pond is a luxurious signature restaurant,
+                    offering refined cuisine
+                    <br />
+                    with sweeping sunset views in both indoor and outdoor
+                    seating areas.
                     <br />
                     <br />
-                    At the same level of the restaurant is the botanical zone,
-                    containing green houses, fruit tree orchards, and small open
-                    air agricultural grounds.
+                    Next to the restaurant lies the botanical zone, which
+                    includes greenhouses, orchards,
+                    <br />
+                    and small open-air agricultural plots where families can
+                    learn about planting,
+                    <br />
+                    harvesting, and eco-friendly practices.
                     <br />
                     <br />
-                    This level also contains an oval amphitheater serving as a
-                    platform for performances, shows, and kids' birthday
-                    parties.  
+                    Nearby, an oval amphitheater acts as a natural stage for
+                    performances, shows, and
+                    <br />
+                    children’s birthday celebrations.
                     <br />
                     <br />
-                    The level further below will feature the adventure zone with
-                    fun outdoor sports activities for the entire family.
+                    Further down the hillside sits the adventure zone, packed
+                    with exhilarating outdoor
                     <br />
+                    sports and activities for all ages. At the lowest level,
+                    families will find the camping and
                     <br />
-                    Finally, the lowermost level holds the camping and barbeque
-                    gear for private rentals. 
+                    barbecue equipment depot, supporting private rentals for
+                    overnight or daytime nature
+                    <br />
+                    outings.
                   </p>
                 </div>
 
@@ -139,32 +181,57 @@ export default function TheEscapeParkandResort() {
                   <h5 className="title-desc">Activities</h5>
                   <p className="body-2">
                     <ul>
-                      The Escape Park and Resort is equipped with outdoor play
-                      equipment, interactive games and other mentally and
-                      physically stimulating activities including:
-                      <li>• Ropes course</li>
-                      <li>• Archery</li>
-                      <li>• Honey making</li>
-                      <li>• Zipline</li>
-                      <li>• Underground maze and jewel extraction  </li>
-                      <li>• Fishing</li>
-                      <li>• Biking</li>
-                      <li>• Animal exploration</li>
-                      <li>• Gardening</li>
-                      <li>• Truck and barrel rides</li>
-                      <li>• And many more...</li>
+                      The Escape Park & Resort offers a wide range of mentally
+                      and physically stimulating
+                      <br />
+                      experiences, including:
+                      <br />
+                      <br />
+                      <h4>Adventure &amp; Movement</h4>
+                      <li>- Ropes course</li>
+                      <li>- Zipline</li>
+                      <li>- Underground maze</li>
+                      <li>- Wall Climbing</li>
+                      <li>- Biking</li>
+                      <li>- Truck and barrel rides</li>
                     </ul>
                   </p>
                 </div>
 
-                {/* <div className="desc-blog">
-                  <h5 className="title-desc">3. Immersive Storytelling</h5>
+                <div className="desc-blog">
+                  <h5 className="title-desc">Nature &amp; Wellness</h5>
                   <p className="body-2">
-                    The park&apos;s narrative-driven design transforms each
-                    visit into a memorable story. Guests are not just visitors,
-                    but active characters in an unfolding adventure.
+                    <ul>
+                      <li>- Fishing</li>
+                      <li>- Gardening</li>
+                      <li>- Animal exploration</li>
+                      <li>- Botanical learning</li>
+                      <li>- Fruit harvesting(seasonal)</li>
+                    </ul>
                   </p>
-                </div> */}
+                </div>
+
+                <div className="desc-blog">
+                  <h5 className="title-desc">Crafts &amp; Skills</h5>
+                  <p className="body-2">
+                    <ul>
+                      <li>- Honey making</li>
+                      <li>- Jewel extraction</li>
+                      <li>- Interactive nature-based games</li>
+                    </ul>
+                  </p>
+                </div>
+
+                <div className="desc-blog">
+                  <h5 className="title-desc">
+                    Sports &amp; Precision Activities
+                  </h5>
+                  <p className="body-2">
+                    <ul>
+                      <li>- Archery</li>
+                    </ul>
+                  </p>
+                </div>
               </div>
             </div>
           </div>

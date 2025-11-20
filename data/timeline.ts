@@ -1,32 +1,32 @@
 export const timelineItems = [
   {
     year: "2010",
-    title: "Innovation: ",
+    title: "Imagination & Creativity: ",
     description:
-      "We continuously reinvent the learning experience to inspire curiosity and creativity.",
+      "We embrace storytelling, innovation, and forward-thinking ideas that inspire children and families to dream, explore, and discover.",
   },
   {
     year: "2013",
-    title: " Integrity: ",
+    title: "Education Through Experience:",
     description:
-      "We operate with transparency and accountability in every partnership.",
+      "We believe learning becomes truly memorable when it is hands-on, engaging, and woven into play. Every concept we create carries an educational purpose",
   },
   {
     year: " Collaboration:",
-    title: "Major Milestone",
+    title: "Safety & Trust:",
     description:
-      "We grow through teamwork: with families, schools, and partners.",
+      "Safety is at the heart of all our destinations. We adhere to the highest international standards to ensure families feel confident and secure.",
   },
   {
     year: "2024",
-    title: "Safety",
+    title: "Cultural Relevance:",
     description:
-      "We protect every child’s wellbeing as our top priority.",
+      "Every project is tailored to reflect the culture, context, and community it serves ensuring authenticity and meaningful impact.",
   },
   {
     year: "2025",
-    title: " Impact: ",
+    title: " Partnership & Collaboration ",
     description:
-      "Every project we build serves a greater educational and social purpose.",
+      "We work hand-in-hand with our partners, developers, governments, franchisees, and operators to build destinations that thrive and grow.",
   },
 ];

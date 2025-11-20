@@ -46,22 +46,26 @@ export default function UrbanVillage() {
                 className="desc-blog"
                 style={{ marginTop: "24px", marginBottom: "32px" }}
               >
-                <h5
+                {/* <h5
                   className="title-desc"
                   style={{ marginBottom: "12px" }}
                 >
-                  Facility
-                </h5>
-                <p className="body-2" style={{ margin: 0 }}>
-                  The village-like compound will cater to a variety of needs and
-                  bring together the community in a way which enables every
-                  person to meet his own personal needs in a joint setting.
-                  <br />
-                  <br />
-                  The facility will be composed of different sections targeted
-                  at different audiences and providing different services
-                  experiences:
-                </p>
+                
+                </h5> */}
+                
+                  <p className="body-2" style={{ margin: 0 }}>
+                    Urban Village is a contemporary lifestyle destination where entertainment, culture,<br/>
+                    food, and community come together in one vibrant space. Designed as an open,<br/>
+                    walkable, and experiential district, Urban Village blends social dining, modern<br/>
+                    entertainment, boutique retail, and wellness amenities to create a dynamic<br/>
+                    environment for families, youth, and adults.
+                    <br />
+                    <br />
+                    Inspired by the most successful lifestyle zones around the world, Urban Village offers a<br/>
+                    curated mix of experiences that activate the senses, celebrate individuality, and bring<br/>
+                    people together, day and night.
+                  </p>
+                
               </div>
 
 
@@ -93,24 +97,22 @@ export default function UrbanVillage() {
                   className="desc-blog"
                   style={{ marginTop: "32px", marginBottom: "32px" }}
                 >
-                  <h5
+                  <h4
                     className="title-desc"
                     style={{ marginBottom: "12px" }}
                   >
-                    1. Toddlers and young kids – Large soft play area
-                  </h5>
+                    A New Vision for Social Living
+                  </h4>
                   <p className="body-2" style={{ margin: 0 }}>
-                    Mothers who want to provide entertainment for their young
-                    children, or want an activity to keep their children engaged
-                    while they shop in the department store or have lunch or a
-                    coffee with friends may do so here.
+                   Urban Village is more than a venue; it is a community hub and a social micro-city.<br/>
+                   Every corner is thoughtfully designed to encourage discovery, movement, connection,<br/>
+                   and exploration. Visitors can dine, play, shop, relax, and socialize in an atmosphere that<br/>
+                   feels vibrant, safe, and alive.
                     <br />
                     <br />
-                    Known for their physical benefits as well as their ability
-                    to keep young kids having fun for hours, this area will be a
-                    large soft play zone including slides, bouncy houses,
-                    trampolines, monkey bars, a jungle gym, a low climbing wall,
-                    and a ball pit.
+                    From artisanal eateries and handcrafted desserts to immersive entertainment and<br/>
+                    lifestyle amenities, Urban Village offers something for everyone, making it one of the<br/>
+                    most attractive anchors for real estate and mixed-use developments.
                   </p>
                 </div>
 
@@ -119,23 +121,73 @@ export default function UrbanVillage() {
                   className="desc-blog"
                   style={{ marginBottom: "32px" }}
                 >
-                  <h5
+                  <h4
                     className="title-desc"
                     style={{ marginBottom: "12px" }}
                   >
-                    2. Kids
-                  </h5>
+                    Core Experiences
+                  </h4>
+                  <h4
+                    className="title-desc"
+                    style={{ marginBottom: "12px" }}
+                  >
+                    Food & Culinary Lane
+                  </h4>
                   <p className="body-2" style={{ margin: 0 }}>
-                    KidzMondo is an edutainment indoor theme park based on the
-                    concept of vocational role play. It caters for kids aged 4
-                    to 14, bridging the gap between toddlers and teens.
-                    <br />
-                    <br />
-                    KidzMondo Ville will offer young guests simultaneously
-                    informative and entertainment experiences to keep them busy
-                    from a few hours up to a full day.
+                    <ul>
+                      <li>- Trendy cafés, dessert boutiques, and contemporary restaurants</li>
+                      <li>- International cuisines and local dining concepts</li>
+                      <li>- Outdoor terraces and communal seating</li>
+                      <li>- Pop-up food stalls and seasonal gastronomic events</li>
+
+                    </ul>
+                    The heart of the village, where food becomes a social experience.
+                  </p>
+                  <h4
+                    className="title-desc"
+                    style={{ marginBottom: "12px" }}
+                  >
+                    Entertainment District
+                  </h4>
+                  <p className="body-2" style={{ margin: 0 }}>
+                    <ul>
+                      <li>- Immersive games and family attractions</li>
+                      <li>- Social entertainment venues</li>
+                      <li>- Edutainment and youth-focused play zones</li>
+                      <li>- Live shows, music, performances, and themed nights</li>
+                    </ul>
+                  </p>
+                  <h4
+                    className="title-desc"
+                    style={{ marginBottom: "12px" }}
+                  >
+                    Lifestyle Retail & Boutique District
+                  </h4>
+                  <p className="body-2" style={{ margin: 0 }}>
+                    <ul>
+                      <li>- Department store or curated concept store</li>
+                      <li>- Niche fashion, beauty, accessories, and lifestyle brands</li>
+                      <li>- Rotating pop-ups and seasonal retail activations</li>
+                      <li>- Instagrammable windows and themed retail displays</li>
+                    
+                    </ul>
+                  </p>
+                  <h4
+                    className="title-desc"
+                    style={{ marginBottom: "12px" }}
+                  >
+                   Wellness & Amenities 
+                  </h4>
+                  <p className="body-2" style={{ margin: 0 }}>
+                    <ul>
+                      <li>- Urban spa and wellness lounge</li>
+                      <li>- Beauty and grooming studios</li>
+                      <li>- Fitness corners and active lifestyle zones</li>
+                      <li>- Kids’ play areas and family amenities</li>
+                    </ul>
                   </p>
                 </div>
+
 
                 {/* Block 3 */}
                 <div
