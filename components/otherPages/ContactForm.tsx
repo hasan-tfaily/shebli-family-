@@ -1,13 +1,14 @@
 "use client";
-import React from "react";
-
+import React, { useState } from "react";
 import axios from "axios";
-import { useState } from "react";
 import DropdownSelect from "../common/DropdownSelect";
 
 export default function ContactForm() {
   const [success, setSuccess] = useState(true);
   const [showMessage, setShowMessage] = useState(false);
+
+  const [country, setCountry] = useState(""); // ✅ required
+  const [topic, setTopic] = useState("");     // ✅ required
 
   const handleShowMessage = () => {
     setShowMessage(true);
@@ -22,7 +23,6 @@ export default function ContactForm() {
     phone: HTMLInputElement;
     city: HTMLInputElement;
     message: HTMLTextAreaElement;
-    // country, experience, investmentRange come from DropdownSelect (no native inputs here)
   }
 
   interface ContactFormElement extends HTMLFormElement {
@@ -33,16 +33,69 @@ export default function ContactForm() {
 
   const sendEmail = async (e: SendEmailEvent): Promise<void> => {
     e.preventDefault();
-    const email = e.currentTarget.email.value;
+    const form = e.currentTarget;
+    const { name, email, phone, city, message } = form.elements;
+
+    // 🔹 name required
+    if (!name.value.trim()) {
+      alert("Please enter your name.");
+      setSuccess(false);
+      handleShowMessage();
+      return;
+    }
+
+    // 🔹 phone OR email required
+    if (!email.value.trim() && !phone.value.trim()) {
+      alert("Please provide at least a phone number or an email address.");
+      setSuccess(false);
+      handleShowMessage();
+      return;
+    }
+
+    // 🔹 country required
+    if (!country || country === "Country") {
+      alert("Please select your country.");
+      setSuccess(false);
+      handleShowMessage();
+      return;
+    }
+
+    // 🔹 city required
+    if (!city.value.trim()) {
+      alert("Please enter your city.");
+      setSuccess(false);
+      handleShowMessage();
+      return;
+    }
+
+    // 🔹 topic required
+    if (!topic || topic === "Topic") {
+      alert("Please select a topic.");
+      setSuccess(false);
+      handleShowMessage();
+      return;
+    }
+
+    // 🔹 message required
+    if (!message.value.trim()) {
+      alert("Please enter your message.");
+      setSuccess(false);
+      handleShowMessage();
+      return;
+    }
+
+    const emailValue = email.value.trim();
 
     try {
       const response = await axios.post(
         "https://express-brevomail.vercel.app/api/contacts",
-        { email }
+        { email: emailValue }
       );
 
       if ([200, 201].includes(response.status)) {
-        e.currentTarget.reset();
+        form.reset();
+        setCountry("");
+        setTopic("");
         setSuccess(true);
         handleShowMessage();
       } else {
@@ -52,22 +105,29 @@ export default function ContactForm() {
     } catch (error) {
       setSuccess(false);
       handleShowMessage();
-      e.currentTarget.reset();
+      form.reset();
+      setCountry("");
+      setTopic("");
     }
   };
 
   return (
     <>
-      <form id="contactform" className="form-contact-us" onSubmit={sendEmail} style={{marginTop: "100px"}}>
+      <form
+        id="contactform"
+        className="form-contact-us"
+        onSubmit={sendEmail}
+        style={{ marginTop: "100px" }}
+      >
         {/* Row 1: Name + Email */}
         <div className="cols">
           <fieldset className="item">
             <input
               type="text"
               name="name"
-              required
               id="name"
               placeholder=" Name "
+              required // ✅
             />
           </fieldset>
           <fieldset className="item">
@@ -75,20 +135,24 @@ export default function ContactForm() {
               type="email"
               name="email"
               id="mail"
-              required
-              placeholder=" Email*"
+              placeholder=" Email"
+              // not required alone because we do phone OR email
             />
           </fieldset>
         </div>
 
-        {/* Row 2: Phone + Country (replaces “How can we help you?”) */}
+        {/* Row 2: Phone + Country */}
         <div className="cols">
           <fieldset className="item">
-            <input type="number" name="phone" id="phone" placeholder="Phone" />
+            <input
+              type="number"
+              name="phone"
+              id="phone"
+              placeholder="Phone"
+            />
           </fieldset>
           <fieldset className="item">
             <DropdownSelect
-              // Countries
               options={[
                 "Country",
                 "Saudi Arabia",
@@ -102,14 +166,22 @@ export default function ContactForm() {
                 "Egypt",
                 "Turkey",
               ]}
+              value={country}
+              onChange={setCountry} // ✅ track country
             />
           </fieldset>
         </div>
 
-        {/* Row 3: City + Experience */}
+        {/* Row 3: City + Topic */}
         <div className="cols">
           <fieldset className="item">
-            <input type="text" name="city" id="city" placeholder="City" />
+            <input
+              type="text"
+              name="city"
+              id="city"
+              placeholder="City"
+              required // ✅
+            />
           </fieldset>
           <fieldset className="item">
             <DropdownSelect
@@ -117,9 +189,11 @@ export default function ContactForm() {
                 "Topic",
                 "New Venture",
                 "Management Consultation",
-                "Franchise (links to KidzMondo franchise form)", 
+                "Franchise (links to KidzMondo franchise form)",
                 "Other Inquiries",
               ]}
+              value={topic}
+              onChange={setTopic} // ✅ track topic
             />
           </fieldset>
         </div>
@@ -137,10 +211,7 @@ export default function ContactForm() {
               ]}
             />
           </fieldset>
-          {/* optional spacer to keep 2-column rhythm */}
-          <fieldset className="item">
-            {/* leave empty or add another field later */}
-          </fieldset>
+          <fieldset className="item">{/* spacer */}</fieldset>
         </div>
 
         {/* Message */}
@@ -150,7 +221,7 @@ export default function ContactForm() {
             id="message"
             placeholder="Your Message*"
             defaultValue={""}
-            required
+            required // ✅
           />
         </fieldset>
 
@@ -169,7 +240,6 @@ export default function ContactForm() {
           )}
         </div>
 
-        {/* Submit */}
         <button
           type="submit"
           className="tf-btn style-1 w-full bg-on-suface-container text-center"
