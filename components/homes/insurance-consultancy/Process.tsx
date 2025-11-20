@@ -35,21 +35,19 @@ export default function Process() {
           </div>
 
           {/* STEPS */}
-          <div className="process-list style-column hover-active-step">
+          <div className="process-list style-column hover-active-step" >
             {/* 1. Site Selection */}
-            <div className="process-item style-color-white style-3 step-hover">
+            <div className="process-item style-color-white style-3 step-hover" >
               <div className="title number-process wow fadeInUp" style={{backgroundColor: "white", color:"#232559"}}>1</div>
               <div className="process-content">
                 <h5 className="wow fadeInUp" data-wow-delay=".1s">
                   <a href="#" className="name-process mb-10">
-                    Site Selection
+                    Franchise
                   </a>
                 </h5>
                 <div className="desc wow fadeInUp" data-wow-delay=".1s">
-                  We support franchisees in identifying and evaluating prime
-                  locations that align with market demand, accessibility, and
-                  target audience, ensuring a strong foundation for long-term
-                  performance.
+                  Our strong brand portfolio and proven track record make Kidz Holding concepts highly attractive to investors and operators worldwide. Our brands consistently generate exceptional footfall, enhance destination value, and deliver strong commercial performance. 
+                  Through our franchise model, partners gain access to world-class expertise across design, delivery, operations, training, marketing, and ongoing support. This allows franchisees to operate confidently and efficiently under the Kidz Holding system while benefiting from our deep industry knowledge, operational excellence, and continuous development.
                 </div>
               </div>
             </div>
@@ -61,13 +59,12 @@ export default function Process() {
               <div className="process-content">
                 <h5 className="wow fadeInUp" data-wow-delay=".1s">
                   <a href="#" className="name-process mb-10">
-                    Design & Layout
+                    Management Contract
                   </a>
                 </h5>
                 <div className="desc wow fadeInUp" data-wow-delay=".1s">
-                  Our design team develops custom layouts that optimize guest
-                  flow, safety, and operational efficiency, while reflecting the
-                  unique character of each Kidz Holding concept.
+                 Kidz Holding offers comprehensive management solutions for entertainment assets of all sizes. With extensive operational expertise and multidisciplinary capabilities, we help partners unlock the full potential of their attractions. <br/> <br/>
+                 We manage both our own concepts and third-party brands, ensuring operational excellence, commercial optimization, staff training, guest experience enhancement, and long-term business sustainability. Our global experience positions us as a trusted operator for leisure destinations seeking reliable, results-driven management
                 </div>
               </div>
             </div>
@@ -79,19 +76,18 @@ export default function Process() {
               <div className="process-content">
                 <h5 className="wow fadeInUp" data-wow-delay=".1s">
                   <a href="#" className="name-process mb-10">
-                    Construction & Fit-Out
+                    Concept Development
                   </a>
                 </h5>
                 <div className="desc wow fadeInUp" data-wow-delay=".1s">
-                  We provide technical guidance throughout construction and
-                  fit-out, ensuring that all areas meet Kidz Holding’s quality,
-                  safety, and brand specifications.
+                 We specialize in creating original, future-ready entertainment concepts that combine imagination, fun, education, and commercial viability. Our team develops fully integrated experiences built on strong storytelling, innovative activities, and a clear operational and financial foundation. <br/> <br/>
+                 From edutainment centers and FECs to themed attractions and hybrid leisure concepts, we transform ideas into scalable brands tailored to each market’s cultural and commercial needs.
                 </div>
               </div>
             </div>
 
             {/* 4. Recruitment & Training */}
-            <div className="process-item style-color-white style-3 step-hover">
+            {/* <div className="process-item style-color-white style-3 step-hover">
               <div className="title number-process wow fadeInUp" style={{backgroundColor: "white", color:"#232559"}}>4</div>
               <div className="circle wow fadeInUp" />
               <div className="process-content">
@@ -107,10 +103,10 @@ export default function Process() {
                   one.
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* 5. Pre-Launch Marketing */}
-            <div className="process-item style-color-white style-3 step-hover">
+            {/* <div className="process-item style-color-white style-3 step-hover">
               <div className="title number-process wow fadeInUp" style={{backgroundColor: "white", color:"#232559"}}>5</div>
               <div className="circle wow fadeInUp" />
               <div className="process-content">
@@ -125,10 +121,10 @@ export default function Process() {
                   and secure strong early bookings ahead of opening.
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* 6. Grand Opening & Ongoing Support */}
-            <div className="process-item style-color-white style-3 step-hover">
+            {/* <div className="process-item style-color-white style-3 step-hover">
               <div className="title number-process wow fadeInUp" style={{backgroundColor: "white", color:"#232559"}}>6</div>
               <div className="circle wow fadeInUp" />
               <div className="process-content">
@@ -144,7 +140,7 @@ export default function Process() {
                   track.
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
