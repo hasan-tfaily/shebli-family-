@@ -27,9 +27,6 @@ export default function Page() {
             <h2 className="title-page-title">About Us</h2>
             <div className="sub-title body-2">
               Kidz Holding: Creating Parks of Imagination, <br />
-<<<<<<< HEAD
-              Edutainment and Fun
-=======
               Edutainment and Fun <br/><br/>
               Kidz Holding is a regional leader in the creation, development, and management of<br/> 
               family entertainment destinations and edutainment concepts. We design immersive<br/>  
@@ -52,7 +49,6 @@ export default function Page() {
               strong educational value — ensuring long-term success for our partners and<br/>
               unforgettable memories for our guests.
 
->>>>>>> 2babaac3ff3f9b22a7fe36b9714d8ec6fbf5627d
             </div>
           </div>
         </div>
