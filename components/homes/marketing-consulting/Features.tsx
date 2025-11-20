@@ -145,7 +145,6 @@ export default function Features() {
                   </div>
                 </div>
 
-                {/* whatever comes next in your layout */}
               </div>
             </div>
           </div>

@@ -172,7 +172,7 @@ export default function ContactForm() {
                 "Egypt",
                 "Turkey",
               ]}
-              value={country}
+              selectedValue={country}
               onChange={setCountry}
             />
           </fieldset>
@@ -198,7 +198,7 @@ export default function ContactForm() {
                 "Franchise (links to KidzMondo franchise form)",
                 "Other Inquiries",
               ]}
-              value={topic}
+              selectedValue={topic}
               onChange={setTopic}
             />
           </fieldset>
