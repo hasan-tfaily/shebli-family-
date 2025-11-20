@@ -3,7 +3,19 @@ import React, { useState } from "react";
 import axios from "axios";
 import DropdownSelect from "../common/DropdownSelect";
 
-export default function ContactForm() {
+interface ContactFormProps {
+  parentClass?: string;
+  title?: string;
+  btnClass?: string;
+  isTitleCenter?: boolean;
+}
+
+export default function ContactForm({
+  parentClass = "form-contact-us",
+  title,
+  btnClass = "tf-btn style-1 w-full bg-on-suface-container text-center",
+  isTitleCenter = true,
+}: ContactFormProps) {
   const [success, setSuccess] = useState(true);
   const [showMessage, setShowMessage] = useState(false);
 
@@ -54,47 +66,43 @@ export default function ContactForm() {
     }
   };
 
+  // build form class from parentClass
+  const formClassName = parentClass
+    ? `${parentClass} form-contact-us`
+    : "form-contact-us";
+
   return (
     <>
+      {/* Optional title (only rendered if passed from parent) */}
+      {title && (
+        <div className={isTitleCenter ? "text-center mb-6" : "mb-6"}>
+          <h3 className="title-section">{title}</h3>
+        </div>
+      )}
+
       <form
         id="contactform"
-        className="form-contact-us"
+        className={formClassName}
         onSubmit={sendEmail}
         style={{ marginTop: "100px" }}
       >
         {/* Row 1: Name + Email */}
         <div className="cols">
           <fieldset className="item">
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder=" Name "
-            />
+            <input type="text" name="name" id="name" placeholder=" Name " />
           </fieldset>
           <fieldset className="item">
-            <input
-              type="email"
-              name="email"
-              id="mail"
-              placeholder=" Email"
-            />
+            <input type="email" name="email" id="mail" placeholder=" Email" />
           </fieldset>
         </div>
 
         {/* Row 2: Phone + Country */}
         <div className="cols">
           <fieldset className="item">
-            <input
-              type="tel"
-              name="phone"
-              id="phone"
-              placeholder="Phone"
-            />
+            <input type="tel" name="phone" id="phone" placeholder="Phone" />
           </fieldset>
           <fieldset className="item">
             <DropdownSelect
-              // Countries
               options={[
                 "Country",
                 "Saudi Arabia",
@@ -115,12 +123,7 @@ export default function ContactForm() {
         {/* Row 3: City + Topic */}
         <div className="cols">
           <fieldset className="item">
-            <input
-              type="text"
-              name="city"
-              id="city"
-              placeholder="City"
-            />
+            <input type="text" name="city" id="city" placeholder="City" />
           </fieldset>
           <fieldset className="item">
             <DropdownSelect
@@ -148,10 +151,7 @@ export default function ContactForm() {
               ]}
             />
           </fieldset>
-          {/* optional spacer to keep 2-column rhythm */}
-          <fieldset className="item">
-            {/* leave empty or add another field later */}
-          </fieldset>
+          <fieldset className="item">{/* spacer */}</fieldset>
         </div>
 
         {/* Message */}
@@ -182,7 +182,7 @@ export default function ContactForm() {
         {/* Submit */}
         <button
           type="submit"
-          className="tf-btn style-1 w-full bg-on-suface-container text-center"
+          className={btnClass}
         >
           <span>Submit Inquiry</span>
         </button>
