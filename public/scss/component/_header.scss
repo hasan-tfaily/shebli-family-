@@ -273,6 +273,26 @@
 .header.style-1.style-absolute.no-bg.header-fixed.is-fixed {
   background-color: #021b44;   // same color
 }
+/* Header 5 – make background solid (same as top bar) */
+.header.style-1.style-absolute.no-bg.header-fixed {
+  background-color: #0b1f4a;   /* <- use the exact color of your top strip */
+  background-image: none !important;
+  backdrop-filter: none !important;
+}
+
+/* When scrolled (is-fixed), keep same color */
+.header.style-1.style-absolute.no-bg.header-fixed.is-fixed {
+  background-color: #0b1f4a;
+  background-image: none !important;
+  backdrop-filter: none !important;
+}
+
+.header.style-1.style-absolute {
+  background-color: #0b1f4a;
+  background-image: none !important;
+  backdrop-filter: none !important;
+}
+
 
 .header {
     position: sticky;
