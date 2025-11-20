@@ -130,10 +130,10 @@ export default function ContactForm() {
             <DropdownSelect
               options={[
                 "Investment Range",
-                "< $5,000,000",
-                "$5,000 M – $10,000 M",
-                "$10,000 M – $20,000 M",
-                "$20,000 M +",
+                "< $5 M",
+                "$5 M – $10 M",
+                "$10 M – $20 M",
+                "$20 M +",
               ]}
             />
           </fieldset>
