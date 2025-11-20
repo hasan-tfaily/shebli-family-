@@ -7,6 +7,7 @@ import { MenuLink } from "@/types/menuLink";
 import { FaLinkedinIn } from "react-icons/fa";
 
 export default function MobileMenu() {
+  
   const pathname = usePathname();
 
   // 🔹 Same active logic as Nav

@@ -1,100 +1,192 @@
 "use client";
-import React from "react";
-import DropdownSelect from "./DropdownSelect";
+import React, { useState } from "react";
 import axios from "axios";
-import { useState } from "react";
+import DropdownSelect from "../common/DropdownSelect";
 
-export default function ContactForm({
-  parentClass = "form-contact-home style-border",
-  btnClass = "tf-btn style-2 bg-on-suface-container w-full text-center",
-  isTitleCenter = true,
-  title = "Get A Free Quote",
-}) {
+export default function ContactForm() {
   const [success, setSuccess] = useState(true);
   const [showMessage, setShowMessage] = useState(false);
+
   const handleShowMessage = () => {
     setShowMessage(true);
     setTimeout(() => {
       setShowMessage(false);
     }, 2000);
   };
-  interface ContactFormProps {
-    parentClass?: string;
-    btnClass?: string;
-    isTitleCenter?: boolean;
-    title?: string;
+
+  interface ContactFormElements extends HTMLFormControlsCollection {
+    name: HTMLInputElement;
+    email: HTMLInputElement;
+    phone: HTMLInputElement;
+    city: HTMLInputElement;
+    message: HTMLTextAreaElement;
   }
 
-  interface SendEmailEvent extends React.FormEvent<HTMLFormElement> {
-    target: HTMLFormElement & {
-      email: { value: string };
-      reset: () => void;
-    };
+  interface ContactFormElement extends HTMLFormElement {
+    elements: ContactFormElements;
   }
+
+  interface SendEmailEvent extends React.FormEvent<ContactFormElement> {}
 
   const sendEmail = async (e: SendEmailEvent): Promise<void> => {
-    e.preventDefault(); // Prevent default form submission behavior
-    const email: string = e.target.email.value;
+    e.preventDefault();
+
+    const email = e.currentTarget.email.value.trim();
 
     try {
       const response = await axios.post(
         "https://express-brevomail.vercel.app/api/contacts",
-        {
-          email,
-        }
+        { email }
       );
 
       if ([200, 201].includes(response.status)) {
-        e.target.reset(); // Reset the form
-        setSuccess(true); // Set success state
+        e.currentTarget.reset();
+        setSuccess(true);
         handleShowMessage();
       } else {
-        setSuccess(false); // Handle unexpected responses
+        setSuccess(false);
         handleShowMessage();
       }
     } catch (error) {
-      setSuccess(false); // Set error state
+      setSuccess(false);
       handleShowMessage();
-      e.target.reset(); // Reset the form
+      e.currentTarget.reset();
     }
   };
-  return (
-    <form onSubmit={sendEmail} className={parentClass}>
-      <h5 className={`title-form ${isTitleCenter ? "text-center" : ""}`}>
-        {title}
-      </h5>
-      <fieldset>
-        <input required type="text" placeholder="Full name" />
-      </fieldset>
-      <fieldset>
-        <input required type="number" placeholder="Phone number" />
-      </fieldset>
-      <fieldset>
-        <input required type="email" name="email" placeholder="Email address" />
-      </fieldset>
 
-      <DropdownSelect
-        options={["How can we help you?", "Option 1", "Option 2", "Option 3"]}
-      />
-      <fieldset>
-        <textarea required placeholder="Your mesages" defaultValue={""} />
-      </fieldset>
-      <div
-        className={`tfSubscribeMsg  footer-sub-element ${
-          showMessage ? "active" : ""
-        }`}
+  return (
+    <>
+      <form
+        id="contactform"
+        className="form-contact-us"
+        onSubmit={sendEmail}
+        style={{ marginTop: "100px" }}
       >
-        {success ? (
-          <p style={{ color: "rgb(52, 168, 83)" }}>
-            Form submitted successfully.
-          </p>
-        ) : (
-          <p style={{ color: "red" }}>Something went wrong</p>
-        )}
-      </div>
-      <button type="submit" className={btnClass}>
-        <span> Submit Require </span>
-      </button>
-    </form>
+        {/* Row 1: Name + Email */}
+        <div className="cols">
+          <fieldset className="item">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder=" Name "
+            />
+          </fieldset>
+          <fieldset className="item">
+            <input
+              type="email"
+              name="email"
+              id="mail"
+              placeholder=" Email"
+            />
+          </fieldset>
+        </div>
+
+        {/* Row 2: Phone + Country */}
+        <div className="cols">
+          <fieldset className="item">
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="Phone"
+            />
+          </fieldset>
+          <fieldset className="item">
+            <DropdownSelect
+              // Countries
+              options={[
+                "Country",
+                "Saudi Arabia",
+                "United Arab Emirates",
+                "Qatar",
+                "Kuwait",
+                "Bahrain",
+                "Oman",
+                "Lebanon",
+                "Jordan",
+                "Egypt",
+                "Turkey",
+              ]}
+            />
+          </fieldset>
+        </div>
+
+        {/* Row 3: City + Topic */}
+        <div className="cols">
+          <fieldset className="item">
+            <input
+              type="text"
+              name="city"
+              id="city"
+              placeholder="City"
+            />
+          </fieldset>
+          <fieldset className="item">
+            <DropdownSelect
+              options={[
+                "Topic",
+                "New Venture",
+                "Management Consultation",
+                "Franchise (links to KidzMondo franchise form)",
+                "Other Inquiries",
+              ]}
+            />
+          </fieldset>
+        </div>
+
+        {/* Row 4: Investment Range */}
+        <div className="cols">
+          <fieldset className="item">
+            <DropdownSelect
+              options={[
+                "Investment Range",
+                "< $5 M",
+                "$5 M – $10 M",
+                "$10 M – $20 M",
+                "$20 M +",
+              ]}
+            />
+          </fieldset>
+          {/* optional spacer to keep 2-column rhythm */}
+          <fieldset className="item">
+            {/* leave empty or add another field later */}
+          </fieldset>
+        </div>
+
+        {/* Message */}
+        <fieldset>
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Your Message*"
+            defaultValue={""}
+          />
+        </fieldset>
+
+        {/* Status */}
+        <div
+          className={`tfSubscribeMsg footer-sub-element ${
+            showMessage ? "active" : ""
+          }`}
+        >
+          {success ? (
+            <p style={{ color: "rgb(52, 168, 83)" }}>
+              Form submitted successfully.
+            </p>
+          ) : (
+            <p style={{ color: "red" }}>Something went wrong</p>
+          )}
+        </div>
+
+        {/* Submit */}
+        <button
+          type="submit"
+          className="tf-btn style-1 w-full bg-on-suface-container text-center"
+        >
+          <span>Submit Inquiry</span>
+        </button>
+      </form>
+    </>
   );
 }
