@@ -10,7 +10,12 @@ export default function UrbanVillage() {
           alt=""
           className="lazyload"
           width={1920}
-          height={804}
+          height={1080}
+          style={{
+            width: "100%",
+            height: "auto",
+            maxWidth: "100%",
+          }}
         />
       </div>
       <div className="tf-container">
@@ -52,20 +57,20 @@ export default function UrbanVillage() {
                 >
                 
                 </h5> */}
-                
-                  <p className="body-2" style={{ margin: 0 }}>
-                    Urban Village is a contemporary lifestyle destination where entertainment, culture,<br/>
-                    food, and community come together in one vibrant space. Designed as an open,<br/>
-                    walkable, and experiential district, Urban Village blends social dining, modern<br/>
-                    entertainment, boutique retail, and wellness amenities to create a dynamic<br/>
-                    environment for families, youth, and adults.
-                    <br />
-                    <br />
-                    Inspired by the most successful lifestyle zones around the world, Urban Village offers a<br/>
-                    curated mix of experiences that activate the senses, celebrate individuality, and bring<br/>
-                    people together, day and night.
-                  </p>
-                
+
+                <p className="body-2" style={{ margin: 0 }}>
+                  Urban Village is a contemporary lifestyle destination where entertainment, culture,<br />
+                  food, and community come together in one vibrant space. Designed as an open,<br />
+                  walkable, and experiential district, Urban Village blends social dining, modern<br />
+                  entertainment, boutique retail, and wellness amenities to create a dynamic<br />
+                  environment for families, youth, and adults.
+                  <br />
+                  <br />
+                  Inspired by the most successful lifestyle zones around the world, Urban Village offers a<br />
+                  curated mix of experiences that activate the senses, celebrate individuality, and bring<br />
+                  people together, day and night.
+                </p>
+
               </div>
 
 
@@ -104,14 +109,14 @@ export default function UrbanVillage() {
                     A New Vision for Social Living
                   </h4>
                   <p className="body-2" style={{ margin: 0 }}>
-                   Urban Village is more than a venue; it is a community hub and a social micro-city.<br/>
-                   Every corner is thoughtfully designed to encourage discovery, movement, connection,<br/>
-                   and exploration. Visitors can dine, play, shop, relax, and socialize in an atmosphere that<br/>
-                   feels vibrant, safe, and alive.
+                    Urban Village is more than a venue; it is a community hub and a social micro-city.<br />
+                    Every corner is thoughtfully designed to encourage discovery, movement, connection,<br />
+                    and exploration. Visitors can dine, play, shop, relax, and socialize in an atmosphere that<br />
+                    feels vibrant, safe, and alive.
                     <br />
                     <br />
-                    From artisanal eateries and handcrafted desserts to immersive entertainment and<br/>
-                    lifestyle amenities, Urban Village offers something for everyone, making it one of the<br/>
+                    From artisanal eateries and handcrafted desserts to immersive entertainment and<br />
+                    lifestyle amenities, Urban Village offers something for everyone, making it one of the<br />
                     most attractive anchors for real estate and mixed-use developments.
                   </p>
                 </div>
@@ -169,14 +174,14 @@ export default function UrbanVillage() {
                       <li>- Niche fashion, beauty, accessories, and lifestyle brands</li>
                       <li>- Rotating pop-ups and seasonal retail activations</li>
                       <li>- Instagrammable windows and themed retail displays</li>
-                    
+
                     </ul>
                   </p>
                   <h4
                     className="title-desc"
                     style={{ marginBottom: "12px" }}
                   >
-                   Wellness & Amenities 
+                    Wellness & Amenities
                   </h4>
                   <p className="body-2" style={{ margin: 0 }}>
                     <ul>

@@ -10,8 +10,13 @@ export default function KidzAcademyPage() {
           src="/image/page-title/our-ventures (1).png"
           alt="KidzAcademy Hero"
           className="lazyload"
-          width={1920}
-          height={804}
+             width={1920}
+          height={1080}
+          style={{
+            width: "100%",
+            height: "auto",
+            maxWidth: "100%",
+          }}
         />
       </div>
 

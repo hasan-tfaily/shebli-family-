@@ -9,8 +9,13 @@ export default function StarDistrict() {
           src="/image/page-title/our-ventures (1).png"
           alt="Star District Hero"
           className="lazyload"
-          width={1920}
-          height={804}
+             width={1920}
+          height={1080}
+          style={{
+            width: "100%",
+            height: "auto",
+            maxWidth: "100%",
+          }}
         />
       </div>
 

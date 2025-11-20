@@ -11,7 +11,12 @@ export default function BowlNRock() {
           alt=""
           className="lazyload"
           width={1920}
-          height={804}
+          height={1080}
+          style={{
+            width: "100%",
+            height: "auto",
+            maxWidth: "100%",
+          }}
         />
       </div>
       <div className="tf-container">
@@ -22,13 +27,13 @@ export default function BowlNRock() {
                 {/* <a href="#" className="tag label text-btn-uppercase">
                   Finance
                 </a> */}
-                <h2 style={{color: '#000000', fontFamily: 'Arial, Helvetica, sans-serif', fontSize: '32px', fontWeight: 'bold', textAlign: 'center', padding: '20px 0', margin: 0}}>
+                <h2 style={{ color: '#000000', fontFamily: 'Arial, Helvetica, sans-serif', fontSize: '32px', fontWeight: 'bold', textAlign: 'center', padding: '20px 0', margin: 0 }}>
                   {/* {blog.title?.split(" ").slice(0, 4).join(" ") ??
                     "How to Effectively Manage"}{" "}
                   <br />
                   {blog.title?.split(" ").slice(4).join(" ") ??
                     "Business Cash Flow"} */}
-                    BOWL N' ROCK
+                  BOWL N' ROCK
                 </h2>
                 {/* <div className="meta">
                   <a href="#" className="meta-content">
@@ -57,13 +62,13 @@ export default function BowlNRock() {
               <div className="desc-blog" >
                 {/* <h5 className="title-desc">Overview</h5> */}
                 <p className="body-2">
-                  Bowl N Rock is the newest experiential social entertainment hub offering Bowling, Immersive sports games, retro 
-                  games, retro art installations, eateries, mini golf and much more. 
-<br/><br/>
-Featuring 10 Lane bowling alleys, Sports Simulators, retro arcade games, pool and snooker tables, Karaoke stage, 
-Virtual Reality, BOWL N ROCK  is an extraordinary ‘eatertainment’ venue with live music, where food and 
-entertainment have been merged into one space and interactive games integrated on each dining table savour the 
-experience. 
+                  Bowl N Rock is the newest experiential social entertainment hub offering Bowling, Immersive sports games, retro
+                  games, retro art installations, eateries, mini golf and much more.
+                  <br /><br />
+                  Featuring 10 Lane bowling alleys, Sports Simulators, retro arcade games, pool and snooker tables, Karaoke stage,
+                  Virtual Reality, BOWL N ROCK  is an extraordinary ‘eatertainment’ venue with live music, where food and
+                  entertainment have been merged into one space and interactive games integrated on each dining table savour the
+                  experience.
                 </p>
                 {/* <p className="body-2">
                   Test your crisis management plan with regular simulations to
@@ -98,55 +103,55 @@ experience. 
                     Experience
                   </h5>
                   <p className="body-2">
-                    
-BOWL N ROCK is a next-generation social entertainment hub where immersive play,<br/>
-retro nostalgia, live entertainment, and elevated dining come together in one dynamic<br/>
-destination. Designed for guests aged 15 and above, the venue blends gaming, music,<br/>
-food, art, and social interaction—creating a vibrant “eatertainment” experience that<br/>
-appeals to teens, young adults, groups, and corporate clients.
-<br/><br/>
-More than a gaming venue, BOWL N ROCK is a fully immersive lifestyle concept.<br/>
-Retro-industrial interiors, themed zones, and art installations set the tone, while a<br/>
-curated mix of social activities ensures there’s always something to discover around<br/>
-every corner.
-<br/><br/>
-The experience begins the moment guests walk through the signature themed<br/>
-entrance tunnel before stepping into a world of energy, music, fun, and play.
+
+                    BOWL N ROCK is a next-generation social entertainment hub where immersive play,<br />
+                    retro nostalgia, live entertainment, and elevated dining come together in one dynamic<br />
+                    destination. Designed for guests aged 15 and above, the venue blends gaming, music,<br />
+                    food, art, and social interaction—creating a vibrant “eatertainment” experience that<br />
+                    appeals to teens, young adults, groups, and corporate clients.
+                    <br /><br />
+                    More than a gaming venue, BOWL N ROCK is a fully immersive lifestyle concept.<br />
+                    Retro-industrial interiors, themed zones, and art installations set the tone, while a<br />
+                    curated mix of social activities ensures there’s always something to discover around<br />
+                    every corner.
+                    <br /><br />
+                    The experience begins the moment guests walk through the signature themed<br />
+                    entrance tunnel before stepping into a world of energy, music, fun, and play.
 
                   </p>
                 </div>
                 <div className="desc-blog">
                   <h5 className="title-desc">
                     Experiences:
-                    
+
                   </h5>
                   <h5>Social Bowling and AR Bowling</h5>
                   <p className="body-2">
-                    A high-energy bowling experience designed for social groups and competitive fun,<br/>
+                    A high-energy bowling experience designed for social groups and competitive fun,<br />
                     enhanced with atmospheric lighting and music
-                   <ul>
-                     <h6><li> Retro Arcade Zone</li></h6>
-                     A mix of classic arcade titles and modern hits, delivering nostalgia and excitement for<br/>
-                     all generations.
+                    <ul>
+                      <h6><li> Retro Arcade Zone</li></h6>
+                      A mix of classic arcade titles and modern hits, delivering nostalgia and excitement for<br />
+                      all generations.
 
-                     <h6><li> Immersive Gaming & Simulators</li></h6>
-                     Sports simulators, VR games, interactive screens, and digital game experiences<br/>inspired by global entertainment leaders.
-                     <h6><li> Mini Golf & Casual Play</li></h6>
-                     Fun and social mini-golf experiences and table-based games that encourage friendly<br/>
-                     competition.
-                     <h6><li> Karaoke & Live Entertainment Stage</li></h6>
-                     A dedicated performance zone featuring karaoke, DJ sets, live music, and event<br/>
-                     nights.
-                     <h6><li> Interactive Dining Experience</li></h6>
-                     Themed dining areas where food and entertainment merge, complete with interactive<br/>
-                     game tables, vibrant menus, and a lively atmosphere.
-                    <h6><li> Social Pool, Snooker & Darts</li></h6>
-                    Classic social games reimagined with modern ambiance, digital scoring, and themed<br/>
-                    environments.
-                    <h6><li> Retro-Industrial Art Installations</li> </h6>
-                    Nostalgic and visually striking art pieces, neon work, and themed installations that<br/>
-                    elevate the venue’s identity and social media appeal.
-                   </ul>
+                      <h6><li> Immersive Gaming & Simulators</li></h6>
+                      Sports simulators, VR games, interactive screens, and digital game experiences<br />inspired by global entertainment leaders.
+                      <h6><li> Mini Golf & Casual Play</li></h6>
+                      Fun and social mini-golf experiences and table-based games that encourage friendly<br />
+                      competition.
+                      <h6><li> Karaoke & Live Entertainment Stage</li></h6>
+                      A dedicated performance zone featuring karaoke, DJ sets, live music, and event<br />
+                      nights.
+                      <h6><li> Interactive Dining Experience</li></h6>
+                      Themed dining areas where food and entertainment merge, complete with interactive<br />
+                      game tables, vibrant menus, and a lively atmosphere.
+                      <h6><li> Social Pool, Snooker & Darts</li></h6>
+                      Classic social games reimagined with modern ambiance, digital scoring, and themed<br />
+                      environments.
+                      <h6><li> Retro-Industrial Art Installations</li> </h6>
+                      Nostalgic and visually striking art pieces, neon work, and themed installations that<br />
+                      elevate the venue’s identity and social media appeal.
+                    </ul>
                   </p>
                 </div>
                 {/* <div className="desc-blog">
@@ -187,7 +192,7 @@ entrance tunnel before stepping into a world of energy, music, fun, and play.
                     </a>
                   </div>
                 </div> */}
-                {/* <div className="right tab-item">
+              {/* <div className="right tab-item">
                   <div className="text">Share this post:</div>
                   <ul className="tf-social radius-50 style-border g-12 color-on-suface-container">
                     <li className="item">

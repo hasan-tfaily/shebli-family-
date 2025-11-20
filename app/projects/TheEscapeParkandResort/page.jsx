@@ -99,8 +99,13 @@ export default function TheEscapeParkandResort() {
                     src="/image/resortAndPark/resort pic 3.jpg"
                     alt="Escape Park Activity 2"
                     className="lazyload"
-                    width={444}
-                    height={334}
+                      width={1920}
+          height={1080}
+          style={{
+            width: "100%",
+            height: "auto",
+            maxWidth: "100%",
+          }}
                   />
                 </div>
               </div>
