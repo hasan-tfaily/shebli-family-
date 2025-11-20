@@ -66,14 +66,12 @@ export default function ContactForm({
     }
   };
 
-  // build form class from parentClass
   const formClassName = parentClass
     ? `${parentClass} form-contact-us`
     : "form-contact-us";
 
   return (
     <>
-      {/* Optional title (only rendered if passed from parent) */}
       {title && (
         <div className={isTitleCenter ? "text-center mb-6" : "mb-6"}>
           <h3 className="title-section">{title}</h3>
@@ -180,10 +178,7 @@ export default function ContactForm({
         </div>
 
         {/* Submit */}
-        <button
-          type="submit"
-          className={btnClass}
-        >
+        <button type="submit" className={btnClass}>
           <span>Submit Inquiry</span>
         </button>
       </form>
