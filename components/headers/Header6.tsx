@@ -72,7 +72,7 @@ export default function Header6({
                   </div>
 
                   <div className="nav-btn">
-                    <Link href={`/pricing`} className="tf-btn bg-white style-1">
+                    <Link href={`/contact-us`} className="tf-btn bg-white style-1">
                       <span>Get Your Consult!</span>
                     </Link>
                   </div>
