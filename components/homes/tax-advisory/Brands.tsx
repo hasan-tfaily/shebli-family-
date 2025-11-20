@@ -20,7 +20,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/brand/vanfaba.svg"
+                        src="/image/logos/logos-01.png"
                         width={226}
                         height={44}
                       />
@@ -30,7 +30,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/brand/panadoxn.svg"
+                        src="/image/logos/logos-02.png"
                         width={226}
                         height={44}
                       />
@@ -40,7 +40,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/brand/slack.svg"
+                        src="/image/logos/logos-03.png"
                         width={226}
                         height={44}
                       />
@@ -50,7 +50,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/brand/shangxi.svg"
+                        src="/image/logos/logos-04.png"
                         width={226}
                         height={44}
                       />
@@ -60,7 +60,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/brand/spotify.svg"
+                        src="/image/logos/logos-05.png"
                         width={226}
                         height={44}
                       />
@@ -71,7 +71,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/brand/vanfaba.svg"
+                        src="/image/logos/logos-01.png"
                         width={226}
                         height={44}
                       />
@@ -81,7 +81,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/brand/panadoxn.svg"
+                        src="/image/logos/logos-02.png"
                         width={226}
                         height={44}
                       />
@@ -91,7 +91,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/brand/slack.svg"
+                        src="/image/logos/logos-03.png"
                         width={226}
                         height={44}
                       />
@@ -101,7 +101,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/brand/shangxi.svg"
+                        src="/image/logos/logos-04.png"
                         width={226}
                         height={44}
                       />
@@ -111,7 +111,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/brand/spotify.svg"
+                        src="/image/logos/logos-05.png"
                         width={226}
                         height={44}
                       />
@@ -122,7 +122,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/brand/vanfaba.svg"
+                        src="/image/logos/logos-01.png"
                         width={226}
                         height={44}
                       />
@@ -132,7 +132,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/brand/panadoxn.svg"
+                        src="/image/logos/logos-02.png"
                         width={226}
                         height={44}
                       />
@@ -142,7 +142,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/brand/slack.svg"
+                        src="/image/logos/logos-03.png"
                         width={226}
                         height={44}
                       />
@@ -152,7 +152,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/brand/shangxi.svg"
+                        src="/image/logos/logos-04.png"
                         width={226}
                         height={44}
                       />
@@ -162,7 +162,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/brand/spotify.svg"
+                        src="/image/logos/logos-05.png"
                         width={226}
                         height={44}
                       />
@@ -173,7 +173,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/brand/vanfaba.svg"
+                        src="/image/logos/logos-01.png"
                         width={226}
                         height={44}
                       />
@@ -183,7 +183,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/brand/panadoxn.svg"
+                        src="/image/logos/logos-02.png"
                         width={226}
                         height={44}
                       />
@@ -193,7 +193,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/brand/slack.svg"
+                        src="/image/logos/logos-03.png"
                         width={226}
                         height={44}
                       />
@@ -203,7 +203,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/brand/shangxi.svg"
+                        src="/image/logos/logos-04.png"
                         width={226}
                         height={44}
                       />
@@ -213,7 +213,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/brand/spotify.svg"
+                        src="/image/logos/logos-05.png"
                         width={226}
                         height={44}
                       />

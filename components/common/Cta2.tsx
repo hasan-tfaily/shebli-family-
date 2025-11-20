@@ -39,9 +39,9 @@ export default function Cta() {
                       href={`/contact-us`}
                       className="tf-btn style-1 bg-white wow fadeInUp"
                     >
-                      <span>Schedule a Consultation</span>
+                      <span>Get In Touch</span>
                     </Link>
-                    <div className="tf-phone no-border color-white g-14">
+                    {/* <div className="tf-phone no-border color-white g-14">
                       <a href="#" className="icon wow fadeInUp">
                         <i className="icon-PhoneCall" />
                       </a>
@@ -51,7 +51,7 @@ export default function Cta() {
                           <a href="#">1-555-678-8888</a>
                         </h6>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>

@@ -116,7 +116,7 @@ export default function Header1({ onepage = false }) {
                       </span>
                     </Link>
                   </div> */}
-                  <div className="canvas-btn">
+                  {/* <div className="canvas-btn">
                     <a href="#canvnasMegamenu" data-bs-toggle="offcanvas">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -148,7 +148,7 @@ export default function Header1({ onepage = false }) {
                         />
                       </svg>
                     </a>
-                  </div>
+                  </div> */}
                   <div className="mobile-button">
                     <a href="#canvasMobile" data-bs-toggle="offcanvas">
                       <span />

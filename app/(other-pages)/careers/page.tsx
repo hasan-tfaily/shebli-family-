@@ -20,7 +20,7 @@ export default function page() {
       <div className="page-title style-1 bg-img-13">
         <div className="tf-container position-relative">
           <div className="page-title-content">
-            <Breadcumb pageName="Carrer" />
+            <Breadcumb pageName="Career" />
             <h2 className="title-page-title">Join Our Team</h2>
             <div className="sub-title body-2">
               Build the Future of Learning and Play

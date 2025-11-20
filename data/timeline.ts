@@ -1,25 +1,25 @@
 export const timelineItems = [
   {
     year: "2010",
-    title: "Imagination & Creativity: ",
+    title: "Imagination & Creativity  ",
     description:
       "We embrace storytelling, innovation, and forward-thinking ideas that inspire children and families to dream, explore, and discover.",
   },
   {
     year: "2013",
-    title: "Education Through Experience:",
+    title: "Education Through Experience ",
     description:
       "We believe learning becomes truly memorable when it is hands-on, engaging, and woven into play. Every concept we create carries an educational purpose",
   },
   {
     year: " Collaboration:",
-    title: "Safety & Trust:",
+    title: "Safety & Trust",
     description:
       "Safety is at the heart of all our destinations. We adhere to the highest international standards to ensure families feel confident and secure.",
   },
   {
     year: "2024",
-    title: "Cultural Relevance:",
+    title: "Cultural Relevance",
     description:
       "Every project is tailored to reflect the culture, context, and community it serves ensuring authenticity and meaningful impact.",
   },

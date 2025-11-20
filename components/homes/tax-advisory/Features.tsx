@@ -50,7 +50,7 @@ export default function Features() {
                       <i className="icon-checkbox" />
                     </div>
                     <div className="title wow fadeInUp" data-wow-delay=".1s">
-                      Proven operational success in MENA.
+                      Proven operational success in MENA
                     </div>
                   </div>
 
@@ -59,7 +59,7 @@ export default function Features() {
                       <i className="icon-checkbox" />
                     </div>
                     <div className="title wow fadeInUp" data-wow-delay=".1s">
-                      High-return franchise model with CSR value.
+                      High-return franchise model with CSR value
                     </div>
                   </div>
 
@@ -68,7 +68,7 @@ export default function Features() {
                       <i className="icon-checkbox" />
                     </div>
                     <div className="title wow fadeInUp" data-wow-delay=".1s">
-                      Comprehensive training and launch support.
+                      Comprehensive training and launch support
                     </div>
                   </div>
 
@@ -77,7 +77,7 @@ export default function Features() {
                       <i className="icon-checkbox" />
                     </div>
                     <div className="title wow fadeInUp" data-wow-delay=".1s">
-                      Strategic partnerships and sponsorship potential.
+                      Strategic partnerships and sponsorship potential
                     </div>
                   </div>
 
@@ -86,7 +86,7 @@ export default function Features() {
                       <i className="icon-checkbox" />
                     </div>
                     <div className="title wow fadeInUp" data-wow-delay=".1s">
-                      Turnkey setup process and design guidance.
+                      Turnkey setup process and design guidance
                     </div>
                   </div>
 
@@ -95,7 +95,7 @@ export default function Features() {
                       <i className="icon-checkbox" />
                     </div>
                     <div className="title wow fadeInUp" data-wow-delay=".1s">
-                      End‑to‑end marketing and performance tools.
+                      End‑to‑end marketing and performance tools
                     </div>
                   </div>
 
@@ -105,7 +105,7 @@ export default function Features() {
                       <i className="icon-checkbox" />
                     </div>
                     <div className="title wow fadeInUp" data-wow-delay=".1s">
-                      High-return franchise model with CSR value.
+                      High-return franchise model with CSR value
                     </div>
                   </div>
 

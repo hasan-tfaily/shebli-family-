@@ -1,14 +1,31 @@
 "use client";
+
 import React, { useState } from "react";
 import axios from "axios";
 import DropdownSelect from "../common/DropdownSelect";
+
+// ---- TYPES ----
+interface ContactFormElements extends HTMLFormControlsCollection {
+  name: HTMLInputElement;
+  email: HTMLInputElement;
+  phone: HTMLInputElement;
+  city: HTMLInputElement;
+  message: HTMLTextAreaElement;
+}
+
+type ContactFormElement = HTMLFormElement & {
+  elements: ContactFormElements;
+};
+
+type SendEmailEvent = React.FormEvent<ContactFormElement>;
 
 export default function ContactForm() {
   const [success, setSuccess] = useState(true);
   const [showMessage, setShowMessage] = useState(false);
 
-  const [country, setCountry] = useState(""); // ✅ required
-  const [topic, setTopic] = useState("");     // ✅ required
+  // dropdowns (required)
+  const [country, setCountry] = useState("");
+  const [topic, setTopic] = useState("");
 
   const handleShowMessage = () => {
     setShowMessage(true);
@@ -17,22 +34,10 @@ export default function ContactForm() {
     }, 2000);
   };
 
-  interface ContactFormElements extends HTMLFormControlsCollection {
-    name: HTMLInputElement;
-    email: HTMLInputElement;
-    phone: HTMLInputElement;
-    city: HTMLInputElement;
-    message: HTMLTextAreaElement;
-  }
-
-  interface ContactFormElement extends HTMLFormElement {
-    elements: ContactFormElements;
-  }
-
-  interface SendEmailEvent extends React.FormEvent<ContactFormElement> {}
-
   const sendEmail = async (e: SendEmailEvent): Promise<void> => {
     e.preventDefault();
+
+    // ✅ capture the form once, before any await
     const form = e.currentTarget;
     const { name, email, phone, city, message } = form.elements;
 
@@ -93,6 +98,7 @@ export default function ContactForm() {
       );
 
       if ([200, 201].includes(response.status)) {
+        // ✅ safely reset using the captured form reference
         form.reset();
         setCountry("");
         setTopic("");
@@ -127,7 +133,7 @@ export default function ContactForm() {
               name="name"
               id="name"
               placeholder=" Name "
-              required // ✅
+              required
             />
           </fieldset>
           <fieldset className="item">
@@ -136,7 +142,7 @@ export default function ContactForm() {
               name="email"
               id="mail"
               placeholder=" Email"
-              // not required alone because we do phone OR email
+              // not required alone (we validate phone OR email)
             />
           </fieldset>
         </div>
@@ -167,7 +173,7 @@ export default function ContactForm() {
                 "Turkey",
               ]}
               value={country}
-              onChange={setCountry} // ✅ track country
+              onChange={setCountry}
             />
           </fieldset>
         </div>
@@ -180,7 +186,7 @@ export default function ContactForm() {
               name="city"
               id="city"
               placeholder="City"
-              required // ✅
+              required
             />
           </fieldset>
           <fieldset className="item">
@@ -193,7 +199,7 @@ export default function ContactForm() {
                 "Other Inquiries",
               ]}
               value={topic}
-              onChange={setTopic} // ✅ track topic
+              onChange={setTopic}
             />
           </fieldset>
         </div>
@@ -221,7 +227,7 @@ export default function ContactForm() {
             id="message"
             placeholder="Your Message*"
             defaultValue={""}
-            required // ✅
+            required
           />
         </fieldset>
 
@@ -240,6 +246,7 @@ export default function ContactForm() {
           )}
         </div>
 
+        {/* Submit */}
         <button
           type="submit"
           className="tf-btn style-1 w-full bg-on-suface-container text-center"

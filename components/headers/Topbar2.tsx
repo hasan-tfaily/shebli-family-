@@ -6,7 +6,7 @@ export default function Topbar2() {
       <div className="tf-container">
         <div className="row">
           <div className="col-12">
-            <div className="top-bar-inner">
+            {/* <div className="top-bar-inner">
               <div className="tf-tb-left">
                 <div className="top-bar-content">
                   <i className="icon-MapPin" />
@@ -70,7 +70,7 @@ export default function Topbar2() {
                   </ul>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

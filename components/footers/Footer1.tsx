@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import React, { useEffect } from "react";
 import NewsLetterForm from "../common/NewsLetterForm";
+import { FaLinkedinIn } from "react-icons/fa";
 
 export default function Footer1({ parentClass = "footer" }) {
   useEffect(() => {
@@ -57,13 +58,9 @@ export default function Footer1({ parentClass = "footer" }) {
                   </Link>
                 </div>
                 <div className="text caption-1">
-                  Welcome to your trusted financial partner! Explore
-                  <br />
-                  personalized strategies and expert guidance to secure
-                  <br />
-                  your financial future and achieve success.
+                 Kidz Holding is the parent company behind KidzMondo and leading family leisure ventures across MENA creating safe educational edutainment destinations and scalable franchise and investment opportunities.
                 </div>
-                <div className="contact-footer">
+                {/* <div className="contact-footer">
                   <div className="address contact-top contact-footer-content">
                     <p className="caption-2">Our address</p>
                     <a href="#">101 E 129th St, East Chicago, IN 46312, US</a>
@@ -78,7 +75,7 @@ export default function Footer1({ parentClass = "footer" }) {
                       <a href="#">example@gmail.com</a>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
               <div className="footer-center">
                 <div className="footer-content our-services footer-col-block">
@@ -88,11 +85,11 @@ export default function Footer1({ parentClass = "footer" }) {
                   </div>
                   <div className="tf-collapse-content">
                     <ul>
-                      <li className="support-item-footer caption-1">
+                      {/* <li className="support-item-footer caption-1">
                         <Link href={`/projects/BowlNRock`}>
                           Bowi N Rock
                         </Link>
-                      </li>
+                      </li> */}
                       <li className="support-item-footer caption-1">
                         <Link href={`/projects/Karnavali`}>Karnavali</Link>
                       </li>
@@ -102,7 +99,7 @@ export default function Footer1({ parentClass = "footer" }) {
                       <li className="support-item-footer caption-1">
                         <Link href={`/projects/KidzMondo`}>Kidz Mondo</Link>
                       </li>
-                      <li className="support-item-footer caption-1">
+                      {/* <li className="support-item-footer caption-1">
                         <Link href={`/projects/KMInnovationCenter`}>
                           KM Innovation Center
                         </Link>
@@ -111,8 +108,8 @@ export default function Footer1({ parentClass = "footer" }) {
                         <Link href={`/projects/StarDistrict`}>
                           Star District
                         </Link>
-                      </li>
-                      <li className="support-item-footer caption-1">
+                      </li> */}
+                      {/* <li className="support-item-footer caption-1">
                         <Link href={`/projects/TheEscapeParkandResort`}>
                           The Escape Park & Resort
                         </Link>
@@ -121,7 +118,7 @@ export default function Footer1({ parentClass = "footer" }) {
                         <Link href={`/projects/UrbanVillage`}>
                           Urban Village
                         </Link>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
                 </div>
@@ -132,7 +129,7 @@ export default function Footer1({ parentClass = "footer" }) {
                   </div>
                   <div className="tf-collapse-content">
                     <ul>
-                      <li className="support-item-footer caption-1">
+                      {/* <li className="support-item-footer caption-1">
                         <Link href={`/`}>Home</Link>
                       </li>
                       <li className="support-item-footer caption-1">
@@ -140,7 +137,7 @@ export default function Footer1({ parentClass = "footer" }) {
                       </li>
                       <li className="support-item-footer caption-1">
                         <Link href={`/Investor-Relations`}>Investor Relations</Link>
-                      </li>
+                      </li> */}
                       <li className="support-item-footer caption-1">
                         <a href="/Franchise-Partnership">Franchise & Partnership</a>
                       </li>
@@ -150,15 +147,15 @@ export default function Footer1({ parentClass = "footer" }) {
                       <li className="support-item-footer caption-1">
                         <Link href={`/services`}>Services</Link>
                       </li>
-                       <li className="support-item-footer caption-1">
+                       {/* <li className="support-item-footer caption-1">
                         <Link href={`/blog`}>Blogs</Link>
-                      </li>
+                      </li> */}
                       <li className="support-item-footer caption-1">
                         <Link href={`/careers`}>Careers</Link>
                       </li>
-                      <li className="support-item-footer caption-1">
+                      {/* <li className="support-item-footer caption-1">
                         <Link href={`/contact-us`}>Contact</Link>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
                 </div>
@@ -177,41 +174,47 @@ export default function Footer1({ parentClass = "footer" }) {
                 <div className="footer-social">
                   <div className="title-footer">Follow Us:</div>
                   <ul className="tf-social style-border radius-50 g-8 style-2">
-                    <li className="item">
+                    {/* <li className="item">
                       <a href="#">
                         <div className="icon">
                           <i className="icon-messenger" />
                         </div>
                       </a>
-                    </li>
-                    <li className="item">
+                    </li> */}
+                    {/* <li className="item">
                       <a href="#">
                         <div className="icon">
                           <i className="icon-x" />
                         </div>
                       </a>
-                    </li>
-                    <li className="item">
+                    </li> */}
+                    {/* <li className="item">
                       <a href="#">
                         <div className="icon">
                           <i className="icon-ig1" />
                         </div>
                       </a>
-                    </li>
-                    <li className="item">
+                    </li> */}
+                    {/* <li className="item">
                       <a href="#">
                         <div className="icon">
                           <i className="icon-skype" />
                         </div>
                       </a>
-                    </li>
-                    <li className="item">
-                      <a href="#">
-                        <div className="icon">
-                          <i className="icon-telegram" />
-                        </div>
-                      </a>
-                    </li>
+                    </li> */}
+ <li className="item">
+  <a
+    href="https://www.linkedin.com/company/kidz-holding/"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{ backgroundColor: "white" }}
+  >
+    <div className="icon">
+      <FaLinkedinIn />
+    </div>
+  </a>
+</li>
+
                   </ul>
                 </div>
               </div>
@@ -230,7 +233,7 @@ export default function Footer1({ parentClass = "footer" }) {
                   </div>
                 </div>
                 <div className="right">
-                  <ul>
+                  {/* <ul>
                     <li>
                       <a href="#" className="caption-1">
                         Terms Of Services
@@ -246,7 +249,7 @@ export default function Footer1({ parentClass = "footer" }) {
                         Cookie Policy
                       </a>
                     </li>
-                  </ul>
+                  </ul> */}
                 </div>
               </div>
             </div>

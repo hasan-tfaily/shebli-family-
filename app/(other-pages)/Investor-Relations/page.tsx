@@ -90,7 +90,7 @@ export default function page() {
             </h2>
             <div className="sub-title body-2">
 Investor Relations showcases our growth performance               <br />
-              and future expansion for confident investmen.
+              and future expansion for confident investment.
             </div>
           </div>
 

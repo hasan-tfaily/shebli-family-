@@ -7,7 +7,7 @@ export default function Topbar1() {
       <div className="tf-container w-1870">
         <div className="row">
           <div className="col-12">
-            <div className="top-bar-inner">
+            {/* <div className="top-bar-inner">
               <div className="tf-tb-left">
                 <div className="top-bar-content">
                   <i className="icon-MapPin" />
@@ -21,7 +21,7 @@ export default function Topbar1() {
                     example@gmail.com
                   </a>
                 </div>
-                {/* <LanguageDropdown /> */}
+                
               </div>
               <div className="tf-tb-right">
                 <div className="top-bar-content tf-phone-topbar">
@@ -70,7 +70,7 @@ export default function Topbar1() {
                   </ul>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

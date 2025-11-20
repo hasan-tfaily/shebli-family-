@@ -75,7 +75,7 @@ export default function Page() {
               href={`/contact-us`}
               className="tf-btn style-1 bg-on-suface-container"
             >
-              <span> Download Prospectus </span>
+              <span> Contact Us </span>
             </Link>
           </div>
         </div>

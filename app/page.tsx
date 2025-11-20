@@ -66,7 +66,7 @@ import Footer1 from "@/components/footers/Footer1";
 
 export const metadata: Metadata = {
   title:
-    "Marketing Consulting || Kidz Holding - Franchise & Corporate Website",
+    "Kidz Holding || Kidz Holding - Franchise & Corporate Website",
   description:
     "Kidz Holding - Franchise & Corporate Website",
 };

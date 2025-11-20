@@ -23,24 +23,24 @@ export default function Details1() {
               />
             </div>
             <div className="detalis-content mb-40">
-              <h4 className="title-content mb-16">Executive Summary:</h4>
+              <h4 className="title-content mb-16">Executive Summary </h4>
               <div className="desc mb-16 body-2">
                 Kidz Holding bridges education and entertainment to create sustainable, profitable experiences for families and investors alike. Our portfolio continues to expand across the GCC and Levant with a clear roadmap toward new markets.
               </div>
             </div>
             <div className="detalis-content mb-40">
-              <h4 className="title-content mb-16">Performance Metrics:</h4>
+              <h4 className="title-content mb-16">Performance Metrics </h4>
               <div className="desc mb-20 body-2">
                 Attendance growth, revenue diversification, and school partnerships demonstrate long‑term stability and scalability.
               </div>
               <div className="mb-20">
-                <h4 className="title-content mb-16">Governance & Board: </h4>
+                <h4 className="title-content mb-16">Governance & Board  </h4>
                 <div className="body-2 desc">
                   Led by experienced industry professionals and advisors who ensure accountability, transparency, and strategic alignment.
                 </div>
               </div>
               <div className="mb-20">
-                <h4 className="title-content mb-16">Pipeline & Expansion:</h4>
+                <h4 className="title-content mb-16">Pipeline & Expansion </h4>
 
                 <div className="body-2 desc">
                   New projects under evaluation in Riyadh, Cairo, and Abu Dhabi, supported by feasibility studies and local partnerships.
@@ -350,7 +350,7 @@ export default function Details1() {
                   href={`/contact-us`}
                   className="tf-btn style-1 bg-white bg-white-style-2 w-full text-center"
                 >
-                  <span> Contact IR </span>
+                  <span> Contact Us </span>
                 </Link>
               </div>
             </div>

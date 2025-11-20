@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 import { usePathname } from "next/navigation";
 import { MenuLink } from "@/types/menuLink";
+import { FaLinkedinIn } from "react-icons/fa";
 
 export default function MobileMenu() {
   const pathname = usePathname();
@@ -276,41 +277,47 @@ export default function MobileMenu() {
             </div>
             <div className="content-contact-moblile">
               <ul className="tf-social style-border radius-50 g-8 style-2 color-on-suface-container">
-                <li className="item">
+                {/* <li className="item">
                   <a href="#">
                     <div className="icon">
                       <i className="icon-messenger" />
                     </div>
                   </a>
-                </li>
-                <li className="item">
+                </li> */}
+                {/* <li className="item">
                   <a href="#">
                     <div className="icon">
                       <i className="icon-x" />
                     </div>
                   </a>
-                </li>
-                <li className="item">
+                </li> */}
+                {/* <li className="item">
                   <a href="#">
                     <div className="icon">
                       <i className="icon-ig1" />
                     </div>
                   </a>
-                </li>
-                <li className="item">
+                </li> */}
+                {/* <li className="item">
                   <a href="#">
                     <div className="icon">
                       <i className="icon-skype" />
                     </div>
                   </a>
-                </li>
-                <li className="item">
-                  <a href="#">
-                    <div className="icon">
-                      <i className="icon-telegram" />
-                    </div>
-                  </a>
-                </li>
+                </li> */}
+        <li className="item">
+  <a
+    href="https://www.linkedin.com/company/kidz-holding/"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{ backgroundColor: "#232559" }}
+  >
+    <div className="icon"  style={{ color: "white" }}>
+      <FaLinkedinIn />
+    </div>
+  </a>
+</li>
+
               </ul>
             </div>
           </div>
