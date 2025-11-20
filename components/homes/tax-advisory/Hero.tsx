@@ -43,7 +43,7 @@ export default function Hero() {
                     </div>
                     <div className="tf-fade-top fade-item-3">
                       <Link
-                        href={`/our-services-1`}
+                        href={`/contact-us`}
                         className="tf-btn style-1 bg-white "
                       >
                         <span>View All Services</span>
