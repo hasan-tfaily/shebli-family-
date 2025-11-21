@@ -163,13 +163,19 @@ export default function Footer1({ parentClass = "footer" }) {
               <div className="footer-right">
                 <div className="footer-subscribe">
                   <div className="label text-btn-uppercase">
-                    Subscribe for all the top news!
+                    Get In Touch
                   </div>
-                  <NewsLetterForm />
-                  <div className="text caption-2">
+                  {/* <NewsLetterForm /> */}
+                  <Link
+                  href={`/contact-us`}
+                  className="tf-btn style-1 bg-white text-center"
+                >
+                  <span> Contact Us </span>
+                </Link>
+                  {/* <div className="text caption-2">
                     Sign up for updates on our latest news and events. No spam,
                     just valuable insights!
-                  </div>
+                  </div> */}
                 </div>
                 <div className="footer-social">
                   <div className="title-footer">Follow Us:</div>

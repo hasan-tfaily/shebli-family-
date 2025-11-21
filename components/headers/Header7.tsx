@@ -70,7 +70,7 @@ export default function Header7({ onepage = false }) {
                     href={`/contact-us`}
                     className="tf-btn bg-on-suface-container style-1"
                   >
-                    <span>Get Your Consult!</span>
+                    <span> Contact US </span>
                   </Link>
                 </div>
                 <div className="nav-icon">

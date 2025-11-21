@@ -258,7 +258,7 @@ export default function MobileMenu() {
           </ul>
 
           {/* -------- CONTACT INFO (kept same) -------- */}
-          <div className="contact-mobile">
+          {/* <div className="contact-mobile">
             <h6 className="title-contact-mobile">Contact Info</h6>
             <div className="content-contact-moblile">
               <a href="#">
@@ -284,28 +284,28 @@ export default function MobileMenu() {
                       <i className="icon-messenger" />
                     </div>
                   </a>
-                </li> */}
-                {/* <li className="item">
+                </li> 
+                <li className="item">
                   <a href="#">
                     <div className="icon">
                       <i className="icon-x" />
                     </div>
                   </a>
-                </li> */}
-                {/* <li className="item">
+                </li> 
+                <li className="item">
                   <a href="#">
                     <div className="icon">
                       <i className="icon-ig1" />
                     </div>
                   </a>
-                </li> */}
-                {/* <li className="item">
+                </li> 
+                 <li className="item">
                   <a href="#">
                     <div className="icon">
                       <i className="icon-skype" />
                     </div>
                   </a>
-                </li> */}
+                </li> 
         <li className="item">
   <a
     href="https://www.linkedin.com/company/kidz-holding/"
@@ -321,7 +321,7 @@ export default function MobileMenu() {
 
               </ul>
             </div>
-          </div>
+          </div> */}
         </nav>
       </div>
     </div>

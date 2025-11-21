@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Features() {
   return (
-    <section className="section-why-choose h-8 bg-surface tf-spacing-7" style={{paddingBottom: "70px"}}>
+    <section className="section-why-choose h-8 bg-surface tf-spacing-7" style={{ paddingBottom: "70px" }}>
       <div className="tf-container position-relative">
         <div className="row">
           <div className="col-12">
@@ -29,7 +29,7 @@ export default function Features() {
               <div className="box-icon">
                 <div className="icon color-primary wow fadeInUp">
                   <Image
-                    src="/image/icon/OurBrands&Ventures.svg" 
+                    src="/image/icon/OurBrands&Ventures.svg"
                     alt="Our Brands & Ventures"
                     width={64}
                     height={64}
@@ -38,7 +38,7 @@ export default function Features() {
 
                 <div className="box-content">
                   <h5 className="wow fadeInUp">
-                    <a href="#" className="title-box">
+                    <a href="/Our-Ventures" className="title-box">
                       Our Brands & Ventures
                     </a>
                   </h5>
@@ -49,16 +49,16 @@ export default function Features() {
               </div>
               <div className="box-icon">
                 <div className="icon color-primary wow fadeInUp">
-  <Image
-    src="/image/icon/investorRelations.svg" 
-    alt="Our Brands & Ventures"
-    width={64}
-    height={64}
-  />
-</div>
+                  <Image
+                    src="/image/icon/investorRelations.svg"
+                    alt="Our Brands & Ventures"
+                    width={64}
+                    height={64}
+                  />
+                </div>
                 <div className="box-content">
                   <h5 className="wow fadeInUp">
-                    <a href="#" className="title-box">
+                    <a href="/Investor-Relations" className="title-box">
                       Investor Relations
                     </a>
                   </h5>
@@ -87,20 +87,20 @@ export default function Features() {
             <div className="list-box-icon">
               <div className="box-icon">
                 <div
-  className="icon cFranchise&Partnership.svgolor-primary wow fadeInUp"
-  data-wow-delay=".3s"
->
-  <Image
-    src="/image/icon/Franchise&Partnership.svg"
-    alt="Franchise & Partnership"
-    width={64}
-    height={64}
-  />
-</div>
+                  className="icon cFranchise&Partnership.svgolor-primary wow fadeInUp"
+                  data-wow-delay=".3s"
+                >
+                  <Image
+                    src="/image/icon/Franchise&Partnership.svg"
+                    alt="Franchise & Partnership"
+                    width={64}
+                    height={64}
+                  />
+                </div>
 
                 <div className="box-content">
                   <h5 className="wow fadeInUp" data-wow-delay=".3s">
-                    <a href="#" className="title-box">
+                    <a href="/Franchise-Partnership" className="title-box">
                       Franchise & Partnership
                     </a>
                   </h5>
@@ -110,20 +110,20 @@ export default function Features() {
                 </div>
               </div>
               <div className="box-icon">
-                     <div
-  className="icon cFranchise&Partnership.svgolor-primary wow fadeInUp"
-  data-wow-delay=".3s"
->
-  <Image
-    src="/image/icon/CSR&Impact.svg" 
-    alt="Franchise & Partnership"
-    width={64}
-    height={64}
-  />
-</div>
+                <div
+                  className="icon cFranchise&Partnership.svgolor-primary wow fadeInUp"
+                  data-wow-delay=".3s"
+                >
+                  <Image
+                    src="/image/icon/CSR&Impact.svg"
+                    alt="Franchise & Partnership"
+                    width={64}
+                    height={64}
+                  />
+                </div>
                 <div className="box-content">
                   <h5 className="wow fadeInUp" data-wow-delay=".3s">
-                    <a href="#" className="title-box">
+                    <a href="/services" className="title-box">
                       CSR & Impact
                     </a>
                   </h5>

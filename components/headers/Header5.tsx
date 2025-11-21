@@ -59,7 +59,7 @@ export default function Header5({ onepage = false }) {
                 <div className="header-right">
                   <div className="nav-btn">
                     <Link href={`/contact-us`} className="tf-btn bg-white style-1">
-                      <span>Get Your Consult!</span>
+                      <span> Contact US </span>
                     </Link>
                   </div>
                   <div className="nav-icon">
