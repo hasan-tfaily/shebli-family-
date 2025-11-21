@@ -80,7 +80,7 @@ export default function Contact() {
                     </div>
                   </div>
                 </div>
-                <div className="list-box-contact">
+                {/* <div className="list-box-contact">
                   <div className="box-contact-item style-bg-white">
                     <div className="icon wow fadeInUp">
                       <i className="icon-MapPin" />
@@ -175,7 +175,7 @@ export default function Contact() {
                       </a>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
