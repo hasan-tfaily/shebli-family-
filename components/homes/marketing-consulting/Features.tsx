@@ -109,10 +109,6 @@
 
 
 
-
-
-
-
 "use client";
 
 import dynamic from "next/dynamic";
@@ -132,6 +128,7 @@ export default function Features() {
         <div className="row">
           <div className="col-12">
             <div className="section-why-inner">
+              {/* LEFT SIDE – Chart */}
               <div className="section-left">
                 <div className="card-chart w-627">
                   <div className="top-cart flex justify-content-end">
@@ -144,8 +141,75 @@ export default function Features() {
                     <WeeklyBarChart />
                   </div>
                 </div>
-
               </div>
+
+              {/* RIGHT SIDE – Why Choose Us */}
+              <div className="section-content section-right">
+                <div className="heading-section">
+                  <div className="wow fadeInUp">
+                    <a href="#" className="tag label text-btn-uppercase">
+                      Investor Deck Glimpse
+                    </a>
+                  </div>
+
+                  <h3 className="title-section mb-12 wow fadeInUp">
+                    Why Investors Choose Kidz Holding
+                  </h3>
+
+                  <div className="sub-title body-2 color-on-suface-variant-1 wow fadeInUp">
+                    With over a decade of successful operations and an expanding footprint <br></br>
+                    across the MENA region, Kidz Holding represents a scalable, value‑driven <br></br> opportunity in the growing family entertainment and education sector.
+                  </div>
+                </div>
+
+                {/* <div className="benefit-lists mb-30">
+                  <div className="benefit-items">
+                    <div className="icon wow fadeInUp">
+                      <i className="icon-checkbox" />
+                    </div>
+                    <div className="title wow fadeInUp" data-wow-delay=".1s">
+                      Experienced Marketing Professionals at Your Service
+                    </div>
+                  </div>
+
+                  <div className="benefit-items">
+                    <div className="icon wow fadeInUp">
+                      <i className="icon-checkbox" />
+                    </div>
+                    <div className="title wow fadeInUp" data-wow-delay=".1s">
+                      Data-Driven Insights for Informed Decisions
+                    </div>
+                  </div>
+
+                  <div className="benefit-items">
+                    <div className="icon wow fadeInUp">
+                      <i className="icon-checkbox" />
+                    </div>
+                    <div className="title wow fadeInUp" data-wow-delay=".1s">
+                      Tailored Strategies for Unique Challenges
+                    </div>
+                  </div>
+
+                  <div className="benefit-items">
+                    <div className="icon wow fadeInUp">
+                      <i className="icon-checkbox" />
+                    </div>
+                    <div className="title wow fadeInUp" data-wow-delay=".1s">
+                      Collaborative Partnership for Shared Success
+                    </div>
+                  </div>
+                </div> */}
+
+                <div className="wow fadeInUp">
+                  <Link
+                    href="/contact-us"
+                    className="tf-btn style-1 bg-on-suface-container"
+                  >
+                    <span>Download Investor Deck</span>
+                  </Link>
+                </div>
+              </div>
+              {/* END RIGHT SIDE */}
             </div>
           </div>
         </div>
