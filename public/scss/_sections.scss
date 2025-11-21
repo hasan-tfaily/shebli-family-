@@ -514,13 +514,19 @@ background-image: url("/image/page-title/our-ventures (1).png");
         }
       }
 
+      // &.img-h5-2 {
+      //   &::before {
+      //     background-image: url("/image/section/hero-banner-2.jpg");
+      //     // opacity: 0.5;
+      //   }
+      // }
+
       &.img-h5-2 {
         &::before {
           background-image: url("/image/section/hero-banner-2.jpg");
           // opacity: 0.5;
         }
       }
-
       &.img-h5-3 {
         &::before {
           background-image: url("/image/section/Hero-Banner-3.jpg");
