@@ -63,7 +63,7 @@ export default function Process() {
                   </a>
                 </h5>
                 <div className="desc wow fadeInUp" data-wow-delay=".1s">
-                 Kidz Holding offers comprehensive management solutions for entertainment assets of all sizes. With extensive operational expertise and multidisciplinary capabilities, we help partners unlock the full potential of their attractions. <br/> <br/>
+                 Kidz Holding offers comprehensive management solutions for entertainment assets of all sizes. With extensive operational expertise and multidisciplinary capabilities, we help partners unlock the full potential of their attractions. 
                  We manage both our own concepts and third-party brands, ensuring operational excellence, commercial optimization, staff training, guest experience enhancement, and long-term business sustainability. Our global experience positions us as a trusted operator for leisure destinations seeking reliable, results-driven management
                 </div>
               </div>
@@ -80,7 +80,7 @@ export default function Process() {
                   </a>
                 </h5>
                 <div className="desc wow fadeInUp" data-wow-delay=".1s">
-                 We specialize in creating original, future-ready entertainment concepts that combine imagination, fun, education, and commercial viability. Our team develops fully integrated experiences built on strong storytelling, innovative activities, and a clear operational and financial foundation. <br/> <br/>
+                 We specialize in creating original, future-ready entertainment concepts that combine imagination, fun, education, and commercial viability. Our team develops fully integrated experiences built on strong storytelling, innovative activities, and a clear operational and financial foundation. 
                  From edutainment centers and FECs to themed attractions and hybrid leisure concepts, we transform ideas into scalable brands tailored to each market’s cultural and commercial needs.
                 </div>
               </div>

@@ -121,7 +121,7 @@ export default function Header8({ onepage = false }) {
                     href={`/contact-us`}
                     className="tf-btn bg-on-suface-container style-1"
                   >
-                    <span> Contact US </span>
+                    <span> Contact Us </span>
                   </Link>
                 </div>
               </div>

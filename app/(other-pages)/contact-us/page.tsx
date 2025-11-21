@@ -23,7 +23,7 @@ export default function page() {
             <div className="sub-title body-2">
               Let’s Build the Future Together
               <br />
-              strategies and solutions.
+             
             </div>
           </div>
         </div>
