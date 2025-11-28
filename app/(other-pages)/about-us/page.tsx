@@ -26,7 +26,8 @@ export default function Page() {
             <Breadcumb pageName="About Us" />
             <h2 className="title-page-title">About Us</h2>
             <div className="sub-title body-2">
-              Kidz Holding: Creating Parks of Imagination, <br />
+              We create destinations come together to play, connect, and experience unforgettable moments.<br/>
+              {/* Kidz Holding: Creating Parks of Imagination, <br />
               Edutainment and Fun <br/><br/>
               Kidz Holding is a regional leader in the creation, development, and management of<br/> 
               family entertainment destinations and edutainment concepts. We design immersive<br/>  
@@ -47,7 +48,7 @@ export default function Page() {
 
               Every project we undertake is built on a foundation of creativity, innovation, safety, and<br/> 
               strong educational value — ensuring long-term success for our partners and<br/>
-              unforgettable memories for our guests.
+              unforgettable memories for our guests. */}
 
             </div>
           </div>
