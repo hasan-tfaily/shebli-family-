@@ -18,21 +18,27 @@ export const slides = [
 
 export const slides2 = [
   {
-    title: "Building Tomorrow’s \n Edutainment & Leisure",
+    title: "Edutainment - KidzMondo",
     subtitle:
-    "Delivering impact for families, partners,\n and investors across MENA.",
+    "Where Learning Meets Fun\nBuilding cities that spark imagination, creativity, and real-world skills for every child.",
     buttonText: "Our brands",
   },
   {
-    title: "Where Learning\n Meets Play",
+    title: "Outdoor Experience - The Escape Park and Resort",
     subtitle:
-    "Building cities that inspire imagination,\nteamwork, and discovery in every child.",
+    "Building Tomorrow’s Leisure and Entertainment\nDelivering Impact for families, partners and investors",
     buttonText: "Franchise",
   },
   {
-    title: "Empowering the \n Next Generation",
+    title: "Social Entertainment Hub",
     subtitle:
-      "We create environments where curiosity\n grows and dreams take flight.",
+      "Where Energy, Flavor & Play Come Together\nBlending adrenaline-filled games, great food, and unforgettable moments",
+    buttonText: "Investor Relations",
+  },
+  {
+    title: "Karnavali",
+    subtitle:
+      "Empowering the next generation through play\nCreating destinations where curiosity grows and fun never ends",
     buttonText: "Investor Relations",
   },
 ];

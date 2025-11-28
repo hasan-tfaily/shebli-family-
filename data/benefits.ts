@@ -8,7 +8,7 @@ export const boxIconItems = [
   // example: /image/icons/mission.svg & /image/icons/vision.svg
   {
     icon: "/image/icon/mission.svg",
-    title: "Mission",
+    title: "Our Promise",
     description:
       "To design and operate innovative, story-driven leisure and entertainment experiences that enrich the lives of children and families. We bring imagination to life through purposeful design, experiential learning, operational excellence, and strong community connections.\n\nOur mission is to support governments, developers, and private partners in building impactful entertainment destinations that promote learning, creativity, wellbeing, and family bonding.",
   },
