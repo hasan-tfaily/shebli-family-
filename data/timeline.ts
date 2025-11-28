@@ -29,14 +29,14 @@ export const timelineItems = [
     description:
       "We work hand-in-hand with our partners, developers, governments, franchisees, and operators to build destinations that thrive and grow.",
   },
-  ,
+  
   {
     year: "2025",
     title: " Innovation",
     description:
       "We embrace new ideas, new technologies, and new formats that elevate the family entertainment experience.",
   },
-  ,
+  
   {
     year: "2025",
     title: " Sustainability & Responsibility",
