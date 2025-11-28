@@ -164,8 +164,8 @@ export default function Process() {
               
             </div>
             <div className="text-anime-wave-2">
-                <Link href={`/contact-us`} className="tf-btn style-1 bg-white">
-                  <span>Open Roles</span>
+                <Link href={`/careers`} className="tf-btn style-1 bg-white">
+                  <span>Submit your CV</span>
                 </Link>
               </div>
 

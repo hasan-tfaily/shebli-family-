@@ -58,7 +58,7 @@ export default function Footer1({ parentClass = "footer" }) {
                   </Link>
                 </div>
                 <div className="text caption-1">
-                 Kidz Holding is the parent company behind KidzMondo and leading family leisure ventures across MENA creating safe educational edutainment destinations and scalable franchise and investment opportunities.
+                 Kidz Holding is the parent company behind KidzMondo and a portfolio of leading family entertainment and leisure ventures across MENA, creating safe, engaging destinations and scalable franchise and investment opportunities.
                 </div>
                 {/* <div className="contact-footer">
                   <div className="address contact-top contact-footer-content">

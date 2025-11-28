@@ -54,9 +54,7 @@ export default function Faqs() {
                   >
                     <div className="according-content">
                       <p>
-                        Kidz Holding is the corporate group behind the KidzMondo
-                        edutainment brand, focused on learning through play and
-                        youth development across the MENA region.
+                        Kidz Holding is a regional leader in developing, operating, and franchising family entertainment and edutainment destinations.
                       </p>
                     </div>
                   </div>
@@ -70,7 +68,7 @@ export default function Faqs() {
                       data-bs-toggle="collapse"
                       className="title-according collapsed" // added "collapsed"
                     >
-                      What does “edutainment” mean?
+                      What types of entertainment concepts does Kidz Holding offer?
                       <span />
                     </a>
                   </h5>
@@ -81,9 +79,7 @@ export default function Faqs() {
                   >
                     <div className="according-content">
                       <p>
-                        Edutainment combines education and entertainment,
-                        creating immersive experiences that teach life skills in
-                        fun, engaging ways.
+                        We create a diverse portfolio of concepts including edutainment cities, family leisure hubs, social entertainment venues, active play zones, and themed attractions for all age groups.
                       </p>
                     </div>
                   </div>
@@ -97,7 +93,7 @@ export default function Faqs() {
                       data-bs-toggle="collapse"
                       className="title-according collapsed"
                     >
-                      How can I invest or open a franchise?
+                      Which markets do Kidz Holding operate in?
                       <span />
                     </a>
                   </h5>
@@ -108,8 +104,7 @@ export default function Faqs() {
                   >
                     <div className="according-content">
                       <p>
-                        Visit our Franchise & Partnership page to learn about
-                        available territories and submit an inquiry.
+                        We are present in Qatar and Lebanon with expansion plans into Saudi Arabia, UAE, Egypt, and additional markets across the region.
                       </p>
                     </div>
                   </div>
@@ -123,7 +118,7 @@ export default function Faqs() {
                       data-bs-toggle="collapse"
                       className="title-according collapsed"
                     >
-                      Where are you currently operating?
+                      Can governments or municipalities partner with Kidz Holding?
                       <span />
                     </a>
                   </h5>
@@ -134,8 +129,7 @@ export default function Faqs() {
                   >
                     <div className="according-content">
                       <p>
-                        We operate in Beirut and Doha, with expansion plans in
-                        Saudi Arabia, Egypt, and the UAE.
+                        Yes. We collaborate with government entities to develop educational and family-focused entertainment destinations that support national visions, tourism goals, and community development.
                       </p>
                     </div>
                   </div>
@@ -149,7 +143,7 @@ export default function Faqs() {
                       data-bs-toggle="collapse"
                       className="title-according collapsed"
                     >
-                      How do schools partner with you?
+                      Do you offer franchise opportunities?
                       <span />
                     </a>
                   </h5>
@@ -160,12 +154,114 @@ export default function Faqs() {
                   >
                     <div className="according-content">
                       <p>
-                        Schools can organize curriculum-linked trips through the
-                        Contact page or directly via our Education team.
+                        Absolutely. We provide turnkey franchise models for investors and operators looking to bring our entertainment concepts to their cities.
                       </p>
                     </div>
                   </div>
                 </div>
+
+                {/* 6 */}
+                <div className="according-item">
+                  <h5>
+                    <a
+                      href="#according-5"
+                      data-bs-toggle="collapse"
+                      className="title-according collapsed"
+                    >
+                      How can investors collaborate with Kidz Holding?
+                      <span />
+                    </a>
+                  </h5>
+                  <div
+                    id="according-5"
+                    className="collapse"
+                    data-bs-parent="#According"
+                  >
+                    <div className="according-content">
+                      <p>
+                        Investors can partner with us through franchising, joint ventures, or direct project development in new markets. 
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 7 */}
+
+              <div className="according-item">
+                  <h5>
+                    <a
+                      href="#according-5"
+                      data-bs-toggle="collapse"
+                      className="title-according collapsed"
+                    >
+                      Does Kidz Holding work with schools and educational institutions?
+                      <span />
+                    </a>
+                  </h5>
+                  <div
+                    id="according-5"
+                    className="collapse"
+                    data-bs-parent="#According"
+                  >
+                    <div className="according-content">
+                      <p>
+                        Yes. Our edutainment models include school partnerships, educational programs, workshops, and curriculum-integrated learning experiences.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                {/* 8 */}
+
+                <div className="according-item">
+                  <h5>
+                    <a
+                      href="#according-5"
+                      data-bs-toggle="collapse"
+                      className="title-according collapsed"
+                    >
+                      How do you ensure safety inside your entertainment destinations?
+                      <span />
+                    </a>
+                  </h5>
+                  <div
+                    id="according-5"
+                    className="collapse"
+                    data-bs-parent="#According"
+                  >
+                    <div className="according-content">
+                      <p>
+                        All our destinations follow strict international safety standards, staff certifications, emergency procedures, and continuous operational audits.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                {/* 9 */}
+
+                <div className="according-item">
+                  <h5>
+                    <a
+                      href="#according-5"
+                      data-bs-toggle="collapse"
+                      className="title-according collapsed"
+                    >
+                      How can I start a partnership or open a franchise in my country?
+                      <span />
+                    </a>
+                  </h5>
+                  <div
+                    id="according-5"
+                    className="collapse"
+                    data-bs-parent="#According"
+                  >
+                    <div className="according-content">
+                      <p>
+                        You can fill out the partnership or franchise inquiry form on our website, and our team will contact you to evaluate the opportunity and share the next steps. 
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                
               </div>
               {/* end wg-according */}
             </div>

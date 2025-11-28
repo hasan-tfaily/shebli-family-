@@ -6,7 +6,7 @@ import OdometerComponent from "@/components/common/OdometerComponent";
 
 export default function About() {
   return (
-    <section className="section-about h-5 tf-spacing-2 section-one-page" id="about"style={{paddingBottom: "0px"}}>
+    <section className="section-about h-5 tf-spacing-2 section-one-page" id="about" style={{ paddingBottom: "0px" }}>
       <div className="tf-container position-relative">
         <div className="row">
           <div className="col-lg-6">
@@ -46,7 +46,7 @@ export default function About() {
                 </p>
               </div> */}
             </div>
-          </div> 
+          </div>
 
           <div className="col-lg-6">
             <div className="section-content ml-40">
@@ -61,7 +61,9 @@ export default function About() {
                   Across the Region
                 </h3>
                 <div className="sub-title color-text-2 wow fadeInUp">
-                  Kidz Holding is the regional pioneer in edutainment and family leisure. Through innovation, safety, and collaboration, we create meaningful spaces where children learn by doing, partners grow with purpose, and investors build lasting impact.
+                  Kidz Holding is the regional pioneer in edutainment, leisure, and family-focused destinations.
+                  Through innovation, engagement, and collaboration, we create meaningful spaces for where guests have fun, partners grow with purpose, and investors build lasting impact.
+
                 </div>
               </div>
 
@@ -71,7 +73,7 @@ export default function About() {
                     <i className="icon-checkbox" />
                   </div>
                   <div className="title wow fadeInUp" data-wow-delay=".1s">
-                    Expanding footprints across leading MENA capitals
+                   	Expanding our footprint across major MENA capitals
                   </div>
                 </div>
                 <div className="benefit-items style-small mb-16">
@@ -79,7 +81,7 @@ export default function About() {
                     <i className="icon-checkbox" />
                   </div>
                   <div className="title wow fadeInUp" data-wow-delay=".1s">
-                    Building trusted partnerships with schools and municipalities
+                    	Building trusted partnerships with schools, municipalities, and development entities
                   </div>
                 </div>
                 <div className="benefit-items style-small">
@@ -87,7 +89,7 @@ export default function About() {
                     <i className="icon-checkbox" />
                   </div>
                   <div className="title wow fadeInUp" data-wow-delay=".1s">
-                    Delivering measurable social, educational, and economic value
+                    	Delivering measurable social, educational, and economic value
                   </div>
                 </div>
               </div>
@@ -121,51 +123,51 @@ export default function About() {
 
       {/* Counters section */}
       <section
-  className="section-why-choose h-7 bg-surface tf-spacing-31"
-  style={{
-    marginTop: "100px",
-    backgroundColor: "#232559", // no need !important here
-    paddingTop: "50px",
-    paddingBottom: "50px",
-  }}
->
-  <div className="tf-container position-relative">
-    <div className="row">
-      <div className="col-12">
-        <div className="wg-counter justify-content-between">
-          {counters3.map((c, i) => (
-            <div className="counter-item style-3" key={i}>
-              <div className="counter">
-                <div className="number-counter">
-                  <h2
-                    className="number odometer"
-                  >
-                    <OdometerComponent max={c.value} />
-                    {c.suffix && (
-                      <span
-                      >
-                        {c.suffix}
-                      </span>
-                    )}
-                  </h2>
-                  <h2 className="plus" >
-                    +
-                  </h2>
-                </div>
+        className="section-why-choose h-7 bg-surface tf-spacing-31"
+        style={{
+          marginTop: "100px",
+          backgroundColor: "#232559", // no need !important here
+          paddingTop: "50px",
+          paddingBottom: "50px",
+        }}
+      >
+        <div className="tf-container position-relative">
+          <div className="row">
+            <div className="col-12">
+              <div className="wg-counter justify-content-between">
+                {counters3.map((c, i) => (
+                  <div className="counter-item style-3" key={i}>
+                    <div className="counter">
+                      <div className="number-counter">
+                        <h2
+                          className="number odometer"
+                        >
+                          <OdometerComponent max={c.value} />
+                          {c.suffix && (
+                            <span
+                            >
+                              {c.suffix}
+                            </span>
+                          )}
+                        </h2>
+                        <h2 className="plus" >
+                          +
+                        </h2>
+                      </div>
 
-                <h6
-                  className="text"
-                  style={{ color: "white" }} // label text in white too (optional)
-                  dangerouslySetInnerHTML={{ __html: c.label }}
-                />
+                      <h6
+                        className="text"
+                        style={{ color: "white" }} // label text in white too (optional)
+                        dangerouslySetInnerHTML={{ __html: c.label }}
+                      />
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
-          ))}
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
 
     </section>

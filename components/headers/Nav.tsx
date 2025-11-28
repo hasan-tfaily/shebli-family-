@@ -410,32 +410,17 @@ export default function Nav() {
           Blogs
         </Link>
       </li>
-
-      {/* CAREERS */}
-      {/* <li
+      <li
         className={`menu-item ${
-          isMenuActive({ href: "/careers" } as MenuLink)
-            ? "current-menu-item"
-            : ""
-        }`}
-      >
-        <Link href="/careers" className="item-link">
-          Careers
-        </Link>
-      </li> */}
-
-      {/* CONTACT */}
-      {/* <li
-        className={`menu-item ${
-          isMenuActive({ href: "/contact-us" } as MenuLink)
-            ? "current-menu-item"
-            : ""
+          isMenuActive({ href: "/contact-us" } as MenuLink) ? "current-menu-item" : ""
         }`}
       >
         <Link href="/contact-us" className="item-link">
-          Contact
+          Contact us
         </Link>
-      </li> */}
+      </li>
+
+   
     </>
   );
 }

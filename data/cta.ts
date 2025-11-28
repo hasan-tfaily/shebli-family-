@@ -55,7 +55,7 @@ export const counters3 = [
     suffix: "M",
   },
   {
-    value: 200,
+    value: 500,
     label: "school partners",
   },
   // {

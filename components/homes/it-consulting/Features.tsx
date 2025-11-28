@@ -13,12 +13,12 @@ export default function Features() {
                   href="#"
                   className="tag label text-btn-uppercase bg-white mb-12"
                 >
-                  Redefining the Edutainment Experience
+                  Redefining the Experience
                 </a>
               </div>
               <h3 className="title-section mb-12 text-anime-wave-1">
-                Building the Future  <br />
-                of Learning and Play
+                Building Entertainment   <br />
+                Destinations for All Ages
               </h3>
             </div>
           </div>
@@ -39,7 +39,7 @@ export default function Features() {
                 <div className="box-content">
                   <h5 className="wow fadeInUp">
                     <a href="/Our-Ventures" className="title-box">
-                      Our Brands & Ventures
+                      Our Brands 
                     </a>
                   </h5>
                   <div className="sub-title wow fadeInUp">
@@ -105,7 +105,7 @@ export default function Features() {
                     </a>
                   </h5>
                   <div className="sub-title wow fadeInUp" data-wow-delay=".3s">
-                    Join a trusted brand with proven success across the region. Partner with us to build new learning cities for kids.
+                    Partner with a proven regional leader to develop world-class entertainment destinations while benefiting from scalable models, operational expertise, and a trusted IP.
                   </div>
                 </div>
               </div>
@@ -128,7 +128,7 @@ export default function Features() {
                     </a>
                   </h5>
                   <div className="sub-title wow fadeInUp" data-wow-delay=".3s">
-                    Empowering youth through education, community action, and sustainability programs.
+                    Enriching communities through family-centered initiatives that support education, youth development, and social well-being.
                   </div>
                 </div>
               </div>
