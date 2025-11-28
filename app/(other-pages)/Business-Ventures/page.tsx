@@ -10,7 +10,7 @@ import CaseStudies2 from "@/components/case-studies/CaseStudies2";
 
 export const metadata: Metadata = {
   title:
-    "Our Ventures || Kidz Holding - Franchise & Corporate Website",
+    "Business Ventures || Kidz Holding - Franchise & Corporate Website",
   description:
     "Kidz Holding - Franchise & Corporate Website",
 };
@@ -20,8 +20,8 @@ export default function page() {
       <div className="page-title style-1 bg-img-17">
         <div className="tf-container">
           <div className="page-title-content">
-            <Breadcumb pageName="Our Ventures" />
-            <h2 className="title-page-title">Our Ventures</h2>
+            <Breadcumb pageName="Business Ventures" />
+            <h2 className="title-page-title">Business Ventures</h2>
             {/* <h2 className="title-page-title">Testimonials</h2> */}
             <div className="sub-title body-2">
               Where imagination and education unite to build tomorrow’s thinkers.

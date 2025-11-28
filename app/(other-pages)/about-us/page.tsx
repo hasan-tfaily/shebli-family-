@@ -86,7 +86,7 @@ export default function Page() {
         <Process />
 
         {/* <Testimonials /> */}
-        <Cta />
+        {/* <Cta /> */}
         {/* <Awards /> */}
       </div>
     </>

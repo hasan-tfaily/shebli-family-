@@ -80,7 +80,7 @@ export default function Footer1({ parentClass = "footer" }) {
               <div className="footer-center">
                 <div className="footer-content our-services footer-col-block">
                   <div className="title-mobile label text-btn-uppercase">
-                    Our Projects
+                    Our Brands
                     <i className="icon-arrow-51" />
                   </div>
                   <div className="tf-collapse-content">
@@ -142,10 +142,13 @@ export default function Footer1({ parentClass = "footer" }) {
                         <a href="/Franchise-Partnership">Franchise & Partnership</a>
                       </li>
                       <li className="support-item-footer caption-1">
-                        <Link href={`/Our-Ventures`}>Our Ventures</Link>
+                        <a href="/blog">Blogs</a>
                       </li>
                       <li className="support-item-footer caption-1">
-                        <Link href={`/services`}>Services</Link>
+                        <Link href={`/Business-Ventures`}>Business Ventures</Link>
+                      </li>
+                      <li className="support-item-footer caption-1">
+                        <Link href={`/services`}>Industries we serve</Link>
                       </li>
                        {/* <li className="support-item-footer caption-1">
                         <Link href={`/blog`}>Blogs</Link>

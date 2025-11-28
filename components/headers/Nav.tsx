@@ -324,43 +324,6 @@ export default function Nav() {
         </Link>
       </li>
 
-      {/* PARTNERSHIP (dropdown) */}
-      <li
-        className={`menu-item menu-item-has-children position-relative ${
-          isMenuParentActive(partnershipLinks) ? "current-menu-item" : ""
-        }`}
-      >
-        <a href="#" className="item-link">
-          Partnership
-        </a>
-        <ul className="sub-menu">
-          {partnershipLinks.map((item, index) => (
-            <li
-              className={`sub-menu-item ${
-                isMenuActive(item) ? "current-item" : ""
-              }`}
-              key={index}
-            >
-              <Link href={item.href} className="item-link-2">
-                {item.title}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </li>
-
-      {/* OUR VENTURES */}
-      <li
-        className={`menu-item ${
-          isMenuActive({ href: "/Our-Ventures" } as MenuLink)
-            ? "current-menu-item"
-            : ""
-        }`}
-      >
-        <Link href="/Our-Ventures" className="item-link">
-          Our Ventures
-        </Link>
-      </li>
 
       {/* OUR PROJECTS (dropdown) */}
       <li
@@ -368,8 +331,8 @@ export default function Nav() {
           isMenuParentActive(projectLinks) ? "current-menu-item" : ""
         }`}
       >
-        <Link href="/Our-Projects" className="item-link">
-          Our Projects
+        <Link href="/Our-Brands" className="item-link">
+          Our Brands
         </Link>
         <ul className="sub-menu">
           {projectLinks.map((item, index) => (
@@ -396,11 +359,53 @@ export default function Nav() {
         }`}
       >
         <Link href="/services" className="item-link">
-          Services
+          Industries we serve
         </Link>
       </li>
 
-      {/* BLOGS */}
+        {/* OUR VENTURES */}
+      <li
+        className={`menu-item ${
+          isMenuActive({ href: "/Business-Ventures" } as MenuLink)
+            ? "current-menu-item"
+            : ""
+        }`}
+      >
+        <Link href="/Business-Ventures" className="item-link">
+          Business Ventures
+        </Link>
+      </li>
+
+      {/* PARTNERSHIP (dropdown) */}
+      <li
+        className={`menu-item menu-item-has-children position-relative ${
+          isMenuParentActive(partnershipLinks) ? "current-menu-item" : ""
+        }`}
+      >
+        <a href="#" className="item-link">
+          Partnership
+        </a>
+        <ul className="sub-menu">
+          {partnershipLinks.map((item, index) => (
+            <li
+              className={`sub-menu-item ${
+                isMenuActive(item) ? "current-item" : ""
+              }`}
+              key={index}
+            >
+              <Link href={item.href} className="item-link-2">
+                {item.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </li>
+
+    
+
+      
+
+       {/* BLOGS */}
       <li
         className={`menu-item ${
           isMenuActive({ href: "/blog" } as MenuLink) ? "current-menu-item" : ""

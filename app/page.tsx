@@ -53,6 +53,7 @@ import Team from "@/components/common/Team";
 import Blogs from "@/components/homes/marketing-consulting/Blogs";
 import Cta from "@/components/common/Cta";
 import Footer2 from "@/components/footers/Footer2";
+import Blogs2 from "@/components/homes/marketing-consulting/Blogs2";
 
 // ✅ alias the two different Features components
 import MCFeatures from "@/components/homes/marketing-consulting/Features";
@@ -79,7 +80,8 @@ export default function Page() {
       <div className="main-content">
         <About />
         <ITFeatures />
-        <MCFeatures />
+        {/* <MCFeatures /> */}
+        <Blogs2 />
         <Brands />
         {/* <Services1 /> */}
         {/* <Process /> */}

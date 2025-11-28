@@ -30,7 +30,7 @@ export default function MobileMenu() {
 
   // Our Projects dropdown items (same as Nav)
   const projectLinks: MenuLink[] = [
-        { href: "/Our-Projects", title: "All Projects" },
+        { href: "/Our-Brands ", title: "All Projects" },
 
     { href: "/projects/KidzMondo", title: "KidzMondo" },
     {
@@ -114,8 +114,61 @@ export default function MobileMenu() {
               <Link href="/about-us" className="item-link">
                 About Us
               </Link>
+            </li>      
+                  {/* OUR PROJECTS (dropdown, same children as Nav) */}
+
+
+             <li
+              className={`menu-item menu-item-has-children-mobile ${
+                isMenuParentActive(projectLinks)
+                  ? "current-menu-mobile-item"
+                  : ""
+              }`}
+            >
+              <a
+                href="#mobile-projects"
+                data-bs-toggle="collapse"
+                className="collapsed"
+              >
+                Our Brands
+              </a>
+              <div
+                id="mobile-projects"
+                className="collapse"
+                data-bs-parent="#menu-mobile"
+              >
+                <ul className="sub-menu-mobile">
+                  {projectLinks.map((link, i) => (
+                    <li
+                      key={i}
+                      className={`menu-item ${
+                        isMenuActive(link)
+                          ? "current-menu-mobile-item"
+                          : ""
+                      }`}
+                    >
+                      <Link href={link.href}>{link.title}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </li>
 
+
+           
+
+            {/* SERVICES */}
+            <li
+              className={`menu-item ${
+                isMenuActive({ href: "/services" } as MenuLink)
+                  ? "current-menu-mobile-item"
+                  : ""
+              }`}
+            >
+              <Link href="/services" className="item-link">
+                Industries we serve
+              </Link>
+            </li>
             {/* PARTNERSHIP (dropdown) */}
             <li
               className={`menu-item menu-item-has-children-mobile ${
@@ -161,60 +214,11 @@ export default function MobileMenu() {
                   : ""
               }`}
             >
-              <Link href="/Our-Ventures" className="item-link">
-                Our Ventures
+              <Link href="/Business-Ventures" className="item-link">
+                Business Ventures
               </Link>
             </li>
 
-            {/* OUR PROJECTS (dropdown, same children as Nav) */}
-            <li
-              className={`menu-item menu-item-has-children-mobile ${
-                isMenuParentActive(projectLinks)
-                  ? "current-menu-mobile-item"
-                  : ""
-              }`}
-            >
-              <a
-                href="#mobile-projects"
-                data-bs-toggle="collapse"
-                className="collapsed"
-              >
-                Our Projects
-              </a>
-              <div
-                id="mobile-projects"
-                className="collapse"
-                data-bs-parent="#menu-mobile"
-              >
-                <ul className="sub-menu-mobile">
-                  {projectLinks.map((link, i) => (
-                    <li
-                      key={i}
-                      className={`menu-item ${
-                        isMenuActive(link)
-                          ? "current-menu-mobile-item"
-                          : ""
-                      }`}
-                    >
-                      <Link href={link.href}>{link.title}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </li>
-
-            {/* SERVICES */}
-            <li
-              className={`menu-item ${
-                isMenuActive({ href: "/services" } as MenuLink)
-                  ? "current-menu-mobile-item"
-                  : ""
-              }`}
-            >
-              <Link href="/services" className="item-link">
-                Services
-              </Link>
-            </li>
 
             {/* BLOGS */}
             <li
@@ -228,6 +232,18 @@ export default function MobileMenu() {
                 Blogs
               </Link>
             </li>
+
+             <li
+              className={`menu-item ${
+                isMenuActive({ href: "/contact-us" } as MenuLink)
+                  ? "current-menu-mobile-item"
+                  : ""
+              }`}
+            >
+              <Link href="/contact-us" className="item-link">
+                Contact Us
+              </Link>
+            </li>  
 
             {/* If you later want Careers / Contact in mobile too, just uncomment: */}
             {/*
