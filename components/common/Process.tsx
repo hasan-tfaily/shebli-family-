@@ -96,13 +96,8 @@ export default function Process() {
             </div>
           </div>
           <div className="col-md-4">
-            <div className="process-item bg-1 step-hover">
-              {/* <div className="process-top">
-                <div className="icon">
-                  <i className="icon-Briefcase" />
-                </div>
-                <span className="label text-btn-uppercase">Step 3</span>
-              </div> */}
+            {/* <div className="process-item bg-1 step-hover">
+              
               <div className="process-content">
                 <h5>
                   <a href="#" className="name-process">
@@ -110,20 +105,14 @@ export default function Process() {
                   </a>
                 </h5>
                 <div className="desc">
-                  {/* Transparent, accountable leadership ensuring sustainable growth and stakeholder confidence. */}
                 </div>
               </div>
               
-            </div>
+            </div> */}
           </div>
-          <div className="col-md-4">
+          {/* <div className="col-md-4">
             <div className="process-item bg-1 step-hover">
-              {/* <div className="process-top">
-                <div className="icon">
-                  <i className="icon-Briefcase" />
-                </div>
-                <span className="label text-btn-uppercase">Step 3</span>
-              </div> */}
+              
               <div className="process-content">
                 <h5>
                   <a href="#" className="name-process">
@@ -131,20 +120,14 @@ export default function Process() {
                   </a>
                 </h5>
                 <div className="desc">
-                  {/* Transparent, accountable leadership ensuring sustainable growth and stakeholder confidence. */}
                 </div>
               </div>
               
             </div>
-          </div>
-          <div className="col-md-4">
+          </div> */}
+          {/* <div className="col-md-4">
             <div className="process-item bg-1 step-hover">
-              {/* <div className="process-top">
-                <div className="icon">
-                  <i className="icon-Briefcase" />
-                </div>
-                <span className="label text-btn-uppercase">Step 3</span>
-              </div> */}
+             
               <div className="process-content">
                 <h5>
                   <a href="#" className="name-process">
@@ -152,12 +135,11 @@ export default function Process() {
                   </a>
                 </h5>
                 <div className="desc">
-                  {/* Transparent, accountable leadership ensuring sustainable growth and stakeholder confidence.*/}
                 </div> 
               </div>
               
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
