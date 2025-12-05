@@ -67,7 +67,7 @@ export default function Features({
                     <i className="icon-checkbox" />
                   </div>
                   <div className="title wow fadeInUp" data-wow-delay=".1">
-                    Focus on Customer Satisfaction
+                     Focus on Guest Experience
                   </div>
                 </div>
                 <div className="benefit-items">
@@ -84,6 +84,30 @@ export default function Features({
                   </div>
                   <div className="title wow fadeInUp" data-wow-delay=".1s">
                     Access to expert training and marketing resources.
+                  </div>
+                </div>
+                 <div className="benefit-items">
+                  <div className="icon wow fadeInUp">
+                    <i className="icon-checkbox" />
+                  </div>
+                  <div className="title wow fadeInUp" data-wow-delay=".1s">
+                   Adaptability & Innovation
+                  </div>
+                </div>
+                 <div className="benefit-items">
+                  <div className="icon wow fadeInUp">
+                    <i className="icon-checkbox" />
+                  </div>
+                  <div className="title wow fadeInUp" data-wow-delay=".1s">
+                   Proven Operational Expertise
+                  </div>
+                </div>
+                 <div className="benefit-items">
+                  <div className="icon wow fadeInUp">
+                    <i className="icon-checkbox" />
+                  </div>
+                  <div className="title wow fadeInUp" data-wow-delay=".1s">
+                    Educational & Developmental Impact
                   </div>
                 </div>
               </div>

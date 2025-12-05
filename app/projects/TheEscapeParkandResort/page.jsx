@@ -1,5 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 
 export default function TheEscapeParkandResort() {
   return (
@@ -10,7 +16,12 @@ export default function TheEscapeParkandResort() {
           alt="The Escape Park & Resort Hero"
           className="lazyload"
           width={1920}
-          height={804}
+          height={1080}
+          style={{
+            width: "100%",
+            height: "auto",
+            maxWidth: "100%",
+          }}
         />
       </div>
 
@@ -53,7 +64,7 @@ export default function TheEscapeParkandResort() {
                   the joy of outdoor play.
                 </h5>
                 <p className="body-2">
-                  The Escape Park & Resort is a green refuge that transports
+                  The Escape Park &amp; Resort is a green refuge that transports
                   families into a world of lush
                   <br />
                   landscapes, flowing water, and immersive nature experiences.
@@ -65,7 +76,6 @@ export default function TheEscapeParkandResort() {
                   of modern life and enjoy meaningful moments together in the
                   outdoors.
                 </p>
-                {/* <h5 className="title-desc">Objective</h5> */}
                 <p className="body-2">
                   Grounded in the principles of nature-based learning and
                   wellness, the park offers an
@@ -79,35 +89,104 @@ export default function TheEscapeParkandResort() {
                   enhance creativity, boost physical activity, and contribute to
                   overall emotional and
                   <br />
-                  mental wellbeing all of which form the cornerstone of this
+                  mental wellbeing — all of which form the cornerstone of this
                   concept.
                 </p>
               </div>
 
+              {/* SLIDER SECTION */}
               <div className="cols-img">
-                <div className="image-blog">
-                  <Image
-                    src="/image/resortAndPark/resort pic 2.jpg"
-                    alt="Escape Park Activity 1"
-                    className="lazyload"
-                    width={444}
-                    height={334}
-                  />
-                </div>
-                <div className="image-blog">
-                  <Image
-                    src="/image/resortAndPark/resort pic 3.jpg"
-                    alt="Escape Park Activity 2"
-                    className="lazyload"
-                      width={1920}
-          height={1080}
-          style={{
-            width: "100%",
-            height: "auto",
-            maxWidth: "100%",
-          }}
-                  />
-                </div>
+                <Swiper
+                  modules={[Navigation]}
+                  navigation
+                  spaceBetween={24}
+                  slidesPerView={1}
+                  loop={true}
+                  className="karnavali-slider escapepark-slider"
+                  breakpoints={{
+                    768: {
+                      slidesPerView: 2,
+                    },
+                  }}
+                >
+                  {/* 1 */}
+                  <SwiperSlide>
+                    <div className="image-blog">
+                      <Image
+                        src="/image/resortAndPark/resort pic 2.jpg"
+                        alt="Escape Park Activity 1 - A"
+                        className="lazyload"
+                        width={444}
+                        height={334}
+                      />
+                    </div>
+                  </SwiperSlide>
+
+                  {/* 2 */}
+                  <SwiperSlide>
+                    <div className="image-blog">
+                      <Image
+                        src="/image/resortAndPark/resort pic 3.jpg"
+                        alt="Escape Park Activity 2 - A"
+                        className="lazyload"
+                        width={444}
+                        height={334}
+                      />
+                    </div>
+                  </SwiperSlide>
+
+                  {/* 3 (duplicate) */}
+                  <SwiperSlide>
+                    <div className="image-blog">
+                      <Image
+                        src="/image/resortAndPark/resort pic 2.jpg"
+                        alt="Escape Park Activity 1 - B"
+                        className="lazyload"
+                        width={444}
+                        height={334}
+                      />
+                    </div>
+                  </SwiperSlide>
+
+                  {/* 4 (duplicate) */}
+                  <SwiperSlide>
+                    <div className="image-blog">
+                      <Image
+                        src="/image/resortAndPark/resort pic 3.jpg"
+                        alt="Escape Park Activity 2 - B"
+                        className="lazyload"
+                        width={444}
+                        height={334}
+                      />
+                    </div>
+                  </SwiperSlide>
+
+                  {/* 5 (duplicate) */}
+                  <SwiperSlide>
+                    <div className="image-blog">
+                      <Image
+                        src="/image/resortAndPark/resort pic 2.jpg"
+                        alt="Escape Park Activity 1 - C"
+                        className="lazyload"
+                        width={444}
+                        height={334}
+                      />
+                    </div>
+                  </SwiperSlide>
+
+                  {/* 6 (duplicate) */}
+                  <SwiperSlide>
+                    <div className="image-blog">
+                      <Image
+                        src="/image/resortAndPark/resort pic 3.jpg"
+                        alt="Escape Park Activity 2 - C"
+                        className="lazyload"
+                        width={444}
+                        height={334}
+                      />
+                    </div>
+                  </SwiperSlide>
+                </Swiper>
               </div>
 
               <div className="list-desc">
@@ -115,7 +194,7 @@ export default function TheEscapeParkandResort() {
                   <h5 className="title-desc">The Facility</h5>
                   <p className="body-2">
                     Designed as a fully integrated nature retreat, The Escape
-                    Park & Resort features:
+                    Park &amp; Resort features:
                     <br />
                     - A scenic pond, surrounded by trees, flowers, and walking
                     paths
@@ -186,8 +265,8 @@ export default function TheEscapeParkandResort() {
                   <h5 className="title-desc">Activities</h5>
                   <p className="body-2">
                     <ul>
-                      The Escape Park & Resort offers a wide range of mentally
-                      and physically stimulating
+                      The Escape Park &amp; Resort offers a wide range of
+                      mentally and physically stimulating
                       <br />
                       experiences, including:
                       <br />
@@ -211,7 +290,7 @@ export default function TheEscapeParkandResort() {
                       <li>- Gardening</li>
                       <li>- Animal exploration</li>
                       <li>- Botanical learning</li>
-                      <li>- Fruit harvesting(seasonal)</li>
+                      <li>- Fruit harvesting (seasonal)</li>
                     </ul>
                   </p>
                 </div>
@@ -238,6 +317,7 @@ export default function TheEscapeParkandResort() {
                   </p>
                 </div>
               </div>
+              {/* end content */}
             </div>
           </div>
         </div>

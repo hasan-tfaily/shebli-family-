@@ -26,7 +26,7 @@ export default function Page() {
             <Breadcumb pageName="About Us" />
             <h2 className="title-page-title">About Us</h2>
             <div className="sub-title body-2">
-              Discover the story behind the region’s <br></br> leading edutainment group shaping the future of learning through play.
+              We create destinations where families come together to play, connect, <br></br> and experience unforgettable moments.
 
             </div>
           </div>

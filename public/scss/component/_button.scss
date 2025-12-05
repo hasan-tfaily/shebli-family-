@@ -10,7 +10,9 @@
   border: 1px solid var(--on-suface-container);
 
   /* NEW: ensure overlay follows the same rounding as the button */
-  &::before { border-radius: inherit; }
+  &::before {
+    border-radius: inherit;
+  }
 
   span {
     font-weight: 500;
@@ -34,8 +36,14 @@
   }
 
   &:hover {
-    span { color: var(--white); }
-    &::before { left: 0; width: 100%; }
+    span {
+      color: var(--white);
+    }
+
+    &::before {
+      left: 0;
+      width: 100%;
+    }
   }
 
   &.bg-on-suface-container {
@@ -44,8 +52,16 @@
     /* border visible pre-hover */
     border-color: var(--on-suface-container);
 
-    &::before { height: 100%; background-color: var(--primary); }
-    &:hover { span { color: var(--white); } }
+    &::before {
+      height: 100%;
+      background-color: var(--primary);
+    }
+
+    &:hover {
+      span {
+        color: var(--white);
+      }
+    }
   }
 
   &.bg-white {
@@ -54,17 +70,27 @@
     /* border visible pre-hover */
     border-color: var(--on-suface-container);
 
-    &::before { height: 100%; background-color: var(--on-suface-container); }
+    &::before {
+      height: 100%;
+      background-color: var(--on-suface-container);
+    }
+
     &:hover {
       /* keep same color system */
       background-color: var(--on-suface-container) !important;
-      span { color: var(--white); }
+
+      span {
+        color: var(--white);
+      }
     }
 
     &.bg-white-style-2 {
       /* used to only show on hover — make it visible always */
       border-color: var(--white);
-      &:hover { border-color: var(--white); }
+
+      &:hover {
+        border-color: var(--white);
+      }
     }
   }
 
@@ -73,221 +99,251 @@
     /* border visible pre-hover (primary edge) */
     border-color: var(--primary);
 
-    span { color: var(--white); }
-    &::before { height: 100%; background-color: var(--on-suface-container); }
-    &:hover { span { color: var(--white); } }
+    span {
+      color: var(--white);
+    }
+
+    &::before {
+      height: 100%;
+      background-color: var(--on-suface-container);
+    }
+
+    &:hover {
+      span {
+        color: var(--white);
+      }
+    }
   }
 
   &.style-border {
     /* already an outlined look; keep it explicit */
     border: 1px solid var(--primary);
-    span { color: var(--on-suface-container); }
-    &:hover { span { color: var(--white); } }
+
+    span {
+      color: var(--on-suface-container);
+    }
+
+    &:hover {
+      span {
+        color: var(--white);
+      }
+    }
   }
 
   &.style-1 {
     padding: 15px 40px;
     border-radius: 999px;
   }
+
   &.style-2 {
     border-radius: 999px;
     padding: 12px 0;
   }
+
   &.style-3 {
     border-radius: 999px;
     padding: 8px 0;
   }
+
   &.style-4 {
     border-radius: 999px;
     padding: 12px 40px;
   }
 
-  &.w-full { width: 100%; }
+  &.w-full {
+    width: 100%;
+  }
 
   &.hover-bg-primary {
-    &::before { height: 100%; background-color: var(--primary); }
-    &:hover { background-color: var(--primary) !important; }
+    &::before {
+      height: 100%;
+      background-color: var(--primary);
+    }
+
+    &:hover {
+      background-color: var(--primary) !important;
+    }
   }
 }
 
 
 .default-btn {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
 
+  span {
+    border-bottom: 2px solid var(--on-suface-container);
+    @include mixin.transition3();
+  }
+
+  &.style-color-white {
     span {
-        border-bottom: 2px solid var(--on-suface-container);
-        @include mixin.transition3();
-    }
-
-    &.style-color-white {
-        span {
-            color: var(--white);
-            border-color: var(--white);
-        }
-
-        &:hover {
-            span {
-                color: var(--primary);
-                border-color: var(--primary);
-            }
-        }
+      color: var(--white);
+      border-color: var(--white);
     }
 
     &:hover {
-        span {
-            border-color: var(--primary);
-        }
+      span {
+        color: var(--primary);
+        border-color: var(--primary);
+      }
     }
+  }
+
+  &:hover {
+    span {
+      border-color: var(--primary);
+    }
+  }
 
 }
 
 .tf-btn-search {
-    @include mixin.flex(center, center);
+  @include mixin.flex(center, center);
 }
 
 .btn-load-more {
-    .tf-btn {
-        padding: 12px 40px;
-    }
+  .tf-btn {
+    padding: 12px 40px;
+  }
 }
 
 .tf-btn-reply {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    color: var(--primary);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--primary);
 
-    &:hover {
-        color: var(--on-suface-container);
-    }
+  &:hover {
+    color: var(--on-suface-container);
+  }
 }
 
 .tf-btn-arrow-t-r {
-    @include mixin.d-flex();
-    align-items: center;
-    gap: 4px;
+  @include mixin.d-flex();
+  align-items: center;
+  gap: 4px;
 
+  span {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--white);
+    border-bottom: 1px solid var(--white);
+    @include mixin.transition3();
+  }
+
+  .icon {
+    @include mixin.flex(center, center);
+  }
+
+  i {
+    color: var(--white);
+    @include mixin.transition3();
+  }
+
+  &:hover {
     span {
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 24px;
-        color: var(--white);
-        border-bottom: 1px solid var(--white);
-        @include mixin.transition3();
-    }
-
-    .icon {
-        @include mixin.flex(center, center);
+      color: var(--primary);
+      border-color: var(--primary);
     }
 
     i {
-        color: var(--white);
-        @include mixin.transition3();
+      color: var(--primary);
     }
-
-    &:hover {
-        span {
-            color: var(--primary);
-            border-color: var(--primary);
-        }
-
-        i {
-            color: var(--primary);
-        }
-    }
+  }
 }
 
 .btn-arrow-item {
-    width: 60px;
-    height: 60px;
-    background-color: var(--bg-1);
-    border: 1px solid var(--bg-1);
-    border-radius: 50%;
-    backdrop-filter: blur(20px);
-    overflow: hidden;
+  width: 60px;
+  height: 60px;
+  background-color: var(--bg-1);
+  border: 1px solid var(--bg-1);
+  border-radius: 50%;
+  backdrop-filter: blur(20px);
+  overflow: hidden;
 
+  i {
+    color: var(--white);
+    font-size: 32px;
+  }
+
+  &:hover {
     i {
-        color: var(--white);
-        font-size: 32px;
+      animation: hover-btn-arrow 0.3s linear;
     }
-
-    &:hover {
-        i {
-            animation: hover-btn-arrow 0.3s linear;
-        }
-    }
+  }
 }
 
 .switch-container {
-    @include mixin.d-flex();
-    justify-content: center;
-    align-items: center;
+  @include mixin.d-flex();
+  justify-content: center;
+  align-items: center;
 
 }
 
 .btn-cancel-review {
-    display: none;
+  display: none;
 }
 
 
 .switch-container {
-    @include mixin.d-flex();
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+  @include mixin.d-flex();
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 
-    .switch {
-        position: relative;
-        width: 80px;
-        height: 40px;
-        background-color: var(--white);
-        border-radius: 999px;
-        border: 1px solid var(--on-suface-variant-2);
-        cursor: pointer;
-        @include mixin.transition3();
+  .switch {
+    position: relative;
+    width: 80px;
+    height: 40px;
+    background-color: var(--white);
+    border-radius: 999px;
+    border: 1px solid var(--on-suface-variant-2);
+    cursor: pointer;
+    @include mixin.transition3();
 
 
-        .toggle {
-            position: absolute;
-            width: 32px;
-            height: 32px;
-            background: var(--primary);
-            border-radius: 50%;
-            top: 3px;
-            left: 3px;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        &.is-active {
-            .toggle {
-                transform: translateX(40px);
-            }
-        }
+    .toggle {
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      background: var(--primary);
+      border-radius: 50%;
+      top: 3px;
+      left: 3px;
+      transition: transform 0.3s ease-in-out;
     }
 
-    .switch-label {
-        color: var(--on-suface-variant-2);
-
-        &.is-active {
-            color: var(--on-suface-container);
-        }
+    &.is-active {
+      .toggle {
+        transform: translateX(40px);
+      }
     }
+  }
+
+  .switch-label {
+    color: var(--on-suface-variant-2);
+
+    &.is-active {
+      color: var(--on-suface-container);
+    }
+  }
 
 }
 
 .page-btn {
-    padding: 5px 10px;
-    background-color: var(--white);
-    color: var(--on-suface-container);
-    border-radius: 999px;
-    @include mixin.transition3();
+  padding: 5px 10px;
+  background-color: var(--white);
+  color: var(--on-suface-container);
+  border-radius: 999px;
+  @include mixin.transition3();
 
-    &:hover {
-        background-color: var(--primary);
-        color: var(--white);
-    }
+  &:hover {
+    background-color: var(--primary);
+    color: var(--white);
+  }
 }
 
 
@@ -324,15 +380,23 @@
     left: 50%;
     width: 0;
     height: 100%;
-    background-color: var(--btn-fill); /* hover fill mirrors the target color */
+    background-color: var(--btn-fill);
+    /* hover fill mirrors the target color */
     z-index: 1;
     @include mixin.transition3();
   }
 
   &:hover {
+
     /* on hover, the before fills under the text; just switch text color */
-    span { color: var(--btn-hover-fg); }
-    &::before { left: 0; width: 100%; }
+    span {
+      color: var(--btn-hover-fg);
+    }
+
+    &::before {
+      left: 0;
+      width: 100%;
+    }
   }
 
   /* ====== THEMES (just set variables) ====== */
@@ -342,14 +406,16 @@
   &.bg-on-suface-container {
     --btn-bg: var(--on-surface-container, var(--on-suface-container));
     --btn-fg: var(--white);
-    --btn-fill: var(--primary);        /* hover moves to primary */
+    --btn-fill: var(--primary);
+    /* hover moves to primary */
     --btn-hover-fg: var(--white);
   }
 
   &.bg-white {
     --btn-bg: var(--white);
     --btn-fg: var(--on-surface-container, var(--on-suface-container));
-    --btn-fill: var(--on-surface-container, var(--on-suface-container)); /* fill mirrors text/border */
+    --btn-fill: var(--on-surface-container, var(--on-suface-container));
+    /* fill mirrors text/border */
     --btn-hover-fg: var(--white);
     border-color: var(--on-surface-container, var(--on-suface-container));
   }
@@ -357,20 +423,23 @@
   &.bg-color-primary {
     --btn-bg: var(--primary);
     --btn-fg: var(--white);
-    --btn-fill: var(--on-surface-container, var(--on-suface-container)); /* invert on hover */
+    --btn-fill: var(--on-surface-container, var(--on-suface-container));
+    /* invert on hover */
     --btn-hover-fg: var(--white);
   }
 
   &.style-border {
     --btn-bg: transparent;
     --btn-fg: var(--on-surface-container, var(--on-suface-container));
-    --btn-fill: var(--primary);   /* hover fills with primary */
+    --btn-fill: var(--primary);
+    /* hover fills with primary */
     --btn-hover-fg: var(--white);
     border: 1px solid var(--primary);
   }
 
   &.hover-bg-primary {
-    --btn-fill: var(--primary);   /* force primary as the hover fill */
+    --btn-fill: var(--primary);
+    /* force primary as the hover fill */
     /* base/other vars inherit from whatever theme it’s combined with */
   }
 
@@ -379,26 +448,115 @@
   &.style-1 {
     padding: 15px 40px;
     border-radius: 999px;
-    &::before { border-radius: 26px; }
+
+    &::before {
+      border-radius: 26px;
+    }
   }
 
   &.style-2 {
     border-radius: 999px;
     padding: 12px 0;
-    &::before { border-radius: 26px; }
+
+    &::before {
+      border-radius: 26px;
+    }
   }
 
   &.style-3 {
     border-radius: 999px;
     padding: 8px 0;
-    &::before { border-radius: 26px; }
+
+    &::before {
+      border-radius: 26px;
+    }
   }
 
   &.style-4 {
     border-radius: 999px;
     padding: 12px 40px;
-    &::before { border-radius: 26px; }
+
+    &::before {
+      border-radius: 26px;
+    }
   }
 
-  &.w-full { width: 100%; }
+  &.w-full {
+    width: 100%;
+  }
+}
+
+
+
+.bowlnrock-slider,
+.karnavali-slider,
+.kidzacademy-slider,
+.kidzmondo-slider,
+.stardistrict-slider,
+.escapepark-slider,
+.urbanvillage-slider,
+.kminnovation-slider {
+  position: relative;
+  overflow: visible; // allow arrows to show outside
+  padding: 0; // no inner padding, arrows will sit outside instead
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #000; // circle color
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    color: #fff; // arrow color
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.2s ease;
+    z-index: 5; // keep above images
+
+    // Swiper default arrow icon
+    &::after {
+      font-size: 18px; // smaller arrow inside the circle
+      font-weight: 600;
+    }
+
+    &:hover {
+      transform: translateY(-50%) scale(1.05);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .swiper-button-prev {
+    left: -40px; // fully OUTSIDE the slider/image
+  }
+
+  .swiper-button-next {
+    right: -40px; // fully OUTSIDE the slider/image
+  }
+}
+
+// Optional: adjust for mobile so arrows don't go too far out
+@media (max-width: 767px) {
+
+  .bowlnrock-slider,
+  .karnavali-slider,
+  .kidzacademy-slider,
+  .kidzmondo-slider,
+  .stardistrict-slider,
+  .escapepark-slider,
+  .urbanvillage-slider,
+  .kminnovation-slider {
+    .swiper-button-prev {
+      left: -16px;
+    }
+
+    .swiper-button-next {
+      right: -16px;
+    }
+  }
+}
+
+// Make sure the wrapper also allows overflow
+.cols-img {
+  position: relative;
+  overflow: visible;
 }

@@ -96,7 +96,7 @@ export default function About() {
 
               <div className="bottom">
                 <div className="wow fadeInUp" >
-                  <Link href="/about-us" className="tf-btnN style-1 bg-on-surface-container">
+                  <Link href="/Our-Brands" className="tf-btnN style-1 bg-on-surface-container">
                     <span>Our Brands</span>
                   </Link>
                 </div>

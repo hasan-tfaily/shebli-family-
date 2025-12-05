@@ -1,15 +1,24 @@
+"use client";
+
+// KMInnovationCenter page
+
 import Image from "next/image";
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 
-export default function KidzMondoPage() {
+export default function KMInnovationCenterPage() {
   return (
     <>
+      {/* HERO IMAGE */}
       <div className="image img-top">
         <Image
           src="/image/page-title/our-ventures (1).png"
-          alt="KidzMondo Hero"
+          alt="KM Innovation Center Hero"
           className="lazyload"
-            width={1920}
+          width={1920}
           height={1080}
           style={{
             width: "100%",
@@ -36,15 +45,15 @@ export default function KidzMondoPage() {
                     margin: 0,
                   }}
                 >
-                  KidzMondo
+                  KM Innovation Center
                 </h2>
               </div>
 
               {/* MAIN IMAGE */}
               <div className="image-blog">
                 <Image
-                  src="/image/kidzMondo/Kidz-mondo-1.png"
-                  alt="KidzMondo"
+                  src="/image/KM-innovation/KM 1.jpg"
+                  alt="Children exploring at KM Innovation Center"
                   className="lazyload"
                   width={910}
                   height={512}
@@ -53,112 +62,163 @@ export default function KidzMondoPage() {
 
               {/* INTRO SECTION */}
               <div className="desc-blog">
-                <p className={"bodytitle"}>Overall Concept</p>
                 <p className="body-2">
-                  KidzMondo is a replica of a real-life city which provides
-                  children between the ages of 2 to 14 with role play activities
-                  that are designed to be fun and pedagogical, based on the
-                  ‘edutainment’ or playful learning concept.
-                </p>
-<p className="body-2">
-                  It is an ideal forum where social rules and values are promoted and ingrained in children to prepare them to behave as good adult citizens would in real life.
-                </p>
-
-                <p className={"bodytitle"}>Objective</p>
-                <p className="body-2">
-                  KidzMondo aims to compliment local school curricula and seeks
-                  to teach children basic citizenship values and rules,
-                  enlightening them about the society they live in today.
+                  The village-like compound will cater to a variety of needs and
+                  bring together the community in a way which enables every
+                  person to meet his own personal needs in a joint setting.
+                  <br /> <br />
+                  The facility will be composed of different sections targeted at
+                  different audiences and providing different services
+                  experiences:
                 </p>
               </div>
 
-              {/* TWO IMAGES */}
+              {/* SLIDER INSTEAD OF TWO STATIC IMAGES */}
               <div className="cols-img">
-                <div className="image-blog">
-                  <Image
-                    src="/image/kidzMondo/kidzMondo2.png"
-                    alt="KidzMondo Activity 1"
-                    className="lazyload"
-                    width={444}
-                    height={334}
-                  />
-                </div>
-                <div className="image-blog">
-                  <Image
-                    src="/image/kidzMondo/kidzMondo3.png"
-                    alt="KidzMondo Activity 2"
-                    className="lazyload"
-                    width={444}
-                    height={334}
-                  />
-                </div>
+                <Swiper
+                  modules={[Navigation]}
+                  navigation
+                  spaceBetween={24}
+                  slidesPerView={1}
+                  loop={true}
+                  className="karnavali-slider kminnovation-slider"
+                  breakpoints={{
+                    768: {
+                      slidesPerView: 2,
+                    },
+                  }}
+                >
+                  {/* 1 */}
+                  <SwiperSlide>
+                    <div className="image-blog">
+                      <Image
+                        src="/image/KM-innovation/KM 2.jpg"
+                        alt="Kids working on a STEM project - A"
+                        className="lazyload"
+                        width={444}
+                        height={334}
+                      />
+                    </div>
+                  </SwiperSlide>
+
+                  {/* 2 */}
+                  <SwiperSlide>
+                    <div className="image-blog">
+                      <Image
+                        src="/image/KM-innovation/KM 3.jpg"
+                        alt="Creative lab at KM Innovation Center - A"
+                        className="lazyload"
+                        width={444}
+                        height={334}
+                      />
+                    </div>
+                  </SwiperSlide>
+
+                  {/* 3 (duplicate) */}
+                  <SwiperSlide>
+                    <div className="image-blog">
+                      <Image
+                        src="/image/KM-innovation/KM 2.jpg"
+                        alt="Kids working on a STEM project - B"
+                        className="lazyload"
+                        width={444}
+                        height={334}
+                      />
+                    </div>
+                  </SwiperSlide>
+
+                  {/* 4 (duplicate) */}
+                  <SwiperSlide>
+                    <div className="image-blog">
+                      <Image
+                        src="/image/KM-innovation/KM 3.jpg"
+                        alt="Creative lab at KM Innovation Center - B"
+                        className="lazyload"
+                        width={444}
+                        height={334}
+                      />
+                    </div>
+                  </SwiperSlide>
+
+                  {/* 5 (duplicate) */}
+                  <SwiperSlide>
+                    <div className="image-blog">
+                      <Image
+                        src="/image/KM-innovation/KM 2.jpg"
+                        alt="Kids working on a STEM project - C"
+                        className="lazyload"
+                        width={444}
+                        height={334}
+                      />
+                    </div>
+                  </SwiperSlide>
+
+                  {/* 6 (duplicate) */}
+                  <SwiperSlide>
+                    <div className="image-blog">
+                      <Image
+                        src="/image/KM-innovation/KM 3.jpg"
+                        alt="Creative lab at KM Innovation Center - C"
+                        className="lazyload"
+                        width={444}
+                        height={334}
+                      />
+                    </div>
+                  </SwiperSlide>
+                </Swiper>
               </div>
 
-              {/* BULLET SECTIONS */}
+              {/* SECTION LIST */}
               <div className="list-desc">
                 <div className="desc-blog">
-                  <h5 className="title-desc">Education</h5>
+                  <h5 className="title-desc">Tech Education</h5>
                   <p className="body-2">
-                    It is an established fact that children learn best through
-                    play and experiencing real hands-on activities.
+                    Mothers who want to provide entertainment for their young
+                    children, or want an activity to keep their children engaged
+                    while they shop in the department store or have lunch or a
+                    coffee with friends may do so here.
                     <br />
                     <br />
-                    The range of playful activities inside KidzMondo is
-                    exclusively created and constructed to help, encourage and
-                    advance physical growth while stimulating intellectual
-                    growth.
+                    KidzMondo thereby serves as a gateway for new technologies
+                    and technological advancements, connecting developers and
+                    designers with students, teachers, caregivers, and school
+                    stakeholders.
                     <br />
                     <br />
-                    The KidzMondo Educational Curriculum improves the
-                    development of skills and attitudes while also motivating
-                    creative thinking and enhancing self-esteem and
-                    self-confidence levels.
+                    It can serve as a platform for launching new products for
+                    younger demographics or school markets. Moreover, KidzMondo
+                    embeds in children ideals and values to carry with them into
+                    the real world.
                     <br />
                     <br />
-                    KidzMondo also teaches financial literacy by establishing
-                    its own economy, where kids exchange Kidlars, the local city
-                    currency, learning about money and how to utilize it.
+                    This includes teaching them use of technology, putting the
+                    newest tech trends to good use, and the importance of
+                    avoiding using technology inappropriately or for destructive
+                    purposes.
+                    <br />
+                    <br />
+                    Receiving 200,000 visitors annually, KidzMondo presents the
+                    ideal platform to educate future generations. The diverse
+                    subjects children can experience at KidzMondo are: Media,
+                    Math, Sciences, Art, Culture, Drama, Technology, Physical
+                    Education, and Social Education.
+                    <br />
+                    <br />
+                    The Innovation Center plans to keep up with global trends
+                    through implementing innovative technologies in its
+                    facilities and establishments. It will resemble a miniature
+                    Silicon Valley. It will be a hub for scientific exploration
+                    and discovery. The curriculum for this zone will be based in
+                    STEAM education, exploring multidisciplinary problem-based
+                    lessons.
+                    <br />
+                    <br />
+                    Guests will experience what it is like to be a tech wiz.
                   </p>
-                </div>
-
-                <div className="desc-blog">
-                  <h5 className="title-desc">Entertainment</h5>
-                  <p className="body-2">
-                    Children can choose between 120+ different professions which
-                    are practiced in replica of the most representative
-                    establishments in an actual city; an airport, a bank,
-                    factories, a theater, shops, a police station, a fire
-                    department, a newspaper publisher, a hotel, a TV studio, a
-                    radio station, a gas station, a racetrack and many more…
-                  </p>
-                </div>
-
-                <div className="desc-blog">
-                  <h5 className="title-desc">Edutainment Competencies</h5>
-
-                  {/* Optional intro text */}
-                  <p className="body-2">
-                    The KidzMondo experience develops a wide range of
-                    competencies:
-                  </p>
-
-                  {/* VALID LIST WITH BULLET POINTS */}
-                  <ul className="body-2">
-                    <li>- Cognitive Development</li>
-                    <li>- Emotional Intelligence</li>
-                    <li>- Psychomotor Development</li>
-                    <li>- Social Development</li>
-                    <li>- Financial Literacy
-                      <ul>
-                        <li>- Currency and Bills</li>
-                        <li>- Bank</li>
-                        <li>- Kidlar Store</li>
-                      </ul>
-                    </li>
-                  </ul>
                 </div>
               </div>
-              {/* END CONTENT */}
+
+              {/* /.content end */}
             </div>
           </div>
         </div>
