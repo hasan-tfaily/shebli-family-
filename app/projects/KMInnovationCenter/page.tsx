@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import React from "react";
+import Benefits11 from "@/components/common/Benefits11";
 
 export default function KMInnovationCenterPage() {
   return (
@@ -12,7 +13,7 @@ export default function KMInnovationCenterPage() {
           src="/image/page-title/our-ventures (1).png"
           alt="KM Innovation Center Hero"
           className="lazyload"
-            width={1920}
+          width={1920}
           height={1080}
           style={{
             width: "100%",
@@ -93,50 +94,19 @@ export default function KMInnovationCenterPage() {
               {/* SECTION LIST */}
               <div className="list-desc">
                 <div className="desc-blog">
-                  <h5 className="title-desc">
-                    Tech Education
-                  </h5>
                   <p className="body-2">
-                    Mothers who want to provide entertainment for their young children, or want an activity to keep their children engaged while they shop in the department store or have lunch or a coffee with friends may do so here.
+                    The KidzMondo Innovation Center is a cutting-edge space designed to ignite curiosity and prepare children for the future of technology. Inspired by the spirit of Silicon Valley, this miniature innovation hub immerses kids in hands-on STEAM learning, empowering them to think, create, and solve real-world challenges. Through interactive labs, smart technologies, and guided exploration, children experience what it feels like to be young tech innovators.
                     <br /><br />
-                    KidzMondo thereby serves as a gateway for new technologies and technological advancements, connecting developers and designers with students, teachers, caregivers, and school stakeholders.
-                    <br /><br />
-                    It can serve as a platform for launching new products for younger demographics or school markets. Moreover, KidzMondo embeds in children ideals and values to carry with them into the real world.
-                    <br /><br />
-                    This includes teaching them use of technology, putting the newest tech trends to good use, and the importance of avoiding using technology inappropriately or for destructive purposes.
-                    <br /><br />
-                    Receiving 200,000 visitors annually, KidzMondo presents the ideal platform to educate future generations. The diverse subjects children can experience at KidzMondo are:  Media, Math, Sciences, Art, Culture, Drama, Technology, Physical Education, and Social Education.
-                    <br /><br />
-                    The Innovation Center plans to keep up with global trends through implementing innovative technologies in its facilities and establishments. It will resemble a miniature Silicon Valley. It will be a hub for scientific exploration and discovery. The curriculum for this zone will be based in STEAM education, exploring multidisciplinary problem-based lessons.
-                    <br /><br />
-                    Guests will experience what it is like to be a tech wiz.
+                    From coding and robotics to artificial intelligence, virtual reality, entrepreneurship, and digital safety, the Innovation Center equips kids with future-ready skills through multidisciplinary, problem-based activities. Every experience is designed to spark imagination, build confidence, and encourage the next generation of creators, inventors, and changemakers.
                   </p>
                 </div>
 
-                {/* <div className="desc-blog">
-                  <h5 className="title-desc">
-                    Some of the activities available will include: 
-
-                  </h5>
-                  <p className="body-2">
-                    <li>
-                      <ul>• Entrepreneurship</ul>
-                      <ul>• Design thinking</ul>
-                      <ul>• Coding</ul>
-                      <ul>• Robotics</ul>
-                      <ul>• Artificial Intelligence</ul>
-                      <ul>• Augmented and Virtual Reality</ul>
-                      <ul>• Cyber Safety</ul>
-                      <ul>• Gaming</ul>
-                    </li>
-                    <p>
-These technologies make the experience more stimulating and attractive to children 
-and teenagers up until the age of 15.</p>
-                  </p>
-                </div> */}
-
+                <h5 className="title-desc">
+                  Activities:
+                </h5>
 
               </div>
+              <Benefits11 />
 
               {/* /.content end */}
             </div>

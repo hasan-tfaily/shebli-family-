@@ -36,7 +36,7 @@ export default function Benefits() {
                 flexDirection: "column",
               }}
             >
-              {/* ICON AS IMAGE */}
+              {/* ICON AS IMAGE */}w
               <div style={{ marginBottom: 12 }}>
                 <Image
                   src={item.icon}

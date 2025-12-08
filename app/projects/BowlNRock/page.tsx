@@ -6,6 +6,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import Faqs from "@/components/homes/strategy-consulting/Faqs";
+
 
 export default function BowlNRock() {
   return (
@@ -102,7 +104,6 @@ export default function BowlNRock() {
                     </div>
                   </SwiperSlide>
 
-                  {/* 2 */}
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
@@ -115,7 +116,6 @@ export default function BowlNRock() {
                     </div>
                   </SwiperSlide>
 
-                  {/* 3 (duplicate) */}
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
@@ -196,85 +196,12 @@ export default function BowlNRock() {
                     world of energy, music, fun, and play.
                   </p>
                 </div>
+                <Faqs />
 
-                {/* Experiences List */}
-                <div className="desc-blog">
-                  <h5 className="title-desc">Experiences:</h5>
-
-                  <h5>Social Bowling and AR Bowling</h5>
-                  <p className="body-2">
-                    A high-energy bowling experience designed for social groups
-                    and competitive fun, enhanced with atmospheric lighting and
-                    music.
-                  </p>
-
-                  <ul className="body-2">
-                    <li>
-                      <h6>Retro Arcade Zone</h6>
-                      <p>
-                        A mix of classic arcade titles and modern hits,
-                        delivering nostalgia and excitement for all generations.
-                      </p>
-                    </li>
-
-                    <li>
-                      <h6>Immersive Gaming &amp; Simulators</h6>
-                      <p>
-                        Sports simulators, VR games, interactive screens, and
-                        digital game experiences inspired by global
-                        entertainment leaders.
-                      </p>
-                    </li>
-
-                    <li>
-                      <h6>Mini Golf &amp; Casual Play</h6>
-                      <p>
-                        Fun and social mini-golf experiences and table-based
-                        games that encourage friendly competition.
-                      </p>
-                    </li>
-
-                    <li>
-                      <h6>Karaoke &amp; Live Entertainment Stage</h6>
-                      <p>
-                        A dedicated performance zone featuring karaoke, DJ sets,
-                        live music, and event nights.
-                      </p>
-                    </li>
-
-                    <li>
-                      <h6>Interactive Dining Experience</h6>
-                      <p>
-                        Themed dining areas where food and entertainment merge,
-                        complete with interactive game tables, vibrant menus,
-                        and a lively atmosphere.
-                      </p>
-                    </li>
-
-                    <li>
-                      <h6>Social Pool, Snooker &amp; Darts</h6>
-                      <p>
-                        Classic social games reimagined with modern ambiance,
-                        digital scoring, and themed environments.
-                      </p>
-                    </li>
-
-                    <li>
-                      <h6>Retro-Industrial Art Installations</h6>
-                      <p>
-                        Nostalgic and visually striking art pieces, neon work,
-                        and themed installations that elevate the venue’s
-                        identity and social media appeal.
-                      </p>
-                    </li>
-                  </ul>
-                </div>
               </div>
-              {/* /.list-desc */}
             </div>
           </div>
         </div>
-        {/* /.main-content */}
       </div>
     </>
   );
