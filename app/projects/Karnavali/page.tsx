@@ -6,6 +6,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import Testimonials from "@/components/common/Testimonials";
+import Contact from "@/components/common/Contact";
+
 
 export default function KarnavaliPage() {
   return (
@@ -65,25 +68,19 @@ export default function KarnavaliPage() {
                 <p className="body-2">
                   Karnavali is a dynamic, indoor Family Entertainment Center
                   designed as a multi-anchor
-                  <br />
                   attraction that brings the energy, excitement, and magic of a
                   carnival into a modern,
-                  <br />
                   immersive indoor setting. With major rides, arcades,
                   simulators, active play zones, and
-                  <br />
                   entertainment experiences for every age bracket, Karnavali
                   offers a vibrant world of
-                  <br />
                   fun under one roof.
                 </p>
                 <p className="body-2">
                   From heart-racing attractions to classic carnival snacks, the
                   environment is crafted to
-                  <br />
                   engage families, teens, and young children alike, making it a
                   go-to destination for
-                  <br />
                   unforgettable shared moments.
                 </p>
               </div>
@@ -190,67 +187,18 @@ export default function KarnavaliPage() {
                   <p className="body-2">
                     Karnavali blends thrill rides, interactive games, sensory
                     play, and themed
-                    <br />
+
                     entertainment into an experience that appeals to a wide
                     audience:
                   </p>
                 </div>
 
-                <div className="desc-blog">
+                <div className="desc-blog" style={{ marginTop: "50px" }}>
                   <h5 className="title-desc">Entertainment</h5>
                   <p className="body-2">
-                    Children can choose between a wide range of activities,
+                    Guests can choose between a wide range of activities,
                     including:
                   </p>
-                  <ul className="body-2">
-                    <li>
-                      <strong>- Thrilling Rides &amp; Simulators</strong>
-                      <br />
-                      High-energy attractions and magical simulators that
-                      captivate both kids and adults.
-                    </li>
-                    <li>
-                      <strong>- Classic Carnival Treats</strong>
-                      <br />
-                      Popcorn, cotton candy, hot dogs, caramel apples,
-                      pretzels, and more; enhancing the
-                      <br />
-                      nostalgic carnival atmosphere.
-                    </li>
-                    <li>
-                      <strong>- Toddler &amp; Young Kids Zone</strong>
-                      <br />
-                      Soft play, face painting, balloon sculpting, arts and
-                      crafts, and a colorful
-                      <br />
-                      carnival-themed play area designed specifically for the
-                      little ones.
-                    </li>
-                    <li>
-                      <strong>- Kids &amp; Teens Action Zone</strong>
-                      <br />
-                      A robust variety of games and experiences, from arcades
-                      and family rides to laser
-                      <br />
-                      maze adventures, wall climbing, and competitive play.
-                    </li>
-                    <li>
-                      <strong>- Redemption Zone</strong>
-                      <br />
-                      Skill-based and interactive novelty games offering
-                      exciting rewards, appealing to
-                      <br />
-                      children, teens, and adults.
-                    </li>
-                    <li>
-                      <strong>- Active Gaming Zone</strong>
-                      <br />
-                      Featuring the latest video games, driving simulators,
-                      sports and dancing games, and
-                      <br />
-                      kiddy rides for younger guests.
-                    </li>
-                  </ul>
                   <p className="body-2">
                     Karnavali is built to cater to different personalities,
                     interests, and age groups —
@@ -258,6 +206,8 @@ export default function KarnavaliPage() {
                     ensuring every visitor finds their unique version of fun.
                   </p>
                 </div>
+
+                <Testimonials />
 
                 <div className="desc-blog">
                   <h5 className="title-desc">Concept Vision</h5>
@@ -275,35 +225,13 @@ export default function KarnavaliPage() {
                   </p>
                 </div>
               </div>
-
-              <div className="desc-blog">
-                <h5 className="title-desc">Activities</h5>
-                <p className="body-2">
-                  Karnavali offers a wide range of engaging activities,
-                  including but not limited to:
-                </p>
-                <ul className="body-2">
-                  <li>- Major Rides</li>
-                  <li>- Arcades</li>
-                  <li>- Family Rides</li>
-                  <li>- Wall Climbing</li>
-                  <li>- Trampoline</li>
-                  <li>- Simulators</li>
-                  <li>- Sky Trail</li>
-                  <li>- Rope Course</li>
-                  <li>- Laser Tag</li>
-                  <li>- Karting</li>
-                  <li>- Esports</li>
-                  <li>- Mirror Maze</li>
-                  <li>- Zero Gravity</li>
-                  <li>- Circus Zone</li>
-                </ul>
-              </div>
             </div>
           </div>
         </div>
+        
         {/* /.main-content */}
       </div>
+       <Contact />
     </>
   );
 }
