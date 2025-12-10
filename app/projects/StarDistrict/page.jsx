@@ -126,7 +126,7 @@ export default function StarDistrict() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src="/image/starDistrict/star district 2.jpg"
+                        src="/image/starDistrict/star 3.jpg"
                         alt="Star District Activity 1 - B"
                         className="lazyload"
                         width={444}
@@ -139,7 +139,7 @@ export default function StarDistrict() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src="/image/starDistrict/star district 3.jpg"
+                        src="/image/starDistrict/star 4.jpg"
                         alt="Star District Activity 2 - B"
                         className="lazyload"
                         width={444}
@@ -152,7 +152,7 @@ export default function StarDistrict() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src="/image/starDistrict/star district 2.jpg"
+                        src="/image/starDistrict/star 5.jpg"
                         alt="Star District Activity 1 - C"
                         className="lazyload"
                         width={444}
@@ -161,18 +161,6 @@ export default function StarDistrict() {
                     </div>
                   </SwiperSlide>
 
-                  {/* 6 (duplicate) */}
-                  <SwiperSlide>
-                    <div className="image-blog">
-                      <Image
-                        src="/image/starDistrict/star district 3.jpg"
-                        alt="Star District Activity 2 - C"
-                        className="lazyload"
-                        width={444}
-                        height={334}
-                      />
-                    </div>
-                  </SwiperSlide>
                 </Swiper>
               </div>
 

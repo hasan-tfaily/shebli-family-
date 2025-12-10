@@ -51,7 +51,7 @@ export default function BowlNRock() {
               {/* Main Image */}
               <div className="image-blog">
                 <Image
-                  src="/image/bowlNRock/Rock N Bowl 1.jpg"
+                  src="/image/bowlNRock/firstbowl n rock 1st.jpg"
                   alt="Bowl N Rock Main"
                   className="lazyload"
                   width={910}
@@ -95,7 +95,7 @@ export default function BowlNRock() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src="/image/bowlNRock/Rock N Bowl 2.jpg"
+                        src="/image/bowlNRock/bowl N rock 1.jpg"
                         alt="Bowl N Rock View 2 - A"
                         className="lazyload"
                         width={444}
@@ -107,7 +107,7 @@ export default function BowlNRock() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src="/image/bowlNRock/Rock N Bowl 3.jpg"
+                        src="/image/bowlNRock/bowl N rock 2.jpg"
                         alt="Bowl N Rock View 3 - A"
                         className="lazyload"
                         width={444}
@@ -119,7 +119,7 @@ export default function BowlNRock() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src="/image/bowlNRock/Rock N Bowl 2.jpg"
+                        src="/image/bowlNRock/bowl N rock 3.jpg"
                         alt="Bowl N Rock View 2 - B"
                         className="lazyload"
                         width={444}
@@ -132,7 +132,7 @@ export default function BowlNRock() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src="/image/bowlNRock/Rock N Bowl 3.jpg"
+                        src="/image/bowlNRock/bowl N rock 4.jpg"
                         alt="Bowl N Rock View 3 - B"
                         className="lazyload"
                         width={444}
@@ -145,7 +145,7 @@ export default function BowlNRock() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src="/image/bowlNRock/Rock N Bowl 2.jpg"
+                        src="/image/bowlNRock/bowl N rock 5.jpg"
                         alt="Bowl N Rock View 2 - C"
                         className="lazyload"
                         width={444}
@@ -158,7 +158,7 @@ export default function BowlNRock() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src="/image/bowlNRock/Rock N Bowl 3.jpg"
+                        src="/image/bowlNRock/bowl N rock 6.jpg"
                         alt="Bowl N Rock View 3 - C"
                         className="lazyload"
                         width={444}

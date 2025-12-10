@@ -126,7 +126,7 @@ export default function UrbanVillage() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src="/image/UrbanVillage/urban-village 2.jpg"
+                        src="/image/UrbanVillage/urban 3.jpg"
                         alt="Urban Village View 1 - B"
                         className="lazyload"
                         width={444}
@@ -139,7 +139,7 @@ export default function UrbanVillage() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src="/image/UrbanVillage/urban-village 3.jpg"
+                        src="/image/UrbanVillage/urban 4.jpg"
                         alt="Urban Village View 2 - B"
                         className="lazyload"
                         width={444}
@@ -152,21 +152,8 @@ export default function UrbanVillage() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src="/image/UrbanVillage/urban-village 2.jpg"
+                        src="/image/UrbanVillage/urban 5.jpg"
                         alt="Urban Village View 1 - C"
-                        className="lazyload"
-                        width={444}
-                        height={334}
-                      />
-                    </div>
-                  </SwiperSlide>
-
-                  {/* 6 (duplicate) */}
-                  <SwiperSlide>
-                    <div className="image-blog">
-                      <Image
-                        src="/image/UrbanVillage/urban-village 3.jpg"
-                        alt="Urban Village View 2 - C"
                         className="lazyload"
                         width={444}
                         height={334}
