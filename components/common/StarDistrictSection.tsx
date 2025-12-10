@@ -34,6 +34,7 @@ export default function StarDistrictSection() {
               </div>
             </div>
 
+
             <div className="section-services-content">
               <div className="flat-animate-tab">
                 {/* Tabs */}
