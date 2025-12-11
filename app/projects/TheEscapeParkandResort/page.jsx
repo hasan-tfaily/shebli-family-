@@ -13,7 +13,7 @@ export default function TheEscapeParkandResort() {
     <>
       <div className="image img-top">
         <Image
-          src="/image/page-title/our-ventures (1).png"
+          src="/image/page-title/Hero-Banner3.jpg"
           alt="The Escape Park & Resort Hero"
           className="lazyload"
           width={1920}
