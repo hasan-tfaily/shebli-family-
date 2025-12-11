@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Breadcumb from "@/components/common/Breadcumb";
+import Link from "next/link";
 type InquiryFormEvent = React.FormEvent<HTMLFormElement>;
 
 export default function InquiryForm() {
@@ -31,8 +32,41 @@ export default function InquiryForm() {
       <div className="page-title style-1 bg-img-13">
         <div className="tf-container position-relative">
           <div className="page-title-content">
-            <Breadcumb pageName="Contact Us" />
-            <h2 className="title-page-title">Inquiry Form</h2>
+            <div className="breadkcum">
+              <Link href={`/`} className="caption-1 home">
+                Contact
+              </Link>{" "}
+              <span className="arrow-svg">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={20}
+                  height={20}
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <g clipPath="url(#clip0_9360_28061)">
+                    <path
+                      d="M3.125 10H16.875"
+                      stroke="#A2A3AB"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M11.25 4.375L16.875 10L11.25 15.625"
+                      stroke="#A2A3AB"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath>
+                      <rect id="clip0_9360_28061" width={20} height={20} fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>{" "}
+              <span className="caption-1 page-breadkcum">Inquiry Form</span>
+            </div>            <h2 className="title-page-title">Inquiry Form</h2>
           </div>
         </div>
       </div>
@@ -41,7 +75,7 @@ export default function InquiryForm() {
         id="inquiryForm"
         className="form-contact-us"
         onSubmit={handleSubmit}
-        style={{ marginTop: "40px" }}
+      // style={{ marginTop: "40px" }}
       >
         {/* Title */}
         <h3 style={{ marginBottom: "24px" }}>Inquiry Form</h3>
@@ -422,50 +456,49 @@ export default function InquiryForm() {
             />
           </div>
         </fieldset>
-        
-      {/* Required note */}
-      <div className="requiredFields" style={{ marginTop: "12px" }}>
-        * Mandatory Fields
-      </div>
 
-      {/* Status message */}
-      <div
-        className={`tfSubscribeMsg footer-sub-element ${
-          showMessage ? "active" : ""
-        }`}
-        style={{ marginTop: "12px", marginBottom: "12px" }}
-      >
-        {success ? (
-          <p style={{ color: "rgb(52, 168, 83)", margin: 0 }}>
-            Form submitted successfully.
-          </p>
-        ) : (
-          <p style={{ color: "red", margin: 0 }}>Something went wrong</p>
-        )}
-      </div>
+        {/* Required note */}
+        <div className="requiredFields" style={{ marginTop: "12px" }}>
+          * Mandatory Fields
+        </div>
 
-      {/* Submit button – bottom right */}
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "flex-end", // ⬅️ pushes button to the right
-          marginTop: "8px",
-        }}
-      >
-        <button
-          type="submit"
-          className="tf-btn style-1 bg-on-suface-container text-center"
+        {/* Status message */}
+        <div
+          className={`tfSubscribeMsg footer-sub-element ${showMessage ? "active" : ""
+            }`}
+          style={{ marginTop: "12px", marginBottom: "12px" }}
+        >
+          {success ? (
+            <p style={{ color: "rgb(52, 168, 83)", margin: 0 }}>
+              Form submitted successfully.
+            </p>
+          ) : (
+            <p style={{ color: "red", margin: 0 }}>Something went wrong</p>
+          )}
+        </div>
+
+        {/* Submit button – bottom right */}
+        <div
           style={{
-            width: "auto",        // ⬅️ no full width
-            padding: "8px 20px",  // smaller
-            fontSize: "14px",
-            minWidth: "150px",
-            whiteSpace: "nowrap",
+            display: "flex",
+            justifyContent: "flex-end", // ⬅️ pushes button to the right
+            marginTop: "8px",
           }}
         >
-          <span>Submit Inquiry</span>
-        </button>
-      </div>
+          <button
+            type="submit"
+            className="tf-btn style-1 bg-on-suface-container text-center"
+            style={{
+              width: "auto",        // ⬅️ no full width
+              padding: "8px 20px",  // smaller
+              fontSize: "14px",
+              minWidth: "150px",
+              whiteSpace: "nowrap",
+            }}
+          >
+            <span>Submit Inquiry</span>
+          </button>
+        </div>
 
       </form>
     </>
