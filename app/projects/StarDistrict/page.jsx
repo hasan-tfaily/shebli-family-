@@ -14,7 +14,7 @@ export default function StarDistrict() {
     <>
       <div className="image img-top">
         <Image
-          src="/image/page-title/our-ventures (1).png"
+          src="/image/page-title/star-banner.jpg"
           alt="Star District Hero"
           className="lazyload"
           width={1920}
