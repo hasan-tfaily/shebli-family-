@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import DropdownSelect from "../common/DropdownSelect";
-
+import Link from "next/link";
 // ---- TYPES ----
 interface ContactFormElements extends HTMLFormControlsCollection {
   name: HTMLInputElement;
@@ -254,6 +254,12 @@ export default function ContactForm() {
           <span>Submit Inquiry</span>
         </button>
       </form>
+      <Link
+  href="/inquiry-form"
+  className="tf-btn style-1 w-full bg-on-suface-container text-center"
+>
+  <span>Submit Inquiry</span>
+</Link>
     </>
   );
 }

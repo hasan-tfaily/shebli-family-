@@ -2578,3 +2578,61 @@ background-image: url("/image/page-title/our-ventures (1).png");
 }
 
 
+.inputEntity.choiceArea {
+  background: #f3f3f3;       /* light grey like screenshot */
+  padding: 24px 32px;
+  margin-top: 16px;
+}
+
+.inputEntity.choiceArea > label {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  color: #00558b;            /* blue title */
+  margin-bottom: 12px;
+}
+
+.stackedInput {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.stackedInput li + li {
+  margin-top: 6px;
+}
+
+.stackedInput input[type="radio"] {
+  margin-right: 8px;
+}
+
+.stackedInput label {
+  font-size: 14px;
+  color: #004466;
+  cursor: pointer;
+}
+/* Make SELECT look like the other inputs inside the inquiry form */
+
+.form-contact-us .item .inputParent select.form-control,
+.form-contact-us .item .inputParent select {
+  width: 100%;
+  display: block;
+  padding: 10px 15px;          /* match your input padding */
+  border: 1px solid #d0d0d0;   /* match input border */
+  border-radius: 4px;          /* match input radius */
+  font-size: 14px;
+  line-height: 1.5;
+  background-color: #fff;
+  color: #333;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* Optional: remove default browser arrow style so it feels cleaner */
+.form-contact-us .item .inputParent select.form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+

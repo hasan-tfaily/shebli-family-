@@ -15,7 +15,7 @@ export default function Contact() {
                 <div className="heading-section mb-28">
                   <div className="wow fadeInUp">
                     <Link
-                      href={`/contact-us`}
+                      href={`/inquiry-form`}
                       className="tag label text-btn-uppercase mb-12"
                     >
                       Contact US

@@ -130,7 +130,7 @@ export default function KarnavaliPage() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src="/image/karnavali/karnavali 2.png"
+                        src="/image/karnavali/karnavali 3.jpg"
                         alt="Karnavali View 2 - B"
                         className="lazyload"
                         width={444}
@@ -143,7 +143,7 @@ export default function KarnavaliPage() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src="/image/karnavali/karnavali 3.png"
+                        src="/image/karnavali/karnavali 4.jpg"
                         alt="Karnavali View 3 - B"
                         className="lazyload"
                         width={444}
@@ -156,7 +156,7 @@ export default function KarnavaliPage() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src="/image/karnavali/karnavali 2.png"
+                        src="/image/karnavali/karnavali 5.jpg"
                         alt="Karnavali View 2 - C"
                         className="lazyload"
                         width={444}
@@ -169,7 +169,7 @@ export default function KarnavaliPage() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src="/image/karnavali/karnavali 3.png"
+                        src="/image/karnavali/karnavali 6.jpg"
                         alt="Karnavali View 3 - C"
                         className="lazyload"
                         width={444}

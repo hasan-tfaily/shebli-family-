@@ -119,7 +119,7 @@ export default function KMInnovationCenterPage() {
                   </SwiperSlide>
 
                   {/* (Optional) duplicate slides for smoother loop */}
-                  <SwiperSlide>
+                  {/* <SwiperSlide>
                     <div className="image-blog">
                       <Image
                         src="/image/KM-innovation/innovation center 3.jpg"
@@ -129,7 +129,7 @@ export default function KMInnovationCenterPage() {
                         height={334}
                       />
                     </div>
-                  </SwiperSlide>
+                  </SwiperSlide> */}
 
                   <SwiperSlide>
                     <div className="image-blog">

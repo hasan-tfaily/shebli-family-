@@ -49,7 +49,7 @@ export default function TheEscapeParkandResort() {
               {/* MAIN IMAGE */}
               <div className="image-blog">
                 <Image
-                  src="/image/resortAndPark/background activities .jpg"
+                  src="/image/resortAndPark/resort pic 1.jpg"
                   alt="The Escape Park & Resort"
                   className="lazyload"
                   width={910}
@@ -136,7 +136,7 @@ export default function TheEscapeParkandResort() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src="/image/resortAndPark/karnavali 3.jpg"
+                        src="/image/resortAndPark/park 3.jpg"
                         alt="Escape Park Activity 1 - B"
                         className="lazyload"
                         width={444}
@@ -149,7 +149,7 @@ export default function TheEscapeParkandResort() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src="/image/resortAndPark/karnavali 4.jpg"
+                        src="/image/resortAndPark/park 4.jpg"
                         alt="Escape Park Activity 2 - B"
                         className="lazyload"
                         width={444}
@@ -162,7 +162,7 @@ export default function TheEscapeParkandResort() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src="/image/resortAndPark/karnavali 5.jpg"
+                        src="/image/resortAndPark/park 5.jpg"
                         alt="Escape Park Activity 1 - C"
                         className="lazyload"
                         width={444}
@@ -175,7 +175,7 @@ export default function TheEscapeParkandResort() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src="/image/resortAndPark/karnavali 6.jpg"
+                        src="/image/resortAndPark/park 6.jpg"
                         alt="Escape Park Activity 2 - C"
                         className="lazyload"
                         width={444}
