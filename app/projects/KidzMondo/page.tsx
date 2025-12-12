@@ -49,7 +49,7 @@ export default function KidzMondoPage() {
               {/* MAIN IMAGE */}
               <div className="image-blog">
                 <Image
-                  src="/image/kidzMondo/kidzmondo-is-a-safe-interactiv.jpg"
+                  src="/image/kidzMondo/Kidz-mondo-1.png"
                   alt="KidzMondo"
                   className="lazyload"
                   width={910}

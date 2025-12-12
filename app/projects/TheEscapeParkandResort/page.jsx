@@ -13,7 +13,7 @@ export default function TheEscapeParkandResort() {
     <>
       <div className="image img-top">
         <Image
-          src="/image/page-title/escape-banner.jpg"
+          src="/image/page-title/Hero-Banner3.jpg"
           alt="The Escape Park & Resort Hero"
           className="lazyload"
           width={1920}
@@ -110,7 +110,7 @@ export default function TheEscapeParkandResort() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src="/image/resortAndPark/image-3.jpg"
+                        src="/image/resortAndPark/resort pic 2.jpg"
                         alt="Escape Park Activity 1 - A"
                         className="lazyload"
                         width={444}
@@ -123,7 +123,7 @@ export default function TheEscapeParkandResort() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src="/image/resortAndPark/image-2.jpg"
+                        src="/image/resortAndPark/resort pic 3.jpg"
                         alt="Escape Park Activity 2 - A"
                         className="lazyload"
                         width={444}
@@ -136,8 +136,47 @@ export default function TheEscapeParkandResort() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src="/image/resortAndPark/image-1.jpg"
+                        src="/image/resortAndPark/park 3.jpg"
                         alt="Escape Park Activity 1 - B"
+                        className="lazyload"
+                        width={444}
+                        height={334}
+                      />
+                    </div>
+                  </SwiperSlide>
+
+                  {/* 4 (duplicate) */}
+                  <SwiperSlide>
+                    <div className="image-blog">
+                      <Image
+                        src="/image/resortAndPark/park 4.jpg"
+                        alt="Escape Park Activity 2 - B"
+                        className="lazyload"
+                        width={444}
+                        height={334}
+                      />
+                    </div>
+                  </SwiperSlide>
+
+                  {/* 5 (duplicate) */}
+                  <SwiperSlide>
+                    <div className="image-blog">
+                      <Image
+                        src="/image/resortAndPark/park 5.jpg"
+                        alt="Escape Park Activity 1 - C"
+                        className="lazyload"
+                        width={444}
+                        height={334}
+                      />
+                    </div>
+                  </SwiperSlide>
+
+                  {/* 6 (duplicate) */}
+                  <SwiperSlide>
+                    <div className="image-blog">
+                      <Image
+                        src="/image/resortAndPark/park 6.jpg"
+                        alt="Escape Park Activity 2 - C"
                         className="lazyload"
                         width={444}
                         height={334}
