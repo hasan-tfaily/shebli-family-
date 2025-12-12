@@ -15,7 +15,7 @@ export default function KarnavaliPage() {
     <>
       <div className="image img-top">
         <Image
-          src="/image/page-title/our-ventures (1).png"
+          src="/image/page-title/karnavali banner.jpg"
           alt=""
           className="lazyload"
           width={1920}
@@ -170,6 +170,17 @@ export default function KarnavaliPage() {
                     <div className="image-blog">
                       <Image
                         src="/image/karnavali/karnavali 6.jpg"
+                        alt="Karnavali View 3 - C"
+                        className="lazyload"
+                        width={444}
+                        height={334}
+                      />
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className="image-blog">
+                      <Image
+                        src="/image/karnavali/karnavali 7  1.jpg"
                         alt="Karnavali View 3 - C"
                         className="lazyload"
                         width={444}

@@ -18,7 +18,7 @@ export default function KMInnovationCenterPage() {
       {/* HERO IMAGE */}
       <div className="image img-top">
         <Image
-          src="/image/page-title/our-ventures (1).png"
+          src="/image/page-title/banner.jpg"
           alt="KM Innovation Center Hero"
           className="lazyload"
           width={1920}
@@ -158,7 +158,7 @@ export default function KMInnovationCenterPage() {
                    <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src="/image/KM-innovation/innovation center 6.jpg"
+                        src="/image/KM-innovation/innovation 5.jpg"
                         alt="Creative lab at KM Innovation Center (2)"
                         className="lazyload"
                         width={444}
@@ -166,6 +166,19 @@ export default function KMInnovationCenterPage() {
                       />
                     </div>
                   </SwiperSlide>
+
+<SwiperSlide>
+                    <div className="image-blog">
+                      <Image
+                        src="/image/KM-innovation/innovation 6.jpg"
+                        alt="Creative lab at KM Innovation Center (2)"
+                        className="lazyload"
+                        width={444}
+                        height={334}
+                      />
+                    </div>
+                  </SwiperSlide>
+
                 </Swiper>
               </div>
 

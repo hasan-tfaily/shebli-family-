@@ -125,7 +125,7 @@ export default function KidzMondoPage() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src="/image/kidzMondo/kidzMondo2.png"
+                        src="/image/kidzMondo/about – philosophy.jpg"
                         alt="KidzMondo Activity 1 - B"
                         className="lazyload"
                         width={444}
@@ -138,7 +138,7 @@ export default function KidzMondoPage() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src="/image/kidzMondo/kidzMondo3.png"
+                        src="/image/kidzMondo/about 1.jpg"
                         alt="KidzMondo Activity 2 - B"
                         className="lazyload"
                         width={444}
@@ -151,7 +151,7 @@ export default function KidzMondoPage() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src="/image/kidzMondo/kidzMondo2.png"
+                        src="/image/kidzMondo/about 2.jpg"
                         alt="KidzMondo Activity 1 - C"
                         className="lazyload"
                         width={444}
@@ -164,7 +164,7 @@ export default function KidzMondoPage() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src="/image/kidzMondo/kidzMondo3.png"
+                        src="/image/kidzMondo/about 3.jpg"
                         alt="KidzMondo Activity 2 - C"
                         className="lazyload"
                         width={444}

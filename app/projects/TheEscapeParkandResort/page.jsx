@@ -13,7 +13,7 @@ export default function TheEscapeParkandResort() {
     <>
       <div className="image img-top">
         <Image
-          src="/image/page-title/Hero-Banner3.jpg"
+          src="/image/page-title/resort banner.jpg"
           alt="The Escape Park & Resort Hero"
           className="lazyload"
           width={1920}
@@ -110,7 +110,7 @@ export default function TheEscapeParkandResort() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src="/image/resortAndPark/resort pic 2.jpg"
+                        src="/image/resortAndPark/resort 1.jpg"
                         alt="Escape Park Activity 1 - A"
                         className="lazyload"
                         width={444}
@@ -123,7 +123,7 @@ export default function TheEscapeParkandResort() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src="/image/resortAndPark/resort pic 3.jpg"
+                        src="/image/resortAndPark/resort 2.jpg"
                         alt="Escape Park Activity 2 - A"
                         className="lazyload"
                         width={444}

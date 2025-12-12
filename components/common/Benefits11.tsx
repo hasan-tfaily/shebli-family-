@@ -7,49 +7,49 @@ import Image from "next/image";
 // you can keep these exports as they are.
 export const boxIconItems = [
   {
-    icon: "/image/icon/mission.svg",
+    icon: "/image/icon/start-up.svg",
     title: "Entrepreneurship & startup building",
     description:
       "To design and operate innovative, story-driven leisure and entertainment experiences that enrich the lives of children and families. We bring imagination to life through purposeful design, experiential learning, operational excellence, and strong community connections.\n\nOur mission is to support governments, developers, and private partners in building impactful entertainment destinations that promote learning, creativity, wellbeing, and family bonding.",
   },
   {
-    icon: "/image/icon/vision.svg",
+    icon: "/image/icon/solution.svg",
     title: "Design Thinking & creative problem-solving",
     description:
       "To be the most trusted and inspiring edutainment group in the Middle East, transforming how children learn, play, and imagine their future.",
   },
   {
-    icon: "/image/icon/mission.svg",
+    icon: "/image/icon/coding.svg",
     title: "Coding & digital literacy labs",
     description:
       "Interactive experiences that introduce children to business basics, idea creation, and the foundations of running a startup.",
   },
   {
-    icon: "/image/icon/vision.svg",
+    icon: "/image/icon/robot-assistant.svg",
     title: "Robotics challenges and automation basics",
     description:
       "Hands-on challenges that foster empathy, ideation, prototyping, and iteration to solve real-world problems.",
   },
   {
-    icon: "/image/icon/mission.svg",
+    icon: "/image/icon/artificial-intelligence.svg",
     title: "Artificial Intelligence & smart technology concepts",
     description:
       "Engaging workshops that help children understand coding logic, digital tools, and the basics of programming.",
   },
   {
-    icon: "/image/icon/vision.svg",
+    icon: "/image/icon/virtual-tour.svg",
     title: "Augmented & Virtual Reality simulations",
     description:
       "Activities where children build, program, and test robots while learning about automation and future technologies.",
   },
   {
-    icon: "/image/icon/mission.svg",
+    icon: "/image/icon/cyber-security.svg",
     title: "Cyber Safety awareness modules",
     description:
       "Modules that teach children how to navigate the digital world safely, responsibly, and confidently.",
   },
   {
-    icon: "/image/icon/vision.svg",
+    icon: "/image/icon/game-controller.svg",
     title: "Gaming & gamified learning experiences",
     description:
       "Playful, game-based learning that turns key skills and concepts into immersive, motivating adventures.",

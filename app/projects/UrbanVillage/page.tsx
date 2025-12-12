@@ -15,7 +15,7 @@ export default function UrbanVillage() {
     <>
       <div className="image img-top">
         <Image
-          src="/image/page-title/our-ventures (1).png"
+          src="/image/page-title/UV-banner.jpg"
           alt=""
           className="lazyload"
           width={1920}
@@ -100,7 +100,7 @@ export default function UrbanVillage() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src="/image/UrbanVillage/urban-village 2.jpg"
+                        src="/image/UrbanVillage/1 .jpg"
                         alt="Urban Village View 1 - A"
                         className="lazyload"
                         width={444}
@@ -113,7 +113,7 @@ export default function UrbanVillage() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src="/image/UrbanVillage/urban-village 3.jpg"
+                        src="/image/UrbanVillage/2 .jpg"
                         alt="Urban Village View 2 - A"
                         className="lazyload"
                         width={444}
