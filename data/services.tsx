@@ -274,8 +274,8 @@ export const caseStudiesData = [
 export const servicesData2 = [
   {
     id: "tab-6",
-    tabTitle: "IT Strategy & Planning",
-    title: "IT Strategy & Planning",
+    tabTitle: "Why Join Us?",
+    title: "Why Join Us?",
     description: (
       <>
         Safeguard your business with comprehensive cybersecurity <br />
@@ -285,12 +285,11 @@ export const servicesData2 = [
       </>
     ),
     benefits: [
-      "Threat Monitoring",
-      "Incident Response",
-      "Firewall Management",
-      "Risk Assessment",
-      "Data Encryption",
-      "Endpoint Security Tools",
+      "Be part of a group shaping the future of the leisure and entertainment industry",
+      "Work on exciting, meaningful projects that impact communities",
+      "Grow within a supportive, multicultural environment",
+      "Access continuous training and professional development",
+      "Join a team that values creativity, passion, and excellence",
     ],
     imgSrc: "/image/section/img-section-services-h8-2.jpg",
     imgWidth: 960,
@@ -299,79 +298,28 @@ export const servicesData2 = [
   },
   {
     id: "tab-7",
-    tabTitle: "Cybersecurity Solutions",
-    title: "Cybersecurity Solutions",
+    tabTitle: "Who We Look For?",
+    title: "Who We Look For?",
     description: (
       <>
-        Safeguard your business with comprehensive cybersecurity <br />
-        solutions, including threat detection, risk assessment, and advanced
+        We recruit talents who bring energy, imagination, and professionalism to their work.<br />
         <br />
-        protection against cyberattacks.
+        Ideal candidates:
       </>
     ),
     benefits: [
-      "Threat Monitoring",
-      "Incident Response",
-      "Firewall Management",
-      "Risk Assessment",
-      "Data Encryption",
-      "Endpoint Security Tools",
+      "Love working around children and families",
+      "Thrive in fast-paced, dynamic environments",
+      "Are proactive, adaptable, and eager to learn",
+      "Demonstrate strong communication and teamwork skills",
+      "Bring creative thinking to problem-solving",
     ],
     imgSrc: "/image/section/img-section-services-h8-1.jpg",
     imgWidth: 640,
     imgHeight: 480,
     isActive: true,
   },
-  {
-    id: "tab-8",
-    tabTitle: "Cloud Services & Migration",
-    title: "Cloud Services & Migration",
-    description: (
-      <>
-        Safeguard your business with comprehensive cybersecurity <br />
-        solutions, including threat detection, risk assessment, and advanced
-        <br />
-        protection against cyberattacks.
-      </>
-    ),
-    benefits: [
-      "Threat Monitoring",
-      "Incident Response",
-      "Firewall Management",
-      "Risk Assessment",
-      "Data Encryption",
-      "Endpoint Security Tools",
-    ],
-    imgSrc: "/image/section/img-section-services-h8-3.jpg",
-    imgWidth: 960,
-    imgHeight: 720,
-    isActive: false,
-  },
-  {
-    id: "tab-9",
-    tabTitle: "Managed IT Support",
-    title: "Managed IT Support",
-    description: (
-      <>
-        Safeguard your business with comprehensive cybersecurity <br />
-        solutions, including threat detection, risk assessment, and advanced
-        <br />
-        protection against cyberattacks.
-      </>
-    ),
-    benefits: [
-      "Threat Monitoring",
-      "Incident Response",
-      "Firewall Management",
-      "Risk Assessment",
-      "Data Encryption",
-      "Endpoint Security Tools",
-    ],
-    imgSrc: "/image/section/img-section-services-h8-4.jpg",
-    imgWidth: 960,
-    imgHeight: 720,
-    isActive: false,
-  },
+ 
 ];
 
 export const allServices = [

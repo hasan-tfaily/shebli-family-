@@ -33,7 +33,7 @@ export default function page() {
         <Process />
         <Features />
         <CaseStudies />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <Contact />
         <Blogs />
         <Cta />

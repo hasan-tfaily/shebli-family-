@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
@@ -12,26 +13,32 @@ export default function Services() {
       <div className="tf-container">
         <div className="row">
           <div className="col-12">
-            <div className="heading-section text-center">
+
+            {/* ✅ LEFT aligned heading */}
+            <div className="heading-section text-start">
               <div className="text-anime-wave-1">
                 <a href="#" className="tag label text-btn-uppercase">
                   Our Services
                 </a>
               </div>
+
               <h3 className="title-section text-anime-wave-1 mb-12">
-                Custom Strategies for Your Goals
+                Careers at Kidz Holding
               </h3>
+
               <div className="sub-title body-2 text-anime-wave-1">
-                See the impact of our solutions through clear, measurable
-                results.
+                Start a career……..not just a job.
+                <br />
+                Whether you’re a fresh graduate, an experienced professional, or
+                a creative visionary, Kidz Holding offers opportunities to grow
+                within an industry that blends entertainment, education,
+                storytelling, and innovation.
               </div>
             </div>
+
             <div className="flat-animate-tab">
               <div className="wg-tab">
-                <ul
-                  className="tab-product g-40 justify-content-between min-w-1131"
-                  role="tablist"
-                >
+                <ul className="tab-product tab-left" role="tablist">
                   {servicesData2.map(({ id, tabTitle, isActive }) => (
                     <li className="nav-tab-item" role="presentation" key={id}>
                       <h5>
@@ -48,6 +55,7 @@ export default function Services() {
                   ))}
                 </ul>
               </div>
+
               <div className="tab-content">
                 {servicesData2.map(
                   ({
@@ -71,23 +79,15 @@ export default function Services() {
                           <h4 className="title-content mb-12">
                             <Link href="/services-details-1">{title}</Link>
                           </h4>
+
                           <div className="sub-title mb-28 body-2">
                             {description}
                           </div>
+
+                          {/* ✅ SINGLE COLUMN BENEFITS */}
                           <div className="cols mb-20">
-                            {/* Split benefits in two columns */}
                             <div className="benefit-lists item">
-                              {benefits.slice(0, 3).map((benefit, i) => (
-                                <div className="benefit-items" key={i}>
-                                  <div className="icon">
-                                    <i className="icon-checkbox" />
-                                  </div>
-                                  <div className="title">{benefit}</div>
-                                </div>
-                              ))}
-                            </div>
-                            <div className="benefit-lists item">
-                              {benefits.slice(3).map((benefit, i) => (
+                              {benefits.map((benefit, i) => (
                                 <div className="benefit-items" key={i}>
                                   <div className="icon">
                                     <i className="icon-checkbox" />
@@ -97,13 +97,8 @@ export default function Services() {
                               ))}
                             </div>
                           </div>
-                          <Link
-                            href="/services-details-1"
-                            className="tf-btn style-1 bg-on-suface-container"
-                          >
-                            <span>Let's Talk</span>
-                          </Link>
                         </div>
+
                         <div className="image">
                           <Image
                             src={imgSrc}
@@ -119,6 +114,21 @@ export default function Services() {
                 )}
               </div>
             </div>
+
+            {/* If something still centers due to theme CSS, this forces left */}
+            <style jsx global>{`
+              .section-services .heading-section {
+                text-align: left !important;
+              }
+              .tab-product.tab-left {
+                display: flex !important;
+                justify-content: flex-start !important;
+                align-items: center;
+                gap: 16px;
+                min-width: 0 !important;
+              }
+            `}</style>
+
           </div>
         </div>
       </div>
