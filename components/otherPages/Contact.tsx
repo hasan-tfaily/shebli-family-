@@ -25,9 +25,9 @@ export default function Contact() {
                     Get in Touch with Us
                   </h3>
                   <div className="sub-title body-2 color-on-suface-container wow fadeInUp">
-                    Whether you’re exploring a partnership, expanding your investment portfolio,  
+                    Whether you’re exploring a partnership, expanding your investment portfolio,
                     <br />
-                     or bringing a new entertainment experience to your city, our team is here to support you.
+                    or bringing a new entertainment experience to your city, our team is here to support you.
                   </div>
                 </div>
                 <div className="cols">
@@ -176,6 +176,14 @@ export default function Contact() {
                     </div>
                   </div>
                 </div> */}
+                <p>Looking for franchising? Fill out the form below.</p>
+                <Link
+                  href="/inquiry-form"
+                  className="tf-btn style-1  bg-on-suface-container text-center"
+                  style={{marginTop:"20px"}}
+                >
+                  <span>Franchise Form</span>
+                </Link>
               </div>
             </div>
           </div>

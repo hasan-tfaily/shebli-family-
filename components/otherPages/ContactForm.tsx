@@ -195,7 +195,6 @@ export default function ContactForm() {
                 "Topic",
                 "New Venture",
                 "Management Consultation",
-                "Franchise (links to KidzMondo franchise form)",
                 "Other Inquiries",
               ]}
               selectedValue={topic}
@@ -205,7 +204,7 @@ export default function ContactForm() {
         </div>
 
         {/* Row 4: Investment Range */}
-        <div className="cols">
+        {/* <div className="cols">
           <fieldset className="item">
             <DropdownSelect
               options={[
@@ -217,8 +216,8 @@ export default function ContactForm() {
               ]}
             />
           </fieldset>
-          <fieldset className="item">{/* spacer */}</fieldset>
-        </div>
+          <fieldset className="item"></fieldset>
+        </div> */}
 
         {/* Message */}
         <fieldset>
@@ -254,12 +253,7 @@ export default function ContactForm() {
           <span>Submit Inquiry</span>
         </button>
       </form>
-      <Link
-  href="/inquiry-form"
-  className="tf-btn style-1 w-full bg-on-suface-container text-center"
->
-  <span>Submit Inquiry</span>
-</Link>
+    
     </>
   );
 }
