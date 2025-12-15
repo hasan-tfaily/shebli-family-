@@ -2707,5 +2707,64 @@ background-image: url("/image/page-title/our-ventures (1).png");
 
 
 .section-brand .marquee-child-item {
-  margin-right: 40px; // change to what you want (20/30/50...)
+  margin-right: 40px; 
+}
+
+
+
+/* Title color (optional) */
+.section-brand h5,
+.section-brand .text {
+  color: #fff;
+}
+
+/* Marquee viewport */
+.brand-marquee__viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Moving track (contains 2 identical lists) */
+.brand-marquee__track {
+  display: flex;
+  width: max-content;
+  animation: brandMarqueeScroll 35s linear infinite; /* speed here */
+  will-change: transform;
+}
+
+/* Each list row */
+.brand-marquee__list {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* space between logos */
+  padding-right: 40px; /* keeps gap at the seam */
+}
+
+/* Each logo item */
+.brand-marquee__item {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* OPTIONAL: make all logos consistent height */
+.brand-marquee__item img {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Infinite loop: move by exactly one list (half of the track) */
+@keyframes brandMarqueeScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause on hover (optional) */
+.brand-marquee__viewport:hover .brand-marquee__track {
+  animation-play-state: paused;
 }

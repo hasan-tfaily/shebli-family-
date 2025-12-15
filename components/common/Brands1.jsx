@@ -1,288 +1,71 @@
-import Link from "next/link";
+"use client";
 import Image from "next/image";
 import React from "react";
 
+const logos = [
+  "/image/logos/4.png",
+  "/image/logos/5.png",
+  "/image/logos/6.jpg",
+  "/image/logos/7.jpg",
+  "/image/logos/8.jpg",
+  "/image/logos/9.jpg",
+  "/image/logos/10.jpg",
+  "/image/logos/11.jpg",
+  "/image/logos/12.jpg",
+  "/image/logos/13.jpg",
+  "/image/logos/14.jpg",
+  "/image/logos/19-The View Hospital.png",
+  "/image/logos/23.jpg",
+  "/image/logos/36.jpg",
+  "/image/logos/168Logo.png",
+  "/image/logos/170Logo.png",
+  "/image/logos/171Logo.png",
+  "/image/logos/182Logo.png",
+  "/image/logos/195Logo.png",
+  "/image/logos/202Logo.png",
+  "/image/logos/210Logo.png",
+  "/image/logos/2530Logo.png",
+  "/image/logos/edu.png",
+  "/image/logos/rail.png",
+  "/image/logos/186Logo.gif",
+  "/image/logos/184Logo.png",
+];
+
 export default function Brands1() {
-    return (
-        <section className="section-brand h-5 tf-spacing-3">
-            <div className="tf-container position-relative">
-                <div className="row">
-                    <div className="col-12">
-                        <h5 className="text text-center mb-28">
-                            Partnerships
-                        </h5>
-                        <div className="tf-marquee">
-                            <div className="marquee-wrapper">
-                                <div className="initial-child-container">
-                                    <div className="marquee-child-item">
-                                        <a href="#" className="brand-item">
-                                            <Image
-                                                alt=""
-                                                src="/image/logos/4.png"
-                                                width={226}
-                                                height={44}
-                                            />
-                                        </a>
-                                    </div>
-                                    <div className="marquee-child-item">
-                                        <a href="#" className="brand-item">
-                                            <Image
-                                                alt=""
-                                                src="/image/logos/5.png"
-                                                width={226}
-                                                height={44}
-                                            />
-                                        </a>
-                                    </div>
-                                    <div className="marquee-child-item">
-                                        <a href="#" className="brand-item">
-                                            <Image
-                                                alt=""
-                                                src="/image/logos/6.jpg"
-                                                width={226}
-                                                height={44}
-                                            />
-                                        </a>
-                                    </div>
-                                    <div className="marquee-child-item">
-                                        <a href="#" className="brand-item">
-                                            <Image
-                                                alt=""
-                                                src="/image/logos/7.jpg"
-                                                width={226}
-                                                height={44}
-                                            />
-                                        </a>
-                                    </div>
-                                    <div className="marquee-child-item">
-                                        <a href="#" className="brand-item">
-                                            <Image
-                                                alt=""
-                                                src="/image/logos/8.jpg"
-                                                width={226}
-                                                height={44}
-                                            />
-                                        </a>
-                                    </div>
-                                    {/* 2 */}
-                                    <div className="marquee-child-item">
-                                        <a href="#" className="brand-item">
-                                            <Image
-                                                alt=""
-                                                src="/image/logos/9.jpg"
-                                                width={226}
-                                                height={44}
-                                            />
-                                        </a>
-                                    </div>
-                                    <div className="marquee-child-item">
-                                        <a href="#" className="brand-item">
-                                            <Image
-                                                alt=""
-                                                src="/image/logos/10.jpg"
-                                                width={226}
-                                                height={44}
-                                            />
-                                        </a>
-                                    </div>
-                                    <div className="marquee-child-item">
-                                        <a href="#" className="brand-item">
-                                            <Image
-                                                alt=""
-                                                src="/image/logos/11.jpg"
-                                                width={226}
-                                                height={44}
-                                            />
-                                        </a>
-                                    </div>
-                                    <div className="marquee-child-item">
-                                        <a href="#" className="brand-item">
-                                            <Image
-                                                alt=""
-                                                src="/image/logos/12.jpg"
-                                                width={226}
-                                                height={44}
-                                            />
-                                        </a>
-                                    </div>
-                                    <div className="marquee-child-item">
-                                        <a href="#" className="brand-item">
-                                            <Image
-                                                alt=""
-                                                src="/image/logos/13.jpg"
-                                                width={226}
-                                                height={44}
-                                            />
-                                        </a>
-                                    </div>
-                                    {/* 3 */}
-                                    <div className="marquee-child-item">
-                                        <a href="#" className="brand-item">
-                                            <Image
-                                                alt=""
-                                                src="/image/logos/14.jpg"
-                                                width={226}
-                                                height={44}
-                                            />
-                                        </a>
-                                    </div>
-                                    <div className="marquee-child-item">
-                                        <a href="#" className="brand-item">
-                                            <Image
-                                                alt=""
-                                                src="/image/logos/19-The View Hospital.png"
-                                                width={226}
-                                                height={44}
-                                            />
-                                        </a>
-                                    </div>
-                                    <div className="marquee-child-item">
-                                        <a href="#" className="brand-item">
-                                            <Image
-                                                alt=""
-                                                src="/image/logos/23.jpg"
-                                                width={226}
-                                                height={44}
-                                            />
-                                        </a>
-                                    </div>
-                                    <div className="marquee-child-item">
-                                        <a href="#" className="brand-item">
-                                            <Image
-                                                alt=""
-                                                src="/image/logos/36.jpg"
-                                                width={226}
-                                                height={44}
-                                            />
-                                        </a>
-                                    </div>
-                                    <div className="marquee-child-item">
-                                        <a href="#" className="brand-item">
-                                            <Image
-                                                alt=""
-                                                src="/image/logos/168Logo.png"
-                                                width={226}
-                                                height={44}
-                                            />
-                                        </a>
-                                    </div>
-                                    {/* 4 */}
-                                    <div className="marquee-child-item">
-                                        <a href="#" className="brand-item">
-                                            <Image
-                                                alt=""
-                                                src="/image/logos/170Logo.png"
-                                                width={226}
-                                                height={44}
-                                            />
-                                        </a>
-                                    </div>
-                                    <div className="marquee-child-item">
-                                        <a href="#" className="brand-item">
-                                            <Image
-                                                alt=""
-                                                src="/image/logos/171Logo.png"
-                                                width={226}
-                                                height={44}
-                                            />
-                                        </a>
-                                    </div>
-                                    <div className="marquee-child-item">
-                                        <a href="#" className="brand-item">
-                                            <Image
-                                                alt=""
-                                                src="/image/logos/182Logo.png"
-                                                width={226}
-                                                height={44}
-                                            />
-                                        </a>
-                                    </div>
-                                    <div className="marquee-child-item">
-                                        <a href="#" className="brand-item">
-                                            <Image
-                                                alt=""
-                                                src="/image/logos/195 Logo.png"
-                                                width={226}
-                                                height={44}
-                                            />
-                                        </a>
-                                    </div>
-                                    <div className="marquee-child-item">
-                                        <a href="#" className="brand-item">
-                                            <Image
-                                                alt=""
-                                                src="/image/logos/202Logo.png"
-                                                width={226}
-                                                height={44}
-                                            />
-                                        </a>
-                                    </div>
-                                    <div className="marquee-child-item">
-                                        <a href="#" className="brand-item">
-                                            <Image
-                                                alt=""
-                                                src="/image/logos/210Logo.png"
-                                                width={226}
-                                                height={44}
-                                            />
-                                        </a>
-                                    </div>
-                                    <div className="marquee-child-item">
-                                        <a href="#" className="brand-item">
-                                            <Image
-                                                alt=""
-                                                src="/image/logos/2530Logo.png"
-                                                width={226}
-                                                height={44}
-                                            />
-                                        </a>
-                                    </div>
-                                    <div className="marquee-child-item">
-                                        <a href="#" className="brand-item">
-                                            <Image
-                                                alt=""
-                                                src="/image/logos/edu.png"
-                                                width={226}
-                                                height={44}
-                                            />
-                                        </a>
-                                    </div>
-                                    <div className="marquee-child-item">
-                                        <a href="#" className="brand-item">
-                                            <Image
-                                                alt=""
-                                                src="/image/logos/rail.png"
-                                                width={226}
-                                                height={44}
-                                            />
-                                        </a>
-                                    </div>
-                                    <div className="marquee-child-item">
-                                        <a href="#" className="brand-item">
-                                            <Image
-                                                alt=""
-                                                src="/image/logos/186Logo.png"
-                                                width={226}
-                                                height={44}
-                                            />
-                                        </a>
-                                    </div>
-                                    <div className="marquee-child-item">
-                                        <a href="#" className="brand-item">
-                                            <Image
-                                                alt=""
-                                                src="/image/logos/184Logo.png"
-                                                width={226}
-                                                height={44}
-                                            />
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+  return (
+    <section className="section-brand h-5 tf-spacing-3">
+      <div className="tf-container position-relative">
+        <div className="row">
+          <div className="col-12">
+            <h5 className="text text-center mb-28">Partnerships</h5>
+
+            <div className="brand-marquee">
+              <div className="brand-marquee__viewport">
+                <div className="brand-marquee__track">
+                  {/* List #1 */}
+                  <div className="brand-marquee__list">
+                    {logos.map((src) => (
+                      <a key={src} href="#" className="brand-marquee__item">
+                        <Image alt="" src={src} width={300} height={60} />
+                      </a>
+                    ))}
+                  </div>
+
+                  {/* List #2 (duplicate for infinite loop) */}
+                  <div className="brand-marquee__list" aria-hidden="true">
+                    {logos.map((src) => (
+                      <a key={`dup-${src}`} href="#" className="brand-marquee__item">
+                        <Image alt="" src={src} width={300} height={44} />
+                      </a>
+                    ))}
+                  </div>
                 </div>
+              </div>
             </div>
-        </section>
-    );
+            {/* /.brand-marquee */}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
