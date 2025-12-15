@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import Brands1 from "@/components/common/Brands1";
 
 export default function KidzMondoPage() {
   return (
@@ -242,8 +243,9 @@ export default function KidzMondoPage() {
             </div>
           </div>
         </div>
+       
         {/* /.main-content */}
-      </div>
+      </div> <Brands1 />
     </>
   );
 }
