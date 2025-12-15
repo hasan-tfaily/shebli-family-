@@ -1641,7 +1641,7 @@ background-image: url("/image/page-title/our-ventures (1).png");
       width: 100%;
       height: 100%;
       opacity: 0.3;
-      background-image: url("/images/section/9340105 1.png");
+      background-image: url("/image/section/9340105 1.png");
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -2643,3 +2643,63 @@ background-image: url("/image/page-title/our-ventures (1).png");
 }
 
 
+
+
+/* Activities section: centered block + white text */
+.activities-section {
+  color: #fff; /* all text white */
+}
+
+.activities-section .section-contact-home-inner {
+  display: block;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Center the whole content block (equal left/right space) */
+.activities-section .activities-block {
+  width: min(980px, 100%);
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+/* Title/subtitle white (in case theme overrides) */
+.activities-section .title-section,
+.activities-section .sub-title,
+.activities-section .caption-1 {
+  color: #fff !important;
+}
+
+/* Two columns centered as one group (not stretched) */
+.activities-section .activities-cols {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 140px; /* space between columns */
+  margin-top: 28px;
+  width: 100%;
+}
+
+/* Fixed column width so the 2 columns stay centered */
+.activities-section .activities-cols .benefit-lists {
+  flex: 0 0 320px;
+  max-width: 320px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .activities-section .activities-block {
+    padding-inline: 16px;
+  }
+
+  .activities-section .activities-cols {
+    flex-direction: column;
+    gap: 18px;
+    align-items: flex-start;
+  }
+
+  .activities-section .activities-cols .benefit-lists {
+    flex: 0 0 auto;
+    max-width: 100%;
+  }
+}

@@ -14,7 +14,7 @@ export default function BowlNRock() {
     <>
       <div className="image img-top">
         <Image
-          src="/image/page-title/our-ventures (1).png"
+          src="/image/page-title/banner-BNR.jpg"
           alt="Bowl N Rock Hero"
           className="lazyload"
           width={1920}
