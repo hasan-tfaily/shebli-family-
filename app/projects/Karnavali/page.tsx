@@ -210,12 +210,12 @@ export default function KarnavaliPage() {
                     Guests can choose between a wide range of activities,
                     including:
                   </p>
-                  <p className="body-2">
+                  {/* <p className="body-2">
                     Karnavali is built to cater to different personalities,
                     interests, and age groups —
                     <br />
                     ensuring every visitor finds their unique version of fun.
-                  </p>
+                  </p> */}
                 </div>
 
                 <Testimonials />

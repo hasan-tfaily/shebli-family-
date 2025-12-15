@@ -20,6 +20,11 @@ export default function UrbanVillageServices() {
           <div className="col-12">
             <div className="heading-section style-2">
               <div className="left">
+                <div className="text-anime-wave">
+                  <a href="#" className="tag label text-btn-uppercase bg-white">
+                    Experiences
+                  </a>
+                </div>
                 <h3 className="title-section text-anime-wave">Experiences</h3>
               </div>
             </div>

@@ -20,6 +20,11 @@ export default function StarDistrictSection() {
           <div className="col-12">
             <div className="heading-section style-2">
               <div className="left">
+                 <div className="text-anime-wave">
+                  <a href="#" className="tag label text-btn-uppercase bg-white">
+                    Experiences
+                  </a>
+                </div>
                 {/* <div className="text-anime-wave">
                   <a
                     href="#"

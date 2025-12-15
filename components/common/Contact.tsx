@@ -31,7 +31,7 @@ export default function Contact() {
             <div className="section-contact-home-inner">
               <div className="activities-block">
                 <div className="heading-section mb-28 style-color-white">
-                  <h3 className="title-section mb-12 wow fadeInUp">Activities</h3>
+                  <h5 className="title-section mb-12 wow fadeInUp">Activities</h5>
                   <div className="sub-title body-2 wow fadeInUp">
                     Karnavali offers a wide range of engaging activities, including but not limited to:
                   </div>

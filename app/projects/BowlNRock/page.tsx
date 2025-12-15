@@ -12,20 +12,20 @@ import Faqs from "@/components/homes/strategy-consulting/Faqs";
 export default function BowlNRock() {
   return (
     <>
-      <div className="image img-top">
-        <Image
-          src="/image/page-title/banner-BNR.jpg"
-          alt="Bowl N Rock Hero"
-          className="lazyload"
-          width={1920}
-          height={1080}
-          style={{
-            width: "100%",
-            height: "auto",
-            maxWidth: "100%",
-          }}
-        />
-      </div>
+       <div className="image img-top">
+              <Image
+                src="/image/page-title/banner-BNR (1).jpg"
+                alt=""
+                className="lazyload"
+                width={1920}
+                height={1080}
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  maxWidth: "100%",
+                }}
+              />
+            </div>
 
       <div className="tf-container">
         <div className="row">

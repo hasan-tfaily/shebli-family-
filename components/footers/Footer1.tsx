@@ -93,9 +93,9 @@ export default function Footer1({ parentClass = "footer" }) {
                       <li className="support-item-footer caption-1">
                         <Link href={`/projects/Karnavali`}>Karnavali</Link>
                       </li>
-                      <li className="support-item-footer caption-1">
+                      {/* <li className="support-item-footer caption-1">
                         <Link href={`/projects/KidzAcademy`}>Kidz Academy </Link>
-                      </li>
+                      </li> */}
                       <li className="support-item-footer caption-1">
                         <Link href={`/projects/KidzMondo`}>Kidz Mondo</Link>
                       </li>

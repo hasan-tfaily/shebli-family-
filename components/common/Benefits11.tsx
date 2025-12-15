@@ -89,7 +89,7 @@ export default function Benefits() {
   const items = boxIconItems.slice(0, 8);
 
   return (
-    <section style={{ padding: "48px 0" }}>
+    <section >
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
         <div
           style={{

@@ -131,7 +131,7 @@ export default function KMInnovationCenterPage() {
                     </div>
                   </SwiperSlide> */}
 
-                  <SwiperSlide>
+                  {/* <SwiperSlide>
                     <div className="image-blog">
                       <Image
                         src="/image/KM-innovation/innovation center 4.jpg"
@@ -141,9 +141,9 @@ export default function KMInnovationCenterPage() {
                         height={334}
                       />
                     </div>
-                  </SwiperSlide>
+                  </SwiperSlide> */}
 
-                   <SwiperSlide>
+                  <SwiperSlide>
                     <div className="image-blog">
                       <Image
                         src="/image/KM-innovation/innovation center 5.jpg"
@@ -155,7 +155,7 @@ export default function KMInnovationCenterPage() {
                     </div>
                   </SwiperSlide>
 
-                   <SwiperSlide>
+                  <SwiperSlide>
                     <div className="image-blog">
                       <Image
                         src="/image/KM-innovation/innovation 5.jpg"
@@ -167,7 +167,7 @@ export default function KMInnovationCenterPage() {
                     </div>
                   </SwiperSlide>
 
-<SwiperSlide>
+                  <SwiperSlide>
                     <div className="image-blog">
                       <Image
                         src="/image/KM-innovation/innovation 6.jpg"
@@ -206,7 +206,7 @@ export default function KMInnovationCenterPage() {
                   </p>
                 </div>
 
-                <h5 className="title-desc">Activities:</h5>
+                <h5 className="title-desc" style={{marginTop:"90px"}}>Activities:</h5>
               </div>
 
               <Benefits11 />
