@@ -1,10 +1,10 @@
 "use client";
 
-// KMInnovationCenter page
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
+import type { Swiper as SwiperClass } from "swiper";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -12,13 +12,11 @@ import "swiper/css/navigation";
 import Benefits11 from "@/components/common/Benefits11";
 
 export default function KMInnovationCenterPage() {
-  const swiperRef = useRef(null);
+  const swiperRef = useRef<SwiperClass | null>(null);
 
   useEffect(() => {
     const update = () => {
-      if (swiperRef.current && typeof swiperRef.current.update === "function") {
-        swiperRef.current.update();
-      }
+      swiperRef.current?.update();
     };
 
     const t = setTimeout(update, 120);
@@ -42,11 +40,12 @@ export default function KMInnovationCenterPage() {
 
   return (
     <>
-      {/* HERO IMAGE */}
-      <div className="page-hero">
+      {/* HERO IMAGE (restored to your original wrapper) */}
+      <div className="image img-top">
         <Image
           src="/image/page-title/banner.jpg"
           alt="KM Innovation Center Hero"
+          className="lazyload"
           width={1920}
           height={1080}
           style={{ width: "100%", height: "auto", maxWidth: "100%" }}
@@ -80,6 +79,7 @@ export default function KMInnovationCenterPage() {
                 <Image
                   src="/image/KM-innovation/KM 1.jpg"
                   alt="Children exploring at KM Innovation Center"
+                  className="lazyload"
                   width={910}
                   height={512}
                   style={{ width: "100%", height: "auto" }}
@@ -99,7 +99,7 @@ export default function KMInnovationCenterPage() {
                 </p>
               </div>
 
-              {/* ✅ SWIPER FIX (NO cols-img wrapper) */}
+              {/* ✅ SWIPER (unchanged design) */}
               <div className="kminnovation-gallery">
                 <Swiper
                   modules={[Navigation]}
@@ -123,6 +123,7 @@ export default function KMInnovationCenterPage() {
                         <Image
                           src={src}
                           alt={`KM Innovation Center slide ${i + 1}`}
+                          className="lazyload"
                           width={444}
                           height={334}
                           style={{ width: "100%", height: "auto", display: "block" }}

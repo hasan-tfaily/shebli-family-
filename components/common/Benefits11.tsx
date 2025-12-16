@@ -3,101 +3,56 @@
 import React from "react";
 import Image from "next/image";
 
-// If this file is in /data/benefits.tsx and you import boxIconItems elsewhere,
-// you can keep these exports as they are.
 export const boxIconItems = [
   {
     icon: "/image/icon/start-up.svg",
     title: "Entrepreneurship & startup building",
-    description:
-      "To design and operate innovative, story-driven leisure and entertainment experiences that enrich the lives of children and families. We bring imagination to life through purposeful design, experiential learning, operational excellence, and strong community connections.\n\nOur mission is to support governments, developers, and private partners in building impactful entertainment destinations that promote learning, creativity, wellbeing, and family bonding.",
+    description: "",
   },
   {
     icon: "/image/icon/solution.svg",
     title: "Design Thinking & creative problem-solving",
-    description:
-      "To be the most trusted and inspiring edutainment group in the Middle East, transforming how children learn, play, and imagine their future.",
+    description: "",
   },
   {
     icon: "/image/icon/coding.svg",
     title: "Coding & digital literacy labs",
-    description:
-      "Interactive experiences that introduce children to business basics, idea creation, and the foundations of running a startup.",
+    description: "",
   },
   {
     icon: "/image/icon/robot-assistant.svg",
     title: "Robotics challenges and automation basics",
-    description:
-      "Hands-on challenges that foster empathy, ideation, prototyping, and iteration to solve real-world problems.",
+    description: "",
   },
   {
     icon: "/image/icon/artificial-intelligence.svg",
     title: "Artificial Intelligence & smart technology concepts",
-    description:
-      "Engaging workshops that help children understand coding logic, digital tools, and the basics of programming.",
+    description: "",
   },
   {
     icon: "/image/icon/virtual-tour.svg",
     title: "Augmented & Virtual Reality simulations",
-    description:
-      "Activities where children build, program, and test robots while learning about automation and future technologies.",
+    description: "",
   },
   {
     icon: "/image/icon/cyber-security.svg",
     title: "Cyber Safety awareness modules",
-    description:
-      "Modules that teach children how to navigate the digital world safely, responsibly, and confidently.",
+    description: "",
   },
   {
     icon: "/image/icon/game-controller.svg",
     title: "Gaming & gamified learning experiences",
-    description:
-      "Playful, game-based learning that turns key skills and concepts into immersive, motivating adventures.",
-  },
-];
-
-// Kept here in case you still need them elsewhere
-export const boxIconItems2 = [
-  {
-    iconClass: "icon-risk",
-    title: "Mitigation Compliance",
-    description:
-      "Proactively identify and address potential risks to ensure your business remains stable and secure in a volatile environment and standards.",
-  },
-  {
-    iconClass: "icon-regulatory",
-    title: "Regulatory Compliance",
-    description:
-      "Proactively identify and address potential risks to ensure your business remains stable and secure in a volatile environment and standards.",
-  },
-  {
-    iconClass: "icon-strategic-planning",
-    title: "Operational Efficiency",
-    description:
-      "Proactively identify and address potential risks to ensure your business remains stable and secure in a volatile environment and standards.",
-  },
-  {
-    iconClass: "icon-reputation",
-    title: "Reputation Protection",
-    description:
-      "Proactively identify and address potential risks to ensure your business remains stable and secure in a volatile environment and standards.",
+    description: "",
   },
 ];
 
 export default function Benefits() {
-  // Take exactly 8 items (you now have 8 above)
   const items = boxIconItems.slice(0, 8);
 
   return (
-    <section >
+    <section>
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)", // 4 boxes per row
-            gap: 32,
-          }}
-        >
+        <div className="benefits-grid">
           {items.map((item, i) => (
             <div
               key={i}
@@ -111,17 +66,10 @@ export default function Benefits() {
                 flexDirection: "column",
               }}
             >
-              {/* ICON */}
               <div style={{ marginBottom: 12 }}>
-                <Image
-                  src={item.icon}
-                  alt={item.title}
-                  width={40}
-                  height={40}
-                />
+                <Image src={item.icon} alt={item.title} width={40} height={40} />
               </div>
 
-              {/* TITLE */}
               <h5
                 style={{
                   margin: "0 0 8px",
@@ -132,23 +80,32 @@ export default function Benefits() {
               >
                 {item.title}
               </h5>
-
-              {/* DESCRIPTION */}
-              {/* <p
-                style={{
-                  margin: 0,
-                  fontSize: 14,
-                  lineHeight: 1.6,
-                  color: "#6b7280",
-                  whiteSpace: "pre-line",
-                }}
-              >
-                {item.description}
-              </p> */}
             </div>
           ))}
         </div>
       </div>
+
+      {/* ✅ responsive CSS INSIDE the component */}
+      <style jsx>{`
+        .benefits-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 32px;
+        }
+
+        @media (max-width: 1024px) {
+          .benefits-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        @media (max-width: 767px) {
+          .benefits-grid {
+            grid-template-columns: 1fr; /* ✅ 1 column on mobile */
+            gap: 16px;
+          }
+        }
+      `}</style>
     </section>
   );
 }

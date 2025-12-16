@@ -4,6 +4,7 @@ import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
+import type { Swiper as SwiperClass } from "swiper";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -11,13 +12,11 @@ import "swiper/css/navigation";
 import UrbanVillageServices from "@/components/common/UrbanVillageServices";
 
 export default function UrbanVillage() {
-  const swiperRef = useRef(null);
+  const swiperRef = useRef<SwiperClass | null>(null);
 
   useEffect(() => {
     const update = () => {
-      if (swiperRef.current && typeof swiperRef.current.update === "function") {
-        swiperRef.current.update();
-      }
+      swiperRef.current?.update();
     };
 
     const t = setTimeout(update, 120);
@@ -106,7 +105,7 @@ export default function UrbanVillage() {
                 </p>
               </div>
 
-              {/* ✅ SWIPER FIX (NO cols-img wrapper) */}
+              {/* ✅ SWIPER */}
               <div className="urbanvillage-gallery">
                 <Swiper
                   modules={[Navigation]}
