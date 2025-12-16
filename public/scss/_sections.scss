@@ -2768,3 +2768,145 @@ background-image: url("/image/page-title/our-ventures (1).png");
 .brand-marquee__viewport:hover .brand-marquee__track {
   animation-play-state: paused;
 }
+
+
+
+
+
+.kidz-formats {
+  margin: 32px 0;
+}
+
+.kidz-formats__head {
+  max-width: 900px;
+  margin: 0 auto 18px;
+  text-align: center;
+}
+
+.kidz-formats__title {
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.kidz-formats__subtitle {
+  opacity: 0.75;
+  margin: 0;
+}
+
+.kidz-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 16px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+
+.kidz-table {
+  width: 100%;
+  min-width: 860px;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.kidz-table__corner {
+  width: 180px;
+  background: rgba(15, 23, 42, 0.02);
+}
+
+.kidz-table__th {
+  padding: 16px 18px;
+  text-align: left;
+  font-weight: 800;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.12);
+  background: rgba(15, 23, 42, 0.03);
+  white-space: nowrap;
+}
+
+.kidz-table__rowhead {
+  padding: 16px 18px;
+  text-align: left;
+  font-weight: 800;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.12);
+  background: rgba(15, 23, 42, 0.02);
+  position: sticky; /* nice when scrolling horizontally */
+  left: 0;
+}
+
+.kidz-table__td {
+  padding: 16px 18px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.12);
+  vertical-align: top;
+}
+
+.kidz-table__list {
+  margin: 0;
+  padding-left: 18px;
+  line-height: 1.6;
+}
+
+.kidz-table__text {
+  display: inline-block;
+  font-weight: 600;
+}
+
+.kidz-table tbody tr:hover td,
+.kidz-table tbody tr:hover th {
+  background: rgba(248, 210, 34, 0.10); /* soft yellow hover */
+}
+
+/* Mobile cards */
+.kidz-cards {
+  display: none;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.kidz-card {
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+  padding: 14px;
+}
+
+.kidz-card__title {
+  font-weight: 900;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.03);
+  margin-bottom: 10px;
+}
+
+.kidz-card__row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 10px;
+  padding: 10px 6px;
+  border-top: 1px dashed rgba(15, 23, 42, 0.18);
+}
+
+.kidz-card__row:first-of-type {
+  border-top: none;
+}
+
+.kidz-card__label {
+  font-weight: 800;
+  opacity: 0.8;
+}
+
+.kidz-card__list {
+  margin: 0;
+  padding-left: 18px;
+  line-height: 1.6;
+}
+
+/* Switch to cards on small screens */
+@media (max-width: 768px) {
+  .kidz-table-wrap {
+    display: none;
+  }
+  .kidz-cards {
+    display: grid;
+  }
+}
