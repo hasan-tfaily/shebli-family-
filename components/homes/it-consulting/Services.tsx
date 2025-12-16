@@ -117,18 +117,30 @@ export default function Services() {
             </div>
 
             {/* If something still centers due to theme CSS, this forces left */}
-            <style jsx global>{`
-              .section-services .heading-section {
-                text-align: left !important;
-              }
-              .tab-product.tab-left {
-                display: flex !important;
-                justify-content: flex-start !important;
-                align-items: center;
-                gap: 16px;
-                min-width: 0 !important;
-              }
-            `}</style>
+        <style jsx global>{`
+  /* Let the left content use the available width */
+  .section-services .services-content {
+    flex: 1 1 0%;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0;
+  }
+
+  /* Let the benefits block stretch fully */
+  .section-services .cols,
+  .section-services .benefit-lists.item,
+  .section-services .benefit-items {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  /* Make sure the text can take the remaining space next to the icon */
+  .section-services .benefit-items .title {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+`}</style>
+
 
           </div>
         </div>

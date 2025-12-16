@@ -24,7 +24,7 @@ export const slides2 = [
     buttonText: "Our brands",
   },
   {
-    title: "Outdoor Experience - The Escape Park and Resort",
+    title: "Outdoor Experience - \nThe Escape Park and Resort",
     subtitle:
     "Building Tomorrow’s Leisure and Entertainment\nDelivering Impact for families, partners and investors",
     buttonText: "Franchise",
