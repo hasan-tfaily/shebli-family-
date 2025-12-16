@@ -56,7 +56,7 @@ export default function Services() {
                 </ul>
               </div>
 
-              <div className="tab-content">
+              <div className="tab-content" >
                 {servicesData2.map(
                   ({
                     id,
@@ -73,11 +73,12 @@ export default function Services() {
                       className={`tab-pane${isActive ? " active show" : ""}`}
                       id={id}
                       role="tabpanel"
+                      
                     >
-                      <div className="services-inner bg-surface">
+                      <div className="services-inner bg-surface"style={{ paddingTop: "20px" }}>
                         <div className="services-content">
                           <h4 className="title-content mb-12">
-                            <Link href="/services-details-1">{title}</Link>
+                            {title}
                           </h4>
 
                           <div className="sub-title mb-28 body-2">
