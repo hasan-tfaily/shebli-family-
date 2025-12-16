@@ -1,28 +1,48 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
+
 import "swiper/css";
 import "swiper/css/navigation";
+
 import ParkandResortServices from "@/components/common/ParkandResortServices";
 
 export default function TheEscapeParkandResort() {
+  const swiperRef = useRef(null);
+
+  useEffect(() => {
+    const update = () => {
+      if (swiperRef.current && typeof swiperRef.current.update === "function") {
+        swiperRef.current.update();
+      }
+    };
+
+    const t = setTimeout(update, 120);
+
+    window.addEventListener("resize", update);
+    window.addEventListener("orientationchange", update);
+
+    return () => {
+      clearTimeout(t);
+      window.removeEventListener("resize", update);
+      window.removeEventListener("orientationchange", update);
+    };
+  }, []);
+
   return (
     <>
-      <div className="image img-top">
+      {/* HERO IMAGE */}
+      <div className="page-hero">
         <Image
           src="/image/page-title/resort banner.jpg"
           alt="The Escape Park & Resort Hero"
-          className="lazyload"
           width={1920}
           height={1080}
-          style={{
-            width: "100%",
-            height: "auto",
-            maxWidth: "100%",
-          }}
+          style={{ width: "100%", height: "auto", maxWidth: "100%" }}
+          priority
         />
       </div>
 
@@ -33,7 +53,7 @@ export default function TheEscapeParkandResort() {
               <div className="blog-details-top">
                 <h2
                   style={{
-                    color: "#000000",
+                    color: "#000",
                     fontFamily: "Arial, Helvetica, sans-serif",
                     fontSize: "32px",
                     fontWeight: "bold",
@@ -51,9 +71,9 @@ export default function TheEscapeParkandResort() {
                 <Image
                   src="/image/resortAndPark/resort pic 1.jpg"
                   alt="The Escape Park & Resort"
-                  className="lazyload"
                   width={910}
                   height={512}
+                  style={{ width: "100%", height: "auto" }}
                 />
               </div>
 
@@ -64,125 +84,66 @@ export default function TheEscapeParkandResort() {
                   <br />
                   the joy of outdoor play.
                 </h5>
+
                 <p className="body-2">
                   The Escape Park &amp; Resort is a green refuge that transports
-                  families into a world of lush
-                  
-                  landscapes, flowing water, and immersive nature experiences.
-                  Built as a multi-sensory
-                  
+                  families into a world of lush landscapes, flowing water, and
+                  immersive nature experiences. Built as a multi-sensory
                   destination, it invites children, teens, and adults to step
-                  away from the speed and noise
-                  
-                  of modern life and enjoy meaningful moments together in the
-                  outdoors.
+                  away from the speed and noise of modern life and enjoy
+                  meaningful moments together in the outdoors.
                 </p>
+
                 <p className="body-2">
                   Grounded in the principles of nature-based learning and
-                  wellness, the park offers an
-                  environment where children can explore, play, and develop
-                  essential motor and
-                  sensory skills. Studies show that outdoor environments rich in
-                  natural elements
-                  enhance creativity, boost physical activity, and contribute to
-                  overall emotional and
-                  mental wellbeing — all of which form the cornerstone of this
-                  concept.
+                  wellness, the park offers an environment where children can
+                  explore, play, and develop essential motor and sensory skills.
+                  Studies show that outdoor environments rich in natural
+                  elements enhance creativity, boost physical activity, and
+                  contribute to overall emotional and mental wellbeing — all of
+                  which form the cornerstone of this concept.
                 </p>
               </div>
 
-              {/* SLIDER SECTION */}
-              <div className="cols-img">
+              {/* SWIPER (NO cols-img) */}
+              <div className="escapepark-gallery">
                 <Swiper
                   modules={[Navigation]}
                   navigation
                   spaceBetween={24}
                   slidesPerView={1}
-                  loop={true}
-                  className="karnavali-slider escapepark-slider"
-                  breakpoints={{
-                    768: {
-                      slidesPerView: 2,
-                    },
+                  loop
+                  className="escapepark-slider"
+                  breakpoints={{ 768: { slidesPerView: 2 } }}
+                  observer
+                  observeParents
+                  resizeObserver
+                  watchOverflow
+                  onSwiper={(swiper) => {
+                    swiperRef.current = swiper;
                   }}
                 >
-                  {/* 1 */}
-                  <SwiperSlide>
-                    <div className="image-blog">
-                      <Image
-                        src="/image/resortAndPark/resort 1.jpg"
-                        alt="Escape Park Activity 1 - A"
-                        className="lazyload"
-                        width={444}
-                        height={334}
-                      />
-                    </div>
-                  </SwiperSlide>
-
-                  {/* 2 */}
-                  <SwiperSlide>
-                    <div className="image-blog">
-                      <Image
-                        src="/image/resortAndPark/resort 2.jpg"
-                        alt="Escape Park Activity 2 - A"
-                        className="lazyload"
-                        width={444}
-                        height={334}
-                      />
-                    </div>
-                  </SwiperSlide>
-
-                  {/* 3 (duplicate) */}
-                  <SwiperSlide>
-                    <div className="image-blog">
-                      <Image
-                        src="/image/resortAndPark/park 3.jpg"
-                        alt="Escape Park Activity 1 - B"
-                        className="lazyload"
-                        width={444}
-                        height={334}
-                      />
-                    </div>
-                  </SwiperSlide>
-
-                  {/* 4 (duplicate) */}
-                  <SwiperSlide>
-                    <div className="image-blog">
-                      <Image
-                        src="/image/resortAndPark/park 4.jpg"
-                        alt="Escape Park Activity 2 - B"
-                        className="lazyload"
-                        width={444}
-                        height={334}
-                      />
-                    </div>
-                  </SwiperSlide>
-
-                  {/* 5 (duplicate) */}
-                  <SwiperSlide>
-                    <div className="image-blog">
-                      <Image
-                        src="/image/resortAndPark/park 5.jpg"
-                        alt="Escape Park Activity 1 - C"
-                        className="lazyload"
-                        width={444}
-                        height={334}
-                      />
-                    </div>
-                  </SwiperSlide>
-
-                  {/* 6 (duplicate) */}
-                  <SwiperSlide>
-                    <div className="image-blog">
-                      <Image
-                        src="/image/resortAndPark/park 6.jpg"
-                        alt="Escape Park Activity 2 - C"
-                        className="lazyload"
-                        width={444}
-                        height={334}
-                      />
-                    </div>
-                  </SwiperSlide>
+                  {[
+                    "/image/resortAndPark/resort 1.jpg",
+                    "/image/resortAndPark/resort 2.jpg",
+                    "/image/resortAndPark/park 3.jpg",
+                    "/image/resortAndPark/park 4.jpg",
+                    "/image/resortAndPark/park 5.jpg",
+                    "/image/resortAndPark/park 6.jpg",
+                  ].map((src, i) => (
+                    <SwiperSlide key={src}>
+                      <div className="image-blog">
+                        <Image
+                          src={src}
+                          alt={`Escape Park Activity ${i + 1}`}
+                          width={444}
+                          height={334}
+                          style={{ width: "100%", height: "auto", display: "block" }}
+                          priority={i < 2}
+                        />
+                      </div>
+                    </SwiperSlide>
+                  ))}
                 </Swiper>
               </div>
 
@@ -193,8 +154,7 @@ export default function TheEscapeParkandResort() {
                     Designed as a fully integrated nature retreat, The Escape
                     Park &amp; Resort features:
                     <br />
-                    - A scenic pond, surrounded by trees, flowers, and walking
-                    paths
+                    - A scenic pond, surrounded by trees, flowers, and walking paths
                     <br />
                     - Gazebos and shaded relaxation areas
                     <br />
@@ -209,60 +169,17 @@ export default function TheEscapeParkandResort() {
                     - Animal enclosures for hands-on exploration and learning
                     <br />
                     - A resort area with bungalows and a swimming pool
-                    <br />
-                    <br />
-                    Families can enjoy a serene lunch by the pond, watch birds
-                    gathered around the
-                   
-                    enclosures, or let children explore the outdoor playground
-                    before attempting the
-                    
-                    elevated obstacle course in the trees. Fathers and sons can
-                    fish together, while
-                    
-                    younger guests enjoy pony rides or nature discovery trails.
-                    <br />
-                    <br />
-                    Perched above the pond is a luxurious signature restaurant,
-                    offering refined cuisine
-                    
-                    with sweeping sunset views in both indoor and outdoor
-                    seating areas.
-                    <br />
-                    <br />
-                    Next to the restaurant lies the botanical zone, which
-                    includes greenhouses, orchards,
-                    
-                    and small open-air agricultural plots where families can
-                    learn about planting,
-                   
-                    harvesting, and eco-friendly practices.
-                    <br />
-                    <br />
-                    Nearby, an oval amphitheater acts as a natural stage for
-                    performances, shows, and
-                    
-                    children’s birthday celebrations.
-                    <br />
-                    <br />
-                    Further down the hillside sits the adventure zone, packed
-                    with exhilarating outdoor
-                    
-                    sports and activities for all ages. At the lowest level,
-                    families will find the camping and
-                    barbecue equipment depot, supporting private rentals for
-                    overnight or daytime nature
-                    outings.
                   </p>
                 </div>
               </div>
+
               {/* end content */}
             </div>
           </div>
         </div>
       </div>
-      <ParkandResortServices />
 
+      <ParkandResortServices />
     </>
   );
 }

@@ -1,30 +1,58 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
+
 import "swiper/css";
 import "swiper/css/navigation";
+
 import Testimonials from "@/components/common/Testimonials";
 import Contact from "@/components/common/Contact";
 
-
 export default function KarnavaliPage() {
+  const swiperRef = useRef(null);
+
+  useEffect(() => {
+    const update = () => {
+      if (swiperRef.current && typeof swiperRef.current.update === "function") {
+        swiperRef.current.update();
+      }
+    };
+
+    const t = setTimeout(update, 120);
+    window.addEventListener("resize", update);
+    window.addEventListener("orientationchange", update);
+
+    return () => {
+      clearTimeout(t);
+      window.removeEventListener("resize", update);
+      window.removeEventListener("orientationchange", update);
+    };
+  }, []);
+
+  const slides = [
+    "/image/karnavali/karnavali 2.png",
+    "/image/karnavali/karnavali 3.png",
+    "/image/karnavali/karnavali 3.jpg",
+    "/image/karnavali/karnavali 4.jpg",
+    "/image/karnavali/karnavali 5.jpg",
+    "/image/karnavali/karnavali 6.jpg",
+    "/image/karnavali/karnavali 7  1.jpg",
+  ];
+
   return (
     <>
-      <div className="image img-top">
+      {/* HERO IMAGE */}
+      <div className="kidz-hero">
         <Image
           src="/image/page-title/karnavali banner.jpg"
-          alt=""
-          className="lazyload"
+          alt="Karnavali Banner"
           width={1920}
           height={1080}
-          style={{
-            width: "100%",
-            height: "auto",
-            maxWidth: "100%",
-          }}
+          style={{ width: "100%", height: "auto", maxWidth: "100%" }}
+          priority
         />
       </div>
 
@@ -35,7 +63,7 @@ export default function KarnavaliPage() {
               <div className="blog-details-top">
                 <h2
                   style={{
-                    color: "#000000",
+                    color: "#000",
                     fontFamily: "Arial, Helvetica, sans-serif",
                     fontSize: "32px",
                     fontWeight: "bold",
@@ -51,11 +79,11 @@ export default function KarnavaliPage() {
               {/* Main Image */}
               <div className="image-blog">
                 <Image
-                  src={"/image/karnavali/karnavali 1.jpg"}
-                  alt=""
-                  className="lazyload"
+                  src="/image/karnavali/karnavali 1.jpg"
+                  alt="Karnavali"
                   width={910}
                   height={512}
+                  style={{ width: "100%", height: "auto" }}
                 />
               </div>
 
@@ -67,127 +95,57 @@ export default function KarnavaliPage() {
                 </h5>
                 <p className="body-2">
                   Karnavali is a dynamic, indoor Family Entertainment Center
-                  designed as a multi-anchor
-                  attraction that brings the energy, excitement, and magic of a
-                  carnival into a modern,
-                  immersive indoor setting. With major rides, arcades,
-                  simulators, active play zones, and
-                  entertainment experiences for every age bracket, Karnavali
-                  offers a vibrant world of
-                  fun under one roof.
+                  designed as a multi-anchor attraction that brings the energy,
+                  excitement, and magic of a carnival into a modern, immersive
+                  indoor setting. With major rides, arcades, simulators, active
+                  play zones, and entertainment experiences for every age
+                  bracket, Karnavali offers a vibrant world of fun under one
+                  roof.
                 </p>
                 <p className="body-2">
                   From heart-racing attractions to classic carnival snacks, the
-                  environment is crafted to
-                  engage families, teens, and young children alike, making it a
-                  go-to destination for
-                  unforgettable shared moments.
+                  environment is crafted to engage families, teens, and young
+                  children alike, making it a go-to destination for unforgettable
+                  shared moments.
                 </p>
               </div>
 
-              {/* IMAGE SLIDER SECTION */}
-              <div className="cols-img">
+              {/* ✅ SWIPER (NO cols-img wrapper) */}
+              <div className="karnavali-gallery">
                 <Swiper
                   modules={[Navigation]}
                   navigation
                   spaceBetween={24}
                   slidesPerView={1}
-                  loop={true}
+                  loop
                   className="karnavali-slider"
-                  breakpoints={{
-                    768: {
-                      slidesPerView: 2,
-                    },
+                  breakpoints={{ 768: { slidesPerView: 2 } }}
+                  observer
+                  observeParents
+                  resizeObserver
+                  watchOverflow
+                  onSwiper={(s) => {
+                    swiperRef.current = s;
                   }}
                 >
-                  {/* 1 */}
-                  <SwiperSlide>
-                    <div className="image-blog">
-                      <Image
-                        src="/image/karnavali/karnavali 2.png"
-                        alt="Karnavali View 2 - A"
-                        className="lazyload"
-                        width={444}
-                        height={334}
-                      />
-                    </div>
-                  </SwiperSlide>
-
-                  {/* 2 */}
-                  <SwiperSlide>
-                    <div className="image-blog">
-                      <Image
-                        src="/image/karnavali/karnavali 3.png"
-                        alt="Karnavali View 3 - A"
-                        className="lazyload"
-                        width={444}
-                        height={334}
-                      />
-                    </div>
-                  </SwiperSlide>
-
-                  {/* 3 (duplicate) */}
-                  <SwiperSlide>
-                    <div className="image-blog">
-                      <Image
-                        src="/image/karnavali/karnavali 3.jpg"
-                        alt="Karnavali View 2 - B"
-                        className="lazyload"
-                        width={444}
-                        height={334}
-                      />
-                    </div>
-                  </SwiperSlide>
-
-                  {/* 4 (duplicate) */}
-                  <SwiperSlide>
-                    <div className="image-blog">
-                      <Image
-                        src="/image/karnavali/karnavali 4.jpg"
-                        alt="Karnavali View 3 - B"
-                        className="lazyload"
-                        width={444}
-                        height={334}
-                      />
-                    </div>
-                  </SwiperSlide>
-
-                  {/* 5 (duplicate) */}
-                  <SwiperSlide>
-                    <div className="image-blog">
-                      <Image
-                        src="/image/karnavali/karnavali 5.jpg"
-                        alt="Karnavali View 2 - C"
-                        className="lazyload"
-                        width={444}
-                        height={334}
-                      />
-                    </div>
-                  </SwiperSlide>
-
-                  {/* 6 (duplicate) */}
-                  <SwiperSlide>
-                    <div className="image-blog">
-                      <Image
-                        src="/image/karnavali/karnavali 6.jpg"
-                        alt="Karnavali View 3 - C"
-                        className="lazyload"
-                        width={444}
-                        height={334}
-                      />
-                    </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <div className="image-blog">
-                      <Image
-                        src="/image/karnavali/karnavali 7  1.jpg"
-                        alt="Karnavali View 3 - C"
-                        className="lazyload"
-                        width={444}
-                        height={334}
-                      />
-                    </div>
-                  </SwiperSlide>
+                  {slides.map((src, i) => (
+                    <SwiperSlide key={src}>
+                      <div className="image-blog">
+                        <Image
+                          src={src}
+                          alt={`Karnavali View ${i + 1}`}
+                          width={444}
+                          height={334}
+                          style={{
+                            width: "100%",
+                            height: "auto",
+                            display: "block",
+                          }}
+                          priority={i < 2}
+                        />
+                      </div>
+                    </SwiperSlide>
+                  ))}
                 </Swiper>
               </div>
 
@@ -197,10 +155,8 @@ export default function KarnavaliPage() {
                   <h5 className="title-desc">A Multisensory Indoor Carnival</h5>
                   <p className="body-2">
                     Karnavali blends thrill rides, interactive games, sensory
-                    play, and themed
-
-                    entertainment into an experience that appeals to a wide
-                    audience:
+                    play, and themed entertainment into an experience that
+                    appeals to a wide audience.
                   </p>
                 </div>
 
@@ -210,12 +166,6 @@ export default function KarnavaliPage() {
                     Guests can choose between a wide range of activities,
                     including:
                   </p>
-                  {/* <p className="body-2">
-                    Karnavali is built to cater to different personalities,
-                    interests, and age groups —
-                    <br />
-                    ensuring every visitor finds their unique version of fun.
-                  </p> */}
                 </div>
 
                 <Testimonials />
@@ -223,26 +173,21 @@ export default function KarnavaliPage() {
                 <div className="desc-blog">
                   <h5 className="title-desc">Concept Vision</h5>
                   <p className="body-2">
-                    Karnavali aims to create a one-of-a-kind indoor
-                    entertainment venue where children,
+                    Karnavali aims to create a one-of-a-kind indoor entertainment
+                    venue where children, teens, and families enjoy diverse
+                    activities inspired by the spirit of a joyful carnival.
                     <br />
-                    teens, and families enjoy diverse activities inspired by the
-                    spirit of a joyful carnival.
-                    <br />
-                    Guests step into a world filled with color, laughter,
-                    motion, and excitement; an escape
-                    <br />
-                    from routine into a place where imagination takes the lead.
+                    Guests step into a world filled with color, laughter, motion,
+                    and excitement; an escape from routine into a place where
+                    imagination takes the lead.
                   </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        
-        {/* /.main-content */}
       </div>
-       <Contact />
+      <Contact />
     </>
   );
 }

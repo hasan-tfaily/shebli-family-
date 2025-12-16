@@ -1,29 +1,55 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
+
 import "swiper/css";
 import "swiper/css/navigation";
+
 import StarDistrictSection from "@/components/common/StarDistrictSection";
 
-
 export default function StarDistrict() {
+  const swiperRef = useRef(null);
+
+  useEffect(() => {
+    const update = () => {
+      if (swiperRef.current && typeof swiperRef.current.update === "function") {
+        swiperRef.current.update();
+      }
+    };
+
+    const t = setTimeout(update, 120);
+    window.addEventListener("resize", update);
+    window.addEventListener("orientationchange", update);
+
+    return () => {
+      clearTimeout(t);
+      window.removeEventListener("resize", update);
+      window.removeEventListener("orientationchange", update);
+    };
+  }, []);
+
+  const slides = [
+    "/image/starDistrict/star district 2.jpg",
+    "/image/starDistrict/star district 3.jpg",
+    "/image/starDistrict/star 3.jpg",
+    "/image/starDistrict/star 4.jpg",
+    "/image/starDistrict/star 5.jpg",
+  ];
+
   return (
     <>
-      <div className="image img-top">
+      {/* HERO */}
+      <div className="page-hero">
         <Image
           src="/image/page-title/our-ventures (1).png"
           alt="Star District Hero"
-          className="lazyload"
           width={1920}
           height={1080}
-          style={{
-            width: "100%",
-            height: "auto",
-            maxWidth: "100%",
-          }}
+          style={{ width: "100%", height: "auto", maxWidth: "100%" }}
+          priority
         />
       </div>
 
@@ -35,7 +61,7 @@ export default function StarDistrict() {
               <div className="blog-details-top">
                 <h2
                   style={{
-                    color: "#000000",
+                    color: "#000",
                     fontFamily: "Arial, Helvetica, sans-serif",
                     fontSize: "32px",
                     fontWeight: "bold",
@@ -51,20 +77,20 @@ export default function StarDistrict() {
               {/* Main image */}
               <div className="image-blog">
                 <Image
-                  src={"/image/starDistrict/star district 1.jpg"}
+                  src="/image/starDistrict/star district 1.jpg"
                   alt="Star District"
-                  className="lazyload"
                   width={910}
                   height={512}
+                  style={{ width: "100%", height: "auto" }}
                 />
               </div>
 
-              {/* Intro description */}
+              {/* Intro */}
               <div className="desc-blog">
                 <h5 className="title-desc">Concept</h5>
                 <p className="body-2">
-                  Star District is the ideal platform for children and
-                  teenagers who want to experience stardom.
+                  Star District is the ideal platform for children and teenagers
+                  who want to experience stardom.
                   <br />
                   <br />
                   It is a one stop family entertainment center where mothers can
@@ -81,86 +107,42 @@ export default function StarDistrict() {
                 </p>
               </div>
 
-              {/* Slider section (replaces two static images) */}
-              <div className="cols-img">
+              {/* ✅ SWIPER (NO cols-img wrapper) */}
+              <div className="stardistrict-gallery">
                 <Swiper
                   modules={[Navigation]}
                   navigation
                   spaceBetween={24}
                   slidesPerView={1}
-                  loop={true}
-                  className="karnavali-slider stardistrict-slider"
-                  breakpoints={{
-                    768: {
-                      slidesPerView: 2,
-                    },
+                  loop
+                  className="stardistrict-slider"
+                  breakpoints={{ 768: { slidesPerView: 2 } }}
+                  observer
+                  observeParents
+                  resizeObserver
+                  watchOverflow
+                  onSwiper={(s) => {
+                    swiperRef.current = s;
                   }}
                 >
-                  {/* 1 */}
-                  <SwiperSlide>
-                    <div className="image-blog">
-                      <Image
-                        src="/image/starDistrict/star district 2.jpg"
-                        alt="Star District Activity 1 - A"
-                        className="lazyload"
-                        width={444}
-                        height={334}
-                      />
-                    </div>
-                  </SwiperSlide>
-
-                  {/* 2 */}
-                  <SwiperSlide>
-                    <div className="image-blog">
-                      <Image
-                        src="/image/starDistrict/star district 3.jpg"
-                        alt="Star District Activity 2 - A"
-                        className="lazyload"
-                        width={444}
-                        height={334}
-                      />
-                    </div>
-                  </SwiperSlide>
-
-                  {/* 3 (duplicate) */}
-                  <SwiperSlide>
-                    <div className="image-blog">
-                      <Image
-                        src="/image/starDistrict/star 3.jpg"
-                        alt="Star District Activity 1 - B"
-                        className="lazyload"
-                        width={444}
-                        height={334}
-                      />
-                    </div>
-                  </SwiperSlide>
-
-                  {/* 4 (duplicate) */}
-                  <SwiperSlide>
-                    <div className="image-blog">
-                      <Image
-                        src="/image/starDistrict/star 4.jpg"
-                        alt="Star District Activity 2 - B"
-                        className="lazyload"
-                        width={444}
-                        height={334}
-                      />
-                    </div>
-                  </SwiperSlide>
-
-                  {/* 5 (duplicate) */}
-                  <SwiperSlide>
-                    <div className="image-blog">
-                      <Image
-                        src="/image/starDistrict/star 5.jpg"
-                        alt="Star District Activity 1 - C"
-                        className="lazyload"
-                        width={444}
-                        height={334}
-                      />
-                    </div>
-                  </SwiperSlide>
-
+                  {slides.map((src, i) => (
+                    <SwiperSlide key={src}>
+                      <div className="image-blog">
+                        <Image
+                          src={src}
+                          alt={`Star District Activity ${i + 1}`}
+                          width={444}
+                          height={334}
+                          style={{
+                            width: "100%",
+                            height: "auto",
+                            display: "block",
+                          }}
+                          priority={i < 2}
+                        />
+                      </div>
+                    </SwiperSlide>
+                  ))}
                 </Swiper>
               </div>
 
@@ -169,43 +151,36 @@ export default function StarDistrict() {
                 <div className="desc-blog">
                   <p className="body-2">
                     Star District is the ultimate fame-experience destination
-                    where children and teenagers
-                    step into the spotlight and live the stardom they dream of.
-                    Designed as an immersive
+                    where children and teenagers step into the spotlight and
+                    live the stardom they dream of. Designed as an immersive
                     activation and entertainment hub, Star District blends
-                    performing arts, creativity,
-                    fashion, media, and lifestyle experiences into one dazzling
-                    world.
+                    performing arts, creativity, fashion, media, and lifestyle
+                    experiences into one dazzling world.
                     <br />
                     <br />
                     It is a one-stop family entertainment center where toddlers
-                    can play,
-                    kids and teens can shine in their “fifteen minutes of fame,”
-                    mothers and daughters can enjoy bonding
+                    can play, kids and teens can shine in their “fifteen minutes
+                    of fame,” mothers and daughters can enjoy bonding
                     activities, and teenagers can hang out, create, and express
                     themselves.
                   </p>
                 </div>
 
-                <div className="desc-blog" style={{marginTop:"50px"}}>
-                  <h5 className="title-desc" >Where Kids Live the Fame</h5>
+                <div className="desc-blog" style={{ marginTop: "50px" }}>
+                  <h5 className="title-desc">Where Kids Live the Fame</h5>
                   <p className="body-2">
                     Star District invites young guests to experience what it
-                    truly means to be a star.
-                    Beyond the glamour, they learn how a star looks, walks,
-                    talks, performs, and expresses
+                    truly means to be a star. Beyond the glamour, they learn
+                    how a star looks, walks, talks, performs, and expresses
                     their talent. Through hands-on experiences and professional
-                    guidance, children
-                    and teens explore the skills needed to shine in front of an
-                    audience.
+                    guidance, children and teens explore the skills needed to
+                    shine in front of an audience.
                     <br />
                     <br />
                     A dedicated team of creative coaches helps them discover and
-                    develop their
-                    talents—whether in music, performing, fashion, design, or
-                    media. With themed sets,
-                    professional equipment, and endless props, every child gets
-                    a chance to perform,
+                    develop their talents—whether in music, performing, fashion,
+                    design, or media. With themed sets, professional equipment,
+                    and endless props, every child gets a chance to perform,
                     create content, and enjoy their moment in the spotlight.
                   </p>
                 </div>
@@ -214,8 +189,8 @@ export default function StarDistrict() {
           </div>
         </div>
       </div>
-      <StarDistrictSection />
 
+      <StarDistrictSection />
     </>
   );
 }

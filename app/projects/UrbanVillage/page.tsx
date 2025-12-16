@@ -1,30 +1,55 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
+
 import "swiper/css";
 import "swiper/css/navigation";
 
-// This is the Experiences / tabs section we fixed above
 import UrbanVillageServices from "@/components/common/UrbanVillageServices";
 
 export default function UrbanVillage() {
+  const swiperRef = useRef(null);
+
+  useEffect(() => {
+    const update = () => {
+      if (swiperRef.current && typeof swiperRef.current.update === "function") {
+        swiperRef.current.update();
+      }
+    };
+
+    const t = setTimeout(update, 120);
+    window.addEventListener("resize", update);
+    window.addEventListener("orientationchange", update);
+
+    return () => {
+      clearTimeout(t);
+      window.removeEventListener("resize", update);
+      window.removeEventListener("orientationchange", update);
+    };
+  }, []);
+
+  const slides = [
+    "/image/UrbanVillage/1 .jpg",
+    "/image/UrbanVillage/2 .jpg",
+    "/image/UrbanVillage/urban 3.jpg",
+    "/image/UrbanVillage/urban 4.jpg",
+    "/image/UrbanVillage/urban 5.jpg",
+  ];
+
   return (
     <>
-      <div className="image img-top">
+      {/* HERO */}
+      <div className="page-hero">
         <Image
           src="/image/page-title/UV-banner.jpg"
-          alt=""
-          className="lazyload"
+          alt="Urban Village Banner"
           width={1920}
           height={1080}
-          style={{
-            width: "100%",
-            height: "auto",
-            maxWidth: "100%",
-          }}
+          style={{ width: "100%", height: "auto", maxWidth: "100%" }}
+          priority
         />
       </div>
 
@@ -35,7 +60,7 @@ export default function UrbanVillage() {
               <div className="blog-details-top">
                 <h2
                   style={{
-                    color: "#000000",
+                    color: "#000",
                     fontFamily: "Arial, Helvetica, sans-serif",
                     fontSize: "32px",
                     fontWeight: "bold",
@@ -51,11 +76,11 @@ export default function UrbanVillage() {
               {/* MAIN IMAGE */}
               <div className="image-blog">
                 <Image
-                  src={"/image/UrbanVillage/urban-village 1.jpg"}
-                  alt=""
-                  className="lazyload"
+                  src="/image/UrbanVillage/urban-village 1.jpg"
+                  alt="Urban Village"
                   width={910}
                   height={512}
+                  style={{ width: "100%", height: "auto" }}
                 />
               </div>
 
@@ -81,90 +106,42 @@ export default function UrbanVillage() {
                 </p>
               </div>
 
-              {/* SLIDER SECTION */}
-              <div className="cols-img">
+              {/* ✅ SWIPER FIX (NO cols-img wrapper) */}
+              <div className="urbanvillage-gallery">
                 <Swiper
                   modules={[Navigation]}
                   navigation
                   spaceBetween={24}
                   slidesPerView={1}
-                  loop={true}
-                  className="karnavali-slider urbanvillage-slider"
-                  breakpoints={{
-                    768: {
-                      slidesPerView: 2,
-                    },
+                  loop
+                  className="urbanvillage-slider"
+                  breakpoints={{ 768: { slidesPerView: 2 } }}
+                  observer
+                  observeParents
+                  resizeObserver
+                  watchOverflow
+                  onSwiper={(s) => {
+                    swiperRef.current = s;
                   }}
                 >
-                  {/* 1 */}
-                  <SwiperSlide>
-                    <div className="image-blog">
-                      <Image
-                        src="/image/UrbanVillage/1 .jpg"
-                        alt="Urban Village View 1 - A"
-                        className="lazyload"
-                        width={444}
-                        height={334}
-                      />
-                    </div>
-                  </SwiperSlide>
-
-                  {/* 2 */}
-                  <SwiperSlide>
-                    <div className="image-blog">
-                      <Image
-                        src="/image/UrbanVillage/2 .jpg"
-                        alt="Urban Village View 2 - A"
-                        className="lazyload"
-                        width={444}
-                        height={334}
-                      />
-                    </div>
-                  </SwiperSlide>
-
-                  {/* 3 (duplicate) */}
-                  <SwiperSlide>
-                    <div className="image-blog">
-                      <Image
-                        src="/image/UrbanVillage/urban 3.jpg"
-                        alt="Urban Village View 1 - B"
-                        className="lazyload"
-                        width={444}
-                        height={334}
-                      />
-                    </div>
-                  </SwiperSlide>
-
-                  {/* 4 (duplicate) */}
-                  <SwiperSlide>
-                    <div className="image-blog">
-                      <Image
-                        src="/image/UrbanVillage/urban 4.jpg"
-                        alt="Urban Village View 2 - B"
-                        className="lazyload"
-                        width={444}
-                        height={334}
-                      />
-                    </div>
-                  </SwiperSlide>
-
-                  {/* 5 (duplicate) */}
-                  <SwiperSlide>
-                    <div className="image-blog">
-                      <Image
-                        src="/image/UrbanVillage/urban 5.jpg"
-                        alt="Urban Village View 1 - C"
-                        className="lazyload"
-                        width={444}
-                        height={334}
-                      />
-                    </div>
-                  </SwiperSlide>
+                  {slides.map((src, i) => (
+                    <SwiperSlide key={src}>
+                      <div className="image-blog">
+                        <Image
+                          src={src}
+                          alt={`Urban Village slide ${i + 1}`}
+                          width={444}
+                          height={334}
+                          style={{ width: "100%", height: "auto", display: "block" }}
+                          priority={i < 2}
+                        />
+                      </div>
+                    </SwiperSlide>
+                  ))}
                 </Swiper>
               </div>
 
               <div className="list-desc">
-                {/* Block 1 */}
                 <div
                   className="desc-blog"
                   style={{ marginTop: "32px", marginBottom: "32px" }}
@@ -173,35 +150,27 @@ export default function UrbanVillage() {
                     A New Vision for Social Living
                   </h4>
                   <p className="body-2" style={{ margin: 0 }}>
-                    Urban Village is more than a venue; it is a community hub
-                    and a social micro-city.
+                    Urban Village is more than a venue; it is a community hub and
+                    a social micro-city.
                     <br />
-                    Every corner is thoughtfully designed to encourage
-                    discovery, movement, connection,
-                    <br />
-                    and exploration. Visitors can dine, play, shop, relax, and
-                    socialize in an atmosphere that
-                    <br />
-                    feels vibrant, safe, and alive.
+                    Every corner is thoughtfully designed to encourage discovery,
+                    movement, connection, and exploration.
                     <br />
                     <br />
-                    From artisanal eateries and handcrafted desserts to
-                    immersive entertainment and
-                    <br />
-                    lifestyle amenities, Urban Village offers something for
-                    everyone, making it one of the
-                    <br />
-                    most attractive anchors for real estate and mixed-use
-                    developments.
+                    From artisanal eateries and handcrafted desserts to immersive
+                    entertainment and lifestyle amenities, Urban Village offers
+                    something for everyone, making it one of the most attractive
+                    anchors for real estate and mixed-use developments.
                   </p>
                 </div>
               </div>
+
+              {/* end content */}
             </div>
           </div>
         </div>
       </div>
 
-      {/* Experiences / Services section below the main article */}
       <UrbanVillageServices />
     </>
   );

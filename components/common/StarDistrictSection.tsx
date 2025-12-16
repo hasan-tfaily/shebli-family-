@@ -89,11 +89,7 @@ export default function StarDistrictSection() {
                       >
                         <div className="section-services-item">
                           <div className="image tf-animate-1">
-                            <Link
-                              href="/services-details-1"
-                              className="link"
-                              aria-label={title}
-                            />
+                            
                             <Image
                               src={imgSrc}
                               alt={title}
@@ -106,12 +102,9 @@ export default function StarDistrictSection() {
                           <div className="services-content">
                             <div className="heading">
                               <h3>
-                                <Link
-                                  href="/services-details-1"
-                                  className="name-services wow fadeInUp"
-                                >
+                              
                                   {title}
-                                </Link>
+                                
                               </h3>
                             </div>
 

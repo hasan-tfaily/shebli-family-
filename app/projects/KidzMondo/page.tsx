@@ -1,32 +1,50 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
+
 import "swiper/css";
 import "swiper/css/navigation";
+
 import Brands1 from "@/components/common/Brands1";
 import KidzMondoFormatsTable from "@/components/common/KidzMondoFormatsTable";
 
 export default function KidzMondoPage() {
+  const swiperRef = useRef<any>(null);
+
+  useEffect(() => {
+    const update = () => swiperRef.current?.update?.();
+
+    // update once after first paint (fixes mobile width calc)
+    const t = setTimeout(update, 120);
+
+    window.addEventListener("resize", update);
+    window.addEventListener("orientationchange", update);
+
+    return () => {
+      clearTimeout(t);
+      window.removeEventListener("resize", update);
+      window.removeEventListener("orientationchange", update);
+    };
+  }, []);
+
   return (
     <>
-      <div className="image img-top">
+      {/* HERO IMAGE */}
+      <div className="kidz-hero">
         <Image
           src="/image/page-title/our-ventures (1).png"
           alt="KidzMondo Hero"
-          className="lazyload"
           width={1920}
           height={1080}
-          style={{
-            width: "100%",
-            height: "auto",
-            maxWidth: "100%",
-          }}
+          style={{ width: "100%", height: "auto", maxWidth: "100%" }}
+          priority
         />
       </div>
 
+      {/* MAIN CONTENT */}
       <div className="tf-container">
         <div className="row">
           <div className="col-12">
@@ -35,7 +53,7 @@ export default function KidzMondoPage() {
               <div className="blog-details-top">
                 <h2
                   style={{
-                    color: "#000000",
+                    color: "#000",
                     fontFamily: "Arial, Helvetica, sans-serif",
                     fontSize: "32px",
                     fontWeight: "bold",
@@ -53,15 +71,15 @@ export default function KidzMondoPage() {
                 <Image
                   src="/image/kidzMondo/Kidz-mondo-1.png"
                   alt="KidzMondo"
-                  className="lazyload"
                   width={910}
                   height={512}
+                  style={{ width: "100%", height: "auto" }}
                 />
               </div>
 
-              {/* INTRO SECTION */}
+              {/* INTRO */}
               <div className="desc-blog">
-                <p className={"bodytitle"}>Overall Concept</p>
+                <p className="bodytitle">Overall Concept</p>
                 <p className="body-2">
                   KidzMondo is a replica of a real-life city which provides
                   children between the ages of 2 to 14 with role play activities
@@ -74,7 +92,7 @@ export default function KidzMondoPage() {
                   as good adult citizens would in real life.
                 </p>
 
-                <p className={"bodytitle"}>Objective</p>
+                <p className="bodytitle">Objective</p>
                 <p className="body-2">
                   KidzMondo aims to compliment local school curricula and seeks
                   to teach children basic citizenship values and rules,
@@ -82,102 +100,99 @@ export default function KidzMondoPage() {
                 </p>
               </div>
 
-              {/* IMAGE SLIDER INSTEAD OF TWO STATIC IMAGES */}
-              <div className="cols-img">
+              {/* ✅ SWIPER (do NOT wrap with cols-img) */}
+              <div className="kidzmondo-gallery">
                 <Swiper
                   modules={[Navigation]}
                   navigation
                   spaceBetween={24}
                   slidesPerView={1}
-                  loop={true}
+                  loop
                   className="kidzmondo-slider"
-                  breakpoints={{
-                    768: {
-                      slidesPerView: 2,
-                    },
-                  }}
+                  breakpoints={{ 768: { slidesPerView: 2 } }}
+                  observer
+                  observeParents
+                  resizeObserver
+                  watchOverflow
+                  onSwiper={(s) => (swiperRef.current = s)}
                 >
-                  {/* 1 */}
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
                         src="/image/kidzMondo/kidzMondo2.png"
-                        alt="KidzMondo Activity 1 - A"
-                        className="lazyload"
+                        alt="KidzMondo Activity 1"
                         width={444}
                         height={334}
+                        style={{ width: "100%", height: "auto", display: "block" }}
+                        priority
                       />
                     </div>
                   </SwiperSlide>
 
-                  {/* 2 */}
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
                         src="/image/kidzMondo/kidzMondo3.png"
-                        alt="KidzMondo Activity 2 - A"
-                        className="lazyload"
+                        alt="KidzMondo Activity 2"
                         width={444}
                         height={334}
+                        style={{ width: "100%", height: "auto", display: "block" }}
+                        priority
                       />
                     </div>
                   </SwiperSlide>
 
-                  {/* 3 (duplicate) */}
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
                         src="/image/kidzMondo/about – philosophy.jpg"
-                        alt="KidzMondo Activity 1 - B"
-                        className="lazyload"
+                        alt="KidzMondo Activity 3"
                         width={444}
                         height={334}
+                        style={{ width: "100%", height: "auto", display: "block" }}
                       />
                     </div>
                   </SwiperSlide>
 
-                  {/* 4 (duplicate) */}
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
                         src="/image/kidzMondo/about 1.jpg"
-                        alt="KidzMondo Activity 2 - B"
-                        className="lazyload"
+                        alt="KidzMondo Activity 4"
                         width={444}
                         height={334}
+                        style={{ width: "100%", height: "auto", display: "block" }}
                       />
                     </div>
                   </SwiperSlide>
 
-                  {/* 5 (duplicate) */}
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
                         src="/image/kidzMondo/about 2.jpg"
-                        alt="KidzMondo Activity 1 - C"
-                        className="lazyload"
+                        alt="KidzMondo Activity 5"
                         width={444}
                         height={334}
+                        style={{ width: "100%", height: "auto", display: "block" }}
                       />
                     </div>
                   </SwiperSlide>
 
-                  {/* 6 (duplicate) */}
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
                         src="/image/kidzMondo/about 3.jpg"
-                        alt="KidzMondo Activity 2 - C"
-                        className="lazyload"
+                        alt="KidzMondo Activity 6"
                         width={444}
                         height={334}
+                        style={{ width: "100%", height: "auto", display: "block" }}
                       />
                     </div>
                   </SwiperSlide>
                 </Swiper>
               </div>
 
-              {/* BULLET SECTIONS */}
+              {/* SECTIONS */}
               <div className="list-desc">
                 <div className="desc-blog">
                   <h5 className="title-desc">Education</h5>
@@ -218,7 +233,6 @@ export default function KidzMondoPage() {
 
                 <div className="desc-blog">
                   <h5 className="title-desc">Edutainment Competencies</h5>
-
                   <p className="body-2">
                     The KidzMondo experience develops a wide range of
                     competencies:
@@ -240,15 +254,22 @@ export default function KidzMondoPage() {
                   </ul>
                 </div>
               </div>
-              {/* END CONTENT */}
+
+              {/* TABLE */}
+              <div style={{ marginTop: 40 }}>
+                <KidzMondoFormatsTable />
+              </div>
             </div>
           </div>
         </div>
-       
-        {/* /.main-content */}
-      </div> <Brands1 />
+      </div>
 
-      <KidzMondoFormatsTable />
+      {/* BRANDS */}
+      <section style={{ padding: "40px 0" }}>
+        <div className="tf-container">
+          <Brands1 />
+        </div>
+      </section>
     </>
   );
 }

@@ -2855,7 +2855,6 @@ background-image: url("/image/page-title/our-ventures (1).png");
   background: rgba(248, 210, 34, 0.10); /* soft yellow hover */
 }
 
-/* Mobile cards */
 .kidz-cards {
   display: none;
   gap: 14px;
@@ -2901,7 +2900,6 @@ background-image: url("/image/page-title/our-ventures (1).png");
   line-height: 1.6;
 }
 
-/* Switch to cards on small screens */
 @media (max-width: 768px) {
   .kidz-table-wrap {
     display: none;
@@ -2909,4 +2907,45 @@ background-image: url("/image/page-title/our-ventures (1).png");
   .kidz-cards {
     display: grid;
   }
+}
+
+
+.escape-hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 992px) {
+  .escape-hero {
+    height: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .escape-hero {
+    height: 220px; 
+  }
+}
+@media (max-width: 768px) {
+  .escape-hero {
+    margin-top: 80px; 
+  }
+}
+@media (max-width: 768px) {
+  .kidz-hero {
+    margin-top: 80px; 
+  }
+}
+@media (max-width: 767.98px) {
+  .testimonial-item {
+    margin-bottom: 16px;
+  }
+
+  .testimonial-item:last-child {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .page-hero { margin-top: 80px; } /* adjust to your header height */
 }
