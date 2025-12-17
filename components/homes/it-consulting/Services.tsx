@@ -73,9 +73,9 @@ export default function Services() {
                       className={`tab-pane${isActive ? " active show" : ""}`}
                       id={id}
                       role="tabpanel"
-                      
+
                     >
-                      <div className="services-inner bg-surface"style={{ paddingTop: "20px" }}>
+                      <div className="services-inner bg-surface" style={{ paddingTop: "20px" }}>
                         <div className="services-content">
                           <h4 className="title-content mb-12">
                             {title}
@@ -117,7 +117,7 @@ export default function Services() {
             </div>
 
             {/* If something still centers due to theme CSS, this forces left */}
-        <style jsx global>{`
+            <style jsx global>{`
   /* Let the left content use the available width */
   .section-services .services-content {
     flex: 1 1 0%;
