@@ -185,28 +185,28 @@ export default function Services() {
                         <h4 className="mb-12">Consulting Services</h4>
                         <div className="desc body-2">
   <p className="mb-20">
-    <span style={{ fontWeight: 600 }}>Consultancy and Advisory Services</span>{" "}
+    <span style={{ fontWeight: 600 , color:"black" }}>Consultancy and Advisory Services</span>{" "}
     Comprehensive support from information analysis and project diagnosis to
     feasibility evaluation and clear implementation planning—tailored to drive
     strategic success.
   </p>
 
   <p className="mb-20">
-    <span style={{ fontWeight: 600 }}>Strategy Development</span>{" "}
+    <span style={{ fontWeight: 600 ,color:"black"}}>Strategy Development</span>{" "}
     We craft impactful strategies through clear mission definition, focused
     strategy formulation, compelling USP development, strong design fundamentals,
     and a refined customer journey.
   </p>
 
   <p className="mb-20">
-    <span style={{ fontWeight: 600 }}>Concept Design and Development</span>{" "}
+    <span style={{ fontWeight: 600 ,color:"black" }}>Concept Design and Development</span>{" "}
     From structured thinking processes and compelling storytelling to initial
     sketches, preliminary concepts, and in-depth detail development—we shape ideas
     into powerful, creative solutions.
   </p>
 
   <p className="mb-0">
-    <span style={{ fontWeight: 600 }}>Project Delivery and Assurance</span>{" "}
+    <span style={{ fontWeight: 600 ,color:"black"}}>Project Delivery and Assurance</span>{" "}
     End-to-end execution covering supply chain, team onboarding, ERP integration,
     and coordinated marketing, with seamless operations and follow-up to ensure
     lasting success.
