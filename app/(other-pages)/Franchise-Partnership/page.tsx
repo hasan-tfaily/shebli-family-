@@ -7,6 +7,7 @@ import About from "@/components/homes/strategy-consulting/About";
 import Process from "@/components/homes/insurance-consultancy/Process";
 import Benefits from "@/components/homes/it-consulting/Benefits";
 import Services from "@/components/homes/tax-advisory/Services";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title:
@@ -83,8 +84,106 @@ export default function Page() {
 
         <Features />
         <About />
+        <section className="section-why-choose h-7 bg-surface tf-spacing-31">
+          <div className="tf-container position-relative tf-spacing-3">
+            <div className="row rg-60">
+              <div className="col-xl-6">
+                <div className="image mr-15">
+                  <Image
+                    src="/image/section/services 1.jpg"
+                    alt="Why partner with us"
+                    width={615}
+                    height={615}
+                    className="lazyload"
+                    priority
+                  />
+                </div>
+              </div>
+
+              <div className="col-xl-6">
+                <div className="section-content ml-15">
+                  <div className="heading-section">
+                    <div className="wow fadeInUp">
+                      <a href="#" className="tag label text-btn-uppercase bg-white">
+                        Partnership
+                      </a>
+                    </div>
+                    <h3 className="wow fadeInUp mb-12">
+                      Concept Development: <br />
+                      Our Methodology
+                    </h3>
+                  </div>
+                  <div className="sub-title body-2 wow fadeInUp">
+                    We apply a design and leisure thinking approach. We focus on our guests'
+                    expectations, the technological trends, and the market change. Our innovative and
+                    immersive experiences make us unique. Each project responds to the singular
+                    opportunities of the context, culture and characteristics of the community.
+                  </div>
+                  <div className="cols g-10" style={{ marginTop: "50px" }}>
+                    <div className="benefit-lists">
+                      <div className="benefit-items">
+                        <div className="icon wow fadeInUp">
+                          <i className="icon-checkbox" />
+                        </div>
+                        <div className="title wow fadeInUp" data-wow-delay=".1s">
+                          Understand our audience
+                        </div>
+                      </div>
+
+                      <div className="benefit-items">
+                        <div className="icon wow fadeInUp">
+                          <i className="icon-checkbox" />
+                        </div>
+                        <div className="title wow fadeInUp" data-wow-delay=".1s">
+                          Research and Define
+                        </div>
+                      </div>
+
+                      <div className="benefit-items">
+                        <div className="icon wow fadeInUp">
+                          <i className="icon-checkbox" />
+                        </div>
+                        <div className="title wow fadeInUp" data-wow-delay=".1s">
+                          Ideate and Create
+                        </div>
+                      </div>
+
+                      <div className="benefit-items">
+                        <div className="icon wow fadeInUp">
+                          <i className="icon-checkbox" />
+                        </div>
+                        <div className="title wow fadeInUp" data-wow-delay=".1s">
+                          Design and Develop
+                        </div>
+                      </div>
+
+                      <div className="benefit-items">
+                        <div className="icon wow fadeInUp">
+                          <i className="icon-checkbox" />
+                        </div>
+                        <div className="title wow fadeInUp" data-wow-delay=".1s">
+                          Build and Activate
+                        </div>
+                      </div>
+
+                      <div className="benefit-items">
+                        <div className="icon wow fadeInUp">
+                          <i className="icon-checkbox" />
+                        </div>
+                        <div className="title wow fadeInUp" data-wow-delay=".1s">
+                          Scale the Business
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {/* /benefit-lists */}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 <Services />
-         <Process />
+         {/* <Process /> */}
         <Benefits /> 
 
 

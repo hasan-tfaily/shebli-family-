@@ -166,7 +166,7 @@ export default function MobileMenu() {
               }`}
             >
               <Link href="/services" className="item-link">
-                Industries we serve
+                Industries We Serve 
               </Link>
             </li>
             {/* PARTNERSHIP (dropdown) */}
@@ -182,7 +182,7 @@ export default function MobileMenu() {
                 data-bs-toggle="collapse"
                 className="collapsed"
               >
-                Partnership
+                Business Ventures
               </a>
               <div
                 id="mobile-partnership"
@@ -207,7 +207,7 @@ export default function MobileMenu() {
             </li>
 
             {/* OUR VENTURES */}
-            <li
+            {/* <li
               className={`menu-item ${
                 isMenuActive({ href: "/Our-Ventures" } as MenuLink)
                   ? "current-menu-mobile-item"
@@ -217,7 +217,7 @@ export default function MobileMenu() {
               <Link href="/Business-Ventures" className="item-link">
                 Business Ventures
               </Link>
-            </li>
+            </li> */}
 
 
             {/* BLOGS */}

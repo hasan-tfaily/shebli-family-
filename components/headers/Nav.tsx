@@ -364,7 +364,7 @@ export default function Nav() {
       </li>
 
         {/* OUR VENTURES */}
-      <li
+      {/* <li
         className={`menu-item ${
           isMenuActive({ href: "/Business-Ventures" } as MenuLink)
             ? "current-menu-item"
@@ -374,7 +374,7 @@ export default function Nav() {
         <Link href="/Business-Ventures" className="item-link">
           Business Ventures
         </Link>
-      </li>
+      </li> */}
 
       {/* PARTNERSHIP (dropdown) */}
       <li
@@ -383,7 +383,7 @@ export default function Nav() {
         }`}
       >
         <a href="#" className="item-link">
-          Partnership
+          Business Ventures
         </a>
         <ul className="sub-menu">
           {partnershipLinks.map((item, index) => (
