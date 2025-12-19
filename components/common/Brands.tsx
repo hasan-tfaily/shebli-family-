@@ -8,7 +8,7 @@ export default function Brands() {
       <div className="tf-container position-relative">
         <div className="row">
           <div className="col-12">
-            <h5 className="text text-center mb-28">
+            <h5 className="text text-center mb-28" style={{color:"#232559", marginTop:"80px"}}>
               Trusted by specialists all around the world
             </h5>
             <div className="tf-marquee">

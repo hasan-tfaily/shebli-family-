@@ -2852,7 +2852,7 @@ background-image: url("/image/page-title/our-ventures (1).png");
 
 .kidz-table tbody tr:hover td,
 .kidz-table tbody tr:hover th {
-  background: rgba(248, 210, 34, 0.10); /* soft yellow hover */
+  background: #C9EFFC; /* soft yellow hover */
 }
 
 .kidz-cards {
@@ -2951,3 +2951,16 @@ background-image: url("/image/page-title/our-ventures (1).png");
 }
 
 
+/* stop vertical centering */
+.tab-content,
+.tab-pane,
+.section-services-item {
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+}
+
+/* remove full-height that causes centering */
+.tab-pane {
+  min-height: 0 !important;
+  height: auto !important;
+}

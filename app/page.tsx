@@ -81,7 +81,7 @@ export default function Page() {
         <About />
         <ITFeatures />
         {/* <MCFeatures /> */}
-        <Blogs2 />
+        {/* <Blogs2 /> */}
         <Brands />
         {/* <Services1 /> */}
         {/* <Process /> */}

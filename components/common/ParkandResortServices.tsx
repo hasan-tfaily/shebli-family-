@@ -23,7 +23,7 @@ export default function ParkandResortServices() {
                     Activities
                   </a>
                 </div>
-                <h3 className="title-section text-anime-wave">
+                <h3 className="title-section text-anime-wave" style={{fontSize:"18px"}}>
                   The Escape Park & Resort offers a wide range of mentally and physically stimulating experiences, including:
                 </h3>
               </div>

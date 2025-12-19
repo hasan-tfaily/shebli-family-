@@ -535,7 +535,7 @@ export default function Page() {
         <Brands />
 
         {/* FAQ / ACCORDION SECTION */}
-        <section className="section-faqs h-5 tf-spacing-2">
+        {/* <section className="section-faqs h-5 tf-spacing-2">
           <div className="tf-container position-relative">
             <div className="row rg-60">
               <div className="col-lg-6">
@@ -670,7 +670,7 @@ export default function Page() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* CTA */}
         <section className="section-cta h-2 section-one-page" id="cta">

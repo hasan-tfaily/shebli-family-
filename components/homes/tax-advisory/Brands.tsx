@@ -10,7 +10,7 @@ export default function Brands() {
           <div className="col-12">
             <div className="text-heading">
               <h5>
-                <span> Trusted by specialists all around the world</span>
+                <span style={{color:"#232559"}}> Trusted by specialists all around the world</span>
               </h5>
             </div>
             <div className="tf-marquee tf-spacing-25">

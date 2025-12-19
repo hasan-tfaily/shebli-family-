@@ -233,7 +233,7 @@ export default function MobileMenu() {
               </Link>
             </li>
 
-             <li
+             {/* <li
               className={`menu-item ${
                 isMenuActive({ href: "/contact-us" } as MenuLink)
                   ? "current-menu-mobile-item"
@@ -243,7 +243,7 @@ export default function MobileMenu() {
               <Link href="/contact-us" className="item-link">
                 Contact Us
               </Link>
-            </li>  
+            </li>   */}
 
             {/* If you later want Careers / Contact in mobile too, just uncomment: */}
             {/*

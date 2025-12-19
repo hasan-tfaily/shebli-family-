@@ -36,12 +36,15 @@ export default function KidzMondoFormatsTable() {
         <div className="tf-container">
         <div className="row">
           <div className="col-12">
-      <div className="kidz-formats__head">
-        <h3 className="kidz-formats__title">KidzMondo Formats</h3>
-        <p className="kidz-formats__subtitle">
-          Quick comparison between City, Village, and Popup concepts.
-        </p>
-      </div>
+    <div className="kidz-formats__head" style={{ textAlign: "left" }}>
+  <h3 className="kidz-formats__title" style={{ fontSize: "18px" }}>
+    KidzMondo Formats
+  </h3>
+  <p className="kidz-formats__subtitle">
+    Quick comparison between City, Village, and Popup concepts.
+  </p>
+</div>
+
 
       {/* Desktop / Tablet table */}
       <div className="kidz-table-wrap">
