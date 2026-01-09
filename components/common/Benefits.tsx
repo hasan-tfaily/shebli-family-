@@ -4,9 +4,22 @@ import React from "react";
 import Image from "next/image";
 import { boxIconItems } from "@/data/benefits";
 
-export default function Benefits() {
-  const items = boxIconItems.slice(0, 2); // keep only two cards
+import { getStrapiMediaAlt, getStrapiMediaUrl, type StrapiMediaSingle } from "@/lib/strapi/media";
 
+type FeaturedItem = {
+  title?: string;
+  Body?: string;
+  img?: StrapiMediaSingle;
+};
+  
+type BenefitsProps = {
+  featuredItems?: FeaturedItem[];
+};
+
+export default function Benefits({ featuredItems = [] }: BenefitsProps) {
+  // Keep only two cards, but render them from Strapi dynamically.
+  const items = boxIconItems.slice(0, 2);
+  const cards = featuredItems.slice(1, 3);
   return (
     <section style={{ padding: "48px 0" }}>
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
@@ -20,7 +33,7 @@ export default function Benefits() {
             flexWrap: "wrap",
           }}
         >
-          {items.map((item, i) => (
+          {cards.map((card, i) => (
             <div
               key={i}
               style={{
@@ -38,12 +51,14 @@ export default function Benefits() {
             >
               {/* ICON AS IMAGE */}
               <div style={{ marginBottom: 12 }}>
-                <Image
-                  src={item.icon}
-                  alt={item.title}
-                  width={40}
-                  height={40}
-                />
+                {getStrapiMediaUrl(card?.img) ? (
+                  <Image
+                    src={getStrapiMediaUrl(card?.img)!}
+                    alt={getStrapiMediaAlt(card?.img)}
+                    width={40}
+                    height={40}
+                  />
+                ) : null}
               </div>
 
               <h5 style={{ margin: "0 0 12px", fontSize: 20, color: "#111827" }}>
@@ -51,12 +66,11 @@ export default function Benefits() {
                   href="#"
                   style={{ textDecoration: "none", color: "inherit" }}
                 >
-                  {item.title}
+                  {card?.title}
                 </a>
               </h5>
-
               <div style={{ color: "#6b7280", lineHeight: 1.7 }}>
-                {item.description}
+                {card?.Body}
               </div>
             </div>
           ))}

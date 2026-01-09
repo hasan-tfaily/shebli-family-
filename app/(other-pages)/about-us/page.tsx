@@ -12,21 +12,42 @@ import Breadcumb from "@/components/common/Breadcumb";
 import { Metadata } from "next";
 import Process from "@/components/common/Process";
 
+import { getBrandByName, unwrapAttributes } from "@/lib/strapi/queries";
+
 export const metadata: Metadata = {
   title: "About us || Kidz Holding - Franchise & Corporate Website",
   description: "Kidz Holding - Franchise & Corporate Website",
 };
 
-export default function Page() {
+export default async function Page() {
+  const aboutBrand = await getBrandByName({
+    brandName: "About Us",
+    populate: [
+      "Hero",
+      "section",
+      "section.img",
+      "section.list",
+      "section.ButtonLinks",
+      "section.featuredItems",
+      "section.featuredItems.img",
+    ],
+    revalidate: 0,
+  });
+
+  const hero = aboutBrand?.Hero;
+  const cmsTitle = hero?.title;
+  const cmsSubtitle = hero?.description;
+  const firstSectionRichText = aboutBrand?.section?.[0]?.featuredItems?.[0]?.Body;
+  const sectionOneCards = aboutBrand?.section?.[0]?.featuredItems ?? [];
   return (
     <>
       <div className="page-title style-1 bg-img-4">
         <div className="tf-container">
           <div className="page-title-content">
-            <Breadcumb pageName="About Us" />
-            <h2 className="title-page-title">About Us</h2>
+            <Breadcumb pageName={hero?.title} />
+            <h2 className="title-page-title">{hero?.title}</h2>
             <div className="sub-title body-2">
-              We create destinations where families come together to play, connect, <br></br> and experience unforgettable moments.
+              {hero?.description}
 
             </div>
           </div>
@@ -45,45 +66,30 @@ export default function Page() {
               marginTop: "70px" 
             }}
           >
-            Kidz Holding is a regional leader in the creation, development, and
-            management of family entertainment destinations and edutainment
-            concepts. We design immersive worlds where each member of the family
-            connects through meaningful shared experiences.
-            <br />
-            <br />
-            Our diverse portfolio spans indoor and outdoor attractions,
-            edutainment cities, nature parks, themed experiences, and hybrid
-            leisure concepts. Each concept has its own story and is designed to
-            serve all age brackets, from toddlers to teens, young adults, and
-            families, ensuring that every visitor finds an experience tailored
-            to their interests, abilities, and stage of growth.
-            <br />
-            <br />
-            With expertise covering concept creation, turnkey development,
-            franchise management, and operational leadership, we support
-            partners from the earliest idea to full operational maturity.
-            Operating across multiple regional markets, Kidz Holding is
-            committed to crafting experiences that are culturally relevant,
-            emotionally engaging, and future-ready.
-            <br />
-            <br />
-            Every project we undertake is built on a foundation of creativity,
-            innovation, safety, and strong educational value — ensuring
-            long-term success for our partners and unforgettable memories for
-            our guests.
+            {firstSectionRichText
+              ? firstSectionRichText.split("\n").map((line: string, idx: number) => (
+                  <React.Fragment key={idx}>
+                    {line}
+                    <br />
+                  </React.Fragment>
+                ))
+              : null}
           </div>
         </div>
 
-        <Benefits />
+        <Benefits featuredItems={sectionOneCards} />
 
         {/* <About /> */}
-        <History />
+        <History historySection={aboutBrand?.section?.[1]} />
         <Features
+          featuresSection={aboutBrand?.section?.[2]}
           hasBorder
           parentClass="section-why-choose h-2 page-about"
         />
 
-        <Process />
+        <Process 
+        processSection={aboutBrand?.section?.[3]}
+        />
 
         {/* <Testimonials /> */}
         {/* <Cta /> */}

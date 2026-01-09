@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-export default function Process() {
+export default function Process({ processSection }: { processSection: any }) {
   return (
     <section className="section-process h-2 tf-spacing-31 hover-active-step">
       <div className="tf-container position-relative">
@@ -14,14 +14,14 @@ export default function Process() {
                     href="#"
                     className="tag label text-btn-uppercase color-white"
                   >
-                    A Framework of Growth and Trust
+                    {processSection.miniTitle}
                   </a>
                 </div>
                 <h3 className="title-section mb-12 text-anime-wave">
-                  Corporate Structure
+                  {processSection.title}
                 </h3>
                 <div className="sub-title body-2 text-anime-wave">
-                 Kidz Holding operates through a robust corporate framework designed to balance creativity, operational excellence, and investor trust.
+                  {processSection.description}
                 </div>
               </div>
               {/* <div className="text-anime-wave-2">
@@ -46,11 +46,11 @@ export default function Process() {
               <div className="process-content">
                 <h5>
                   <a href="#" className="name-process">
-                    Holding Framework 
+                    {processSection.featuredItems[0]?.title}
                   </a>
                 </h5>
                 <div className="desc">
-                Strategic oversight and governance for all brands and franchises under one unified vision.
+                {processSection.featuredItems[0]?.Body}
                 </div>
               </div>
             </div>
@@ -66,11 +66,11 @@ export default function Process() {
               <div className="process-content">
                 <h5>
                   <a href="#" className="name-process">
-                   Business Units 
+                    {processSection.featuredItems[1]?.title}
                   </a>
                 </h5>
                 <div className="desc">
-                   Specialized divisions handling operations, marketing, education, and innovation.
+                   {processSection.featuredItems[1]?.Body}
                 </div>
               </div>
             </div>
@@ -86,11 +86,11 @@ export default function Process() {
               <div className="process-content">
                 <h5>
                   <a href="#" className="name-process">
-                     Corporate Governance
+                    {processSection.featuredItems[2]?.title}
                   </a>
                 </h5>
                 <div className="desc">
-                  Transparent, accountable leadership ensuring sustainable growth and stakeholder confidence.
+                  {processSection.featuredItems[2]?.Body}
                 </div>
               </div>  
             </div>

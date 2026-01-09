@@ -1,11 +1,30 @@
 "use client";
-import { timelineItems } from "@/data/timeline";
 import React, { useState } from "react";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+type HistoryItem = {
+  title?: string;
+  Body?: string;
+};
 
-export default function History() {
+type HistorySection = {
+  miniTitle?: string;
+  title?: string;
+  description?: string;
+  featuredItems?: HistoryItem[];
+};
+
+export default function History({ historySection }: { historySection?: HistorySection }) {
   const [hoveredItems, setHoveredItems] = useState<number[]>([]);
+
+  // No fallbacks: if CMS data isn't there, render nothing.
+  if (!historySection) return null;
+
+  const headingTag = historySection.miniTitle;
+  const headingTitle = historySection.title;
+  const headingDesc = historySection.description;
+  const items: HistoryItem[] = historySection.featuredItems ?? [];
+
   return (
     <section className="section-history section-about bg-on-suface-container tf-spacing-2 hover-active-step">
       <div className="tf-container">
@@ -13,19 +32,18 @@ export default function History() {
           <div className="col-12">
             <div className="heading-section text-center style-color-white mb-60">
               <div className="text-anime-wave-1">
-                <a
-                  href="#"
-                  className="tag label text-btn-uppercase color-white"
-                >
-                  Our Values
-                </a>
+                {headingTag ? (
+                  <a href="#" className="tag label text-btn-uppercase color-white">
+                    {headingTag}
+                  </a>
+                ) : null}
               </div>
-              <h3 className="title-section mb-12 text-anime-wave-1">
-                Values & Operating Principles
-              </h3>
-              <div className="sub-title body-2 text-anime-wave-1">
-                Explore the values and principles that shape our  work.
-              </div>
+              {headingTitle ? (
+                <h3 className="title-section mb-12 text-anime-wave-1">{headingTitle}</h3>
+              ) : null}
+              {headingDesc ? (
+                <div className="sub-title body-2 text-anime-wave-1">{headingDesc}</div>
+              ) : null}
             </div>
             <div className="wg-time-line">
               <div className="sw-layout-1 swiper-time-line">
@@ -53,7 +71,7 @@ export default function History() {
                     nextEl: ".snbn8",
                   }}
                 >
-                  {timelineItems.map((item, index) => (
+                  {items.map((item: HistoryItem, index: number) => (
                     <SwiperSlide className="swiper-slide" key={index}>
                       <div
                         className={`time-line-item step-hover ${
@@ -66,9 +84,13 @@ export default function History() {
                         <div className="time-line-content">
                           <div className="heading">
                             {/* <div className="label">{item.year}</div> */}
-                            <h5 className="title-content">{item.title}</h5>
+                            {item.title ? (
+                              <h5 className="title-content">{item.title}</h5>
+                            ) : null}
                           </div>
-                          <div className="desc">{item.description}</div>
+                          {item.Body ? (
+                            <div className="desc">{item.Body}</div>
+                          ) : null}
                         </div>
                       </div>
                     </SwiperSlide>

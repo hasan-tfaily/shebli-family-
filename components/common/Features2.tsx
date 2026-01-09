@@ -2,10 +2,21 @@ import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 
-export default function Features({
+import { getStrapiMediaUrl, type StrapiMediaSingle } from "@/lib/strapi/media";
+
+
+export default function Features( {
   parentClass = "section-why-choose h-2 tf-spacing-31",
   hasBorder = false,
+  featuresSection
+}: {
+  parentClass?: string;
+  hasBorder?: boolean;
+  featuresSection?: any;
 }) {
+  if (!featuresSection) return null;
+
+  const sectionImgUrl = getStrapiMediaUrl(featuresSection.img);
   return (
     <section className={parentClass}>
       <div className="tf-container position-relative">
@@ -18,105 +29,58 @@ export default function Features({
         >
           <div className="col-lg-6">
             <div className="image mr-15 tf-animate-1">
-              <Image
-                src="/image/section/WhyChooseUsAbout.png"
-                alt=""
-                className="lazyload"
-                width={615}
-                height={615}
-              />
+              {sectionImgUrl ? (
+                <Image
+                  src={sectionImgUrl}
+                  alt={""}
+                  className="lazyload"
+                  width={615}
+                  height={615}
+                />
+              ) : null}
             </div>
           </div>
           <div className="col-lg-6">
             <div className="section-content ml-15">
               <div className="heading-section">
                 <div className="wow fadeInUp">
-                  <a href="#" className="tag label text-btn-uppercase">
-                    Why Choose us?
-                  </a>
+                  {featuresSection.miniTitle ? (
+                    <a href="#" className="tag label text-btn-uppercase">
+                      {featuresSection.miniTitle}
+                    </a>
+                  ) : null}
                 </div>
-                <h3 className="title-section wow fadeInUp mb-12">
-                 Our Key Success Factors
-                 
-                </h3>
-                {/* <div className="sub-title body-2 wow fadeInUp">
-                  Choose us for unparalleled expertise, tailored solutions, and
-                  a commitment to your success. We deliver exceptional results
-                  through a strategic and collaborative approach.
-                </div> */}
+                {featuresSection.title ? (
+                  <h3 className="title-section wow fadeInUp mb-12">{featuresSection.title}</h3>
+                ) : null}
+                {featuresSection.description ? (
+                  <div className="sub-title body-2 wow fadeInUp">{featuresSection.description}</div>
+                ) : null}
               </div>
               <div className="benefit-lists">
-                <div className="benefit-items">
-                  <div className="icon wow fadeInUp">
-                    <i className="icon-checkbox" />
+                {(featuresSection.list).map((row, idx) => {
+                  const point = typeof row === "string" ? row : row?.point;
+
+                  return point ? (
+                  <div className="benefit-items" key={idx}>
+                    <div className="icon wow fadeInUp">
+                      <i className="icon-checkbox" />
+                    </div>
+                    <div className="title wow fadeInUp" data-wow-delay=".1s">
+                      {point}
+                    </div>
                   </div>
-                  <div className="title wow fadeInUp" data-wow-delay=".1s">
-                   Strategic Partnerships
-                  </div>
-                </div>
-                <div className="benefit-items">
-                  <div className="icon wow fadeInUp">
-                    <i className="icon-checkbox" />
-                  </div>
-                  <div className="title wow fadeInUp" data-wow-delay=".1s">
-                    Cultural Adaptation
-                  </div>
-                </div>
-                <div className="benefit-items">
-                  <div className="icon wow fadeInUp">
-                    <i className="icon-checkbox" />
-                  </div>
-                  <div className="title wow fadeInUp" data-wow-delay=".1">
-                     Focus on Guest Experience
-                  </div>
-                </div>
-                <div className="benefit-items">
-                  <div className="icon wow fadeInUp">
-                    <i className="icon-checkbox" />
-                  </div>
-                  <div className="title wow fadeInUp" data-wow-delay=".1s">
-                    Business Scalability
-                  </div>
-                </div>
-                <div className="benefit-items">
-                  <div className="icon wow fadeInUp">
-                    <i className="icon-checkbox" />
-                  </div>
-                  <div className="title wow fadeInUp" data-wow-delay=".1s">
-                    Access to expert training and marketing resources.
-                  </div>
-                </div>
-                 <div className="benefit-items">
-                  <div className="icon wow fadeInUp">
-                    <i className="icon-checkbox" />
-                  </div>
-                  <div className="title wow fadeInUp" data-wow-delay=".1s">
-                   Adaptability & Innovation
-                  </div>
-                </div>
-                 <div className="benefit-items">
-                  <div className="icon wow fadeInUp">
-                    <i className="icon-checkbox" />
-                  </div>
-                  <div className="title wow fadeInUp" data-wow-delay=".1s">
-                   Proven Operational Expertise
-                  </div>
-                </div>
-                 <div className="benefit-items">
-                  <div className="icon wow fadeInUp">
-                    <i className="icon-checkbox" />
-                  </div>
-                  <div className="title wow fadeInUp" data-wow-delay=".1s">
-                    Educational & Developmental Impact
-                  </div>
-                </div>
+                  ) : null;
+                })}
               </div>
-              <Link
-                href={`/contact-us`}
-                className="tf-btn style-1 bg-on-suface-container wow fadeInUp"
-              >
-                <span> Request a Quote </span>
-              </Link>
+              {featuresSection.ButtonLinks?.[0]?.link ? (
+                <Link
+                  href={featuresSection.ButtonLinks[0].link}
+                  className="tf-btn style-1 bg-on-suface-container wow fadeInUp"
+                >
+                  <span>{featuresSection.ButtonLinks[0].title}</span>
+                </Link>
+              ) : null}
             </div>
           </div>
         </div>

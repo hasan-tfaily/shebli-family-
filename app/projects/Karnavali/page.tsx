@@ -11,8 +11,10 @@ import "swiper/css/navigation";
 
 import Testimonials from "@/components/common/Testimonials";
 import Contact from "@/components/common/Contact";
+import { getBrandByName } from "@/lib/strapi/queries";
+import { getStrapiMediaUrl } from "@/lib/strapi/media";
 
-export default function KarnavaliPage() {
+export default async function KarnavaliPage() {
   const swiperRef = useRef<SwiperClass | null>(null);
 
   useEffect(() => {
@@ -40,13 +42,26 @@ export default function KarnavaliPage() {
     "/image/karnavali/karnavali 6.jpg",
     "/image/karnavali/karnavali 7  1.jpg",
   ];
-
+  const karnavaliBrand = await getBrandByName({
+    brandName: "Karnavali - Brand",
+    populate: [
+      "Hero",
+      "Hero.image",
+      "section",
+      "section.img",
+      "section.list",
+      "section.ButtonLinks",
+      "section.featuredItems",
+      "section.featuredItems.img",
+    ],
+    revalidate: 0,
+  });
   return (
     <>
       {/* HERO IMAGE */}
       <div className="kidz-hero">
         <Image
-          src="/image/page-title/karnavali banner.jpg"
+          src={getStrapiMediaUrl(karnavaliBrand.Hero.image)}
           alt="Karnavali Banner"
           width={1920}
           height={1080}
@@ -71,14 +86,14 @@ export default function KarnavaliPage() {
                     margin: 0,
                   }}
                 >
-                  Karnavali
+                  {karnavaliBrand.section?.[0]?.title}
                 </h2>
               </div>
 
               {/* Main Image */}
               <div className="image-blog">
                 <Image
-                  src="/image/karnavali/karnavali 1.jpg"
+                  src={getStrapiMediaUrl(karnavaliBrand.section?.[0]?.img)}
                   alt="Karnavali"
                   width={910}
                   height={512}
@@ -88,25 +103,14 @@ export default function KarnavaliPage() {
 
               {/* Intro Text */}
               <div className="desc-blog">
-                <h5 className="title-desc">
-                  The ultimate indoor carnival experience — reinvented for all
-                  age groups.
-                </h5>
-                <p className="body-2">
-                  Karnavali is a dynamic, indoor Family Entertainment Center
-                  designed as a multi-anchor attraction that brings the energy,
-                  excitement, and magic of a carnival into a modern, immersive
-                  indoor setting. With major rides, arcades, simulators, active
-                  play zones, and entertainment experiences for every age
-                  bracket, Karnavali offers a vibrant world of fun under one
-                  roof.
-                </p>
-                <p className="body-2">
-                  From heart-racing attractions to classic carnival snacks, the
-                  environment is crafted to engage families, teens, and young
-                  children alike, making it a go-to destination for unforgettable
-                  shared moments.
-                </p>
+                {karnavaliBrand.section?.[0]?.featuredItems?.[0]?.Body
+                    ? karnavaliBrand.section?.[0]?.featuredItems?.[0]?.Body.split("\n").map((line: string, idx: number) => (
+                        <React.Fragment key={idx}>
+                          {line}
+                          <br />
+                        </React.Fragment>
+                      ))
+                    : null}
               </div>
 
               {/* ✅ SWIPER (NO cols-img wrapper) */}
@@ -151,34 +155,31 @@ export default function KarnavaliPage() {
               {/* CONTENT SECTIONS */}
               <div className="list-desc">
                 <div className="desc-blog">
-                  <h5 className="title-desc">A Multisensory Indoor Carnival</h5>
-                  <p className="body-2">
-                    Karnavali blends thrill rides, interactive games, sensory
-                    play, and themed entertainment into an experience that
-                    appeals to a wide audience.
-                  </p>
+                  {karnavaliBrand?.section?.[0]?.featuredItems?.[1]?.Body
+                      ? karnavaliBrand?.section?.[0]?.featuredItems?.[1]?.Body.split("\n").map((line: string, idx: number) => (
+                          <React.Fragment key={idx}>
+                            {line}
+                            <br />
+                          </React.Fragment>
+                        ))
+                      : null}
                 </div>
 
                 <div className="desc-blog" style={{ marginTop: "50px" }}>
-                  <h5 className="title-desc">Entertainment</h5>
+                  <h5 className="title-desc">{karnavaliBrand?.section?.[1]?.title}</h5>
                   <p className="body-2">
-                    Guests can choose between a wide range of activities,
-                    including:
+                    {karnavaliBrand?.section?.[1]?.description}
                   </p>
                 </div>
 
-                <Testimonials />
+                <Testimonials
+                  testimonialSection={karnavaliBrand?.section?.[1]} 
+                />
 
                 <div className="desc-blog">
-                  <h5 className="title-desc">Concept Vision</h5>
+                  <h5 className="title-desc">{karnavaliBrand?.section?.[1]?.featuredItems[6]?.title}</h5>
                   <p className="body-2">
-                    Karnavali aims to create a one-of-a-kind indoor entertainment
-                    venue where children, teens, and families enjoy diverse
-                    activities inspired by the spirit of a joyful carnival.
-                    <br />
-                    Guests step into a world filled with color, laughter, motion,
-                    and excitement; an escape from routine into a place where
-                    imagination takes the lead.
+                    {karnavaliBrand?.section?.[1]?.featuredItems[6]?.Body}
                   </p>
                 </div>
               </div>
@@ -187,7 +188,9 @@ export default function KarnavaliPage() {
         </div>
       </div>
 
-      <Contact />
+      <Contact 
+        contactSection={karnavaliBrand?.section?.[2]}
+      />
     </>
   );
 }

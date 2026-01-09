@@ -1,15 +1,14 @@
 "use client";
 
 import React from "react";
-import { testimonials2 } from "@/data/testimonials";
 
-export default function Testimonials() {
-  // Split testimonials into rows of 3
-  const rows: typeof testimonials2[] = [];
-  for (let i = 0; i < testimonials2.length; i += 3) {
-    rows.push(testimonials2.slice(i, i + 3));
+export default function Testimonials({ testimonialSection }: { testimonialSection?: any }) {
+  const rows: any[] = [];
+  if (testimonialSection?.featuredItems) {
+    for (let i = 0; i < testimonialSection.featuredItems.length - 1; i += 3) {
+      rows.push(testimonialSection.featuredItems.slice(i, i + 3));
+    }
   }
-
   return (
     <section
       className="section-testimonials h-2 tf-spacing-14 section-one-page"
@@ -28,12 +27,12 @@ export default function Testimonials() {
                   <div className="testimonial-top">
                     <div className="counter-item">
                       <div className="counter">
-                        <h5 className="text">{item.label}</h5>
+                        <h5 className="text">{item.title}</h5>
                       </div>
                     </div>
                   </div>
                   <div className="item-content">
-                    <div className="text">{item.text}</div>
+                    <div className="text">{item.Body}</div>
                   </div>
                 </div>
               </div>
