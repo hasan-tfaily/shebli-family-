@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { getStrapiMediaUrl } from "@/lib/strapi/media";
 
 export const boxIconItems = [
   {
@@ -46,16 +47,16 @@ export const boxIconItems = [
   },
 ];
 
-export default function Benefits() {
-  const items = boxIconItems.slice(0, 8);
-
+export default function Benefits({ benefitsSection }: { benefitsSection?: any }) {
+  const items = benefitsSection?.featuredItems || boxIconItems;
+  
   return (
     <section>
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
         <div className="benefits-grid">
-          {items.map((item, i) => (
+          {items.map((item : any) => (
             <div
-              key={i}
+              key={item.title}
               style={{
                 border: "1px solid rgba(15,23,42,.18)",
                 background: "#fff",
@@ -67,7 +68,7 @@ export default function Benefits() {
               }}
             >
               <div style={{ marginBottom: 12 }}>
-                <Image src={item.icon} alt={item.title} width={40} height={40} />
+                <Image src={getStrapiMediaUrl(item.img)} alt={item.title} width={40} height={40} />
               </div>
 
               <h5
@@ -75,7 +76,7 @@ export default function Benefits() {
                   margin: "0 0 8px",
                   fontSize: 16,
                   fontWeight: 600,
-                  color: "#111827",
+                  color: "#2f3646ff",
                 }}
               >
                 {item.title}

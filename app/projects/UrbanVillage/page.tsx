@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import type { Swiper as SwiperClass } from "swiper";
@@ -10,9 +10,34 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import UrbanVillageServices from "@/components/common/UrbanVillageServices";
+import { getBrandByName } from "@/lib/strapi/queries";
+import { getStrapiMediaUrl } from "@/lib/strapi/media";
+import ReactMarkdown from "react-markdown";
 
 export default function UrbanVillage() {
   const swiperRef = useRef<SwiperClass | null>(null);
+  const [urbanVillageBrand, setBrandData] = useState<any>(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+          const data = await getBrandByName({
+            brandName: "Urban Village - Brand",
+            populate: [
+              "Hero",
+              "Hero.image",
+              "section",
+              "section.img",
+              "section.featuredItems.list",
+              "section.ButtonLinks",
+              "section.featuredItems",
+              "section.featuredItems.img",
+            ],
+            revalidate: 0,
+          });
+          setBrandData(data);
+        };
+        fetchData();
+      }, []);
 
   useEffect(() => {
     const update = () => {
@@ -37,13 +62,12 @@ export default function UrbanVillage() {
     "/image/UrbanVillage/urban 4.jpg",
     "/image/UrbanVillage/urban 5.jpg",
   ];
-
   return (
     <>
       {/* HERO */}
       <div className="page-hero">
         <Image
-          src="/image/page-title/UV-banner.jpg"
+          src={getStrapiMediaUrl(urbanVillageBrand?.Hero?.image) || "/image/UrbanVillage/urban village banner.jpg"}
           alt="Urban Village Banner"
           width={1920}
           height={1080}
@@ -68,14 +92,14 @@ export default function UrbanVillage() {
                     margin: 0,
                   }}
                 >
-                  Urban Village
+                  {urbanVillageBrand?.section?.[0]?.title}
                 </h2>
               </div>
 
               {/* MAIN IMAGE */}
               <div className="image-blog">
                 <Image
-                  src="/image/UrbanVillage/urban-village 1.jpg"
+                  src={getStrapiMediaUrl(urbanVillageBrand?.section?.[0]?.img) || "/"}
                   alt="Urban Village"
                   width={910}
                   height={512}
@@ -89,19 +113,7 @@ export default function UrbanVillage() {
                 style={{ marginTop: "24px", marginBottom: "32px" }}
               >
                 <p className="body-2" style={{ margin: 0 }}>
-                  Urban Village is a contemporary lifestyle destination where
-                  entertainment, culture, food, and community come together in
-                  one vibrant space. Designed as an open, walkable, and
-                  experiential district, Urban Village blends social dining,
-                  modern entertainment, boutique retail, and wellness amenities
-                  to create a dynamic environment for families, youth, and
-                  adults.
-                  <br />
-                  <br />
-                  Inspired by the most successful lifestyle zones around the
-                  world, Urban Village offers a curated mix of experiences that
-                  activate the senses, celebrate individuality, and bring people
-                  together, day and night.
+                  {urbanVillageBrand?.section?.[0]?.featuredItems?.[0]?.Body}
                 </p>
               </div>
 
@@ -145,22 +157,11 @@ export default function UrbanVillage() {
                   className="desc-blog"
                   style={{ marginTop: "32px", marginBottom: "32px" }}
                 >
-                  <h4 className="title-desc" style={{ marginBottom: "12px" }}>
-                    A New Vision for Social Living
-                  </h4>
-                  <p className="body-2" style={{ margin: 0 }}>
-                    Urban Village is more than a venue; it is a community hub and
-                    a social micro-city.
-                    <br />
-                    Every corner is thoughtfully designed to encourage discovery,
-                    movement, connection, and exploration.
-                    <br />
-                    <br />
-                    From artisanal eateries and handcrafted desserts to immersive
-                    entertainment and lifestyle amenities, Urban Village offers
-                    something for everyone, making it one of the most attractive
-                    anchors for real estate and mixed-use developments.
-                  </p>
+                  {urbanVillageBrand?.section?.[0]?.featuredItems?.[1]?.Body ? (
+                    <ReactMarkdown>
+                      {urbanVillageBrand.section[0].featuredItems[1].Body}
+                    </ReactMarkdown>
+                  ) : null}
                 </div>
               </div>
 
@@ -170,7 +171,9 @@ export default function UrbanVillage() {
         </div>
       </div>
 
-      <UrbanVillageServices />
+      <UrbanVillageServices 
+        experiencesSection={urbanVillageBrand?.section?.[1]}
+      />
     </>
   );
 }

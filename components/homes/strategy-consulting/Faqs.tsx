@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Faqs() {
+export default function Faqs({ faqs }: { faqs: any }) {
   return (
     <section className="section-faqs h-3 tf-spacing-17">
       <div className="tf-container position-relative">
@@ -13,7 +13,7 @@ export default function Faqs() {
                 </a>
               </div> */}
               <h3 className="text-anime-wave mb-12">
-                Activities
+                {faqs?.title}
               </h3>
             </div>
             <div className="wg-according style-border m-lr-100" id="According">
@@ -24,7 +24,7 @@ export default function Faqs() {
                     data-bs-toggle="collapse"
                     className="title-according collapsed"
                   >
-                    Social Bowling and AR Bowling
+                    {faqs?.featuredItems?.[0]?.title}
                     <span />
                   </a>
                 </h5>
@@ -35,7 +35,7 @@ export default function Faqs() {
                 >
                   <div className="according-content">
                     <p>
-                      A high-energy bowling experience designed for social groups and competitive fun, enhanced with atmospheric lighting and music.
+                      {faqs?.featuredItems?.[0]?.Body}
                     </p>
                   </div>
                 </div>
@@ -47,7 +47,7 @@ export default function Faqs() {
                     data-bs-toggle="collapse"
                     className="title-according"
                   >
-                    Retro Arcade Zone
+                    {faqs?.featuredItems?.[1]?.title}
                     <span />
                   </a>
                 </h5>
@@ -58,7 +58,7 @@ export default function Faqs() {
                 >
                   <div className="according-content">
                     <p>
-                     A mix of classic arcade titles and modern hits, delivering nostalgia and excitement for all generations.
+                      {faqs?.featuredItems?.[1]?.Body}
                     </p>
                   </div>
                 </div>
@@ -70,7 +70,7 @@ export default function Faqs() {
                     data-bs-toggle="collapse"
                     className="title-according collapsed"
                   >
-                    Immersive Gaming & Simulators
+                    {faqs?.featuredItems?.[2]?.title}
                     <span />
                   </a>
                 </h5>
@@ -81,7 +81,7 @@ export default function Faqs() {
                 >
                   <div className="according-content">
                     <p>
-                      Sports simulators, VR games, interactive screens, and digital game experiences inspired by global entertainment leaders.
+                      {faqs?.featuredItems?.[2]?.Body}
                     </p>
                   </div>
                 </div>
@@ -93,7 +93,7 @@ export default function Faqs() {
                     data-bs-toggle="collapse"
                     className="title-according collapsed"
                   >
-                    Mini Golf & Casual Play
+                    {faqs?.featuredItems?.[3]?.title}
                     <span />
                   </a>
                 </h5>
@@ -104,7 +104,7 @@ export default function Faqs() {
                 >
                   <div className="according-content">
                     <p>
-                      Fun and social mini-golf experiences and table-based games that encourage friendly competition.
+                      {faqs?.featuredItems?.[3]?.Body}
                     </p>
                   </div>
                 </div>
@@ -116,7 +116,7 @@ export default function Faqs() {
                     data-bs-toggle="collapse"
                     className="title-according collapsed"
                   >
-                    Karaoke & Live Entertainment Stage
+                    {faqs?.featuredItems?.[4]?.title}
                     <span />
                   </a>
                 </h5>
@@ -127,31 +127,7 @@ export default function Faqs() {
                 >
                   <div className="according-content">
                     <p>
-                     A dedicated performance zone featuring karaoke, DJ sets, live music, and event nights.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="according-item">
-                <h5>
-                  <a
-                    href="#according-5"
-                    data-bs-toggle="collapse"
-                    className="title-according collapsed"
-                  >
-                    Interactive Dining Experience
-                    <span />
-                  </a>
-                </h5>
-                <div
-                  id="according-5"
-                  className="collapse"
-                  data-bs-parent="#According"
-                >
-                  <div className="according-content">
-                    <p>
-                     Themed dining areas where food and entertainment merge, complete with interactive game tables, vibrant menus, and a lively atmosphere.
+                     {faqs?.featuredItems?.[4]?.Body}
                     </p>
                   </div>
                 </div>
@@ -164,7 +140,7 @@ export default function Faqs() {
                     data-bs-toggle="collapse"
                     className="title-according collapsed"
                   >
-                    Social Pool, Snooker & Darts
+                    {faqs?.featuredItems?.[5]?.title}
                     <span />
                   </a>
                 </h5>
@@ -175,7 +151,31 @@ export default function Faqs() {
                 >
                   <div className="according-content">
                     <p>
-                     Classic social games reimagined with modern ambiance, digital scoring, and themed environments.
+                     {faqs?.featuredItems?.[5]?.Body}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="according-item">
+                <h5>
+                  <a
+                    href="#according-5"
+                    data-bs-toggle="collapse"
+                    className="title-according collapsed"
+                  >
+                    {faqs?.featuredItems?.[6]?.title}
+                    <span />
+                  </a>
+                </h5>
+                <div
+                  id="according-5"
+                  className="collapse"
+                  data-bs-parent="#According"
+                >
+                  <div className="according-content">
+                    <p>
+                     {faqs?.featuredItems?.[6]?.Body}
                      </p>
                   </div>
                 </div>
@@ -188,7 +188,7 @@ export default function Faqs() {
                     data-bs-toggle="collapse"
                     className="title-according collapsed"
                   >
-                    Retro-Industrial Art Installations
+                    {faqs?.featuredItems?.[7]?.title}
                     <span />
                   </a>
                 </h5>
@@ -199,7 +199,7 @@ export default function Faqs() {
                 >
                   <div className="according-content">
                     <p>
-                     Nostalgic and visually striking art pieces, neon work, and themed installations that elevate the venue’s identity and social media appeal.
+                     {faqs?.featuredItems?.[7]?.Body}
                     </p>
                   </div>
                 </div>

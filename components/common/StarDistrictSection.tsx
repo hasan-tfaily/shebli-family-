@@ -2,14 +2,22 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
+import { get } from "http";
+import { getStrapiMediaUrl } from "@/lib/strapi/media";
 import { starDistrictData } from "@/data/starDistrictData";
 
-export default function StarDistrictSection() {
-  if (!starDistrictData || starDistrictData.length === 0) {
+export default function StarDistrictSection({ experiencesSection }: any) {
+  if (!experiencesSection) {
     return null;
   }
-
+  const rawData = experiencesSection.featuredItems;
+  const starDistrictData = rawData.map((item: any, index: number) => ({
+    ...item,
+    id: `experience-${index}`,
+  }));
+  const [activeIndex, setActiveIndex] = useState(0);
+  console.log("starDistrictData", starDistrictData);
   return (
     <section
       className="section-services h-1 tf-spacing-31 bg-surface section-one-page"
@@ -22,7 +30,7 @@ export default function StarDistrictSection() {
               <div className="left">
                  <div className="text-anime-wave">
                   <a href="#" className="tag label text-btn-uppercase bg-white">
-                    Experiences
+                    {experiencesSection.miniTitle}
                   </a>
                 </div>
                 {/* <div className="text-anime-wave">
@@ -34,11 +42,10 @@ export default function StarDistrictSection() {
                   </a>
                 </div> */}
                 <h3 className="title-section text-anime-wave">
-                 Experiences
+                 {experiencesSection.title}
                 </h3>
               </div>
             </div>
-
 
 
             <div className="section-services-content">
@@ -46,20 +53,25 @@ export default function StarDistrictSection() {
                 {/* Tabs */}
                 <div className="wg-tab">
                   <ul className="tab-product min-w-757" role="tablist">
-                    {starDistrictData.map(({ id, title, isActive }) => (
+                    {starDistrictData.map((item: any, index: number) => (
                       <li
                         className="nav-tab-item"
                         role="presentation"
-                        key={id}
+                        key={item.title}
                       >
                         <h5>
                           <a
-                            href={`#${id}`}
-                            data-bs-toggle="tab"
+                            href={`#${item.id}`}
                             role="tab"
-                            className={isActive ? "active" : ""}
+                            className={activeIndex === index ? "active" : ""}
+                            onClick={(e) => {
+                              e.preventDefault();
+                              e.stopPropagation();
+                              console.log("Tab clicked:", index);
+                              setActiveIndex(index);
+                            }}
                           >
-                            {title}
+                            {item.title}
                           </a>
                         </h5>
                       </li>
@@ -69,47 +81,36 @@ export default function StarDistrictSection() {
 
                 {/* Tab panes */}
                 <div className="tab-content">
-                  {starDistrictData.map(
-                    ({
-                      id,
-                      imgSrc,
-                      imgWidth,
-                      imgHeight,
-                      title,
-                      benefits,
-                      isActive,
-                    }) => (
+                  {starDistrictData.map((item: any, index: number) => (
                       <div
-                        key={id}
+                        key={item.title}
                         className={`tab-pane${
-                          isActive ? " active show" : ""
+                          activeIndex === index ? " active show" : ""
                         }`}
-                        id={id}
+                        id={item.id}
                         role="tabpanel"
+                        style={{ display: activeIndex === index ? "block" : "none" }}
                       >
                         <div className="section-services-item">
-                          <div className="image tf-animate-1">
-                            
+                          <div className="image tf-animate-1 active-animate">
                             <Image
-                              src={imgSrc}
-                              alt={title}
-                              className="lazyload"
-                              width={imgWidth}
-                              height={imgHeight}
+                              src={getStrapiMediaUrl(item.img) || ""}
+                              alt={item.title}
+                              width={1920}
+                              height={1080}
                             />
-                          </div>
-
+                        </div>
                           <div className="services-content">
                             <div className="heading">
                               <h3>
                               
-                                  {title}
+                                  {item.title}
                                 
                               </h3>
                             </div>
 
                             <div className="benefit-lists">
-                              {benefits.map((benefit, i) => (
+                              {item.list.map((benefit: any, i: number) => (
                                 <div className="benefit-items" key={i}>
                                   <div className="icon wow fadeInUp">
                                     <i className="icon-checkbox" />
@@ -118,7 +119,7 @@ export default function StarDistrictSection() {
                                     className="title wow fadeInUp"
                                     data-wow-delay=".1s"
                                   >
-                                    {benefit}
+                                    {benefit.point}
                                   </div>
                                 </div>
                               ))}

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 
@@ -9,9 +9,39 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import StarDistrictSection from "@/components/common/StarDistrictSection";
+import { get } from "http";
+import { starDistrictData } from "@/data/starDistrictData";
+import { getBrandByName } from "@/lib/strapi/queries";
+import { getStrapiMediaUrl } from "@/lib/strapi/media";
+import ReactMarkdown from "react-markdown";
 
 export default function StarDistrict() {
   const swiperRef = useRef(null);
+  const [starDistrictBrand, setStarDistrictBrand] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await getBrandByName({
+        brandName: "Star District - Brand",
+        populate: [
+          "Hero",
+          "Hero.image",
+          "section",
+          "section.img",
+          "section.list",
+          "section.ButtonLinks",
+          "section.featuredItems",
+          "section.featuredItems.list",
+          "section.featuredItems.img",
+        ],
+        revalidate: 0,
+      });
+      setStarDistrictBrand(data);
+      setLoading(false);
+    };
+    fetchData();
+  }, []);
 
   useEffect(() => {
     const update = () => {
@@ -39,12 +69,16 @@ export default function StarDistrict() {
     "/image/starDistrict/star 5.jpg",
   ];
 
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <>
       {/* HERO */}
       <div className="page-hero">
         <Image
-          src="/image/page-title/our-ventures (1).png"
+          src={getStrapiMediaUrl(starDistrictBrand.Hero.image)}
           alt="Star District Hero"
           width={1920}
           height={1080}
@@ -70,14 +104,14 @@ export default function StarDistrict() {
                     margin: 0,
                   }}
                 >
-                  Star District
+                  {starDistrictBrand?.section[0]?.title}
                 </h2>
               </div>
 
               {/* Main image */}
               <div className="image-blog">
                 <Image
-                  src="/image/starDistrict/star district 1.jpg"
+                  src={getStrapiMediaUrl(starDistrictBrand?.section[0]?.img)}
                   alt="Star District"
                   width={910}
                   height={512}
@@ -87,24 +121,11 @@ export default function StarDistrict() {
 
               {/* Intro */}
               <div className="desc-blog">
-                <h5 className="title-desc">Concept</h5>
-                <p className="body-2">
-                  Star District is the ideal platform for children and teenagers
-                  who want to experience stardom.
-                  <br />
-                  <br />
-                  It is a one stop family entertainment center where mothers can
-                  take their toddlers to play, children and teenagers can have
-                  their fifteen minutes of fame and shine in the spotlight,
-                  where mothers and their daughters can bond over girly
-                  activities, and where teenagers can hang out and have fun.
-                  <br />
-                  <br />
-                  It is a forum where children and teenagers can interact with
-                  different international brands through engaging in sponsored
-                  activities and enjoying a unique Hollywood-esque shopping
-                  experience.
-                </p>
+                {starDistrictBrand?.section?.[0]?.featuredItems?.[0]?.Body ? (
+                  <ReactMarkdown>
+                    {starDistrictBrand.section[0].featuredItems[0].Body}
+                  </ReactMarkdown>
+                ) : null}
               </div>
 
               {/* ✅ SWIPER (NO cols-img wrapper) */}
@@ -149,40 +170,9 @@ export default function StarDistrict() {
               {/* Sections */}
               <div className="list-desc">
                 <div className="desc-blog">
-                  <p className="body-2">
-                    Star District is the ultimate fame-experience destination
-                    where children and teenagers step into the spotlight and
-                    live the stardom they dream of. Designed as an immersive
-                    activation and entertainment hub, Star District blends
-                    performing arts, creativity, fashion, media, and lifestyle
-                    experiences into one dazzling world.
-                    <br />
-                    <br />
-                    It is a one-stop family entertainment center where toddlers
-                    can play, kids and teens can shine in their “fifteen minutes
-                    of fame,” mothers and daughters can enjoy bonding
-                    activities, and teenagers can hang out, create, and express
-                    themselves.
-                  </p>
-                </div>
-
-                <div className="desc-blog" style={{ marginTop: "50px" }}>
-                  <h5 className="title-desc">Where Kids Live the Fame</h5>
-                  <p className="body-2">
-                    Star District invites young guests to experience what it
-                    truly means to be a star. Beyond the glamour, they learn
-                    how a star looks, walks, talks, performs, and expresses
-                    their talent. Through hands-on experiences and professional
-                    guidance, children and teens explore the skills needed to
-                    shine in front of an audience.
-                    <br />
-                    <br />
-                    A dedicated team of creative coaches helps them discover and
-                    develop their talents—whether in music, performing, fashion,
-                    design, or media. With themed sets, professional equipment,
-                    and endless props, every child gets a chance to perform,
-                    create content, and enjoy their moment in the spotlight.
-                  </p>
+                  <ReactMarkdown>
+                    {starDistrictBrand?.section?.[0]?.featuredItems?.[1]?.Body}
+                  </ReactMarkdown>
                 </div>
               </div>
             </div>
@@ -190,7 +180,9 @@ export default function StarDistrict() {
         </div>
       </div>
 
-      <StarDistrictSection />
+      <StarDistrictSection 
+       experiencesSection={starDistrictBrand?.section?.[1]}
+      />
     </>
   );
 }

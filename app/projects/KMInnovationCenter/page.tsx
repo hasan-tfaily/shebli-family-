@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import type { Swiper as SwiperClass } from "swiper";
@@ -10,9 +10,35 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import Benefits11 from "@/components/common/Benefits11";
+import { getBrandByName } from "@/lib/strapi/queries";
+import { getStrapiMediaUrl } from "@/lib/strapi/media";
 
 export default function KMInnovationCenterPage() {
   const swiperRef = useRef<SwiperClass | null>(null);
+  const [brandData, setBrandData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await getBrandByName({
+        brandName: "KM Innovation Center - Brand",
+        populate: [
+          "Hero",
+          "Hero.image",
+          "section",
+          "section.img",
+          "section.list",
+          "section.ButtonLinks",
+          "section.featuredItems",
+          "section.featuredItems.img",
+        ],
+        revalidate: 0,
+      });
+      setBrandData(data);
+      setLoading(false);
+    };
+    fetchData();
+  }, []);
 
   useEffect(() => {
     const update = () => {
@@ -38,12 +64,18 @@ export default function KMInnovationCenterPage() {
     "/image/KM-innovation/innovation 6.jpg",
   ];
 
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  const sectionOne = brandData?.section?.[0];
+
   return (
     <>
-      {/* HERO IMAGE (restored to your original wrapper) */}
+      {/* HERO IMAGE */}
       <div className="image img-top">
         <Image
-          src="/image/page-title/banner.jpg"
+          src={getStrapiMediaUrl(brandData?.Hero?.image) || "/image/page-title/banner.jpg"}
           alt="KM Innovation Center Hero"
           className="lazyload"
           width={1920}
@@ -70,14 +102,14 @@ export default function KMInnovationCenterPage() {
                     margin: 0,
                   }}
                 >
-                  KM Innovation Center
+                  {sectionOne?.title }
                 </h2>
               </div>
 
               {/* MAIN IMAGE */}
               <div className="image-blog">
                 <Image
-                  src="/image/KM-innovation/KM 1.jpg"
+                  src={getStrapiMediaUrl(sectionOne?.img) || "/image/KM-innovation/KM 1.jpg"}
                   alt="Children exploring at KM Innovation Center"
                   className="lazyload"
                   width={910}
@@ -89,13 +121,7 @@ export default function KMInnovationCenterPage() {
               {/* INTRO SECTION */}
               <div className="desc-blog">
                 <p className="body-2">
-                  The village-like compound will cater to a variety of needs and
-                  bring together the community in a way which enables every person
-                  to meet his own personal needs in a joint setting.
-                  <br />
-                  <br />
-                  The facility will be composed of different sections targeted at
-                  different audiences and providing different services experiences:
+                  {sectionOne?.featuredItems?.[0]?.Body}
                 </p>
               </div>
 
@@ -139,25 +165,18 @@ export default function KMInnovationCenterPage() {
               <div className="list-desc">
                 <div className="desc-blog">
                   <p className="body-2">
-                    The KidzMondo Innovation Center is a cutting-edge space designed
-                    to ignite curiosity and prepare children for the future of technology.
-                    Inspired by the spirit of Silicon Valley, this miniature innovation hub
-                    immerses kids in hands-on STEAM learning, empowering them to think,
-                    create, and solve real-world challenges.
-                    <br />
-                    <br />
-                    From coding and robotics to artificial intelligence, virtual reality,
-                    entrepreneurship, and digital safety, the Innovation Center equips kids
-                    with future-ready skills through multidisciplinary, problem-based activities.
+                    {sectionOne?.featuredItems?.[1]?.Body}
                   </p>
                 </div>
 
                 <h5 className="title-desc" style={{ marginTop: "90px" }}>
-                  Activities:
+                  {brandData?.section?.[1]?.title || "Activities:"}
                 </h5>
               </div>
 
-              <Benefits11 />
+              <Benefits11 
+               benefitsSection={brandData?.section?.[1]}
+              />
             </div>
           </div>
         </div>

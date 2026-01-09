@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import type { Swiper as SwiperClass } from "swiper";
@@ -14,8 +14,32 @@ import Contact from "@/components/common/Contact";
 import { getBrandByName } from "@/lib/strapi/queries";
 import { getStrapiMediaUrl } from "@/lib/strapi/media";
 
-export default async function KarnavaliPage() {
+export default function KarnavaliPage() {
   const swiperRef = useRef<SwiperClass | null>(null);
+  const [karnavaliBrand, setKarnavaliBrand] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await getBrandByName({
+        brandName: "Karnavali - Brand",
+        populate: [
+          "Hero",
+          "Hero.image",
+          "section",
+          "section.img",
+          "section.list",
+          "section.ButtonLinks",
+          "section.featuredItems",
+          "section.featuredItems.img",
+        ],
+        revalidate: 0,
+      });
+      setKarnavaliBrand(data);
+      setLoading(false);
+    };
+    fetchData();
+  }, []);
 
   useEffect(() => {
     const update = () => {
@@ -42,20 +66,11 @@ export default async function KarnavaliPage() {
     "/image/karnavali/karnavali 6.jpg",
     "/image/karnavali/karnavali 7  1.jpg",
   ];
-  const karnavaliBrand = await getBrandByName({
-    brandName: "Karnavali - Brand",
-    populate: [
-      "Hero",
-      "Hero.image",
-      "section",
-      "section.img",
-      "section.list",
-      "section.ButtonLinks",
-      "section.featuredItems",
-      "section.featuredItems.img",
-    ],
-    revalidate: 0,
-  });
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <>
       {/* HERO IMAGE */}

@@ -2,14 +2,22 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
+import { get } from "http";
+import { getStrapiMediaUrl } from "@/lib/strapi/media";
 import { urbanVillageData } from "@/data/urbanVillageData";
 
-export default function UrbanVillageServices() {
-  if (!urbanVillageData || urbanVillageData.length === 0) {
+export default function UrbanVillageServices({ experiencesSection }: any) {
+  if (!experiencesSection || !experiencesSection.featuredItems || !Array.isArray(experiencesSection.featuredItems)) {
     return null;
   }
-
+  const rawData = experiencesSection.featuredItems;
+  const urbanVillageData = rawData.map((item: any, index: number) => ({
+    ...item,
+    id: `experience-${index}`,
+  }));
+  const [activeIndex, setActiveIndex] = useState(0);
+  console.log("urbanVillageData", urbanVillageData);
   return (
     <section
       className="section-services h-1 tf-spacing-31 bg-surface section-one-page"
@@ -20,34 +28,42 @@ export default function UrbanVillageServices() {
           <div className="col-12">
             <div className="heading-section style-2">
               <div className="left">
-                <div className="text-anime-wave">
+                 <div className="text-anime-wave">
                   <a href="#" className="tag label text-btn-uppercase bg-white">
-                    Experiences
+                    {experiencesSection.miniTitle}
                   </a>
                 </div>
-                <h3 className="title-section text-anime-wave">Experiences</h3>
+                <h3 className="title-section text-anime-wave">
+                 {experiencesSection.title}
+                </h3>
               </div>
             </div>
+
 
             <div className="section-services-content">
               <div className="flat-animate-tab">
                 {/* Tabs */}
                 <div className="wg-tab">
                   <ul className="tab-product min-w-757" role="tablist">
-                    {urbanVillageData.map(({ id, title, isActive }) => (
+                    {urbanVillageData.map((item: any, index: number) => (
                       <li
                         className="nav-tab-item"
                         role="presentation"
-                        key={id}
+                        key={item.title}
                       >
                         <h5>
                           <a
-                            href={`#${id}`}
-                            data-bs-toggle="tab"
+                            href={`#${item.id}`}
                             role="tab"
-                            className={isActive ? "active" : ""}
+                            className={activeIndex === index ? "active" : ""}
+                            onClick={(e) => {
+                              e.preventDefault();
+                              e.stopPropagation();
+                              console.log("Tab clicked:", index);
+                              setActiveIndex(index);
+                            }}
                           >
-                            {title}
+                            {item.title}
                           </a>
                         </h5>
                       </li>
@@ -57,44 +73,34 @@ export default function UrbanVillageServices() {
 
                 {/* Tab panes */}
                 <div className="tab-content">
-                  {urbanVillageData.map(
-                    ({
-                      id,
-                      imgSrc,
-                      imgWidth,
-                      imgHeight,
-                      title,
-                      benefits,
-                      isActive,
-                    }) => (
+                  {urbanVillageData.map((item: any, index: number) => (
                       <div
-                        key={id}
+                        key={item.title}
                         className={`tab-pane${
-                          isActive ? " active show" : ""
+                          activeIndex === index ? " active show" : ""
                         }`}
-                        id={id}
+                        id={item.id}
                         role="tabpanel"
+                        style={{ display: activeIndex === index ? "block" : "none" }}
                       >
                         <div className="section-services-item">
-                          <div className="image tf-animate-1">
-                          
+                          <div className="image tf-animate-1 active-animate">
                             <Image
-                              src={imgSrc}
-                              alt={title}
-                              className="lazyload"
-                              width={imgWidth}
-                              height={imgHeight}
+                              src={getStrapiMediaUrl(item.img)}
+                              alt={item.title}
+                              width={1920}
+                              height={1080}
                             />
                           </div>
                           <div className="services-content">
                             <div className="heading">
                               <h3>
-                                  {title}
+                                  {item.title}
                               </h3>
                             </div>
-
+                            
                             <div className="benefit-lists">
-                              {benefits.map((benefit, i) => (
+                              {item.list?.map((benefit: any, i: number) => (
                                 <div className="benefit-items" key={i}>
                                   <div className="icon wow fadeInUp">
                                     <i className="icon-checkbox" />
@@ -103,7 +109,7 @@ export default function UrbanVillageServices() {
                                     className="title wow fadeInUp"
                                     data-wow-delay=".1s"
                                   >
-                                    {benefit}
+                                    {benefit.point}
                                   </div>
                                 </div>
                               ))}

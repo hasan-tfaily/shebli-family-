@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 
@@ -13,8 +13,33 @@ import KidzMondoFormatsTable from "@/components/common/KidzMondoFormatsTable";
 import { getBrandByName } from "@/lib/strapi/queries";
 import { getStrapiMediaUrl } from "@/lib/strapi/media";
 
-export default async function KidzMondoPage() {
+export default function KidzMondoPage() {
   const swiperRef = useRef<any>(null);
+  const [kidzMondoBrand, setKidzMondoBrand] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await getBrandByName({
+        brandName: "KidzMondo - Brand",
+        populate: [
+          "Hero",
+          "Hero.image",
+          "section",
+          "section.img",
+          "section.list",
+          "section.ButtonLinks",
+          "section.featuredItems",
+          "section.featuredItems.img",
+        ],
+        revalidate: 0,
+      });
+      setKidzMondoBrand(data);
+      setLoading(false);
+    };
+    fetchData();
+  }, []);
+
   useEffect(() => {
     const update = () => swiperRef.current?.update?.();
 
@@ -30,20 +55,11 @@ export default async function KidzMondoPage() {
       window.removeEventListener("orientationchange", update);
     };
   }, []);
-    const kidzMondoBrand = await getBrandByName({
-    brandName: "KidzMondo - Brand",
-    populate: [
-      "Hero",
-      "Hero.image",
-      "section",
-      "section.img",
-      "section.list",
-      "section.ButtonLinks",
-      "section.featuredItems",
-      "section.featuredItems.img",
-    ],
-    revalidate: 0,
-  });
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
   const sectionOne = kidzMondoBrand?.section?.[0];
   const sectionTwo = kidzMondoBrand?.section?.[1];
   return (
