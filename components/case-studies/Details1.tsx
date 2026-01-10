@@ -18,7 +18,7 @@ export default function Details1({ investorRelationsPage }: any) {
           <div className="case-studies-details">
             <div className="image-details image mb-40">
               <Image
-                src={getStrapiMediaUrl(investorRelationsPage?.section[0]?.img) || ""}
+                src={getStrapiMediaUrl(investorRelationsPage?.section[0]?.img)}
                 alt=""
                 className="lazyload"
                 width={850}
@@ -27,7 +27,7 @@ export default function Details1({ investorRelationsPage }: any) {
             </div>
             <div className="detalis-content mb-40">
               <ReactMarkdown>
-                {investorRelationsPage?.section?.[0]?.featuredItems?.[0]?.Body || ""}
+                {investorRelationsPage?.section?.[0]?.featuredItems?.[0]?.Body}
               </ReactMarkdown>
               {/* </div> */}
               {/* <div className="mb-20">

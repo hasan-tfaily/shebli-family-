@@ -11,7 +11,7 @@ import "swiper/css/navigation";
 
 import Testimonials from "@/components/common/Testimonials";
 import Contact from "@/components/common/Contact";
-import { getBrandByName } from "@/lib/strapi/queries";
+import { getPageByName } from "@/lib/strapi/queries";
 import { getStrapiMediaUrl } from "@/lib/strapi/media";
 
 export default function KarnavaliPage() {
@@ -21,8 +21,8 @@ export default function KarnavaliPage() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await getBrandByName({
-        brandName: "Karnavali - Brand",
+      const data = await getPageByName({
+        pageName: "Karnavali - Brand",
         populate: [
           "Hero",
           "Hero.image",

@@ -12,7 +12,7 @@ import Breadcumb from "@/components/common/Breadcumb";
 import { Metadata } from "next";
 import Process from "@/components/common/Process";
 
-import { getBrandByName, unwrapAttributes } from "@/lib/strapi/queries";
+import { getPageByName, unwrapAttributes } from "@/lib/strapi/queries";
 
 export const metadata: Metadata = {
   title: "About us || Kidz Holding - Franchise & Corporate Website",
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-  const aboutBrand = await getBrandByName({
-    brandName: "About Us",
+  const aboutPageEntity = await getPageByName({
+    pageName: "About Us",
     populate: [
       "Hero",
       "section",
@@ -33,6 +33,8 @@ export default async function Page() {
     ],
     revalidate: 0,
   });
+
+  const aboutBrand = unwrapAttributes(aboutPageEntity);
 
   const hero = aboutBrand?.Hero;
   const cmsTitle = hero?.title;

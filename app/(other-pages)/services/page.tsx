@@ -5,7 +5,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import Breadcumb from "@/components/common/Breadcumb";
 import Brands from "@/components/homes/tax-advisory/Brands";
-import { getBrandByName } from "@/lib/strapi/queries";
+import { getPageByName } from "@/lib/strapi/queries";
 import { getStrapiMediaUrl } from "@/lib/strapi/media";
 import { get } from "http";
 
@@ -14,8 +14,8 @@ export default function ServicesPage() {
 
   useEffect(() => {
     const fetchData = async () => {
-          const data = await getBrandByName({
-            brandName: "Industries We Serve - Page",
+          const data = await getPageByName({
+            pageName: "Industries We Serve - Page",
             populate: [
               "Hero",
               "Hero.image",

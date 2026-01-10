@@ -10,7 +10,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import Benefits11 from "@/components/common/Benefits11";
-import { getBrandByName } from "@/lib/strapi/queries";
+import { getPageByName } from "@/lib/strapi/queries";
 import { getStrapiMediaUrl } from "@/lib/strapi/media";
 
 export default function KMInnovationCenterPage() {
@@ -20,8 +20,8 @@ export default function KMInnovationCenterPage() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await getBrandByName({
-        brandName: "KM Innovation Center - Brand",
+      const data = await getPageByName({
+        pageName: "KM Innovation Center - Brand",
         populate: [
           "Hero",
           "Hero.image",

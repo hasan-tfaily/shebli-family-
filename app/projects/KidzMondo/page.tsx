@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 
 import Brands1 from "@/components/common/Brands1";
 import KidzMondoFormatsTable from "@/components/common/KidzMondoFormatsTable";
-import { getBrandByName } from "@/lib/strapi/queries";
+import { getPageByName } from "@/lib/strapi/queries";
 import { getStrapiMediaUrl } from "@/lib/strapi/media";
 import ReactMarkdown from "react-markdown";
 
@@ -21,8 +21,8 @@ export default function KidzMondoPage() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await getBrandByName({
-        brandName: "KidzMondo - Brand",
+      const data = await getPageByName({
+        pageName: "KidzMondo - Brand",
         populate: [
           "Hero",
           "Hero.image",
@@ -32,7 +32,6 @@ export default function KidzMondoPage() {
           "section.featuredItems.list",
           "section.ButtonLinks",
           "section.featuredItems",
-          "imageScroll",
           "section.imageScroll",
           "section.featuredItems.img",
         ],
@@ -63,10 +62,9 @@ export default function KidzMondoPage() {
   if (loading) {
     return <div>Loading...</div>;
   }
-
+  console.log("KidzMondo Brand Data:", kidzMondoBrand);
   const sectionOne = kidzMondoBrand?.section?.[0];
   const sectionTwo = kidzMondoBrand?.section?.[1];
-  console.log("KidzMondo Brand Data:", kidzMondoBrand?.section[2]);
   return (
     <>
       {/* HERO IMAGE */}

@@ -1,4 +1,4 @@
-import { getBrandByName } from "@/lib/strapi/queries";
+import { getPageByName } from "@/lib/strapi/queries";
 
 type Brand = {
   id: number;
@@ -14,8 +14,8 @@ type BrandResponse = {
 };
 
 export default async function TestBrandsPage() {
-  const brand = await getBrandByName({
-    brandName: "About Us",
+  const brand = await getPageByName({
+    pageName: "About Us",
     populate: ["Hero", "section", "section.featuredItems"],
     revalidate: 0,
   });

@@ -11,7 +11,7 @@ import "swiper/css/navigation";
 import StarDistrictSection from "@/components/common/StarDistrictSection";
 import { get } from "http";
 import { starDistrictData } from "@/data/starDistrictData";
-import { getBrandByName } from "@/lib/strapi/queries";
+import { getPageByName } from "@/lib/strapi/queries";
 import { getStrapiMediaUrl } from "@/lib/strapi/media";
 import ReactMarkdown from "react-markdown";
 
@@ -22,8 +22,8 @@ export default function StarDistrict() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await getBrandByName({
-        brandName: "Star District - Brand",
+      const data = await getPageByName({
+        pageName: "Star District - Brand",
         populate: [
           "Hero",
           "Hero.image",

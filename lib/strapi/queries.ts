@@ -3,7 +3,7 @@ import apiService from "@/lib/strapi/apiService";
 export type StrapiPopulate = string[];
 export type StrapiEntity<T> = { id: number } & (T | { attributes: T });
 
-export type StrapiBrand = {
+export type StrapiPage = {
   name: string;
   slug?: string;
   description?: string;
@@ -30,8 +30,8 @@ export type StrapiBrand = {
   
 };
 
-export type StrapiBrandResponse = {
-  data: Array<StrapiEntity<StrapiBrand>>;
+export type StrapiPageResponse = {
+  data: Array<StrapiEntity<StrapiPage>>;
 };
 
 export function unwrapAttributes<T>(entity: StrapiEntity<T> | null | undefined): T | null {
@@ -41,7 +41,7 @@ export function unwrapAttributes<T>(entity: StrapiEntity<T> | null | undefined):
 }
 
 type Options = {
-  brandName: string;
+  pageName: string;
   populate?: StrapiPopulate;
   /** Next.js caching controls; default keeps it always fresh for testing */
   revalidate?: number;
@@ -52,9 +52,9 @@ type Options = {
  * - filters[name][$eq]
  * - populate[0]=Hero, populate[1]=section, ...
  */
-function buildBrandQueryParams(brandName: string, populate: StrapiPopulate = ["*"]) {
+function buildPageQueryParams(pageName: string, populate: StrapiPopulate = ["*"]) {
   const params: Record<string, string> = {
-    "filters[name][$eq]": brandName,
+    "filters[name][$eq]": pageName,
   };
 
   // If user passed ["*"] keep it simple.
@@ -71,15 +71,27 @@ function buildBrandQueryParams(brandName: string, populate: StrapiPopulate = ["*
 }
 
 /**
- * Fetch a single Brand by exact name.
+ * Fetch a single Page by exact name.
  * Returns the first matching item (or null).
  */
-export async function getBrandByName({ brandName, populate, revalidate = 0 }: Options) {
-  const { data } = await apiService.get<StrapiBrandResponse>(
-    "api/brands",
-    buildBrandQueryParams(brandName, populate),
-    { next: { revalidate } }
-  );
+export async function getPageByName({ pageName, populate, revalidate = 0 }: Options) {
+  try {
+    const { data } = await apiService.get<StrapiPageResponse>(
+      "api/brands",
+      buildPageQueryParams(pageName, populate),
+      { next: { revalidate } }
+    );
 
-  return data?.data?.[0] ?? null;
+    return data?.data?.[0] ?? null;
+  } catch (error) {
+    console.error("❌ Strapi API Error:", error);
+    console.log("🔍 Debug Info:");
+    console.log("- pageName:", pageName);
+    console.log("- populate:", populate);
+    console.log("- params:", buildPageQueryParams(pageName, populate));
+    throw error;
+  }
 }
+
+// Backwards compatibility alias (deprecated)
+export const getBrandByName = getPageByName;
