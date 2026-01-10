@@ -69,7 +69,7 @@ export default function BowlNRock() {
       {/* HERO */}
       <div className="page-hero">
         <Image
-          src={getStrapiMediaUrl(bowlNRockBrand?.Hero?.image) }
+          src={getStrapiMediaUrl(bowlNRockBrand?.Hero?.image) || "/image/bowlNRock/bowl n rock banner.jpg"}
           alt="Bowl N Rock Banner"
           width={1920}
           height={1080}

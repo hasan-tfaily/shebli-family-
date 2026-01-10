@@ -69,8 +69,8 @@ export default function KidzMondoFormatsTable({ kidzMondoTableSection }: any) {
                   <td key={idx} className="kidz-table__td">
                     {cell.length > 1 ? (
                       <ul className="kidz-table__list">
-                        {cell.map((item) => (
-                          <li key={item}>{item}</li>
+                        {cell.map((item, itemIdx: number) => (
+                          <li key={`${idx}-${itemIdx}-${item}`}>{item}</li>
                         ))}
                       </ul>
                     ) : (
@@ -98,8 +98,8 @@ export default function KidzMondoFormatsTable({ kidzMondoTableSection }: any) {
                   <div className="kidz-card__value">
                     {cell.length > 1 ? (
                       <ul className="kidz-card__list">
-                        {cell.map((item) => (
-                          <li key={item}>{item}</li>
+                        {cell.map((item, itemIdx: number) => (
+                          <li key={`card-${colIndex}-${row.label}-${itemIdx}-${item}`}>{item}</li>
                         ))}
                       </ul>
                     ) : (
