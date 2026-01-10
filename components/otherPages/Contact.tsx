@@ -4,7 +4,7 @@ import DropdownSelect from "../common/DropdownSelect";
 import Link from "next/link";
 import ContactForm from "./ContactForm";
 
-export default function Contact() {
+export default function Contact({ contactUsSection }: any) {
   return (
     <section className="section-contact-home page-contact tf-spacing-2">
       <div className="tf-container position-relative">
@@ -18,16 +18,14 @@ export default function Contact() {
                       href={`/inquiry-form`}
                       className="tag label text-btn-uppercase mb-12"
                     >
-                      Contact US
+                      {}
                     </Link>
                   </div>
                   <h3 className="title-section mb-12 wow fadeInUp">
-                    Get in Touch with Us
+                    {contactUsSection?.title}
                   </h3>
                   <div className="sub-title body-2 color-on-suface-container wow fadeInUp">
-                    Whether you’re exploring a partnership, expanding your investment portfolio,
-                    <br />
-                    or bringing a new entertainment experience to your city, our team is here to support you.
+                    {contactUsSection?.description}
                   </div>
                 </div>
                 <div className="cols">
@@ -40,7 +38,7 @@ export default function Contact() {
                         className="caption-1 wow fadeInUp"
                         data-wow-delay=".1s"
                       >
-                        24/7 Expert Support
+                        {contactUsSection?.list[0]?.point}
                       </div>
                     </div>
                     <div className="benefit-items">
@@ -51,7 +49,7 @@ export default function Contact() {
                         className="caption-1 wow fadeInUp"
                         data-wow-delay=".1s"
                       >
-                        Free Consultation Before You Commit
+                        {contactUsSection?.list[1]?.point}
                       </div>
                     </div>
                   </div>
@@ -64,7 +62,7 @@ export default function Contact() {
                         className="caption-1 wow fadeInUp"
                         data-wow-delay=".3s"
                       >
-                        Business-Focused Guidance
+                        {contactUsSection?.list[2]?.point}
                       </div>
                     </div>
                     <div className="benefit-items">
@@ -75,7 +73,7 @@ export default function Contact() {
                         className="caption-1 wow fadeInUp"
                         data-wow-delay=".3s"
                       >
-                        Trusted and Qualified Advisors
+                        {contactUsSection?.list[3]?.point}
                       </div>
                     </div>
                   </div>
@@ -182,7 +180,7 @@ export default function Contact() {
                   className="tf-btn style-1  bg-on-suface-container text-center"
                   style={{marginTop:"20px"}}
                 >
-                  <span>Franchise Form</span>
+                  <span>{contactUsSection?.ButtonLinks[0]?.title}</span>
                 </Link>
               </div>
             </div>

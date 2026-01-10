@@ -1,12 +1,22 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
-import React from "react";
-import { parkandResortServicesData } from "@/data/parkandResortServicesData";
+import React, { useState } from "react";
+import { getStrapiMediaUrl } from "@/lib/strapi/media";
 
-export default function ParkandResortServices() {
-  if (!parkandResortServicesData || parkandResortServicesData.length === 0) {
-    return null; 
+export default function ParkandResortServices({ activitiesSection }: any) {
+  if (!activitiesSection) {
+    return null;
   }
+  
+  const rawData = activitiesSection.featuredItems;
+  const parkResortData = rawData.map((item: any, index: number) => ({
+    ...item,
+    id: `activity-${index}`,
+  }));
+  
+  const [activeIndex, setActiveIndex] = useState(0);
 
   return (
     <section
@@ -20,11 +30,11 @@ export default function ParkandResortServices() {
               <div className="left">
                 <div className="text-anime-wave">
                   <a href="#" className="tag label text-btn-uppercase bg-white">
-                    Activities
+                    {activitiesSection?.miniTitle}
                   </a>
                 </div>
                 <h3 className="title-section text-anime-wave" style={{fontSize:"18px"}}>
-                  The Escape Park & Resort offers a wide range of mentally and physically stimulating experiences, including:
+                  {activitiesSection?.description}
                 </h3>
               </div>
             </div>
@@ -34,16 +44,24 @@ export default function ParkandResortServices() {
                 {/* Tabs */}
                 <div className="wg-tab">
                   <ul className="tab-product min-w-757" role="tablist">
-                    {parkandResortServicesData.map(({ id, title, isActive }) => (
-                      <li className="nav-tab-item" role="presentation" key={id}>
+                    {parkResortData.map((item: any, index: number) => (
+                      <li
+                        className="nav-tab-item"
+                        role="presentation"
+                        key={item.title}
+                      >
                         <h5>
                           <a
-                            href={`#${id}`}
-                            data-bs-toggle="tab"
+                            href={`#${item.id}`}
                             role="tab"
-                            className={isActive ? "active" : ""}
+                            className={activeIndex === index ? "active" : ""}
+                            onClick={(e) => {
+                              e.preventDefault();
+                              e.stopPropagation();
+                              setActiveIndex(index);
+                            }}
                           >
-                            {title}
+                            {item.title}
                           </a>
                         </h5>
                       </li>
@@ -53,48 +71,34 @@ export default function ParkandResortServices() {
 
                 {/* Tab panes */}
                 <div className="tab-content">
-                  {parkandResortServicesData.map(
-                    ({
-                      id,
-                      imgSrc,
-                      imgWidth,
-                      imgHeight,
-                      title,
-                      description,
-                      benefits,
-                      linkText,
-                      isActive,
-                    }) => (
+                  {parkResortData.map((item: any, index: number) => (
                       <div
-                        key={id}
-                        className={`tab-pane${isActive ? " active show" : ""}`}
-                        id={id}
+                        key={item.title}
+                        className={`tab-pane${
+                          activeIndex === index ? " active show" : ""
+                        }`}
+                        id={item.id}
                         role="tabpanel"
+                        style={{ display: activeIndex === index ? "block" : "none" }}
                       >
                         <div className="section-services-item">
-                          <div className="image tf-animate-1">
+                          <div className="image tf-animate-1 active-animate">
                             <Image
-                              src={imgSrc}
-                              alt={title}
-                              className="lazyload"
-                              width={imgWidth}
-                              height={imgHeight}
+                              src={getStrapiMediaUrl(item.img) || ""}
+                              alt={item.title}
+                              width={1920}
+                              height={1080}
                             />
-                          </div>
-
+                        </div>
                           <div className="services-content">
                             <div className="heading">
                               <h3>
-                            
-                                  {title}
+                                  {item.title}
                               </h3>
-                              {/* <div className="sub-name body-2 wow fadeInUp">
-                                {description}
-                              </div> */}
                             </div>
 
                             <div className="benefit-lists">
-                              {benefits.map((benefit, i) => (
+                              {item.list.map((benefit: any, i: number) => (
                                 <div className="benefit-items" key={i}>
                                   <div className="icon wow fadeInUp">
                                     <i className="icon-checkbox" />
@@ -103,13 +107,11 @@ export default function ParkandResortServices() {
                                     className="title wow fadeInUp"
                                     data-wow-delay=".1s"
                                   >
-                                    {benefit}
+                                    {benefit.point}
                                   </div>
                                 </div>
                               ))}
                             </div>
-
-                           
                           </div>
                         </div>
                       </div>

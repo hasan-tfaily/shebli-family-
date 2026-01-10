@@ -1,8 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
+import { getStrapiMediaUrl } from "@/lib/strapi/media";
 
-export default function Brands() {
+export default function Brands({ brandsSectionData }: any) {
+  console.log("brandsSectionData:", brandsSectionData);
   return (
     <section className="section-brand h-7 section-one-page" id="cta" style={{marginTop: "100px"}}>
       <div className="tf-container">
@@ -10,7 +12,7 @@ export default function Brands() {
           <div className="col-12">
             <div className="text-heading">
               <h5>
-                <span style={{color:"#232559"}}> Trusted by specialists all around the world</span>
+                <span style={{color:"#232559"}}>{brandsSectionData?.title}</span>
               </h5>
             </div>
             <div className="tf-marquee tf-spacing-25">
@@ -20,7 +22,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/logos/logos-01.png"
+                        src={getStrapiMediaUrl(brandsSectionData?.imageScroll[0])}
                         width={226}
                         height={44}
                       />
@@ -30,7 +32,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/logos/logos-02.png"
+                        src={getStrapiMediaUrl(brandsSectionData?.imageScroll[1])}
                         width={226}
                         height={44}
                       />
@@ -40,7 +42,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/logos/logos-03.png"
+                        src={getStrapiMediaUrl(brandsSectionData?.imageScroll[2])}
                         width={226}
                         height={44}
                       />
@@ -50,7 +52,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/logos/logos-04.png"
+                        src={getStrapiMediaUrl(brandsSectionData?.imageScroll[3])}
                         width={226}
                         height={44}
                       />
@@ -60,7 +62,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/logos/logos-05.png"
+                        src={getStrapiMediaUrl(brandsSectionData?.imageScroll[4])}
                         width={226}
                         height={44}
                       />
@@ -71,7 +73,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/logos/logos-01.png"
+                        src={getStrapiMediaUrl(brandsSectionData?.imageScroll[0])}
                         width={226}
                         height={44}
                       />
@@ -81,7 +83,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/logos/logos-02.png"
+                        src={getStrapiMediaUrl(brandsSectionData?.imageScroll[1])}
                         width={226}
                         height={44}
                       />
@@ -91,7 +93,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/logos/logos-03.png"
+                        src={getStrapiMediaUrl(brandsSectionData?.imageScroll[2])}
                         width={226}
                         height={44}
                       />
@@ -101,7 +103,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/logos/logos-04.png"
+                        src={getStrapiMediaUrl(brandsSectionData?.imageScroll[3])}
                         width={226}
                         height={44}
                       />
@@ -111,7 +113,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/logos/logos-05.png"
+                        src={getStrapiMediaUrl(brandsSectionData?.imageScroll[4])}
                         width={226}
                         height={44}
                       />
@@ -122,7 +124,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/logos/logos-01.png"
+                        src={getStrapiMediaUrl(brandsSectionData?.imageScroll[0])}
                         width={226}
                         height={44}
                       />
@@ -132,7 +134,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/logos/logos-02.png"
+                        src={getStrapiMediaUrl(brandsSectionData?.imageScroll[1])}
                         width={226}
                         height={44}
                       />
@@ -142,7 +144,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/logos/logos-03.png"
+                        src={getStrapiMediaUrl(brandsSectionData?.imageScroll[2])}
                         width={226}
                         height={44}
                       />
@@ -152,7 +154,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/logos/logos-04.png"
+                        src={getStrapiMediaUrl(brandsSectionData?.imageScroll[3])}
                         width={226}
                         height={44}
                       />
@@ -162,7 +164,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/logos/logos-05.png"
+                        src={getStrapiMediaUrl(brandsSectionData?.imageScroll[4])}
                         width={226}
                         height={44}
                       />
@@ -173,7 +175,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/logos/logos-01.png"
+                        src={getStrapiMediaUrl(brandsSectionData?.imageScroll[0])}
                         width={226}
                         height={44}
                       />
@@ -183,7 +185,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/logos/logos-02.png"
+                        src={getStrapiMediaUrl(brandsSectionData?.imageScroll[1])}
                         width={226}
                         height={44}
                       />
@@ -193,7 +195,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/logos/logos-03.png"
+                        src={getStrapiMediaUrl(brandsSectionData?.imageScroll[2])}
                         width={226}
                         height={44}
                       />
@@ -203,7 +205,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/logos/logos-04.png"
+                        src={getStrapiMediaUrl(brandsSectionData?.imageScroll[3])}
                         width={226}
                         height={44}
                       />
@@ -213,7 +215,7 @@ export default function Brands() {
                     <a href="#" className="brand-item style-opacity">
                       <Image
                         alt=""
-                        src="/image/logos/logos-05.png"
+                        src={getStrapiMediaUrl(brandsSectionData?.imageScroll[4])}
                         width={226}
                         height={44}
                       />

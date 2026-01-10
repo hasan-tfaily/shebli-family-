@@ -1,16 +1,37 @@
+"use client";
+
 import Link from "next/link";
+import React, { useEffect, useState } from "react";
 
 import Details1 from "@/components/case-studies/Details1";
 import RelatedCaseStudies from "@/components/case-studies/RelatedCaseStudies";
-import React from "react";
-import { Metadata } from "next";
-export const metadata: Metadata = {
-  title:
-    "Investor Relations || Kidz Holding - Franchise & Corporate Website",
-  description:
-    "Kidz Holding - Franchise & Corporate Website",
-};
-export default function page() {
+import { getBrandByName } from "@/lib/strapi/queries";
+import { getStrapiMediaUrl } from "@/lib/strapi/media";
+
+export default function InvestorRelationsPage() {
+  const [investorRelationsPage, setBrandData] = useState<any>(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+          const data = await getBrandByName({
+            brandName: "Investor Relations - Page",
+            populate: [
+              "Hero",
+              "Hero.image",
+              "section",
+              "section.img",
+              "section.featuredItems.list",
+              "section.ButtonLinks",
+              "section.featuredItems",
+              "section.featuredItems.img",
+              "section.imageScroll",
+            ],
+            revalidate: 0,
+          });
+          setBrandData(data);
+        };
+        fetchData();
+      }, []);
   return (
     <>
       <div className="page-title style-1 bg-img-16">
@@ -82,15 +103,14 @@ export default function page() {
                 </svg>
               </span>{" "} */}
               <span className="caption-1 page-breadkcum">
-                Investor Relations
+                {investorRelationsPage?.Hero?.title}
               </span>
             </div>
             <h2 className="title-page-title pb-0">
-              Investor Relations
+              {investorRelationsPage?.Hero?.title}
             </h2>
             <div className="sub-title body-2">
-Investor Relations showcases our growth performance               <br />
-              and future expansion for confident investment.
+              {investorRelationsPage?.Hero?.description}
             </div>
           </div>
 
@@ -98,7 +118,9 @@ Investor Relations showcases our growth performance               <br />
         </div>
       </div>
       <div className="main-content">
-        <Details1 />
+        <Details1 
+          investorRelationsPage={investorRelationsPage}
+        />
         {/* <RelatedCaseStudies /> */}
       </div>
     </>

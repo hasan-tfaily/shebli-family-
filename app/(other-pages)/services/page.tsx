@@ -1,24 +1,48 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import React, { useEffect, useState } from "react";
 import Breadcumb from "@/components/common/Breadcumb";
-import { Metadata } from "next";
 import Brands from "@/components/homes/tax-advisory/Brands";
+import { getBrandByName } from "@/lib/strapi/queries";
+import { getStrapiMediaUrl } from "@/lib/strapi/media";
+import { get } from "http";
 
-export const metadata: Metadata = {
-  title: "Services || Kidz Holding - Franchise & Corporate Website",
-  description: "Kidz Holding - Franchise & Corporate Website",
-};
+export default function ServicesPage() {
+  const [industriesWeServePage, setBrandData] = useState<any>(null);
 
-export default function Page() {
+  useEffect(() => {
+    const fetchData = async () => {
+          const data = await getBrandByName({
+            brandName: "Industries We Serve - Page",
+            populate: [
+              "Hero",
+              "Hero.image",
+              "section",
+              "section.img",
+              "section.featuredItems.list",
+              "section.ButtonLinks",
+              "section.featuredItems",
+              "section.featuredItems.img",
+              "section.imageScroll",
+              "section.ButtonLinks"
+            ],
+            revalidate: 0,
+          });
+          setBrandData(data);
+        };
+        fetchData();
+      }, []);
   return (
     <>
       <div className="page-title style-1 bg-img-7">
         <div className="tf-container">
           <div className="page-title-content">
             <Breadcumb pageName="Industries We Serve" />
-            <h2 className="title-page-title">Industries We Serve </h2>
+            <h2 className="title-page-title">{industriesWeServePage?.Hero?.title}</h2>
             <div className="sub-title body-2">
-              Building brighter futures through education, community, and sustainability.
+              {industriesWeServePage?.Hero?.description}
             </div>
           </div>
         </div>
@@ -33,18 +57,14 @@ export default function Page() {
                 <div className="heading-section text-center">
                   <div className="text-anime-wave-1">
                     <a href="#" className="tag label text-btn-uppercase">
-                      industries we serve
+                    {industriesWeServePage?.section[0]?.miniTitle}
                     </a>
                   </div>
                   <h3 className="title-section text-anime-wave-1 mb-12">
-                    Designing Experiences Across <br />
-                    Every Leisure and Lifestyle Industry
+                      {industriesWeServePage?.section[0]?.title}
                   </h3>
                   <div className="sub-title body-2 color-on-suface-container text-anime-wave-1">
-                    Kidz Holding partners with developers, operators, and destination owners across a
-                    diverse range of industries. Our expertise spans entertainment design, operations,
-                    master planning, and concept creation, enabling us to deliver meaningful,
-                    future-ready experiences tailored to each environment.
+                    {industriesWeServePage?.section[0]?.description}
                   </div>
                 </div>
               </div>
@@ -59,7 +79,7 @@ export default function Page() {
                   <div className="top">
                     <div className="icon">
                       <Image
-                        src="/image/icon/architecture.svg"
+                        src={getStrapiMediaUrl(industriesWeServePage?.section[0]?.featuredItems[0]?.img)}
                         alt="Leisure Architecture"
                         width={40}
                         height={40}
@@ -72,7 +92,7 @@ export default function Page() {
                         data-bs-toggle="modal"
                         data-bs-target="#modal-leisure-architecture"
                       >
-                        Leisure Architecture
+                        {industriesWeServePage?.section[0]?.featuredItems[0]?.title}
                       </a>
                     </h6>
                   </div>
@@ -85,7 +105,7 @@ export default function Page() {
                   <div className="top">
                     <div className="icon">
                       <Image
-                        src="/image/icon/hospitality.svg"
+                        src={getStrapiMediaUrl(industriesWeServePage?.section[0]?.featuredItems[1]?.img)}
                         alt="Hospitality and Leisure Resort"
                         width={40}
                         height={40}
@@ -98,9 +118,7 @@ export default function Page() {
                         data-bs-toggle="modal"
                         data-bs-target="#modal-hospitality-resorts"
                       >
-                        Hospitality and
-                        <br />
-                        Leisure Resort
+                      {industriesWeServePage?.section[0]?.featuredItems[1]?.title}
                       </a>
                     </h6>
                   </div>
@@ -113,7 +131,7 @@ export default function Page() {
                   <div className="top">
                     <div className="icon">
                       <Image
-                        src="/image/icon/landscape.svg"
+                        src={getStrapiMediaUrl(industriesWeServePage?.section[0]?.featuredItems[2]?.img)}
                         alt="Urban Realm and Leisure Landscape"
                         width={40}
                         height={40}
@@ -126,7 +144,7 @@ export default function Page() {
                         data-bs-toggle="modal"
                         data-bs-target="#modal-urban-landscapes"
                       >
-                        Urban Landscapes
+                        {industriesWeServePage?.section[0]?.featuredItems[2]?.title}
                       </a>
                     </h6>
                   </div>
@@ -139,7 +157,7 @@ export default function Page() {
                   <div className="top">
                     <div className="icon">
                       <Image
-                        src="/image/icon/family.svg"
+                        src={getStrapiMediaUrl(industriesWeServePage?.section[0]?.featuredItems[3]?.img)}
                         alt="Family Leisure Destinations"
                         width={40}
                         height={40}
@@ -152,9 +170,7 @@ export default function Page() {
                         data-bs-toggle="modal"
                         data-bs-target="#modal-family-leisure"
                       >
-                        Family Leisure
-                        <br />
-                        Destinations
+                        {industriesWeServePage?.section[0]?.featuredItems[3]?.title}  
                       </a>
                     </h6>
                   </div>
@@ -167,7 +183,7 @@ export default function Page() {
                   <div className="top">
                     <div className="icon">
                       <Image
-                        src="/image/icon/shopping.svg"
+                        src={getStrapiMediaUrl(industriesWeServePage?.section[0]?.featuredItems[4]?.img)}
                         alt="Shopping and Mixed-Use Environment"
                         width={40}
                         height={40}
@@ -180,7 +196,7 @@ export default function Page() {
                         data-bs-toggle="modal"
                         data-bs-target="#modal-shopping-centers"
                       >
-                        Shopping Centers
+                        {industriesWeServePage?.section[0]?.featuredItems[4]?.title}
                       </a>
                     </h6>
                   </div>
@@ -193,7 +209,7 @@ export default function Page() {
                   <div className="top">
                     <div className="icon">
                       <Image
-                        src="/image/icon/education.svg"
+                        src={getStrapiMediaUrl(industriesWeServePage?.section[0]?.featuredItems[5]?.img)}
                         alt="Education and Working Environment"
                         width={40}
                         height={40}
@@ -206,7 +222,7 @@ export default function Page() {
                         data-bs-toggle="modal"
                         data-bs-target="#modal-education"
                       >
-                        Education
+                        {industriesWeServePage?.section[0]?.featuredItems[5]?.title}
                       </a>
                     </h6>
                   </div>
@@ -219,7 +235,7 @@ export default function Page() {
                   <div className="top">
                     <div className="icon">
                       <Image
-                        src="/image/icon/urban village.svg"
+                        src={getStrapiMediaUrl(industriesWeServePage?.section[0]?.featuredItems[6]?.img)}
                         alt="Real Estate & Landlords"
                         width={40}
                         height={40}
@@ -232,7 +248,7 @@ export default function Page() {
                         data-bs-toggle="modal"
                         data-bs-target="#modal-real-estate"
                       >
-                        Real Estate &amp; Landlords
+                        {industriesWeServePage?.section[0]?.featuredItems[6]?.title}
                       </a>
                     </h6>
                   </div>
@@ -245,7 +261,7 @@ export default function Page() {
                   <div className="top">
                     <div className="icon">
                       <Image
-                        src="/image/icon/play.svg"
+                        src={getStrapiMediaUrl(industriesWeServePage?.section[0]?.featuredItems[7]?.img)}
                         alt="Playful Attractions"
                         width={40}
                         height={40}
@@ -258,7 +274,7 @@ export default function Page() {
                         data-bs-toggle="modal"
                         data-bs-target="#modal-playful-attractions"
                       >
-                        Playful Attractions
+                        {industriesWeServePage?.section[0]?.featuredItems[7]?.title}
                       </a>
                     </h6>
                   </div>
@@ -282,7 +298,7 @@ export default function Page() {
               <div className="modal-content">
                 <div className="modal-header">
                   <h5 className="modal-title" id="modal-real-estate-label">
-                    Real Estate Developers &amp; Landlords
+                    {industriesWeServePage?.section[0]?.featuredItems[6]?.title}
                   </h5>
                   <button
                     type="button"
@@ -293,10 +309,7 @@ export default function Page() {
                 </div>
                 <div className="modal-body">
                   <p>
-                    We work with real estate developers and landlords to transform properties into
-                    immersive, fully fledged lifestyle destinations. By integrating entertainment,
-                    edutainment concepts, and family-centric experiences, we help increase footfall,
-                    extend dwell time, and enhance the overall commercial value of developments.
+                    {industriesWeServePage?.section[0]?.featuredItems[6]?.Body}
                   </p>
                 </div>
               </div>
@@ -315,7 +328,7 @@ export default function Page() {
               <div className="modal-content">
                 <div className="modal-header">
                   <h5 className="modal-title" id="modal-leisure-architecture-label">
-                    Leisure Architecture
+                    {industriesWeServePage?.section[0]?.featuredItems[0]?.title}
                   </h5>
                   <button
                     type="button"
@@ -326,10 +339,7 @@ export default function Page() {
                 </div>
                 <div className="modal-body">
                   <p>
-                    We collaborate with architects and master planners to infuse leisure-driven,
-                    experience-based elements into the built environment. Our early involvement
-                    ensures seamless integration of storytelling, zoning, guest flow, and operational
-                    functionality.
+                    {industriesWeServePage?.section[0]?.featuredItems[0]?.Body}
                   </p>
                 </div>
               </div>
@@ -348,7 +358,7 @@ export default function Page() {
               <div className="modal-content">
                 <div className="modal-header">
                   <h5 className="modal-title" id="modal-hospitality-resorts-label">
-                    Hospitality &amp; Leisure Resorts
+                    {industriesWeServePage?.section[0]?.featuredItems[1]?.title}
                   </h5>
                   <button
                     type="button"
@@ -359,9 +369,7 @@ export default function Page() {
                 </div>
                 <div className="modal-body">
                   <p>
-                    We develop family zones, kids’ clubs, entertainment hubs, and bespoke experiences
-                    that enrich the resort journey. Our concepts enhance guest satisfaction, create
-                    memorable moments, and support premium positioning for hospitality brands.
+                    {industriesWeServePage?.section[0]?.featuredItems[1]?.Body}
                   </p>
                 </div>
               </div>
@@ -380,7 +388,7 @@ export default function Page() {
               <div className="modal-content">
                 <div className="modal-header">
                   <h5 className="modal-title" id="modal-urban-landscapes-label">
-                    Urban Landscapes
+                    {industriesWeServePage?.section[0]?.featuredItems[2]?.title}
                   </h5>
                   <button
                     type="button"
@@ -391,9 +399,7 @@ export default function Page() {
                 </div>
                 <div className="modal-body">
                   <p>
-                    We activate public and semi-public urban spaces by transforming them into
-                    interactive, community-focused environments. Through playful design and
-                    experiential storytelling, urban areas become vibrant destinations.
+                    {industriesWeServePage?.section[0]?.featuredItems[2]?.Body}
                   </p>
                 </div>
               </div>
@@ -412,7 +418,7 @@ export default function Page() {
               <div className="modal-content">
                 <div className="modal-header">
                   <h5 className="modal-title" id="modal-family-leisure-label">
-                    Family Leisure Destinations
+                    {industriesWeServePage?.section[0]?.featuredItems[3]?.title}
                   </h5>
                   <button
                     type="button"
@@ -423,9 +429,7 @@ export default function Page() {
                 </div>
                 <div className="modal-body">
                   <p>
-                    From large-scale entertainment hubs to boutique family venues, we design
-                    experiences that attract visitors, build repeat engagement, and strengthen
-                    destination identity.
+                    {industriesWeServePage?.section[0]?.featuredItems[3]?.Body}
                   </p>
                 </div>
               </div>
@@ -444,7 +448,7 @@ export default function Page() {
               <div className="modal-content">
                 <div className="modal-header">
                   <h5 className="modal-title" id="modal-playful-attractions-label">
-                    Playful Attractions
+                    {industriesWeServePage?.section[0]?.featuredItems[7]?.title}
                   </h5>
                   <button
                     type="button"
@@ -455,9 +459,7 @@ export default function Page() {
                 </div>
                 <div className="modal-body">
                   <p>
-                    We design standalone attractions and interactive play zones that deliver fun,
-                    education, and memorable engagement for children and families. Each attraction is
-                    crafted for operational efficiency and long-term sustainability.
+                    {industriesWeServePage?.section[0]?.featuredItems[7]?.Body}
                   </p>
                 </div>
               </div>
@@ -476,7 +478,7 @@ export default function Page() {
               <div className="modal-content">
                 <div className="modal-header">
                   <h5 className="modal-title" id="modal-education-label">
-                    Education
+                    {industriesWeServePage?.section[0]?.featuredItems[5]?.title}
                   </h5>
                   <button
                     type="button"
@@ -487,9 +489,7 @@ export default function Page() {
                 </div>
                 <div className="modal-body">
                   <p>
-                    We collaborate with schools, institutions, and learning centers to merge
-                    education with experiential play. The result is hands-on environments that
-                    support learning outcomes, skill development, and student engagement.
+                    {industriesWeServePage?.section[0]?.featuredItems[5]?.Body}
                   </p>
                 </div>
               </div>
@@ -508,7 +508,7 @@ export default function Page() {
               <div className="modal-content">
                 <div className="modal-header">
                   <h5 className="modal-title" id="modal-shopping-centers-label">
-                    Shopping Centers
+                    {industriesWeServePage?.section[0]?.featuredItems[4]?.title}
                   </h5>
                   <button
                     type="button"
@@ -519,9 +519,7 @@ export default function Page() {
                 </div>
                 <div className="modal-body">
                   <p>
-                    We help malls evolve into experiential lifestyle destinations by implementing
-                    immersive anchor experiences, themed entertainment zones, and family-focused
-                    concepts that boost traffic and enrich the tenant mix.
+                    {industriesWeServePage?.section[0]?.featuredItems[4]?.Body}
                   </p>
                 </div>
               </div>
@@ -532,7 +530,9 @@ export default function Page() {
         {/* SECTION: Concept Development – Our Methodology (Image + Bullet Steps) */}
         
 
-        <Brands />
+        <Brands 
+        brandsSectionData={industriesWeServePage?.section[1]}
+        />
 
         {/* FAQ / ACCORDION SECTION */}
         {/* <section className="section-faqs h-5 tf-spacing-2">
@@ -679,12 +679,12 @@ export default function Page() {
               <div className="col-12">
                 <div className="cta-inner style-2">
                   <div className="cta-content">
-                    <h4 className="title-content">Start your journey with us</h4>
+                    <h4 className="title-content">{industriesWeServePage?.section[2]?.title}</h4>
                     <Link
                       href="/contact-us"
                       className="tf-btn style-1 bg-white text-center"
                     >
-                      <span> Franchise Opportunities </span>
+                      <span> {industriesWeServePage?.section[2]?.ButtonLinks[0]?.title} </span>
                     </Link>
                   </div>
                 </div>

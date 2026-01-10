@@ -12,6 +12,7 @@ import Brands1 from "@/components/common/Brands1";
 import KidzMondoFormatsTable from "@/components/common/KidzMondoFormatsTable";
 import { getBrandByName } from "@/lib/strapi/queries";
 import { getStrapiMediaUrl } from "@/lib/strapi/media";
+import ReactMarkdown from "react-markdown";
 
 export default function KidzMondoPage() {
   const swiperRef = useRef<any>(null);
@@ -28,8 +29,11 @@ export default function KidzMondoPage() {
           "section",
           "section.img",
           "section.list",
+          "section.featuredItems.list",
           "section.ButtonLinks",
           "section.featuredItems",
+          "imageScroll",
+          "section.imageScroll",
           "section.featuredItems.img",
         ],
         revalidate: 0,
@@ -62,6 +66,7 @@ export default function KidzMondoPage() {
 
   const sectionOne = kidzMondoBrand?.section?.[0];
   const sectionTwo = kidzMondoBrand?.section?.[1];
+  console.log("KidzMondo Brand Data:", kidzMondoBrand?.section[2]);
   return (
     <>
       {/* HERO IMAGE */}
@@ -139,7 +144,7 @@ export default function KidzMondoPage() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src={kidzMondoBrand.sectionOne?.featuredItems?.[0].img?.[0]}
+                        src={getStrapiMediaUrl(kidzMondoBrand?.imageScroll?.[0])}
                         alt="KidzMondo Activity 1"
                         width={444}
                         height={334}
@@ -152,7 +157,7 @@ export default function KidzMondoPage() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src="/image/kidzMondo/kidzMondo3.png"
+                        src={getStrapiMediaUrl(kidzMondoBrand?.imageScroll?.[1])}
                         alt="KidzMondo Activity 2"
                         width={444}
                         height={334}
@@ -165,7 +170,7 @@ export default function KidzMondoPage() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src="/image/kidzMondo/about – philosophy.jpg"
+                        src={getStrapiMediaUrl(kidzMondoBrand?.imageScroll?.[2])}
                         alt="KidzMondo Activity 3"
                         width={444}
                         height={334}
@@ -177,7 +182,7 @@ export default function KidzMondoPage() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src="/image/kidzMondo/about 1.jpg"
+                        src={getStrapiMediaUrl(kidzMondoBrand?.imageScroll?.[3])}
                         alt="KidzMondo Activity 4"
                         width={444}
                         height={334}
@@ -189,20 +194,8 @@ export default function KidzMondoPage() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src="/image/kidzMondo/about 2.jpg"
+                        src={getStrapiMediaUrl(kidzMondoBrand?.imageScroll?.[4])}
                         alt="KidzMondo Activity 5"
-                        width={444}
-                        height={334}
-                        style={{ width: "100%", height: "auto", display: "block" }}
-                      />
-                    </div>
-                  </SwiperSlide>
-
-                  <SwiperSlide>
-                    <div className="image-blog">
-                      <Image
-                        src="/image/kidzMondo/about 3.jpg"
-                        alt="KidzMondo Activity 6"
                         width={444}
                         height={334}
                         style={{ width: "100%", height: "auto", display: "block" }}
@@ -215,20 +208,17 @@ export default function KidzMondoPage() {
               {/* SECTIONS */}
               <div className="list-desc">
                 <div className="desc-blog">
-                    {sectionTwo?.featuredItems?.[0]?.Body
-                      ? sectionTwo?.featuredItems?.[0]?.Body.split("\n").map((line: string, idx: number) => (
-                          <React.Fragment key={idx}>
-                            {line}
-                            <br />
-                          </React.Fragment>
-                        ))
-                      : null}
+                  <ReactMarkdown>
+                    {sectionTwo?.featuredItems?.[0]?.Body || ""}
+                  </ReactMarkdown>  
                 </div>
               </div>
 
               {/* TABLE */}
               <div style={{ marginTop: 40 }}>
-                <KidzMondoFormatsTable />
+                <KidzMondoFormatsTable 
+                kidzMondoTableSection={kidzMondoBrand?.section[2]}
+                />
               </div>
             </div>
           </div>
@@ -238,7 +228,9 @@ export default function KidzMondoPage() {
       {/* BRANDS */}
       <section style={{ padding: "40px 0" }}>
         <div className="tf-container">
-          <Brands1 />
+          <Brands1 
+          kidzMondoBrandSection={kidzMondoBrand?.section[3]}
+          />
         </div>
       </section>
     </>

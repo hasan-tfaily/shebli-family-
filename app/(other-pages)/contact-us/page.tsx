@@ -1,35 +1,65 @@
+"use client";
+
 import Link from "next/link";
+import React, { useEffect, useState } from "react";
 
 import Contact from "@/components/otherPages/Contact";
 import Locations from "@/components/otherPages/Locations";
 import Map from "@/components/otherPages/Map";
-import React from "react";
 import Breadcumb from "@/components/common/Breadcumb";
-import { Metadata } from "next";
-export const metadata: Metadata = {
-  title:
-    "Contact Us || Kidz Holding - Franchise & Corporate Website",
-  description:
-    "Kidz Holding - Franchise & Corporate Website",
-};
-export default function page() {
+import { getBrandByName } from "@/lib/strapi/queries";
+import { getStrapiMediaUrl } from "@/lib/strapi/media";
+
+export default function ContactUsPage() {
+  const [contactUsPage, setBrandData] = useState<any>(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+          const data = await getBrandByName({
+            brandName: "Contact Us - Page",
+            populate: [
+              "Hero",
+              "Hero.image",
+              "section",
+              "section.img",
+              "section.list",
+              "section.ButtonLinks",
+              "section.featuredItems",
+              "section.featuredItems.img",
+            ],
+            revalidate: 0,
+          });
+          setBrandData(data);
+        };
+        fetchData();
+      }, []);
   return (
     <>
-      <div className="page-title style-1 bg-img-13">
+      <div 
+        className="page-title style-1"
+        style={{
+          backgroundImage: contactUsPage?.Hero?.image 
+            ? `url(${getStrapiMediaUrl(contactUsPage?.Hero?.image)})` 
+            : 'url(/image/page-title/bg-img-13.jpg)', 
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
         <div className="tf-container position-relative">
           <div className="page-title-content">
             <Breadcumb pageName="Contact Us" />
-            <h2 className="title-page-title">Contact Us</h2>
+            <h2 className="title-page-title">{contactUsPage?.Hero?.title}</h2>
             <div className="sub-title body-2">
-              Let’s Build the Future Together
-              <br />
-             
+              {contactUsPage?.Hero?.description}
             </div>
           </div>
         </div>
       </div>
       <div className="main-content">
-        <Contact />
+        <Contact 
+        contactUsSection={contactUsPage?.section[0]}
+        />
         <Map />
         {/* <Locations /> */}
       </div>

@@ -1,36 +1,34 @@
 "use client";
 import React from "react";
 
-const columns = ["KidzMondo City", "KidzMondo Village", "KidzMondo Popup"] as const;
-
-const rows = [
-  {
-    label: "Type",
-    values: [
-      ["Fixed", "Permanent"],
-      ["Fixed", "Permanent"],
-      ["Mobile", "Temporary"],
-    ],
-  },
-  {
-    label: "Target Age",
-    values: [["2 to 14"], ["2 to 14"], ["2 to 14"]],
-  },
-  {
-    label: "Size",
-    values: [["BUA +5000sqm"], ["BUA +3000sqm"], ["+1200 sqm"]],
-  },
-  {
-    label: "Location type",
-    values: [
-      ["Standalone", "In Malls", "Extension to Malls", "Mixed-used complexes"],
-      ["Standalone", "In Malls", "Extension to Malls", "Mixed-used complexes"],
-      ["Standalone", "In Malls", "Activations"],
-    ],
-  },
-];
-
-export default function KidzMondoFormatsTable() {
+export default function KidzMondoFormatsTable({ kidzMondoTableSection }: any) {
+  // Extract columns from featuredItems (skip the first one which is "Table")
+  const columns = kidzMondoTableSection?.featuredItems?.slice(1).map((item: any) => item.title) || [];
+  
+  // Extract rows from the first featuredItem ("Table") list
+  const tableHeaders = kidzMondoTableSection?.featuredItems?.[0]?.list || [];
+  
+  // Create rows data structure
+  const rows = tableHeaders.map((header: any, headerIndex: number) => {
+    return {
+      label: header.point,
+      values: kidzMondoTableSection?.featuredItems?.slice(1).map((column: any) => {
+        const point = column.list[headerIndex]?.point || "";
+        
+        if (headerIndex === 0) { 
+        } else if (headerIndex === 1) { 
+          return [point];
+        } else if (headerIndex === 2) { 
+          return [point];
+        } else if (headerIndex === 3) { 
+          return point.split(/(?=[A-Z][a-z])|(?<=\s)(?=In\s)|(?<=\s)(?=Extension\s)|(?<=\s)(?=Mixed-used\s)|(?<=\s)(?=Activations\s)/)
+                     .filter((item: string) => item.trim() !== "");
+        }
+        
+        return [point]; // fallback
+      }) || []
+    };
+  });
   return (
     <section className="kidz-formats">
         <div className="tf-container">
@@ -38,10 +36,10 @@ export default function KidzMondoFormatsTable() {
           <div className="col-12">
     <div className="kidz-formats__head" style={{ textAlign: "left" }}>
   <h3 className="kidz-formats__title" style={{ fontSize: "18px" }}>
-    KidzMondo Formats
+    {kidzMondoTableSection?.title}
   </h3>
   <p className="kidz-formats__subtitle">
-    Quick comparison between City, Village, and Popup concepts.
+    {kidzMondoTableSection?.description}
   </p>
 </div>
 

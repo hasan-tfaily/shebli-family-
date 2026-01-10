@@ -3,11 +3,14 @@ import Image from "next/image";
 import React from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import image from "next/image";
+import { getStrapiMediaUrl } from "@/lib/strapi/media";
+import ReactMarkdown from "react-markdown";
 const AreaLineChart = dynamic(() => import("../charts/CrealineChart"), {
   ssr: false,
 });
 
-export default function Details1() {
+export default function Details1({ investorRelationsPage }: any) {
   return (
     <div className="tf-container tf-spacing-2">
       <div className="row rg-60">
@@ -15,7 +18,7 @@ export default function Details1() {
           <div className="case-studies-details">
             <div className="image-details image mb-40">
               <Image
-                src="/image/section/indian-businessmen-looking-stock-market.jpg"
+                src={getStrapiMediaUrl(investorRelationsPage?.section[0]?.img) || ""}
                 alt=""
                 className="lazyload"
                 width={850}
@@ -23,29 +26,10 @@ export default function Details1() {
               />
             </div>
             <div className="detalis-content mb-40">
-              <h4 className="title-content mb-16">Executive Summary </h4>
-              <div className="desc mb-16 body-2">
-                Kidz Holding bridges education and entertainment to create sustainable, profitable experiences for families and investors alike. Our portfolio continues to expand across the GCC and Levant with a clear roadmap toward new markets.
-              </div>
-            </div>
-            <div className="detalis-content mb-40">
-              <h4 className="title-content mb-16">Performance Metrics </h4>
-              <div className="desc mb-20 body-2">
-                Attendance growth, revenue diversification, and school partnerships demonstrate long‑term stability and scalability.
-              </div>
-              <div className="mb-20">
-                <h4 className="title-content mb-16">Governance & Board  </h4>
-                <div className="body-2 desc">
-                  Led by experienced industry professionals and advisors who ensure accountability, transparency, and strategic alignment.
-                </div>
-              </div>
-              <div className="mb-20">
-                <h4 className="title-content mb-16">Pipeline & Expansion </h4>
-
-                <div className="body-2 desc">
-                  New projects under evaluation in Riyadh, Cairo, and Abu Dhabi, supported by feasibility studies and local partnerships.
-                </div>
-              </div>
+              <ReactMarkdown>
+                {investorRelationsPage?.section?.[0]?.featuredItems?.[0]?.Body || ""}
+              </ReactMarkdown>
+              {/* </div> */}
               {/* <div className="mb-20">
                 <h6 className="mb-8">
                   3. Real-Time Tracking and Workflow Management
@@ -241,13 +225,11 @@ export default function Details1() {
                     href={`/contact-us`}
                     className="tag label text-btn-uppercase color-white mb-16"
                   >
-                    Contact Us
+                    {investorRelationsPage?.section[1]?.miniTitle}
                   </Link>
-                  <h4 className="title-section mb-1">Get In Touch</h4>
+                  <h4 className="title-section mb-1">{investorRelationsPage?.section[1]?.title}</h4>
                   <div className="sub-title caption-1">
-                    Reach out today to discuss how we can
-                    <br />
-                    support your business goals.
+                    {investorRelationsPage?.section[1]?.description}
                   </div>
 
                 </div>
@@ -350,7 +332,7 @@ export default function Details1() {
                   href={`/contact-us`}
                   className="tf-btn style-1 bg-white bg-white-style-2 w-full text-center"
                 >
-                  <span> Contact Us </span>
+                  <span> {investorRelationsPage?.section[1]?.ButtonLinks?.[0]?.title} </span>
                 </Link>
               </div>
             </div>

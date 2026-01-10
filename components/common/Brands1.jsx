@@ -1,8 +1,10 @@
 "use client";
 import Image from "next/image";
 import React from "react";
+import { getStrapiMediaUrl } from "@/lib/strapi/media";
 
-const logos = [
+
+const logosFullBack = [
   "/image/logos/4.png",
   "/image/logos/5.png",
   "/image/logos/6.jpg",
@@ -31,13 +33,15 @@ const logos = [
   "/image/logos/184Logo.png",
 ];
 
-export default function Brands1() {
+export default function Brands1({ kidzMondoBrandSection }) {
+
+  const logos = kidzMondoBrandSection?.imageScroll?.map((img) => getStrapiMediaUrl(img)) || [];
   return (
     <section className="section-brand h-5 tf-spacing-3">
       <div className="tf-container position-relative">
         <div className="row">
           <div className="col-12">
-            <h5 className="text text-center mb-28" style={{color:"black"}}>Partnerships</h5>
+            <h5 className="text text-center mb-28" style={{color:"black"}}>{kidzMondoBrandSection?.title}</h5>
 
             <div className="brand-marquee">
               <div className="brand-marquee__viewport">
@@ -53,9 +57,9 @@ export default function Brands1() {
 
                   {/* List #2 (duplicate for infinite loop) */}
                   <div className="brand-marquee__list" aria-hidden="true">
-                    {logos.map((src) => (
+                    {logos.map((src , index) => (
                       <a key={`dup-${src}`} href="#" className="brand-marquee__item">
-                        <Image alt="" src={src} width={300} height={44} />
+                        <Image alt="" src={src || logosFullBack[index]} width={300} height={44} />
                       </a>
                     ))}
                   </div>
