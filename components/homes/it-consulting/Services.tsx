@@ -1,10 +1,21 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import React from "react";
-import { servicesData2 } from "@/data/services";
+import React, { useState } from "react";
+import { getStrapiMediaUrl } from "@/lib/strapi/media";
 
-export default function Services() {
+export default function Services( { servicesSection }: any) {
+  const [activeIndex, setActiveIndex] = useState(0);
+  
+  if (!servicesSection?.featuredItems) {
+    return null;
+  }
+
+  const servicesData = servicesSection.featuredItems.map((item: any, index: number) => ({
+    ...item,
+    id: `service-${index}`,
+  }));
+  
   return (
     <section
       className="section-services h-8 tf-spacing-18 section-one-page"
@@ -18,37 +29,36 @@ export default function Services() {
             <div className="heading-section text-start">
               <div className="text-anime-wave-1">
                 <a href="#" className="tag label text-btn-uppercase">
-                  Our Services
+                  {servicesSection?.miniTitle}
                 </a>
               </div>
 
               <h3 className="title-section text-anime-wave-1 mb-12">
-                Careers at Kidz Holding
+                {servicesSection?.title}
               </h3>
 
               <div className="sub-title body-2 text-anime-wave-1">
-                Start a career……..not just a job.
-                <br />
-                Whether you’re a fresh graduate, an experienced professional, or
-                a creative visionary, Kidz Holding offers opportunities to grow
-                within an industry that blends entertainment, education,
-                storytelling, and innovation.
+                {servicesSection?.description}
               </div>
             </div>
 
             <div className="flat-animate-tab">
               <div className="wg-tab">
                 <ul className="tab-product tab-left" role="tablist">
-                  {servicesData2.map(({ id, tabTitle, isActive }) => (
-                    <li className="nav-tab-item" role="presentation" key={id}>
+                  {servicesData.map((item: any, index: number) => (
+                    <li className="nav-tab-item" role="presentation" key={item.id}>
                       <h5>
                         <a
-                          href={`#${id}`}
-                          data-bs-toggle="tab"
+                          href={`#${item.id}`}
                           role="tab"
-                          className={isActive ? "active" : ""}
+                          className={activeIndex === index ? "active" : ""}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            setActiveIndex(index);
+                          }}
                         >
-                          {tabTitle}
+                          {item.title}
                         </a>
                       </h5>
                     </li>
@@ -57,43 +67,33 @@ export default function Services() {
               </div>
 
               <div className="tab-content" >
-                {servicesData2.map(
-                  ({
-                    id,
-                    title,
-                    description,
-                    benefits,
-                    imgSrc,
-                    imgWidth,
-                    imgHeight,
-                    isActive,
-                  }) => (
+                {servicesData.map((item: any, index: number) => (
                     <div
-                      key={id}
-                      className={`tab-pane${isActive ? " active show" : ""}`}
-                      id={id}
+                      key={item.id}
+                      className={`tab-pane${activeIndex === index ? " active show" : ""}`}
+                      id={item.id}
                       role="tabpanel"
-
+                      style={{ display: activeIndex === index ? "block" : "none" }}
                     >
                       <div className="services-inner bg-surface" style={{ paddingTop: "20px" }}>
                         <div className="services-content">
                           <h4 className="title-content mb-12">
-                            {title}
+                            {item.title}
                           </h4>
 
                           <div className="sub-title mb-28 body-2">
-                            {description}
+                            {item.Body}
                           </div>
 
                           {/* ✅ SINGLE COLUMN BENEFITS */}
                           <div className="cols mb-20">
                             <div className="benefit-lists item">
-                              {benefits.map((benefit, i) => (
+                              {item.list?.map((benefit: any, i: number) => (
                                 <div className="benefit-items" key={i}>
                                   <div className="icon">
                                     <i className="icon-checkbox" />
                                   </div>
-                                  <div className="title">{benefit}</div>
+                                  <div className="title">{benefit.point}</div>
                                 </div>
                               ))}
                             </div>
@@ -102,11 +102,11 @@ export default function Services() {
 
                         <div className="image">
                           <Image
-                            src={imgSrc}
-                            alt={title}
+                            src={getStrapiMediaUrl(item.img) || "/image/section/services 1.jpg"}
+                            alt={item.title}
                             className="lazyload"
-                            width={imgWidth}
-                            height={imgHeight}
+                            width={615}
+                            height={615}
                           />
                         </div>
                       </div>

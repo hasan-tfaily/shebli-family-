@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import OdometerComponent from "@/components/common/OdometerComponent";
 
-export default function About() {
+export default function About({ aboutSection }: { aboutSection: any }) {
   return (
     <section
       className="section-about h-1 h-3 tf-spacing-2 section-one-page"
@@ -15,12 +15,11 @@ export default function About() {
             <div className="heading-section about-content-left">
               <div className="text-anime-wave">
                 <a href="#" className="tag label text-btn-uppercase">
-                  Business Model
+                  {aboutSection?.title}
                 </a>
               </div>
               <h3 className="text-color-change mb-40">
-                Kidz Holding offers a franchise model built for scalability and long‑term profitability. Franchisees receive operational manuals, brand support, and continuous training to maintain global standards.
-                <br />
+                {aboutSection?.description}
                 <br />
 
               </h3>
@@ -28,7 +27,7 @@ export default function About() {
                 href={`/contact-us`}
                 className="tf-btn style-1 bg-on-suface-container"
               >
-                <span> Contact Us </span>
+                <span> {aboutSection?.ButtonLinks?.[0]?.title} </span>
               </Link>
             </div>
           </div>

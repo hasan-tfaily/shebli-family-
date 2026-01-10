@@ -1,33 +1,54 @@
-import Link from "next/link";
+"use client";
 
+import Link from "next/link";
 import Contact from "@/components/otherPages/Contact";
 import Locations from "@/components/otherPages/Locations";
 import Map from "@/components/otherPages/Map";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Breadcumb from "@/components/common/Breadcumb";
-import { Metadata } from "next";
 import Services2 from "@/components/homes/digital-transformation/Services2";
 import Career from "@/components/otherPages/Career";
 import Features3 from "@/components/common/Features3";
 import Services from "@/components/homes/it-consulting/Services";
+import { getPageByName } from "@/lib/strapi/queries";
+import { getStrapiMediaUrl } from "@/lib/strapi/media";
 
-
-export const metadata: Metadata = {
-  title:
-    "Career || Kidz Holding - Franchise & Corporate Website",
-  description:
-    "Kidz Holding - Franchise & Corporate Website",
-};
 export default function page() {
+  const [careerPage, setCareerPage] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await getPageByName({
+        pageName: "Careers - Page",
+        populate: [
+          "Hero",
+          "Hero.image",
+          "section",
+          "section.img",
+          "section.list",
+          "section.featuredItems.list",
+          "section.ButtonLinks",
+          "section.featuredItems.ButtonLink",
+          "section.featuredItems",
+          "section.featuredItems.img",
+        ],
+        revalidate: 0,
+      });
+      setCareerPage(data);
+      setLoading(false);
+    };
+    fetchData();
+  }, []);
   return (
     <>
       <div className="page-title style-1 bg-img-13">
         <div className="tf-container position-relative">
           <div className="page-title-content">
             <Breadcumb pageName="Career" />
-            <h2 className="title-page-title">Join Our Team</h2>
+            <h2 className="title-page-title">{careerPage?.Hero?.title}</h2>
             <div className="sub-title body-2">
-              Build the Future of Learning and Play
+              {careerPage?.Hero?.description}
               <br />
               
             </div>
@@ -36,12 +57,18 @@ export default function page() {
       </div>
       <div className="main-content">
         {/* <Services2/> */}
-        <Features3 />
+        <Features3 
+         featuresSection={careerPage?.section?.[0]}
+        />
  {/* <Services2/> */}
- <Services />
+        <Services 
+          servicesSection={careerPage?.section?.[1]}
+        />
 
 
-        <Career />
+        <Career 
+         careerSection={careerPage?.section?.[2]}
+        />
         {/* <Contact />
         <Map />
         <Locations /> */}

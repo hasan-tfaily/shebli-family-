@@ -1,6 +1,7 @@
 import React from "react";
+import ReactMarkdown from "react-markdown";
 
-export default function Career() {
+export default function Career( { careerSection }: { careerSection?: any } ) {
   return (
     <section className="section-new page-career bg-surface tf-spacing-2">
       <div className="tf-container position-relative">
@@ -9,14 +10,14 @@ export default function Career() {
             <div className="heading-section text-center">
               <div className="text-anime-wave-1">
                 <a href="#" className="tag label text-btn-uppercase bg-white">
-                  Careers
+                  {careerSection?.miniTitle}
                 </a>
               </div>
               <h3 className="text-anime-wave-1 mb-12">
-                Explore Career Opportunities
+                {careerSection?.title}
               </h3>
               <div className="sub-title body-2 text-anime-wave-1">
-                Didn’t find a role that fits? Send us your profile and we’ll get in touch.
+                {careerSection?.description}
               </div>
             </div>
             <div className="wg-according" id="According1">
@@ -27,7 +28,7 @@ export default function Career() {
                     data-bs-toggle="collapse"
                     className="title-according"
                   >
-                    Business Development Manager
+                    {careerSection?.featuredItems?.[0]?.title}
                     <i className="icon-chevron-down" />
                   </a>
                 </h5>
@@ -39,44 +40,39 @@ export default function Career() {
                   <div className="according-content">
                     <div className="content">
                       <div className="job-description item-content item-content-1">
+                        <div className="body-2 title-item" >
                         <h6 className="title-item">Job Description</h6>
-                        <div className="text body-2">
-                          Drive growth by developing new business opportunities{" "}
-                          <br />
-                          and building client relationships. Collaborate on{" "}
-                          <br />
-                          strategies to meet revenue goals and expand our market
-                          <br />
-                          presence.
+                        <ReactMarkdown>
+                          {careerSection?.featuredItems?.[0]?.Body}
+                        </ReactMarkdown>
                         </div>
+                        
                       </div>
                       <div className="item-content item-content-1">
-                        <h6 className="title-item">The Work You'll Do</h6>
+                        <h6 className="title-item">{careerSection?.featuredItems?.[0]?.list?.[0]?.point}</h6>
                         <ul>
                           <li className="body-2">
-                            Expand client portfolio through new business
-                            <br />
-                            opportunities.
+                            {careerSection?.featuredItems?.[0]?.list?.[1]?.point}
                           </li>
                           <li className="body-2">
-                            Build and sustain strong client relationships.
+                            {careerSection?.featuredItems?.[0]?.list?.[2]?.point}
                           </li>
                           <li className="body-2">
-                            Collaborate on strategies to achieve revenue goals.
+                            {careerSection?.featuredItems?.[0]?.list?.[3]?.point}
                           </li>
                         </ul>
                       </div>
                       <div className="item-content item-content-2">
-                        <h6 className="title-item">Salary</h6>
+                        <h6 className="title-item">{careerSection?.featuredItems?.[0]?.list?.[4]?.point}</h6>
                         <div className="price-according mb-20">
-                          <h5>$10 - $15</h5>
-                          <span>/Month</span>
+                          <h5>{careerSection?.featuredItems?.[0]?.list?.[5]?.point}</h5>
+                          <span>{careerSection?.featuredItems?.[0]?.list?.[6]?.point}</span>
                         </div>
                         <a
-                          href="#"
+                          href={careerSection?.featuredItems?.[0]?.ButtonLink?.[0]?.link}
                           className="tf-btn style-1 bg-on-suface-container"
                         >
-                          <span> Apply Job Now </span>
+                          <span> {careerSection?.featuredItems?.[0]?.ButtonLink?.[0]?.title} </span>
                         </a>
                       </div>
                     </div>
@@ -90,7 +86,7 @@ export default function Career() {
                     data-bs-toggle="collapse"
                     className="title-according collapsed"
                   >
-                    Risk Management Consultant
+                    {careerSection?.featuredItems?.[1]?.title}
                     <i className="icon-chevron-down" />
                   </a>
                 </h5>
@@ -103,43 +99,35 @@ export default function Career() {
                     <div className="content">
                       <div className="job-description item-content item-content-1">
                         <h6 className="title-item">Job Description</h6>
-                        <div className="text body-2">
-                          Drive growth by developing new business opportunities{" "}
-                          <br />
-                          and building client relationships. Collaborate on{" "}
-                          <br />
-                          strategies to meet revenue goals and expand our market
-                          <br />
-                          presence.
-                        </div>
+                        <ReactMarkdown>
+                          {careerSection?.featuredItems?.[1]?.Body}
+                        </ReactMarkdown>
                       </div>
                       <div className="item-content item-content-1">
-                        <h6 className="title-item">The Work You'll Do</h6>
+                        <h6 className="title-item">{careerSection?.featuredItems?.[1]?.list?.[0]?.point}</h6>
                         <ul>
                           <li className="body-2">
-                            Expand client portfolio through new business
-                            <br />
-                            opportunities.
+                            {careerSection?.featuredItems?.[1]?.list?.[1]?.point}
                           </li>
                           <li className="body-2">
-                            Build and sustain strong client relationships.
+                            {careerSection?.featuredItems?.[1]?.list?.[2]?.point}
                           </li>
                           <li className="body-2">
-                            Collaborate on strategies to achieve revenue goals.
+                            {careerSection?.featuredItems?.[1]?.list?.[3]?.point}
                           </li>
                         </ul>
                       </div>
                       <div className="item-content item-content-2">
-                        <h6 className="title-item">Salary</h6>
+                        <h6 className="title-item">{careerSection?.featuredItems?.[1]?.list?.[4]?.point}</h6>
                         <div className="price-according mb-20">
-                          <h5>$10 - $15</h5>
-                          <span>/Month</span>
+                          <h5>{careerSection?.featuredItems?.[1]?.list?.[5]?.point}</h5>
+                          <span>{careerSection?.featuredItems?.[1]?.list?.[6]?.point}</span>
                         </div>
                         <a
-                          href="#"
+                          href={careerSection?.featuredItems?.[1]?.ButtonLink?.[0]?.link}
                           className="tf-btn style-1 bg-on-suface-container"
                         >
-                          <span> Apply Job Now </span>
+                          <span> {careerSection?.featuredItems?.[1]?.ButtonLink?.[0]?.title} </span>
                         </a>
                       </div>
                     </div>
@@ -153,7 +141,7 @@ export default function Career() {
                     data-bs-toggle="collapse"
                     className="title-according collapsed"
                   >
-                    Client Relationship Specialist
+                    {careerSection?.featuredItems?.[2]?.title}
                     <i className="icon-chevron-down" />
                   </a>
                 </h5>
@@ -166,43 +154,35 @@ export default function Career() {
                     <div className="content">
                       <div className="job-description item-content item-content-1">
                         <h6 className="title-item">Job Description</h6>
-                        <div className="text body-2">
-                          Drive growth by developing new business opportunities{" "}
-                          <br />
-                          and building client relationships. Collaborate on{" "}
-                          <br />
-                          strategies to meet revenue goals and expand our market
-                          <br />
-                          presence.
-                        </div>
+                        <ReactMarkdown>
+                          {careerSection?.featuredItems?.[2]?.Body}
+                        </ReactMarkdown>
                       </div>
                       <div className="item-content item-content-1">
-                        <h6 className="title-item">The Work You'll Do</h6>
+                        <h6 className="title-item">{careerSection?.featuredItems?.[2]?.list?.[0]?.point}</h6>
                         <ul>
                           <li className="body-2">
-                            Expand client portfolio through new business
-                            <br />
-                            opportunities.
+                            {careerSection?.featuredItems?.[2]?.list?.[1]?.point}
                           </li>
                           <li className="body-2">
-                            Build and sustain strong client relationships.
+                            {careerSection?.featuredItems?.[2]?.list?.[2]?.point}
                           </li>
                           <li className="body-2">
-                            Collaborate on strategies to achieve revenue goals.
+                            {careerSection?.featuredItems?.[2]?.list?.[3]?.point}
                           </li>
                         </ul>
                       </div>
                       <div className="item-content item-content-2">
-                        <h6 className="title-item">Salary</h6>
+                        <h6 className="title-item">{careerSection?.featuredItems?.[2]?.list?.[4]?.point}</h6>
                         <div className="price-according mb-20">
-                          <h5>$10 - $15</h5>
-                          <span>/Month</span>
+                          <h5>{careerSection?.featuredItems?.[2]?.list?.[5]?.point}</h5>
+                          <span>{careerSection?.featuredItems?.[2]?.list?.[6]?.point}</span>
                         </div>
                         <a
-                          href="#"
+                          href={careerSection?.featuredItems?.[2]?.ButtonLink?.[0]?.link}
                           className="tf-btn style-1 bg-on-suface-container"
                         >
-                          <span> Apply Job Now </span>
+                          <span> {careerSection?.featuredItems?.[2]?.ButtonLink?.[0]?.title} </span>
                         </a>
                       </div>
                     </div>
@@ -216,7 +196,7 @@ export default function Career() {
                     data-bs-toggle="collapse"
                     className="title-according collapsed"
                   >
-                    Operations &amp; Compliance Manager
+                    {careerSection?.featuredItems?.[3]?.title}
                     <i className="icon-chevron-down" />
                   </a>
                 </h5>
@@ -229,43 +209,35 @@ export default function Career() {
                     <div className="content">
                       <div className="job-description item-content item-content-1">
                         <h6 className="title-item">Job Description</h6>
-                        <div className="text body-2">
-                          Drive growth by developing new business opportunities{" "}
-                          <br />
-                          and building client relationships. Collaborate on{" "}
-                          <br />
-                          strategies to meet revenue goals and expand our market
-                          <br />
-                          presence.
-                        </div>
+                        <ReactMarkdown>
+                          {careerSection?.featuredItems?.[3]?.Body}
+                        </ReactMarkdown>
                       </div>
                       <div className="item-content item-content-1">
-                        <h6 className="title-item">The Work You'll Do</h6>
+                        <h6 className="title-item">{careerSection?.featuredItems?.[3]?.list?.[0]?.point}</h6>
                         <ul>
                           <li className="body-2">
-                            Expand client portfolio through new business
-                            <br />
-                            opportunities.
+                            {careerSection?.featuredItems?.[3]?.list?.[1]?.point}
                           </li>
                           <li className="body-2">
-                            Build and sustain strong client relationships.
+                            {careerSection?.featuredItems?.[3]?.list?.[2]?.point}
                           </li>
                           <li className="body-2">
-                            Collaborate on strategies to achieve revenue goals.
+                            {careerSection?.featuredItems?.[3]?.list?.[3]?.point}
                           </li>
                         </ul>
                       </div>
                       <div className="item-content item-content-2">
-                        <h6 className="title-item">Salary</h6>
+                        <h6 className="title-item">{careerSection?.featuredItems?.[3]?.list?.[4]?.point}</h6>
                         <div className="price-according mb-20">
-                          <h5>$10 - $15</h5>
-                          <span>/Month</span>
+                          <h5>{careerSection?.featuredItems?.[3]?.list?.[5]?.point}</h5>
+                          <span>{careerSection?.featuredItems?.[3]?.list?.[6]?.point}</span>
                         </div>
                         <a
-                          href="#"
+                          href={careerSection?.featuredItems?.[1]?.ButtonLink?.[0]?.link}
                           className="tf-btn style-1 bg-on-suface-container"
                         >
-                          <span> Apply Job Now </span>
+                          <span> {careerSection?.featuredItems?.[1]?.ButtonLink?.[0]?.title} </span>
                         </a>
                       </div>
                     </div>

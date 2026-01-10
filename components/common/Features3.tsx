@@ -1,10 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
+import { sectionServices } from "@/data/services";
+import { get } from "http";
+import { getStrapiMediaAlt, getStrapiMediaUrl, StrapiMediaUrl } from "@/lib/strapi/media";    
 
 export default function Features3({
     parentClass = "section-why-choose h-2 tf-spacing-31",
     hasBorder = false,
+    featuresSection
 }) {
     return (
         <section className={parentClass}>
@@ -18,7 +22,7 @@ export default function Features3({
                     <div className="col-lg-6">
                         <div className="image mr-15 tf-animate-1">
                             <Image
-                                src="/image/section/WhyChooseUsAbout.png"
+                                src={getStrapiMediaUrl(featuresSection?.img)}
                                 alt=""
                                 className="lazyload"
                                 width={615}
@@ -35,13 +39,11 @@ export default function Features3({
                   </a>
                 </div> */}
                                 <h3 className="title-section wow fadeInUp mb-12">
-                                    Our People
+                                    {featuresSection?.title}
 
                                 </h3>
                                 <div className="sub-title body-2 wow fadeInUp">
-                                    At Kidz Holding, our people are the heart of everything we create.
-                                    Behind every concept, every experience, and every memorable moment stands a diverse team of passionate professionals who believe in the power of play, learning, and creativity.
-                                    Our teams span multiple disciplines from architects, designers, educators, and experience developers to operators, marketers, and technology specialists. Together, we build destinations that inspire everyone and enrich communities. We value talent that is:
+                                    {featuresSection?.description}
 
                                 </div>
                             </div>
@@ -51,7 +53,7 @@ export default function Features3({
                                         <i className="icon-checkbox" />
                                     </div>
                                     <div className="title wow fadeInUp" data-wow-delay=".1s">
-                                        Creative in thought and execution
+                                        {featuresSection?.list[0]?.point}
                                     </div>
                                 </div>
                                 <div className="benefit-items">
@@ -59,7 +61,7 @@ export default function Features3({
                                         <i className="icon-checkbox" />
                                     </div>
                                     <div className="title wow fadeInUp" data-wow-delay=".1s">
-                                        Committed to delivering world-class experiences
+                                        {featuresSection?.list[1]?.point}
                                     </div>
                                 </div>
                                 <div className="benefit-items">
@@ -67,7 +69,7 @@ export default function Features3({
                                         <i className="icon-checkbox" />
                                     </div>
                                     <div className="title wow fadeInUp" data-wow-delay=".1">
-                                        Experience focus
+                                        {featuresSection?.list[2]?.point}
                                     </div>
                                 </div>
                                 <div className="benefit-items">
@@ -75,7 +77,7 @@ export default function Features3({
                                         <i className="icon-checkbox" />
                                     </div>
                                     <div className="title wow fadeInUp" data-wow-delay=".1s">
-                                        Professional, reliable, and passionate about growth
+                                        {featuresSection?.list[3]?.point}
                                     </div>
                                 </div>
                                 <div className="benefit-items">
@@ -83,14 +85,14 @@ export default function Features3({
                                         <i className="icon-checkbox" />
                                     </div>
                                     <div className="title wow fadeInUp" data-wow-delay=".1s">
-                                        Collaborative, contributing to a culture of support and innovation
+                                        {featuresSection?.list[4]?.point}
                                     </div>
                                 </div>
 
                             </div>
 
                             <div className="sub-title body-2 wow fadeInUp">
-                                At Kidz Holding, we invest in our people by fostering a workplace where ideas are encouraged, skills are developed, and careers grow with purpose.
+                                {featuresSection?.miniTitle}
 
                             </div>
                             {/* <Link

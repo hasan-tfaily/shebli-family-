@@ -1,6 +1,7 @@
-import Link from "next/link";
-import React from "react";
+"use client";
 
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
 import { Metadata } from "next";
 import Features from "@/components/homes/tax-advisory/Features";
 import About from "@/components/homes/strategy-consulting/About";
@@ -8,15 +9,35 @@ import Process from "@/components/homes/insurance-consultancy/Process";
 import Benefits from "@/components/homes/it-consulting/Benefits";
 import Services from "@/components/homes/tax-advisory/Services";
 import Image from "next/image";
-
-export const metadata: Metadata = {
-  title:
-    "Franchise & Partnership || Kidz Holding - Franchise & Corporate Website",
-  description:
-    "Kidz Holding - Franchise & Corporate Website",
-};
+import { getPageByName } from "@/lib/strapi/queries";
+import { getStrapiMediaUrl } from "@/lib/strapi/media";
 
 export default function Page() {
+  const [franchisePage, setFranchisePage] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await getPageByName({
+        pageName: "Franchise & Partnership - Page",
+        populate: [
+          "Hero",
+          "Hero.image",
+          "section",
+          "section.img",
+          "section.list",
+          "section.featuredItems.list",
+          "section.featuredItems",
+          "section.featuredItems.img",
+          "section.ButtonLinks",
+        ],
+        revalidate: 0,
+      });
+      setFranchisePage(data);
+      setLoading(false);
+    };
+    fetchData();
+  }, []);
   return (
     <>
       <div className="page-title style-1 bg-img-6">
@@ -56,16 +77,14 @@ export default function Page() {
                 </svg>
               </span>{" "}
               <span className="caption-1 page-breadkcum">
-                Franchise &amp; Partnership
+                {franchisePage?.Hero?.title}
               </span>
             </div>
 
-            <h2 className="title-page-title">Franchise &amp; Partnership</h2>
+            <h2 className="title-page-title">{franchisePage?.Hero?.title}</h2>
 
             <div className="sub-title body-2">
-              Partner with the region’s most trusted edutainment brand and
-              <br />
-              build cities that inspire tomorrow’s leaders.
+              {franchisePage?.Hero?.description}
             </div>
           </div>
 
@@ -74,7 +93,7 @@ export default function Page() {
               href={`/contact-us`}
               className="tf-btn style-1 bg-on-suface-container"
             >
-              <span> Contact Us </span>
+              <span> {franchisePage?.Hero?.buttonText} </span>
             </Link>
           </div>
         </div>
@@ -82,15 +101,19 @@ export default function Page() {
 
       <div className="main-content">
 
-        <Features />
-        <About />
+        <Features 
+          featuresSection={franchisePage?.section?.[0]}
+        />
+        <About
+          aboutSection={franchisePage?.section?.[1]}
+        />
         <section className="section-why-choose h-7 bg-surface tf-spacing-31">
           <div className="tf-container position-relative tf-spacing-3">
             <div className="row rg-60">
               <div className="col-xl-6">
                 <div className="image mr-15">
                   <Image
-                    src="/image/section/services 1.jpg"
+                    src={getStrapiMediaUrl(franchisePage?.section?.[2]?.img)}
                     alt="Why partner with us"
                     width={615}
                     height={615}
@@ -105,28 +128,24 @@ export default function Page() {
                   <div className="heading-section">
                     <div className="wow fadeInUp">
                       <a href="#" className="tag label text-btn-uppercase bg-white">
-                        Partnership
+                        {franchisePage?.section?.[2]?.miniTitle}
                       </a>
                     </div>
                     <h3 className="wow fadeInUp mb-12">
-                      Concept Development: <br />
-                      Our Methodology
+                      {franchisePage?.section?.[2]?.title}
                     </h3>
                   </div>
                   <div className="sub-title body-2 wow fadeInUp">
-                    We apply a design and leisure thinking approach. We focus on our guests'
-                    expectations, the technological trends, and the market change. Our innovative and
-                    immersive experiences make us unique. Each project responds to the singular
-                    opportunities of the context, culture and characteristics of the community.
+                    {franchisePage?.section?.[2]?.description}
                   </div>
-                  <div className="cols g-10" style={{ marginTop: "50px" }}>
+                  <div className="cols g-10" style={{ marginTop: "50px"   }}>
                     <div className="benefit-lists">
                       <div className="benefit-items">
                         <div className="icon wow fadeInUp">
                           <i className="icon-checkbox" />
                         </div>
                         <div className="title wow fadeInUp" data-wow-delay=".1s">
-                          Understand our audience
+                          {franchisePage?.section?.[2]?.list?.[0]?.point}
                         </div>
                       </div>
 
@@ -135,7 +154,7 @@ export default function Page() {
                           <i className="icon-checkbox" />
                         </div>
                         <div className="title wow fadeInUp" data-wow-delay=".1s">
-                          Research and Define
+                          {franchisePage?.section?.[2]?.list?.[1]?.point}
                         </div>
                       </div>
 
@@ -144,7 +163,7 @@ export default function Page() {
                           <i className="icon-checkbox" />
                         </div>
                         <div className="title wow fadeInUp" data-wow-delay=".1s">
-                          Ideate and Create
+                          {franchisePage?.section?.[2]?.list?.[2]?.point}
                         </div>
                       </div>
 
@@ -153,7 +172,7 @@ export default function Page() {
                           <i className="icon-checkbox" />
                         </div>
                         <div className="title wow fadeInUp" data-wow-delay=".1s">
-                          Design and Develop
+                          {franchisePage?.section?.[2]?.list?.[3]?.point}
                         </div>
                       </div>
 
@@ -162,7 +181,7 @@ export default function Page() {
                           <i className="icon-checkbox" />
                         </div>
                         <div className="title wow fadeInUp" data-wow-delay=".1s">
-                          Build and Activate
+                          {franchisePage?.section?.[2]?.list?.[4]?.point}
                         </div>
                       </div>
 
@@ -171,7 +190,7 @@ export default function Page() {
                           <i className="icon-checkbox" />
                         </div>
                         <div className="title wow fadeInUp" data-wow-delay=".1s">
-                          Scale the Business
+                          {franchisePage?.section?.[2]?.list?.[5]?.point}
                         </div>
                       </div>
                     </div>
@@ -182,9 +201,13 @@ export default function Page() {
             </div>
           </div>
         </section>
-<Services />
+        <Services 
+          servicesSection={franchisePage?.section?.[3]}
+        />
          {/* <Process /> */}
-        <Benefits /> 
+        <Benefits 
+          benefitsSection={franchisePage?.section?.[4]}
+        />
 
 
         <section className="section-cta h-2 section-one-page" id="cta">
@@ -194,13 +217,13 @@ export default function Page() {
                 <div className="cta-inner style-2">
                   <div className="cta-content">
                     <h4 className="title-content">
-                      Have a project or idea to bring to life? Let’s create it together
+                      {franchisePage?.section?.[5]?.title}
                     </h4>
                     <Link
                       href={`/contact-us`}
                       className="tf-btn style-1 bg-white text-center"
                     >
-                      <span> Request a Quote </span>
+                      <span> {franchisePage?.section?.[5]?.ButtonLinks?.[0]?.title} </span>
                     </Link>
                   </div>
                 </div>

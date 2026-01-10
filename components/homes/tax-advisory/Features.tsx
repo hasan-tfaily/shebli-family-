@@ -3,8 +3,9 @@ import Image from "next/image";
 import React from "react";
 import { counters3 } from "@/data/cta";
 import OdometerComponent from "@/components/common/OdometerComponent";
+import { getStrapiMediaUrl } from "@/lib/strapi/media";
 
-export default function Features() {
+export default function Features({ featuresSection }: { featuresSection?: any }) {
   return (
     <section className="section-why-choose h-7 bg-surface tf-spacing-31">
       <div className="tf-container position-relative tf-spacing-3" style={{ paddingBottom: "0px"}}>
@@ -12,7 +13,7 @@ export default function Features() {
           <div className="col-xl-6">
             <div className="image mr-15">
               <Image
-                src="/image/section/franshise1.png"
+                src={getStrapiMediaUrl(featuresSection?.img)}
                 alt=""
                 className="lazyload"
                 width={615}
@@ -26,11 +27,11 @@ export default function Features() {
               <div className="heading-section">
                 <div className="wow fadeInUp">
                   <a href="#" className="tag label text-btn-uppercase bg-white">
-                    Partnership
+                    {featuresSection?.miniTitle}
                   </a>
                 </div>
 
-                <h3 className="wow fadeInUp mb-12">Why Partner With Us</h3>
+                <h3 className="wow fadeInUp mb-12">{featuresSection?.title}</h3>
 
                 {/* 
                 <div className="sub-title body-2 wow fadeInUp">
@@ -50,7 +51,7 @@ export default function Features() {
                       <i className="icon-checkbox" />
                     </div>
                     <div className="title wow fadeInUp" data-wow-delay=".1s">
-                      Proven operational success in MENA
+                      {featuresSection?.list[0]?.point}
                     </div>
                   </div>
 
@@ -59,7 +60,7 @@ export default function Features() {
                       <i className="icon-checkbox" />
                     </div>
                     <div className="title wow fadeInUp" data-wow-delay=".1s">
-                      High-return franchise model with CSR value
+                      {featuresSection?.list[1]?.point}
                     </div>
                   </div>
 
@@ -68,7 +69,7 @@ export default function Features() {
                       <i className="icon-checkbox" />
                     </div>
                     <div className="title wow fadeInUp" data-wow-delay=".1s">
-                      Comprehensive training and launch support
+                      {featuresSection?.list[2]?.point}
                     </div>
                   </div>
 
@@ -77,7 +78,7 @@ export default function Features() {
                       <i className="icon-checkbox" />
                     </div>
                     <div className="title wow fadeInUp" data-wow-delay=".1s">
-                      Strategic partnerships and sponsorship potential
+                      {featuresSection?.list[3]?.point}
                     </div>
                   </div>
 
@@ -86,7 +87,7 @@ export default function Features() {
                       <i className="icon-checkbox" />
                     </div>
                     <div className="title wow fadeInUp" data-wow-delay=".1s">
-                      Turnkey setup process and design guidance
+                      {featuresSection?.list[4]?.point}
                     </div>
                   </div>
 
@@ -95,7 +96,7 @@ export default function Features() {
                       <i className="icon-checkbox" />
                     </div>
                     <div className="title wow fadeInUp" data-wow-delay=".1s">
-                      End‑to‑end marketing and performance tools
+                      {featuresSection?.list[5]?.point}
                     </div>
                   </div>
 
@@ -105,7 +106,7 @@ export default function Features() {
                       <i className="icon-checkbox" />
                     </div>
                     <div className="title wow fadeInUp" data-wow-delay=".1s">
-                      High-return franchise model with CSR value
+                      {featuresSection?.list[6]?.point}
                     </div>
                   </div>
 
