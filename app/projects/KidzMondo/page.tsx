@@ -142,7 +142,7 @@ export default function KidzMondoPage() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src={getStrapiMediaUrl(kidzMondoBrand?.imageScroll?.[0])}
+                        src={getStrapiMediaUrl(kidzMondoBrand?.section[0]?.imageScroll?.[0])}
                         alt="KidzMondo Activity 1"
                         width={444}
                         height={334}
@@ -155,7 +155,7 @@ export default function KidzMondoPage() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src={getStrapiMediaUrl(kidzMondoBrand?.imageScroll?.[1])}
+                        src={getStrapiMediaUrl(kidzMondoBrand?.section[0]?.imageScroll?.[1])}
                         alt="KidzMondo Activity 2"
                         width={444}
                         height={334}
@@ -168,7 +168,7 @@ export default function KidzMondoPage() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src={getStrapiMediaUrl(kidzMondoBrand?.imageScroll?.[2])}
+                        src={getStrapiMediaUrl(kidzMondoBrand?.section[0]?.imageScroll?.[2])}
                         alt="KidzMondo Activity 3"
                         width={444}
                         height={334}
@@ -180,7 +180,7 @@ export default function KidzMondoPage() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src={getStrapiMediaUrl(kidzMondoBrand?.imageScroll?.[3])}
+                        src={getStrapiMediaUrl(kidzMondoBrand?.section[0]?.imageScroll?.[3])}
                         alt="KidzMondo Activity 4"
                         width={444}
                         height={334}
@@ -192,7 +192,7 @@ export default function KidzMondoPage() {
                   <SwiperSlide>
                     <div className="image-blog">
                       <Image
-                        src={getStrapiMediaUrl(kidzMondoBrand?.imageScroll?.[4])}
+                        src={getStrapiMediaUrl(kidzMondoBrand?.section[0]?.imageScroll?.[4])}
                         alt="KidzMondo Activity 5"
                         width={444}
                         height={334}
