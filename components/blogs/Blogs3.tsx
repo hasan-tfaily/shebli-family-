@@ -80,7 +80,14 @@ export default function Blogs3({ blogs = [] }: Props) {
                         key={blog.documentId || i}
                       >
                         <div className="tf-post-grid style-absolute">
-                          <div className="image">
+                          <div
+                            className="image"
+                            style={{
+                              position: "relative",
+                              height: "505px",
+                              width: "100%",
+                            }}
+                          >
                             <Link
                               href={`/blog-details-1/${blog.documentId}`}
                               className="link"
@@ -89,8 +96,7 @@ export default function Blogs3({ blogs = [] }: Props) {
                               src={imageUrl}
                               alt={blog.title || "Blog post"}
                               className="lazyload"
-                              width={blog.coverImage?.width || 800}
-                              height={blog.coverImage?.height || 600}
+                              fill
                               style={{ objectFit: "cover" }}
                             />
                             <span className="date">
@@ -136,7 +142,14 @@ export default function Blogs3({ blogs = [] }: Props) {
                     className="tf-post-grid style-small fl-item d-block"
                     key={blog.documentId || index}
                   >
-                    <div className="image">
+                    <div
+                      className="image"
+                      style={{
+                        position: "relative",
+                        height: "505px",
+                        width: "100%",
+                      }}
+                    >
                       <Link
                         href={`/blog-details-2/${blog.documentId}`}
                         className="link"
@@ -144,8 +157,7 @@ export default function Blogs3({ blogs = [] }: Props) {
                       <Image
                         src={imageUrl}
                         alt={blog.title || "Blog post"}
-                        width={blog.coverImage?.width || 400}
-                        height={blog.coverImage?.height || 300}
+                        fill
                         className="lazyload"
                         style={{ objectFit: "cover" }}
                       />

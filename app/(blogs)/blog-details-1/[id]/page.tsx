@@ -2,7 +2,11 @@ import Link from "next/link";
 import Details1 from "@/components/blogs/Details1";
 import RelatedBlogs from "@/components/blogs/RelatedBlogs";
 import React from "react";
-import { getBlogByDocumentId, StrapiBlog } from "@/lib/strapi/queries";
+import {
+  getBlogByDocumentId,
+  getAllBlogs,
+  StrapiBlog,
+} from "@/lib/strapi/queries";
 
 const STRAPI_URL = "http://46.62.246.5:1337";
 
@@ -56,7 +60,13 @@ export default async function page({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const blog = await getBlogByDocumentId({ documentId: id });
+  const [blog, allBlogs] = await Promise.all([
+    getBlogByDocumentId({ documentId: id }),
+    getAllBlogs(),
+  ]);
+
+  // Get recent blogs (limit 3, excluding current blog)
+  const recentBlogs = allBlogs.filter((b) => b.documentId !== id).slice(0, 3);
 
   if (!blog) {
     return (
@@ -192,8 +202,7 @@ export default async function page({
         </div>
       </div>
       <div className="main-content tf-spacing-2">
-        <Details1 blog={blog} />
-        <RelatedBlogs />
+        <Details1 blog={blog} recentBlogs={recentBlogs} />
       </div>
     </>
   );
