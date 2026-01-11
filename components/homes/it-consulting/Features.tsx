@@ -1,7 +1,9 @@
+import { getStrapiMediaUrl } from "@/lib/strapi/media";
+import { get } from "http";
 import Image from "next/image";
 import React from "react";
 
-export default function Features() {
+export default function Features({ featureSection }: { featureSection?: any }) {
   return (
     <section className="section-why-choose h-8 bg-surface tf-spacing-7" style={{ paddingBottom: "70px" }}>
       <div className="tf-container position-relative">
@@ -13,13 +15,12 @@ export default function Features() {
                   href="#"
                   className="tag label text-btn-uppercase bg-white mb-12"
                 >
-                  Redefining the fun experience
+                  {featureSection?.miniTitle}
 
                 </a>
               </div>
               <h3 className="title-section mb-12 text-anime-wave-1">
-                Building Entertainment   <br />
-                Destinations for All Ages
+                {featureSection?.title}
               </h3>
             </div>
           </div>
@@ -30,28 +31,27 @@ export default function Features() {
               <div className="box-icon">
                 <div className="icon color-primary wow fadeInUp">
                   <Image
-                    src="/image/icon/OurBrands&Ventures.svg"
+                    src={getStrapiMediaUrl(featureSection?.featuredItems?.[0]?.img)}
                     alt="Our Brands & Ventures"
                     width={64}
                     height={64}
                   />
                 </div>
-
                 <div className="box-content">
                   <h5 className="wow fadeInUp">
                     <a href="/Our-Ventures" className="title-box">
-                      Our Brands 
+                      {featureSection?.featuredItems?.[0]?.title}
                     </a>
                   </h5>
                   <div className="sub-title wow fadeInUp">
-                    Discover our portfolio of pioneering family and entertainment ventures designed to educate, engage, and inspire.
+                    {featureSection?.featuredItems?.[0]?.Body}
                   </div>
                 </div>
               </div>
               <div className="box-icon">
                 <div className="icon color-primary wow fadeInUp">
                   <Image
-                    src="/image/icon/investorRelations.svg"
+                    src={getStrapiMediaUrl(featureSection?.featuredItems?.[1]?.img)}
                     alt="Our Brands & Ventures"
                     width={64}
                     height={64}
@@ -60,11 +60,11 @@ export default function Features() {
                 <div className="box-content">
                   <h5 className="wow fadeInUp">
                     <a href="/Investor-Relations" className="title-box">
-                      Investor Relations
+                      {featureSection?.featuredItems?.[1]?.title}
                     </a>
                   </h5>
                   <div className="sub-title wow fadeInUp">
-                    A transparent investment platform driving sustainable growth and community impact.
+                    {featureSection?.featuredItems?.[1]?.Body}
                   </div>
                 </div>
               </div>
@@ -76,7 +76,7 @@ export default function Features() {
               data-delay=".4s"
             >
               <Image
-                src="/image/section/familyPhoto.png"
+                src={getStrapiMediaUrl(featureSection?.img)}
                 alt=""
                 className="lazyload"
                 width={410}
@@ -92,7 +92,7 @@ export default function Features() {
                   data-wow-delay=".3s"
                 >
                   <Image
-                    src="/image/icon/Franchise&Partnership.svg"
+                    src={getStrapiMediaUrl(featureSection?.featuredItems?.[2]?.img)}
                     alt="Franchise & Partnership"
                     width={64}
                     height={64}
@@ -102,11 +102,11 @@ export default function Features() {
                 <div className="box-content">
                   <h5 className="wow fadeInUp" data-wow-delay=".3s">
                     <a href="/Franchise-Partnership" className="title-box">
-                      Franchise & Partnership
+                      {featureSection?.featuredItems?.[2]?.title}
                     </a>
                   </h5>
                   <div className="sub-title wow fadeInUp" data-wow-delay=".3s">
-                    Partner with a proven regional leader to develop world-class entertainment destinations while benefiting from scalable models, operational expertise, and a trusted IP.
+                    {featureSection?.featuredItems?.[2]?.Body}
                   </div>
                 </div>
               </div>
@@ -116,7 +116,7 @@ export default function Features() {
                   data-wow-delay=".3s"
                 >
                   <Image
-                    src="/image/icon/CSR&Impact.svg"
+                    src={getStrapiMediaUrl(featureSection?.featuredItems?.[3]?.img)}
                     alt="Franchise & Partnership"
                     width={64}
                     height={64}
@@ -125,11 +125,11 @@ export default function Features() {
                 <div className="box-content">
                   <h5 className="wow fadeInUp" data-wow-delay=".3s">
                     <a href="/services" className="title-box">
-                      CSR & Impact
+                      {featureSection?.featuredItems?.[3]?.title}
                     </a>
                   </h5>
                   <div className="sub-title wow fadeInUp" data-wow-delay=".3s">
-                    Enriching communities through family-centered initiatives that support education, youth development, and social well-being.
+                    {featureSection?.featuredItems?.[3]?.Body}
                   </div>
                 </div>
               </div>

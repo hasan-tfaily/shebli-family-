@@ -46,7 +46,7 @@ import Services1 from "@/components/common/Services";
 import About from "@/components/homes/marketing-consulting/About";
 import Brands from "@/components/common/Brands";
 import Hero from "@/components/homes/marketing-consulting/Hero";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Services from "@/components/common/Services3";
 import Faqs from "@/components/homes/marketing-consulting/Faqs";
 import Team from "@/components/common/Team";
@@ -54,6 +54,8 @@ import Blogs from "@/components/homes/marketing-consulting/Blogs";
 import Cta from "@/components/common/Cta";
 import Footer2 from "@/components/footers/Footer2";
 import Blogs2 from "@/components/homes/marketing-consulting/Blogs2";
+import { getSingleType } from "@/lib/strapi/queries";
+import { getStrapiMediaUrl } from "@/lib/strapi/media";
 
 // ✅ alias the two different Features components
 import MCFeatures from "@/components/homes/marketing-consulting/Features";
@@ -62,36 +64,64 @@ import ITFeatures from "@/components/homes/it-consulting/Features";
 import Process from "@/components/homes/it-consulting/Process";
 // import Process from "@/components/common/Process2";
 
-import { Metadata } from "next";
 import Footer1 from "@/components/footers/Footer1";
 
-export const metadata: Metadata = {
-  title:
-    "Kidz Holding || Kidz Holding - Franchise & Corporate Website",
-  description:
-    "Kidz Holding - Franchise & Corporate Website",
-};
 
-export default function Page() {
+export default async function Page() {
+  // server-side fetch (no CORS issues)
+  let homePage = null;
+  try {
+    const data = await getSingleType("homepage", {
+      populate: [
+        "Hero",
+        "Hero.image",
+        "section",
+        "section.img",
+        "section.list",
+        "section.featuredItems.list",
+        "section.ButtonLinks",
+        "section.featuredItems.ButtonLink",
+        "section.featuredItems",
+        "section.featuredItems.img",
+        "section.imageScroll",
+      ],
+      revalidate: 0,
+    });
+    homePage = data;
+  } catch (err) {
+    console.error("Failed to fetch homepage (server):", err);
+  }
+
   return (
     <>
       <Header5 />
-      <Hero />
+      <Hero heroData={homePage?.Hero} />
       <div className="main-content">
-        <About />
-        <ITFeatures />
+        <About aboutSection={homePage?.section?.[0]} />
+        <ITFeatures 
+          featureSection={homePage?.section?.[2]}
+        />
+        
         {/* <MCFeatures /> */}
         {/* <Blogs2 /> */}
-        <Brands />
+        <Brands 
+          brandSection={homePage?.section?.[3]}
+        />
         {/* <Services1 /> */}
         {/* <Process /> */}
         {/* <Services /> */}
         <Blogs />
         {/* <Team /> */}
-        <Process />
+        <Process 
+          processSection={homePage?.section?.[5]}
+        />
 
-        <Faqs />
-        <Cta />
+        <Faqs 
+          faqsSection={homePage?.section?.[6]}
+        />
+        <Cta 
+          ctaSection={homePage?.section?.[7]}
+        />
       </div>
       <Footer1 />
     </>

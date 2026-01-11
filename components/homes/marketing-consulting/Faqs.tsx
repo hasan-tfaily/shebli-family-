@@ -1,7 +1,8 @@
+import { getStrapiMediaUrl } from "@/lib/strapi/media";
 import Image from "next/image";
 import React from "react";
 
-export default function Faqs() {
+export default function Faqs( { faqsSection }: { faqsSection?: any }) {
   return (
     <section className="section-faqs h-5 tf-spacing-2">
       <div className="tf-container position-relative">
@@ -10,7 +11,7 @@ export default function Faqs() {
             <div className="section-faqs-left mr-15">
               <div className="image tf-animate-1">
                 <Image
-                  src="/image/section/Home - 5 FAQ.png"
+                  src={getStrapiMediaUrl(faqsSection?.img)}
                   alt=""
                   className="lazyloaded"
                   width={615}
@@ -25,12 +26,11 @@ export default function Faqs() {
               <div className="heading-section">
                 <div className="wow fadeInUp">
                   <a href="#" className="tag label text-btn-uppercase">
-                    FAQs
+                    {faqsSection?.miniTitle}
                   </a>
                 </div>
                 <h3 className="wow fadeInUp">
-                  Find Answers to Your <br />
-                  Question
+                  {faqsSection?.title}
                 </h3>
               </div>
 
@@ -43,7 +43,7 @@ export default function Faqs() {
                       data-bs-toggle="collapse"
                       className="title-according" // removed "collapsed"
                     >
-                      What is Kidz Holding?
+                      {faqsSection?.featuredItems?.[0]?.title}
                       <span />
                     </a>
                   </h5>
@@ -54,7 +54,7 @@ export default function Faqs() {
                   >
                     <div className="according-content">
                       <p>
-                        Kidz Holding is a regional leader in developing, operating, and franchising family entertainment and edutainment destinations.
+                        {faqsSection?.featuredItems?.[0]?.Body}
                       </p>
                     </div>
                   </div>
@@ -68,7 +68,7 @@ export default function Faqs() {
                       data-bs-toggle="collapse"
                       className="title-according collapsed" // added "collapsed"
                     >
-                      What types of entertainment concepts does Kidz Holding offer?
+                      {faqsSection?.featuredItems?.[1]?.title}
                       <span />
                     </a>
                   </h5>
@@ -79,7 +79,7 @@ export default function Faqs() {
                   >
                     <div className="according-content">
                       <p>
-                        We create a diverse portfolio of concepts including edutainment cities, family leisure hubs, social entertainment venues, active play zones, and themed attractions for all age groups.
+                        {faqsSection?.featuredItems?.[1]?.Body}
                       </p>
                     </div>
                   </div>
@@ -93,7 +93,7 @@ export default function Faqs() {
                       data-bs-toggle="collapse"
                       className="title-according collapsed"
                     >
-                      Which markets do Kidz Holding operate in?
+                      {faqsSection?.featuredItems?.[2]?.title}
                       <span />
                     </a>
                   </h5>
@@ -104,7 +104,7 @@ export default function Faqs() {
                   >
                     <div className="according-content">
                       <p>
-                        We are present in Qatar and Lebanon with expansion plans into Saudi Arabia, UAE, Egypt, and additional markets across the region.
+                        {faqsSection?.featuredItems?.[2]?.Body}
                       </p>
                     </div>
                   </div>
@@ -118,7 +118,7 @@ export default function Faqs() {
                       data-bs-toggle="collapse"
                       className="title-according collapsed"
                     >
-                      Can governments or municipalities partner with Kidz Holding?
+                      {faqsSection?.featuredItems?.[3]?.title}
                       <span />
                     </a>
                   </h5>
@@ -129,7 +129,7 @@ export default function Faqs() {
                   >
                     <div className="according-content">
                       <p>
-                        Yes. We collaborate with government entities to develop educational and family-focused entertainment destinations that support national visions, tourism goals, and community development.
+                        {faqsSection?.featuredItems?.[3]?.Body}
                       </p>
                     </div>
                   </div>
@@ -143,7 +143,7 @@ export default function Faqs() {
                       data-bs-toggle="collapse"
                       className="title-according collapsed"
                     >
-                      Do you offer franchise opportunities?
+                      {faqsSection?.featuredItems?.[4]?.title}
                       <span />
                     </a>
                   </h5>
@@ -154,7 +154,7 @@ export default function Faqs() {
                   >
                     <div className="according-content">
                       <p>
-                        Absolutely. We provide turnkey franchise models for investors and operators looking to bring our entertainment concepts to their cities.
+                        {faqsSection?.featuredItems?.[4]?.Body}
                       </p>
                     </div>
                   </div>
@@ -164,22 +164,22 @@ export default function Faqs() {
                 <div className="according-item">
                   <h5>
                     <a
-                      href="#according-5"
+                      href="#according-6"
                       data-bs-toggle="collapse"
                       className="title-according collapsed"
                     >
-                      How can investors collaborate with Kidz Holding?
+                      {faqsSection?.featuredItems?.[5]?.title}
                       <span />
                     </a>
                   </h5>
                   <div
-                    id="according-5"
+                    id="according-6"
                     className="collapse"
                     data-bs-parent="#According"
                   >
                     <div className="according-content">
                       <p>
-                        Investors can partner with us through franchising, joint ventures, or direct project development in new markets. 
+                        {faqsSection?.featuredItems?.[5]?.Body}
                       </p>
                     </div>
                   </div>
@@ -190,22 +190,22 @@ export default function Faqs() {
               <div className="according-item">
                   <h5>
                     <a
-                      href="#according-5"
+                      href="#according-7"
                       data-bs-toggle="collapse"
                       className="title-according collapsed"
                     >
-                      Does Kidz Holding work with schools and educational institutions?
+                      {faqsSection?.featuredItems?.[6]?.title}
                       <span />
                     </a>
                   </h5>
                   <div
-                    id="according-5"
+                    id="according-7"
                     className="collapse"
                     data-bs-parent="#According"
                   >
                     <div className="according-content">
                       <p>
-                        Yes. Our edutainment models include school partnerships, educational programs, workshops, and curriculum-integrated learning experiences.
+                        {faqsSection?.featuredItems?.[6]?.Body}
                       </p>
                     </div>
                   </div>
@@ -215,22 +215,22 @@ export default function Faqs() {
                 <div className="according-item">
                   <h5>
                     <a
-                      href="#according-5"
+                      href="#according-8"
                       data-bs-toggle="collapse"
                       className="title-according collapsed"
                     >
-                      How do you ensure safety inside your entertainment destinations?
+                      {faqsSection?.featuredItems?.[7]?.title}
                       <span />
                     </a>
                   </h5>
                   <div
-                    id="according-5"
+                    id="according-8"
                     className="collapse"
                     data-bs-parent="#According"
                   >
                     <div className="according-content">
                       <p>
-                        All our destinations follow strict international safety standards, staff certifications, emergency procedures, and continuous operational audits.
+                        {faqsSection?.featuredItems?.[7]?.Body}
                       </p>
                     </div>
                   </div>
@@ -240,22 +240,22 @@ export default function Faqs() {
                 <div className="according-item">
                   <h5>
                     <a
-                      href="#according-5"
+                      href="#according-9"
                       data-bs-toggle="collapse"
                       className="title-according collapsed"
                     >
-                      How can I start a partnership or open a franchise in my country?
+                      {faqsSection?.featuredItems?.[8]?.title}
                       <span />
                     </a>
                   </h5>
                   <div
-                    id="according-5"
+                    id="according-9`"
                     className="collapse"
                     data-bs-parent="#According"
                   >
                     <div className="according-content">
                       <p>
-                        You can fill out the partnership or franchise inquiry form on our website, and our team will contact you to evaluate the opportunity and share the next steps. 
+                        {faqsSection?.featuredItems?.[8]?.Body}
                       </p>
                     </div>
                   </div>

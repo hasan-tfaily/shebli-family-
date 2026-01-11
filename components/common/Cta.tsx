@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-export default function Cta() {
+export default function Cta({ ctaSection }: { ctaSection?: any }) {
   return (
     <section className="section-cta h-2 section-one-page" id="cta">
       <div className="tf-container">
@@ -10,13 +10,13 @@ export default function Cta() {
             <div className="cta-inner style-2">
               <div className="cta-content">
                 <h4 className="title-content">
-                 Have a project or idea to bring to life? Let’s create it together
+                  {ctaSection?.title}
                 </h4>
                 <Link
-                  href={`/contact-us`}
+                  href={ctaSection?.ButtonLinks?.[0]?.link}
                   className="tf-btn style-1 bg-white text-center"
                 >
-                  <span> Request a Quote </span>
+                  <span> {ctaSection?.ButtonLinks?.[0]?.title} </span>
                 </Link>
               </div>
             </div>

@@ -70,3 +70,15 @@ export function getStrapiMediaAlt(media: StrapiMediaSingle | undefined | null): 
   }
   return (data?.attributes?.alternativeText ?? "") as string;
 }
+
+/**
+ * Get Strapi media URL with a fallback for undefined values
+ * This version returns a placeholder image if no media is found
+ */
+export function getStrapiMediaUrlOrFallback(
+  media: StrapiMediaSingle | undefined | null,
+  fallback: string = "/image/placeholder.jpg"
+): string {
+  const url = getStrapiMediaUrl(media);
+  return url ?? fallback;
+}

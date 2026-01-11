@@ -137,8 +137,9 @@ const processSteps = [
     ),
   },
 ];
+export default function Process( { processSection }: { processSection?: any }) {
+  console.log("processSection:", processSection);
 
-export default function Process() {
   return (
     <section className="section-process h-8 tf-spacing-2 hover-active-step">
       <div className="tf-container position-relative">
@@ -151,21 +152,21 @@ export default function Process() {
                     href="#"
                     className="tag label text-btn-uppercase color-white"
                   >
-                    Careers
+                    {processSection?.miniTitle}
                   </a>
                 </div>
                 <h3 className="title-section mb-12 text-anime-wave">
-                  Build the Future With Us
+                  {processSection?.title}
                 </h3>
                 <div className="sub-title body-2 text-anime-wave">
-                  Join a passionate team shaping the future of learning, creativity, and family entertainment across the MENA region. Together, we build experiences that matter.
+                  {processSection?.description}
                 </div>
               </div>
               
             </div>
             <div className="text-anime-wave-2">
-                <Link href={`/careers`} className="tf-btn style-1 bg-white">
-                  <span>Submit your CV</span>
+                <Link href={processSection?.ButtonLinks?.[0].link} className="tf-btn style-1 bg-white">
+                  <span>{processSection?.ButtonLinks?.[0].title}</span>
                 </Link>
               </div>
 

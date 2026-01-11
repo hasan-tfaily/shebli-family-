@@ -1,12 +1,22 @@
 "use client";
-import { slides2} from "@/data/heroSlides";
 import Link from "next/link";
 import React from "react";
 import { Autoplay, EffectFade, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { getStrapiMediaUrl } from "@/lib/strapi/media";
 
 
-export default function Hero() {
+export default function Hero({ heroData }: { heroData: any }) {  
+  if (!heroData || !Array.isArray(heroData) || heroData.length === 0) {
+    return null;
+  }
+
+  const slides = heroData.map((item: any) => ({
+    title: item.title,
+    subtitle: item.description,
+    buttonText: item.buttonText,
+    image: getStrapiMediaUrl(item.image),
+  }));
   return (
     <Swiper
       dir="ltr"
@@ -27,15 +37,22 @@ export default function Hero() {
       <div className="tf-btn-arrow arrow-left sw-auto-next snbp6">
         <i className="icon-arrow-left" />
       </div>
-      {slides2.map((slide, index) => (
+      {slides.map((slide, index) => (
         <SwiperSlide className="swiper-slide" key={index}>
-          <div className={`page-title-inner img-h5-${index + 1}`}>
+          <div 
+            className="page-title-inner"
+            style={{
+              backgroundImage: slide.image ? `url(${slide.image})` : undefined,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          >
             <div className="tf-container">
               <div className="row">
                 <div className="col-12">
                   <div className="page-title-content">
                     <h1 className="tf-fade-top fade-item-1">
-                      {slide.title.split("\n").map((line, i) => (
+                      {slide.title && slide.title.split("\n").map((line: string, i: number) => (
                         <React.Fragment key={i}>
                           {line}
                           <br />
@@ -43,7 +60,7 @@ export default function Hero() {
                       ))}
                     </h1>
                     <div className="sub-title body-2 tf-fade-top fade-item-2">
-                      {slide.subtitle.split("\n").map((line, i) => (
+                      {slide.subtitle && slide.subtitle.split("\n").map((line: string, i: number) => (
                         <React.Fragment key={i}>
                           {line}
                           <br />

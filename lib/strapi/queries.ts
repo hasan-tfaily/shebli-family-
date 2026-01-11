@@ -95,3 +95,55 @@ export async function getPageByName({ pageName, populate, revalidate = 0 }: Opti
 
 // Backwards compatibility alias (deprecated)
 export const getBrandByName = getPageByName;
+
+/**
+ * Build query params for single type endpoints
+ * Single types don't use filters, just populate
+ */
+function buildSingleTypeQueryParams(populate: StrapiPopulate = ["*"]) {
+  const params: Record<string, string> = {};
+
+  // If user passed ["*"] keep it simple.
+  if (populate.length === 1 && populate[0] === "*") {
+    params.populate = "*";
+    return params;
+  }
+
+  populate.forEach((field, idx) => {
+    params[`populate[${idx}]`] = field;
+  });
+
+  return params;
+}
+
+type SingleTypeOptions = {
+  populate?: StrapiPopulate;
+  revalidate?: number;
+};
+
+/**
+ * Fetch a Strapi single type (e.g., "homepage", "about", etc.)
+ * Single types have a fixed endpoint and return a single object
+ */
+export async function getSingleType(
+  endpoint: string,
+  { populate, revalidate = 0 }: SingleTypeOptions = {}
+) {
+  try {
+    const params = buildSingleTypeQueryParams(populate);
+    const { data } = await apiService.get<any>(
+      `api/${endpoint}`,
+      params,
+      { next: { revalidate } }
+    );
+
+    return data?.data ?? null;
+  } catch (error) {
+    console.error("❌ Strapi Single Type API Error:", error);
+    console.log("🔍 Debug Info:");
+    console.log("- endpoint:", endpoint);
+    console.log("- populate:", populate);
+    console.log("- params:", buildSingleTypeQueryParams(populate));
+    throw error;
+  }
+}

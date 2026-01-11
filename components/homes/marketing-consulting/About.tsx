@@ -3,8 +3,10 @@ import Image from "next/image";
 import React from "react";
 import { counters3 } from "@/data/cta";
 import OdometerComponent from "@/components/common/OdometerComponent";
+import { getStrapiMediaUrl } from "@/lib/strapi/media";
 
-export default function About() {
+export default function About( { aboutSection }: { aboutSection: any }) {
+  console.log("aboutSection:", aboutSection);
   return (
     <section className="section-about h-5 tf-spacing-2 section-one-page" id="about" style={{ paddingBottom: "0px" }}>
       <div className="tf-container position-relative">
@@ -13,7 +15,7 @@ export default function About() {
             <div className="about-left mr-10">
               <div className="image item-1 tf-animate-1">
                 <Image
-                  src="/image/section/Home – 1_ 450x600.jpg"
+                  src={getStrapiMediaUrl(aboutSection?.img) || "/image/placeholder.jpg"}
                   alt="Team collaborating"
                   className="lazyload"
                   width={450}
@@ -22,7 +24,7 @@ export default function About() {
               </div>
               <div className="image item item-2 tf-animate-3">
                 <Image
-                  src="/image/section/Home – 2 _ 320x320.png"
+                  src={getStrapiMediaUrl(aboutSection?.featuredItems?.[0]?.img) || "/image/placeholder.jpg"}
                   alt="Analytics dashboard"
                   className="lazyload"
                   width={320}
@@ -53,17 +55,14 @@ export default function About() {
               <div className="heading-section mb-32">
                 <div className="wow fadeInUp">
                   <a href="#" className="tag label text-btn-uppercase mb-16">
-                    Empowering Future Generations
+                    {aboutSection?.miniTitle}
                   </a>
                 </div>
                 <h3 className="title-section mb-20 wow fadeInUp">
-                  Trusted by Families, Schools & Cities <br />
-                  Across the Region
+                  {aboutSection?.title}
                 </h3>
                 <div className="sub-title color-text-2 wow fadeInUp">
-                  Kidz Holding is the regional pioneer in edutainment, leisure, and family-focused destinations.
-                  Through innovation, engagement, and collaboration, we create meaningful spaces for where guests have fun, partners grow with purpose, and investors build lasting impact.
-
+                  {aboutSection?.description}
                 </div>
               </div>
 
@@ -73,7 +72,7 @@ export default function About() {
                     <i className="icon-checkbox" />
                   </div>
                   <div className="title wow fadeInUp" data-wow-delay=".1s">
-                   	Expanding our footprint across major MENA capitals
+                  {aboutSection?.list?.[0]?.point}
                   </div>
                 </div>
                 <div className="benefit-items style-small mb-16">
@@ -81,7 +80,7 @@ export default function About() {
                     <i className="icon-checkbox" />
                   </div>
                   <div className="title wow fadeInUp" data-wow-delay=".1s">
-                    	Building trusted partnerships with schools, municipalities, and development entities
+                  {aboutSection?.list?.[1]?.point}
                   </div>
                 </div>
                 <div className="benefit-items style-small">
@@ -89,15 +88,15 @@ export default function About() {
                     <i className="icon-checkbox" />
                   </div>
                   <div className="title wow fadeInUp" data-wow-delay=".1s">
-                    	Delivering measurable social, educational, and economic value
+                    {aboutSection?.list?.[2]?.point}
                   </div>
                 </div>
               </div>
 
               <div className="bottom">
                 <div className="wow fadeInUp" >
-                  <Link href="/Our-Brands" className="tf-btnN style-1 bg-on-surface-container">
-                    <span>Our Brands</span>
+                  <Link href={aboutSection?.ButtonLinks?.[0]?.link} className="tf-btnN style-1 bg-on-surface-container">
+                    <span>{aboutSection?.ButtonLinks?.[0]?.title}</span>
                   </Link>
                 </div>
 
@@ -108,8 +107,8 @@ export default function About() {
                 <div className="tf-phone no-border style-2">
                   <div className="bottom">
                     <div className="wow fadeInUp">
-                      <Link href="/contact-us" className="tf-btn style-1 bg-on-surface-container">
-                        <span>Contact Us</span>
+                      <Link href={aboutSection?.ButtonLinks?.[1]?.link} className="tf-btn style-1 bg-on-surface-container">
+                        <span>{aboutSection?.ButtonLinks?.[1]?.title}</span>
                       </Link>
                     </div>
                   </div>

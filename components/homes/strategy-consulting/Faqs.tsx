@@ -136,7 +136,7 @@ export default function Faqs({ faqs }: { faqs: any }) {
               <div className="according-item">
                 <h5>
                   <a
-                    href="#according-5"
+                    href="#according-6"
                     data-bs-toggle="collapse"
                     className="title-according collapsed"
                   >
@@ -145,7 +145,7 @@ export default function Faqs({ faqs }: { faqs: any }) {
                   </a>
                 </h5>
                 <div
-                  id="according-5"
+                  id="according-6"
                   className="collapse"
                   data-bs-parent="#According"
                 >
@@ -160,7 +160,7 @@ export default function Faqs({ faqs }: { faqs: any }) {
               <div className="according-item">
                 <h5>
                   <a
-                    href="#according-5"
+                    href="#according-7"
                     data-bs-toggle="collapse"
                     className="title-according collapsed"
                   >
@@ -169,7 +169,7 @@ export default function Faqs({ faqs }: { faqs: any }) {
                   </a>
                 </h5>
                 <div
-                  id="according-5"
+                  id="according-7"
                   className="collapse"
                   data-bs-parent="#According"
                 >
@@ -184,7 +184,7 @@ export default function Faqs({ faqs }: { faqs: any }) {
               <div className="according-item">
                 <h5>
                   <a
-                    href="#according-5"
+                    href="#according-8"
                     data-bs-toggle="collapse"
                     className="title-according collapsed"
                   >
@@ -193,7 +193,7 @@ export default function Faqs({ faqs }: { faqs: any }) {
                   </a>
                 </h5>
                 <div
-                  id="according-5"
+                  id="according-8"
                   className="collapse"
                   data-bs-parent="#According"
                 >
