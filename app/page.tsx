@@ -97,7 +97,11 @@ export default async function Page() {
       <Header5 />
       <Hero heroData={homePage?.Hero} />
       <div className="main-content">
-        <About aboutSection={homePage?.section?.[0]} />
+        <About 
+          aboutSection={homePage?.section?.[0]} 
+          testimonialSection={homePage?.section?.[1]}  
+        />
+
         <ITFeatures 
           featureSection={homePage?.section?.[2]}
         />
@@ -110,7 +114,9 @@ export default async function Page() {
         {/* <Services1 /> */}
         {/* <Process /> */}
         {/* <Services /> */}
-        <Blogs />
+        <Blogs 
+          blogSection={homePage?.section?.[4]}
+        />
         {/* <Team /> */}
         <Process 
           processSection={homePage?.section?.[5]}

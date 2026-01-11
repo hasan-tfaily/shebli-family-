@@ -1,12 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
-import { counters3 } from "@/data/cta";
 import OdometerComponent from "@/components/common/OdometerComponent";
 import { getStrapiMediaUrl } from "@/lib/strapi/media";
 
-export default function About( { aboutSection }: { aboutSection: any }) {
-  console.log("aboutSection:", aboutSection);
+export default function About({ aboutSection, testimonialSection }: { aboutSection: any; testimonialSection: any }) {
+  const featureItems = testimonialSection?.featuredItems ?? [];
+  const counters = featureItems.map((item: any) => ({
+    value: item?.Body,
+    label: item?.title,
+  }));
   return (
     <section className="section-about h-5 tf-spacing-2 section-one-page" id="about" style={{ paddingBottom: "0px" }}>
       <div className="tf-container position-relative">
@@ -134,20 +137,14 @@ export default function About( { aboutSection }: { aboutSection: any }) {
           <div className="row">
             <div className="col-12">
               <div className="wg-counter justify-content-between">
-                {counters3.map((c, i) => (
+                {counters.map((c, i) => (
                   <div className="counter-item style-3" key={i}>
                     <div className="counter">
                       <div className="number-counter">
                         <h2
                           className="number odometer"
                         >
-                          <OdometerComponent max={c.value} />
-                          {c.suffix && (
-                            <span
-                            >
-                              {c.suffix}
-                            </span>
-                          )}
+                          <OdometerComponent max={c.value ?? 0} />
                         </h2>
                         <h2 className="plus" >
                           +
@@ -157,7 +154,7 @@ export default function About( { aboutSection }: { aboutSection: any }) {
                       <h6
                         className="text"
                         style={{ color: "white" }} // label text in white too (optional)
-                        dangerouslySetInnerHTML={{ __html: c.label }}
+                        dangerouslySetInnerHTML={{ __html: c.label ?? "" }}
                       />
                     </div>
                   </div>

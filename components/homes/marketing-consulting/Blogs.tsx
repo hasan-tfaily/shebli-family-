@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { absolute2Posts, small2Posts } from "@/data/blogs";
 
-export default function Blogs() {
+export default function Blogs({ blogSection }: { blogSection?: any }) {
   return (
     <section className="section-new h-5 tf-spacing-2 section-one-page" id="new">
       <div className="tf-container position-relative">
