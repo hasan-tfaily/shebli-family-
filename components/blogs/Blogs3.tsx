@@ -2,144 +2,199 @@
 import Link from "next/link";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import { absolutePosts2, posts4 } from "@/data/blogs";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
+import { StrapiBlog } from "@/lib/strapi/queries";
 
-export default function Blogs3() {
-  const [filteres, setFilteres] = useState(posts4);
+const STRAPI_URL = "http://46.62.246.5:1337";
+
+type Props = {
+  blogs?: StrapiBlog[];
+};
+
+// Helper to format date
+function formatDate(dateString?: string) {
+  if (!dateString) return { day: "01", month: "Jan" };
+  const date = new Date(dateString);
+  const day = date.getDate().toString().padStart(2, "0");
+  const month = date.toLocaleString("en-US", { month: "short" });
+  return { day, month };
+}
+
+// Helper to get image URL
+function getImageUrl(url?: string) {
+  if (!url) return "/image/blog/blog1.jpg"; // fallback image
+  if (url.startsWith("http")) return url;
+  return `${STRAPI_URL}${url}`;
+}
+
+// Helper to truncate description
+function truncateText(text?: string | null, maxLength: number = 150) {
+  if (!text) return "";
+  if (text.length <= maxLength) return text;
+  return text.substring(0, maxLength) + "...";
+}
+
+export default function Blogs3({ blogs = [] }: Props) {
+  const [displayedBlogs, setDisplayedBlogs] = useState<StrapiBlog[]>([]);
   const [isLoadedMore, setIsLoadedMore] = useState(false);
+
   useEffect(() => {
-    if (isLoadedMore) {
-      setFilteres(posts4);
-    } else {
-      setFilteres(posts4.slice(0, 6));
+    if (blogs.length > 0) {
+      if (isLoadedMore) {
+        setDisplayedBlogs(blogs);
+      } else {
+        setDisplayedBlogs(blogs.slice(0, 6));
+      }
     }
-  }, [isLoadedMore]);
+  }, [blogs, isLoadedMore]);
+
+  // Use first blog for slider if available, otherwise show all in slider
+  const sliderBlogs = blogs.length > 0 ? blogs : [];
+
   return (
     <div className="tf-container">
       <div className="row">
         <div className="col-12">
           <div className="blog-content blog-no-sidebar-content">
-            <div className="tf-slideshow blog-no-sidebar-slide">
-              <Swiper
-                className="swiper sw-single"
-                modules={[Navigation]}
-                navigation={{
-                  prevEl: ".snbp1",
-                  nextEl: ".snbn1",
-                }}
-              >
-                <div className="tf-btn-arrow arrow-left sw-single-prev snbp1">
-                  <i className="icon-arrow-left" />
-                </div>
-                {absolutePosts2.map((post, i) => (
-                  <SwiperSlide className="swiper-slide" key={i}>
-                    <div
-                      className={`tf-post-grid style-absolute ${
-                        post.animate ? "tf-animate-2" : ""
-                      }`}
-                    >
-                      <div className="image">
-                        <Link
-                          href={`/blog-details-1/${post.id}`}
-                          className="link"
-                        />
-                        <Image
-                          src={post.imgSrc}
-                          alt=""
-                          className="lazyload"
-                          width={post.imgWidth}
-                          height={post.imgHeight}
-                        />
-                        <a href="#" className="date">
-                          <span className="day">{post.date.day}</span>
-                          <span>{post.date.month}</span>
-                        </a>
-                      </div>
-                      <div
-                        className={`tf-post-grid-content ${
-                          post.animate ? "text-anime-wave" : ""
-                        }`}
-                      >
-                        <div
-                          className="position"
-                          {...(post.animate ? { "data-delay": ".3s" } : {})}
-                        >
-                          {post.category}
-                        </div>
-                        <h4
-                          className="title-post"
-                          {...(post.animate ? { "data-delay": ".3s" } : {})}
-                        >
-                          <Link href={`/blog-details-1/${post.id}`}>
-                            {post.title}
-                          </Link>
-                        </h4>
-                        <div
-                          className="sub-title body-2"
-                          {...(post.animate ? { "data-delay": ".3s" } : {})}
-                        >
-                          {post.description}
-                        </div>
-                      </div>
-                    </div>
-                  </SwiperSlide>
-                ))}
-                <div className="tf-btn-arrow arrow-right sw-single-next snbn1">
-                  <i className="icon-arrow-right1" />
-                </div>
-              </Swiper>
-            </div>
-            <div className="layout-grid-3 loadmore-item">
-              {filteres.map((post, index) => (
-                <div
-                  className="tf-post-grid style-small fl-item d-block"
-                  key={index}
+            {/* Slider Section */}
+            {sliderBlogs.length > 0 && (
+              <div className="tf-slideshow blog-no-sidebar-slide">
+                <Swiper
+                  className="swiper sw-single"
+                  modules={[Navigation]}
+                  navigation={{
+                    prevEl: ".snbp1",
+                    nextEl: ".snbn1",
+                  }}
                 >
-                  <div className="image">
-                    <Link
-                      href={`/blog-details-2/${post.id}`}
-                      className="link"
-                    />
-                    <Image
-                      src={post.imgSrc}
-                      alt={post.title}
-                      width={post.imgWidth}
-                      height={post.imgHeight}
-                      className="lazyload"
-                    />
-                    <a href="#" className="date">
-                      <span className="day"> {post.date.day} </span>
-                      <span>{post.date.month}</span>
-                    </a>
+                  <div className="tf-btn-arrow arrow-left sw-single-prev snbp1">
+                    <i className="icon-arrow-left" />
                   </div>
-                  <div className="tf-grid-post-content">
+                  {sliderBlogs.map((blog, i) => {
+                    const date = formatDate(blog.Date);
+                    const imageUrl = getImageUrl(blog.coverImage?.url);
+                    return (
+                      <SwiperSlide
+                        className="swiper-slide"
+                        key={blog.documentId || i}
+                      >
+                        <div className="tf-post-grid style-absolute">
+                          <div
+                            className="image"
+                            style={{
+                              position: "relative",
+                              height: "505px",
+                              width: "100%",
+                            }}
+                          >
+                            <Link
+                              href={`/blog-details-1/${blog.documentId}`}
+                              className="link"
+                            />
+                            <Image
+                              src={imageUrl}
+                              alt={blog.title || "Blog post"}
+                              className="lazyload"
+                              fill
+                              style={{ objectFit: "cover" }}
+                            />
+                            <span className="date">
+                              <span className="day">{date.day}</span>
+                              <span>{date.month}</span>
+                            </span>
+                          </div>
+                          <div className="tf-post-grid-content">
+                            <div className="position">
+                              {blog.category?.name || "Uncategorized"}
+                            </div>
+                            <h4 className="title-post">
+                              <Link href={`/blog-details-1/${blog.documentId}`}>
+                                {blog.title}
+                              </Link>
+                            </h4>
+                            <div className="sub-title body-2">
+                              {truncateText(
+                                blog.description || blog.paragraphs,
+                                200
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                      </SwiperSlide>
+                    );
+                  })}
+                  <div className="tf-btn-arrow arrow-right sw-single-next snbn1">
+                    <i className="icon-arrow-right1" />
+                  </div>
+                </Swiper>
+              </div>
+            )}
+
+            {/* Grid Section */}
+            <div className="layout-grid-3 loadmore-item">
+              {displayedBlogs.map((blog, index) => {
+                const date = formatDate(blog.Date);
+                const imageUrl = getImageUrl(blog.coverImage?.url);
+                const delay = `0.${index + 1}s`;
+                return (
+                  <div
+                    className="tf-post-grid style-small fl-item d-block"
+                    key={blog.documentId || index}
+                  >
                     <div
-                      className="position caption-1 wow fadeInUp"
-                      data-wow-delay={post.delay}
+                      className="image"
+                      style={{
+                        position: "relative",
+                        height: "505px",
+                        width: "100%",
+                      }}
                     >
-                      {post.category}
+                      <Link
+                        href={`/blog-details-2/${blog.documentId}`}
+                        className="link"
+                      />
+                      <Image
+                        src={imageUrl}
+                        alt={blog.title || "Blog post"}
+                        fill
+                        className="lazyload"
+                        style={{ objectFit: "cover" }}
+                      />
+                      <span className="date">
+                        <span className="day">{date.day}</span>
+                        <span>{date.month}</span>
+                      </span>
                     </div>
-                    <h5
-                      className="title-post wow fadeInUp"
-                      data-wow-delay={post.delay}
-                    >
-                      <Link href={`/blog-details-2/${post.id}`}>
-                        {post.title}
-                      </Link>
-                    </h5>
-                    <div
-                      className="sub-title wow fadeInUp"
-                      data-wow-delay={post.delay}
-                    >
-                      {post.description}
+                    <div className="tf-grid-post-content">
+                      <div
+                        className="position caption-1 wow fadeInUp"
+                        data-wow-delay={delay}
+                      >
+                        {blog.category?.name || "Uncategorized"}
+                      </div>
+                      <h5
+                        className="title-post wow fadeInUp"
+                        data-wow-delay={delay}
+                      >
+                        <Link href={`/blog-details-2/${blog.documentId}`}>
+                          {blog.title}
+                        </Link>
+                      </h5>
+                      <div
+                        className="sub-title wow fadeInUp"
+                        data-wow-delay={delay}
+                      >
+                        {truncateText(blog.description || blog.paragraphs, 150)}
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
-            {!isLoadedMore ? (
+
+            {/* Load More Button */}
+            {blogs.length > 6 && !isLoadedMore && (
               <div className="btn-load-more text-center view-more-button wow fadeInUp">
                 <button
                   onClick={() => setIsLoadedMore(true)}
@@ -148,8 +203,6 @@ export default function Blogs3() {
                   <span>Load More</span>
                 </button>
               </div>
-            ) : (
-              ""
             )}
           </div>
         </div>

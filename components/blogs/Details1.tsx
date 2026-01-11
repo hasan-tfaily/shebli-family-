@@ -1,125 +1,179 @@
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
-import { postListItems } from "@/data/blogs";
-import CommentForm from "./CommentForm";
-import NewsLetterForm from "../common/NewsLetterForm";
-import Comments from "./Comments";
+import { StrapiBlog } from "@/lib/strapi/queries";
 
-export default function Details1() {
+const STRAPI_URL = "http://46.62.246.5:1337";
+
+type Props = {
+  blog?: StrapiBlog;
+  recentBlogs?: StrapiBlog[];
+};
+
+// Helper to format date
+function formatDate(dateString?: string) {
+  if (!dateString) return "Jan 01, 2025";
+  const date = new Date(dateString);
+  const month = date.toLocaleString("en-US", { month: "short" });
+  const day = date.getDate().toString().padStart(2, "0");
+  const year = date.getFullYear();
+  return `${month} ${day}, ${year}`;
+}
+
+// Helper to get image URL
+function getImageUrl(url?: string) {
+  if (!url) return "/image/blog/image-blog-1.jpg";
+  if (url.startsWith("http")) return url;
+  return `${STRAPI_URL}${url}`;
+}
+
+// Parse paragraphs from Strapi content
+function parseParagraphs(content?: string) {
+  if (!content) return [];
+
+  // Split by double newlines or "Paragraph X:" pattern
+  const sections = content
+    .split(/\n\n+|(?=Paragraph \d+:|(?=\d+\.\s))/g)
+    .filter(Boolean);
+
+  return sections
+    .map((section) => {
+      // Check if it starts with a numbered heading like "1. Title"
+      const numberedMatch = section.match(/^(\d+)\.\s+(.+?)(?:\n|$)([\s\S]*)/);
+      if (numberedMatch) {
+        return {
+          type: "section" as const,
+          title: `${numberedMatch[1]}. ${numberedMatch[2]}`,
+          content: numberedMatch[3]?.trim() || "",
+        };
+      }
+
+      // Check if it's "Conclusion" or similar
+      const conclusionMatch = section.match(
+        /^(Conclusion|Summary)(?:\n|:?\s*)([\s\S]*)/i
+      );
+      if (conclusionMatch) {
+        return {
+          type: "section" as const,
+          title: conclusionMatch[1],
+          content: conclusionMatch[2]?.trim() || "",
+        };
+      }
+
+      // Check if it starts with "Paragraph X:"
+      const paragraphMatch = section.match(/^Paragraph \d+:\s*([\s\S]*)/);
+      if (paragraphMatch) {
+        return {
+          type: "paragraph" as const,
+          content: paragraphMatch[1]?.trim() || "",
+        };
+      }
+
+      // Regular paragraph
+      return {
+        type: "paragraph" as const,
+        content: section.trim(),
+      };
+    })
+    .filter((p) => p.content);
+}
+
+export default function Details1({ blog, recentBlogs = [] }: Props) {
+  const coverImageUrl = getImageUrl(blog?.coverImage?.url);
+  const parsedContent = parseParagraphs(blog?.paragraphs);
+
+  // Get additional images
+  const additionalImages = blog?.images || [];
+
   return (
     <div className="tf-container tf-spacing-3">
       <div className="row rg-60">
         <div className="col-xl-9">
           <div className="blog-content blog-details-content mr-50">
-            <div className="image-blog">
+            {/* Cover Image */}
+            <div
+              className="image-blog"
+              style={{
+                position: "relative",
+                height: "550px",
+                width: "100%",
+              }}
+            >
               <Image
-                src={"/image/blog/image-blog-1.jpg"}
-                alt=""
+                src={coverImageUrl}
+                alt={blog?.title || "Blog image"}
                 className="lazyload"
-                width={910}
-                height={512}
+                fill
+                style={{ objectFit: "cover" }}
               />
             </div>
-            <div className="desc-blog">
-              <p className="body-2">
-                In today's rapidly changing economic landscape, volatility is
-                the new normal. Markets are affected by global events,
-                technological advancements, and shifting consumer behaviors. For
-                businesses, this means that risks are inevitable—but they can
-                also be managed effectively. The key is to develop a proactive
-                risk management strategy that allows your business to thrive
-                even in uncertain conditions.
-              </p>
-              <p className="body-2">
-                Test your crisis management plan with regular simulations to
-                ensure that your team knows what to do if an emergency arises. A
-                well-prepared team can minimize downtime and protect your
-                reputation.
-              </p>
-            </div>
-            <div className="cols-img">
-              <div className="image-blog">
-                <Image
-                  src="/image/blog/image-blog-2.jpg"
-                  alt=""
-                  className="lazyload"
-                  width={444}
-                  height={334}
-                />
+
+            {/* Description */}
+            {blog?.description && (
+              <div className="desc-blog">
+                {blog.description.split("\n\n").map((para, idx) => (
+                  <p className="body-2" key={idx}>
+                    {para}
+                  </p>
+                ))}
               </div>
-              <div className="image-blog">
-                <Image
-                  src="/image/blog/image-blog-3.jpg"
-                  alt=""
-                  className="lazyload"
-                  width={444}
-                  height={334}
-                />
+            )}
+
+            {/* Additional Images */}
+            {additionalImages.length > 0 && (
+              <div
+                className="cols-img"
+                style={{
+                  display: "flex",
+                  gap: "20px",
+                  width: "100%",
+                }}
+              >
+                {additionalImages.slice(0, 2).map((img: any, idx) => (
+                  <div
+                    className="image-blog"
+                    key={idx}
+                    style={{
+                      position: "relative",
+                      height: "334px",
+                      flex: "1",
+                      minWidth: 0,
+                    }}
+                  >
+                    <Image
+                      src={getImageUrl(img.url)}
+                      alt={`Blog image ${idx + 1}`}
+                      className="lazyload"
+                      fill
+                      style={{ objectFit: "cover" }}
+                    />
+                  </div>
+                ))}
               </div>
-            </div>
+            )}
+
+            {/* Parsed Content Sections */}
             <div className="list-desc">
-              <div className="desc-blog">
-                <h5 className="title-desc">
-                  1. Conduct a Comprehensive Risk Assessment
-                </h5>
-                <p className="body-2">
-                  The first step in managing risk is to understand what risks
-                  your business faces. This includes both internal and external
-                  risks such as financial instability, supply chain disruptions,
-                  cybersecurity threats, and market fluctuations. Conduct a
-                  thorough risk assessment to identify and categorize risks
-                  based on their potential impact and likelihood of occurrence.
-                </p>
-              </div>
-              <div className="desc-blog">
-                <h5 className="title-desc">
-                  2. Diversify Your Business Operations
-                </h5>
-                <p className="body-2">
-                  Diversification is one of the most effective ways to mitigate
-                  risk. By expanding your products, services, or markets, you
-                  reduce your dependency on a single source of revenue. In a
-                  volatile market, diversification provides a safety net, as
-                  declines in one area can be offset by growth in another.
-                </p>
-              </div>
-              <div className="desc-blog">
-                <h5 className="title-desc">
-                  3. Build a Strong Financial Buffer
-                </h5>
-                <p className="body-2">
-                  Cash flow is the lifeblood of any business, and during
-                  volatile periods, having a strong financial buffer is
-                  critical. Ensure your business has access to adequate working
-                  capital to cover unforeseen expenses or downturns. This might
-                  mean reducing non-essential spending or setting up an
-                  emergency fund.
-                </p>
-              </div>
+              {parsedContent.map((item, idx) => (
+                <div className="desc-blog" key={idx}>
+                  {item.type === "section" && item.title && (
+                    <h5 className="title-desc">{item.title}</h5>
+                  )}
+                  <p className="body-2">{item.content}</p>
+                </div>
+              ))}
             </div>
-            <div className="desc-blog">
-              <h5 className="title-desc">Conclusion</h5>
-              <p className="body-2">
-                Managing business risks in a volatile market requires a
-                combination of foresight, preparation, and agility. By
-                conducting thorough risk assessments, diversifying your
-                operations, building financial resilience, staying informed, and
-                having a solid crisis management plan, you can navigate
-                uncertainty and turn potential threats into opportunities for
-                growth.
-              </p>
-            </div>
+
+            {/* Tags and Share */}
             <div className="tab-list">
               <div className="left tab-item">
                 <div className="text">Tag:</div>
                 <div className="tabs-list g-12">
-                  <a href="#" className="tabs-item caption-1">
-                    Finance
-                  </a>
-                  <a href="#" className="tabs-item caption-1">
-                    Consulting
-                  </a>
+                  {blog?.category && (
+                    <a href="#" className="tabs-item caption-1">
+                      {blog.category.name}
+                    </a>
+                  )}
                 </div>
               </div>
               <div className="right tab-item">
@@ -149,206 +203,59 @@ export default function Details1() {
                 </ul>
               </div>
             </div>
-            <div className="pre-next-blog">
-              <div className="pre pre-next-blog-item">
-                <a href="#" className="pre-next-btn">
-                  PREVIOUS
-                </a>
-                <h6>
-                  <a href="#" className="name-blog">
-                    Increasing Profit Margins with Efficient
-                    <br />
-                    Business Operations
-                  </a>
-                </h6>
-              </div>
-              <div className="line" />
-              <div className="next pre-next-blog-item">
-                <a href="#" className="pre-next-btn">
-                  NEXT
-                </a>
-                <h6>
-                  <a href="#" className="name-blog">
-                    Navigating Market Trends to Stay
-                    <br />
-                    Competitive
-                  </a>
-                </h6>
-              </div>
-            </div>
-            <Comments />
-            <CommentForm />
+
+            {/* Previous / Next Navigation */}
           </div>
         </div>
+
+        {/* Sidebar */}
         <div className="col-xl-3">
           <div className="tf-sidebar">
-            <div className="sidebar-item sidebar-search">
-              <fieldset>
-                <input type="text" placeholder="Search products..." />
-                <a href="#" className="tf-btn-search">
-                  <i className="icon-MagnifyingGlass" />
-                </a>
-              </fieldset>
-            </div>
-            <div className="sidebar-item sidebar-info">
-              <div className="info-top">
-                <div className="image">
-                  <a href="#" className="link" />
-                  <Image
-                    src="/image/avatar/avt-1.jpg"
-                    alt=""
-                    className="lazyload"
-                    width={100}
-                    height={100}
-                  />
-                </div>
-                <div className="top-content">
-                  <h5>
-                    <a href="#" className="name">
-                      Kidz Holding Editorial Team
-                    </a>
-                  </h5>
-                  <div className="number-follower">200 Follower</div>
-                </div>
-              </div>
-              <div className="introduce">
-                 Written by the Kidz Holding Editorial Team — passionate about creating spaces where children imagine, play, and become.
-              </div>
-              <div className="info-social">
-                <ul className="tf-social radius-50 style-border g-12 color-on-suface-container">
-                  <li className="item">
-                    <a href="#">
-                      <div className="icon">
-                        <i className="icon-messenger" />
-                      </div>
-                    </a>
-                  </li>
-                  <li className="item">
-                    <a href="#">
-                      <div className="icon">
-                        <i className="icon-x" />
-                      </div>
-                    </a>
-                  </li>
-                  <li className="item">
-                    <a href="#">
-                      <div className="icon">
-                        <i className="icon-ig1" />
-                      </div>
-                    </a>
-                  </li>
-                  <li className="item">
-                    <a href="#">
-                      <div className="icon">
-                        <i className="icon-skype" />
-                      </div>
-                    </a>
-                  </li>
-                  <li className="item">
-                    <a href="#">
-                      <div className="icon">
-                        <i className="icon-telegram" />
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            {/* <div className="sidebar-item sidebar-content sidebar-categories">
-              <h6 className="title-content">Categories</h6>
-              <ul className="list">
-                <li className="item">
-                  <a href="#">Business Consulting</a>
-                  <p>(112)</p>
-                </li>
-                <li className="item">
-                  <a href="#">Finance Consulting</a>
-                  <p>(32)</p>
-                </li>
-                <li className="item">
-                  <a href="#">Investment Tips</a>
-                  <p>(42)</p>
-                </li>
-                <li className="item">
-                  <a href="#">Tax Solutions</a>
-                  <p>(65)</p>
-                </li>
-                <li className="item">
-                  <a href="#">Risk Management</a>
-                  <p>(13)</p>
-                </li>
-                <li className="item">
-                  <a href="#">Leadership Strategies</a>
-                  <p>(32)</p>
-                </li>
-              </ul>
-            </div> */}
             <div className="sidebar-item sidebar-content sidebar-recent-posts">
               <h6 className="title-content">Recent posts</h6>
-              {postListItems.map((post, i) => (
-                <div className="tf-post-list style-small hover-img" key={i}>
-                  <div className="image">
+              {recentBlogs.slice(0, 3).map((post, i) => (
+                <div
+                  className="tf-post-list style-small hover-img"
+                  key={post.documentId || i}
+                >
+                  <div
+                    className="image"
+                    style={{
+                      position: "relative",
+                      width: "80px",
+                      height: "80px",
+                      flexShrink: 0,
+                    }}
+                  >
                     <Link
-                      href={`/blog-details-1/${post.id}`}
+                      href={`/blog-details-1/${post.documentId}`}
                       className="link"
                     />
                     <Image
-                      src={post.imgSrc}
-                      alt={post.title}
+                      src={getImageUrl(post.coverImage?.url)}
+                      alt={post.title || "Blog post"}
                       className="lazyload"
-                      width={post.imgWidth}
-                      height={post.imgHeight}
+                      fill
+                      style={{ objectFit: "cover" }}
                     />
                   </div>
                   <div className="post-content">
-                    <div className="post-date caption-1">{post.date}</div>
-                    <a href="#" className="name-post">
+                    <div className="post-date caption-1">
+                      {formatDate(post.Date)}
+                    </div>
+                    <Link
+                      href={`/blog-details-1/${post.documentId}`}
+                      className="name-post"
+                    >
                       {post.title}
-                    </a>
+                    </Link>
                   </div>
                 </div>
               ))}
             </div>
-            {/* <div className="sidebar-item sidebar-content sidebar-newsletter">
-              <h6 className="title-content">Subscribe Newsletter</h6>
-              <NewsLetterForm placeholder="Email address" />
-            </div> */}
-            {/* <div className="sidebar-item sidebar-content sidebar-tags">
-              <h6 className="title-content">Tags</h6>
-              <div className="tabs-list">
-                <a href="#" className="tabs-item caption-1">
-                  Finance
-                </a>
-                <a href="#" className="tabs-item caption-1">
-                  Growth
-                </a>
-                <a href="#" className="tabs-item caption-1">
-                  Strategy
-                </a>
-                <a href="#" className="tabs-item caption-1">
-                  Risk
-                </a>
-                <a href="#" className="tabs-item caption-1">
-                  Tax
-                </a>
-                <a href="#" className="tabs-item caption-1">
-                  Investment
-                </a>
-                <a href="#" className="tabs-item caption-1">
-                  Business
-                </a>
-                <a href="#" className="tabs-item caption-1">
-                  Market
-                </a>
-                <a href="#" className="tabs-item caption-1">
-                  Consulting
-                </a>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>
-      {/* /.main-content */}
     </div>
   );
 }
