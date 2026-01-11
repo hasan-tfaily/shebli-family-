@@ -31,6 +31,7 @@ export default function UrbanVillage() {
               "section.ButtonLinks",
               "section.featuredItems",
               "section.featuredItems.img",
+              "section.imageScroll",
             ],
             revalidate: 0,
           });
@@ -118,40 +119,42 @@ export default function UrbanVillage() {
               </div>
 
               {/* ✅ SWIPER */}
-              <div className="urbanvillage-gallery">
-                <Swiper
-                  modules={[Navigation]}
-                  navigation
-                  spaceBetween={24}
-                  slidesPerView={1}
-                  loop
-                  className="urbanvillage-slider"
-                  breakpoints={{ 768: { slidesPerView: 2 } }}
-                  observer
-                  observeParents
-                  resizeObserver
-                  watchOverflow
-                  onSwiper={(s) => {
-                    swiperRef.current = s;
-                  }}
-                >
-                  {slides.map((src, i) => (
-                    <SwiperSlide key={src}>
-                      <div className="image-blog">
-                        <Image
-                          src={src}
-                          alt={`Urban Village slide ${i + 1}`}
-                          width={444}
-                          height={334}
-                          style={{ width: "100%", height: "auto", display: "block" }}
-                          priority={i < 2}
-                        />
-                      </div>
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
-              </div>
-
+              {urbanVillageBrand?.section?.[0]?.imageScroll?.length > 0 && (
+                <div className="urbanvillage-gallery">
+                  <Swiper
+                    modules={[Navigation]}
+                    navigation={true}
+                    spaceBetween={24}
+                    slidesPerView={1}
+                    loop={true}
+                    className="urbanvillage-slider"
+                    breakpoints={{ 768: { slidesPerView: 2 } }}
+                    observer
+                    observeParents
+                    resizeObserver
+                    watchOverflow
+                    onSwiper={(s) => {
+                      swiperRef.current = s;
+                    }}
+                  >
+                    {urbanVillageBrand?.section?.[0]?.imageScroll?.map((image: any, i: number) => (
+                      <SwiperSlide key={i}>
+                        <div className="image-blog">
+                          <Image
+                            src={getStrapiMediaUrl(image)}
+                            alt={`Urban Village slide ${i + 1}`}
+                            width={444}
+                            height={334}
+                            style={{ width: "100%", height: "auto", display: "block" }}
+                            priority={i < 2}
+                          />
+                        </div>
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                </div>
+              )}
+                  
               <div className="list-desc">
                 <div
                   className="desc-blog"

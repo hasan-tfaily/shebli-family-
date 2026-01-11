@@ -10,6 +10,7 @@ import { getStrapiMediaUrl } from "@/lib/strapi/media";
 
 export default function InvestorRelationsPage() {
   const [investorRelationsPage, setBrandData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -29,9 +30,15 @@ export default function InvestorRelationsPage() {
             revalidate: 0,
           });
           setBrandData(data);
+          setLoading(false);
         };
         fetchData();
       }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <>
       <div className="page-title style-1 bg-img-16">

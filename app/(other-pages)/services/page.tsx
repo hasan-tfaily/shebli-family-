@@ -11,6 +11,7 @@ import { get } from "http";
 
 export default function ServicesPage() {
   const [industriesWeServePage, setBrandData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,9 +32,15 @@ export default function ServicesPage() {
             revalidate: 0,
           });
           setBrandData(data);
+          setLoading(false);
         };
         fetchData();
       }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <>
       <div className="page-title style-1 bg-img-7">

@@ -31,6 +31,7 @@ export default function KMInnovationCenterPage() {
           "section.ButtonLinks",
           "section.featuredItems",
           "section.featuredItems.img",
+          "section.imageScroll",
         ],
         revalidate: 0,
       });
@@ -143,11 +144,11 @@ export default function KMInnovationCenterPage() {
                     swiperRef.current = s;
                   }}
                 >
-                  {slides.map((src, i) => (
-                    <SwiperSlide key={src}>
+                  {sectionOne?.imageScroll?.map((image: any, i: number) => (
+                    <SwiperSlide key={i}>
                       <div className="image-blog">
                         <Image
-                          src={src}
+                          src={getStrapiMediaUrl(image)}
                           alt={`KM Innovation Center slide ${i + 1}`}
                           className="lazyload"
                           width={444}

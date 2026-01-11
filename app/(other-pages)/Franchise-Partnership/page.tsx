@@ -38,6 +38,11 @@ export default function Page() {
     };
     fetchData();
   }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <>
       <div className="page-title style-1 bg-img-6">

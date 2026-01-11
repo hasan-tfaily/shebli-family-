@@ -1158,9 +1158,21 @@
                 margin-bottom: 0;
             }
         }
+
+        
     }
 }
-
+.markdown-pre-line {
+    white-space: pre-line;
+    
+    p {
+        margin-bottom: 1em;
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
 .wg-comment {
     .title-wg-comment {
         margin-bottom: 18px;

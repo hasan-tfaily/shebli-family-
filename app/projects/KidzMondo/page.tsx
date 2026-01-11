@@ -62,7 +62,6 @@ export default function KidzMondoPage() {
   if (loading) {
     return <div>Loading...</div>;
   }
-  console.log("KidzMondo Brand Data:", kidzMondoBrand);
   const sectionOne = kidzMondoBrand?.section?.[0];
   const sectionTwo = kidzMondoBrand?.section?.[1];
   return (
@@ -114,14 +113,9 @@ export default function KidzMondoPage() {
 
               {/* INTRO */}
               <div className="desc-blog">
-                {sectionOne?.featuredItems?.[0]?.Body
-                    ? sectionOne?.featuredItems?.[0]?.Body.split("\n").map((line: string, idx: number) => (
-                        <React.Fragment key={idx}>
-                          {line}
-                          <br />
-                        </React.Fragment>
-                      ))
-                    : null}
+                <ReactMarkdown>
+                  {sectionOne?.featuredItems?.[0]?.Body || ""}
+                </ReactMarkdown>
               </div>
               {/* ✅ SWIPER (do NOT wrap with cols-img) */}
               <div className="kidzmondo-gallery">

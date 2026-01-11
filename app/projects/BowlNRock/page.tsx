@@ -31,6 +31,7 @@ export default function BowlNRock() {
               "section.ButtonLinks",
               "section.featuredItems",
               "section.featuredItems.img",
+              "section.imageScroll",
             ],
             revalidate: 0,
           });
@@ -54,15 +55,6 @@ export default function BowlNRock() {
       window.removeEventListener("orientationchange", update);
     };
   }, []);
-
-  const slides = [
-    "/image/bowlNRock/bowl N rock 1.jpg",
-    "/image/bowlNRock/bowl N rock 2.jpg",
-    "/image/bowlNRock/bowl N rock 3.jpg",
-    "/image/bowlNRock/bowl N rock 4.jpg",
-    "/image/bowlNRock/bowl N rock 5.jpg",
-    "/image/bowlNRock/bowl N rock 6.jpg",
-  ];
 
   return (
     <>
@@ -118,39 +110,41 @@ export default function BowlNRock() {
               </div>
 
               {/* ✅ SWIPER FIX (NO cols-img wrapper) */}
-              <div className="bowlnrock-gallery">
-                <Swiper
-                  modules={[Navigation]}
-                  navigation
-                  spaceBetween={24}
-                  slidesPerView={1}
-                  loop
-                  className="bowlnrock-slider"
-                  breakpoints={{ 768: { slidesPerView: 2 } }}
-                  observer
-                  observeParents
-                  resizeObserver
-                  watchOverflow
-                  onSwiper={(s) => {
-                    swiperRef.current = s;
-                  }}
-                >
-                  {slides.map((src, i) => (
-                    <SwiperSlide key={src}>
-                      <div className="image-blog">
-                        <Image
-                          src={src}
-                          alt={`Bowl N Rock slide ${i + 1}`}
-                          width={444}
-                          height={334}
-                          style={{ width: "100%", height: "auto", display: "block" }}
-                          priority={i < 2}
-                        />
-                      </div>
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
-              </div>
+              {bowlNRockBrand?.section?.[0]?.imageScroll?.length > 0 && (
+                <div className="bowlnrock-gallery">
+                  <Swiper
+                    modules={[Navigation]}
+                    navigation={true}
+                    spaceBetween={24}
+                    slidesPerView={1}
+                    loop={true}
+                    className="bowlnrock-slider"
+                    breakpoints={{ 768: { slidesPerView: 2 } }}
+                    observer
+                    observeParents
+                    resizeObserver
+                    watchOverflow
+                    onSwiper={(s) => {
+                      swiperRef.current = s;
+                    }}
+                  >
+                    {bowlNRockBrand?.section?.[0]?.imageScroll?.map((image: any, i: number) => (
+                      <SwiperSlide key={i}>
+                        <div className="image-blog">
+                          <Image
+                            src={getStrapiMediaUrl(image)}
+                            alt={`Bowl N Rock slide ${i + 1}`}
+                            width={444}
+                            height={334}
+                            style={{ width: "100%", height: "auto", display: "block" }}
+                            priority={i < 2}
+                          />
+                        </div>
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                </div>
+              )}
 
               {/* EXPERIENCE SECTION */}
               <div className="list-desc">

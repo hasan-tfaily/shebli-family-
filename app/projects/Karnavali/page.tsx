@@ -5,7 +5,6 @@ import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import type { Swiper as SwiperClass } from "swiper";
-
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -13,6 +12,7 @@ import Testimonials from "@/components/common/Testimonials";
 import Contact from "@/components/common/Contact";
 import { getPageByName } from "@/lib/strapi/queries";
 import { getStrapiMediaUrl } from "@/lib/strapi/media";
+import ReactMarkdown from "react-markdown";
 
 export default function KarnavaliPage() {
   const swiperRef = useRef<SwiperClass | null>(null);
@@ -32,6 +32,7 @@ export default function KarnavaliPage() {
           "section.ButtonLinks",
           "section.featuredItems",
           "section.featuredItems.img",
+          "section.imageScroll",
         ],
         revalidate: 0,
       });
@@ -56,16 +57,6 @@ export default function KarnavaliPage() {
       window.removeEventListener("orientationchange", update);
     };
   }, []);
-
-  const slides = [
-    "/image/karnavali/karnavali 2.png",
-    "/image/karnavali/karnavali 3.png",
-    "/image/karnavali/karnavali 3.jpg",
-    "/image/karnavali/karnavali 4.jpg",
-    "/image/karnavali/karnavali 5.jpg",
-    "/image/karnavali/karnavali 6.jpg",
-    "/image/karnavali/karnavali 7  1.jpg",
-  ];
 
   if (loading) {
     return <div>Loading...</div>;
@@ -117,17 +108,13 @@ export default function KarnavaliPage() {
               </div>
 
               {/* Intro Text */}
-              <div className="desc-blog">
-                {karnavaliBrand.section?.[0]?.featuredItems?.[0]?.Body
-                    ? karnavaliBrand.section?.[0]?.featuredItems?.[0]?.Body.split("\n").map((line: string, idx: number) => (
-                        <React.Fragment key={idx}>
-                          {line}
-                          <br />
-                        </React.Fragment>
-                      ))
-                    : null}
+              <div className="list-desc">
+                <div className="desc-blog">
+                  <ReactMarkdown>
+                    {karnavaliBrand?.section?.[0]?.featuredItems?.[0]?.Body || ""}
+                  </ReactMarkdown>  
+                </div>
               </div>
-
               {/* ✅ SWIPER (NO cols-img wrapper) */}
               <div className="karnavali-gallery">
                 <Swiper
@@ -146,11 +133,11 @@ export default function KarnavaliPage() {
                     swiperRef.current = s;
                   }}
                 >
-                  {slides.map((src, i) => (
-                    <SwiperSlide key={src}>
+                  {karnavaliBrand?.section[0]?.imageScroll?.map((image: any, i: number) => (
+                    <SwiperSlide key={i}>
                       <div className="image-blog">
                         <Image
-                          src={src}
+                          src={getStrapiMediaUrl(image)}
                           alt={`Karnavali View ${i + 1}`}
                           width={444}
                           height={334}
@@ -170,14 +157,9 @@ export default function KarnavaliPage() {
               {/* CONTENT SECTIONS */}
               <div className="list-desc">
                 <div className="desc-blog">
-                  {karnavaliBrand?.section?.[0]?.featuredItems?.[1]?.Body
-                      ? karnavaliBrand?.section?.[0]?.featuredItems?.[1]?.Body.split("\n").map((line: string, idx: number) => (
-                          <React.Fragment key={idx}>
-                            {line}
-                            <br />
-                          </React.Fragment>
-                        ))
-                      : null}
+                  <ReactMarkdown>
+                    {karnavaliBrand?.section?.[0]?.featuredItems?.[1]?.Body}
+                  </ReactMarkdown>
                 </div>
 
                 <div className="desc-blog" style={{ marginTop: "50px" }}>
@@ -190,9 +172,9 @@ export default function KarnavaliPage() {
                 <Testimonials
                   testimonialSection={karnavaliBrand?.section?.[1]} 
                 />
-
-                <div className="desc-blog">
-                  <h5 className="title-desc">{karnavaliBrand?.section?.[1]?.featuredItems[6]?.title}</h5>
+                
+                <div className="desc-blog" style={{ marginTop: "50px" }}>
+                  <h5 className="title-d  esc">{karnavaliBrand?.section?.[1]?.title}</h5>
                   <p className="body-2">
                     {karnavaliBrand?.section?.[1]?.featuredItems[6]?.Body}
                   </p>
