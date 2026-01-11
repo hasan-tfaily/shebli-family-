@@ -17,7 +17,6 @@ export default function UrbanVillageServices({ experiencesSection }: any) {
     id: `experience-${index}`,
   }));
   const [activeIndex, setActiveIndex] = useState(0);
-  console.log("urbanVillageData", urbanVillageData);
   return (
     <section
       className="section-services h-1 tf-spacing-31 bg-surface section-one-page"
@@ -59,7 +58,6 @@ export default function UrbanVillageServices({ experiencesSection }: any) {
                             onClick={(e) => {
                               e.preventDefault();
                               e.stopPropagation();
-                              console.log("Tab clicked:", index);
                               setActiveIndex(index);
                             }}
                           >

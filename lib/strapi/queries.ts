@@ -144,10 +144,6 @@ export async function getPageByName({
     return data?.data?.[0] ?? null;
   } catch (error) {
     console.error("❌ Strapi API Error:", error);
-    console.log("🔍 Debug Info:");
-    console.log("- pageName:", pageName);
-    console.log("- populate:", populate);
-    console.log("- params:", buildPageQueryParams(pageName, populate));
     throw error;
   }
 }
@@ -226,10 +222,6 @@ export async function getBlogByDocumentId({
 
     return data?.data ?? null;
   } catch (error) {
-    console.error("❌ Strapi API Error (getBlogByDocumentId):", error);
-    console.log("🔍 Debug Info:");
-    console.log("- documentId:", documentId);
-    console.log("- populate:", populate);
     throw error;
   }
 }
@@ -276,10 +268,6 @@ export async function getSingleType(
     return data?.data ?? null;
   } catch (error) {
     console.error("❌ Strapi Single Type API Error:", error);
-    console.log("🔍 Debug Info:");
-    console.log("- endpoint:", endpoint);
-    console.log("- populate:", populate);
-    console.log("- params:", buildSingleTypeQueryParams(populate));
     throw error;
   }
 }

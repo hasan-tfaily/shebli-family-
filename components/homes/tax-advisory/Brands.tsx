@@ -4,7 +4,6 @@ import React from "react";
 import { getStrapiMediaUrl } from "@/lib/strapi/media";
 
 export default function Brands({ brandsSectionData }: any) {
-  console.log("brandsSectionData:", brandsSectionData);
   return (
     <section className="section-brand h-7 section-one-page" id="cta" style={{marginTop: "100px"}}>
       <div className="tf-container">

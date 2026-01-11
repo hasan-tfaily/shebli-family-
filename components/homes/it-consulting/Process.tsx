@@ -138,8 +138,6 @@ const processSteps = [
   },
 ];
 export default function Process( { processSection }: { processSection?: any }) {
-  console.log("processSection:", processSection);
-
   return (
     <section className="section-process h-8 tf-spacing-2 hover-active-step">
       <div className="tf-container position-relative">

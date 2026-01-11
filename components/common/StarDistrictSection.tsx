@@ -17,7 +17,6 @@ export default function StarDistrictSection({ experiencesSection }: any) {
     id: `experience-${index}`,
   }));
   const [activeIndex, setActiveIndex] = useState(0);
-  console.log("starDistrictData", starDistrictData);
   return (
     <section
       className="section-services h-1 tf-spacing-31 bg-surface section-one-page"
@@ -67,7 +66,6 @@ export default function StarDistrictSection({ experiencesSection }: any) {
                             onClick={(e) => {
                               e.preventDefault();
                               e.stopPropagation();
-                              console.log("Tab clicked:", index);
                               setActiveIndex(index);
                             }}
                           >
