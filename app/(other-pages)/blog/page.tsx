@@ -2,13 +2,16 @@ import Blogs3 from "@/components/blogs/Blogs3";
 import React from "react";
 import Breadcumb from "@/components/common/Breadcumb";
 import { Metadata } from "next";
+import { getAllBlogs } from "@/lib/strapi/queries";
+
 export const metadata: Metadata = {
-  title:
-    "Blogs || Kidz Holding - Franchise & Corporate Website",
-  description:
-    "Kidz Holding - Franchise & Corporate Website",
+  title: "Blogs || Kidz Holding - Franchise & Corporate Website",
+  description: "Kidz Holding - Franchise & Corporate Website",
 };
-export default function page() {
+
+export default async function page() {
+  const blogs = await getAllBlogs();
+
   return (
     <>
       <div className="page-title style-1 bg-img-2">
@@ -19,9 +22,11 @@ export default function page() {
                 <Breadcumb pageName="Blog" />
                 <h2 className="title-page-title">Blog </h2>
                 <div className="sub-title body-2">
-                  Welcome to the Kidz Holding Blog. Your window into the world of 
+                  Welcome to the Kidz Holding Blog. Your window into the world
+                  of
                   <br />
-                 edutainment, family learning, and innovation across our cities.
+                  edutainment, family learning, and innovation across our
+                  cities.
                 </div>
               </div>
             </div>
@@ -29,7 +34,7 @@ export default function page() {
         </div>
       </div>
       <div className="main-content tf-spacing-2">
-        <Blogs3 />
+        <Blogs3 blogs={blogs} />
       </div>
     </>
   );
