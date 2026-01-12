@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import OdometerComponent from "@/components/common/OdometerComponent";
 
-export default function About({ aboutSection }: { aboutSection: any }) {
+export default function About({ aboutSection }: { aboutSection?: any }) {
   return (
     <section
       className="section-about h-1 h-3 tf-spacing-2 section-one-page"

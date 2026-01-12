@@ -156,6 +156,7 @@ export const getBrandByName = getPageByName;
 type BlogQueryOptions = {
   populate?: StrapiPopulate;
   revalidate?: number;
+  limit?: number;
 };
 
 type BlogByIdOptions = {
@@ -189,11 +190,19 @@ function buildPopulateParams(populate: StrapiPopulate = ["*"]) {
 export async function getAllBlogs({
   populate = ["*"],
   revalidate = 0,
+  limit,
 }: BlogQueryOptions = {}) {
   try {
+    const params: Record<string, string> = buildPopulateParams(populate);
+    
+    // Add pagination limit if specified
+    if (limit !== undefined) {
+      params["pagination[limit]"] = String(limit);
+    }
+    
     const { data } = await apiService.get<StrapiBlogResponse>(
       "api/blogs",
-      buildPopulateParams(populate),
+      params,
       { next: { revalidate } }
     );
 

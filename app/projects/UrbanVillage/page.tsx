@@ -34,7 +34,7 @@ export default function UrbanVillage() {
               "section.featuredItems.img",
               "section.imageScroll",
             ],
-            revalidate: 0,
+            revalidate: 30,
           });
           setBrandData(data);
         };

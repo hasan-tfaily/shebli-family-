@@ -9,6 +9,8 @@ export const metadata: Metadata = {
   description: "Kidz Holding - Franchise & Corporate Website",
 };
 
+export const dynamic = "force-dynamic";
+
 export default async function page() {
   const blogs = await getAllBlogs();
 

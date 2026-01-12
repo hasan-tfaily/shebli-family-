@@ -14,9 +14,11 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title:
     "Insurance Consultancy || Kidz Holding - Franchise & Corporate Website",
-  description:
-    "Kidz Holding - Franchise & Corporate Website",
+  description: "Kidz Holding - Franchise & Corporate Website",
 };
+
+export const dynamic = "force-dynamic";
+
 export default function page() {
   return (
     <>

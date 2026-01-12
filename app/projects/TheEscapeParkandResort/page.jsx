@@ -35,7 +35,7 @@ export default function TheEscapeParkandResort() {
           "section.imageScroll",
           "section.featuredItems.img",
         ],
-        revalidate: 0,
+        revalidate: 30,
       });
       setEscapeResortBrand(data);
       setLoading(false);

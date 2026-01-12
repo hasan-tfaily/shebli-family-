@@ -31,27 +31,29 @@ export function toAbsoluteStrapiUrl(url: string | undefined | null): string | un
   return `http://46.62.246.5:1337${url}`;
 }
 
-export function getStrapiMediaUrl(media: StrapiMediaSingle | undefined | null): string | undefined {
-  if (!media) return undefined;
-  if (typeof media === "string") return toAbsoluteStrapiUrl(media);
+const PLACEHOLDER_IMAGE = "/image/placeholder.jpg";
+
+export function getStrapiMediaUrl(media: StrapiMediaSingle | undefined | null): string {
+  if (!media) return PLACEHOLDER_IMAGE;
+  if (typeof media === "string") return toAbsoluteStrapiUrl(media) ?? PLACEHOLDER_IMAGE;
 
   // Array of flat objects (like your debug output)
   if (Array.isArray(media)) {
-    return toAbsoluteStrapiUrl(media[0]?.url);
+    return toAbsoluteStrapiUrl(media[0]?.url) ?? PLACEHOLDER_IMAGE;
   }
 
   // Flat object with url
   const maybeFile = media as any;
   if (typeof maybeFile?.url === "string") {
-    return toAbsoluteStrapiUrl(maybeFile.url);
+    return toAbsoluteStrapiUrl(maybeFile.url) ?? PLACEHOLDER_IMAGE;
   }
 
   // v4 data object or v4 data array
   const data: any = (media as any).data;
   if (Array.isArray(data)) {
-    return toAbsoluteStrapiUrl(data[0]?.attributes?.url);
+    return toAbsoluteStrapiUrl(data[0]?.attributes?.url) ?? PLACEHOLDER_IMAGE;
   }
-  return toAbsoluteStrapiUrl(data?.attributes?.url);
+  return toAbsoluteStrapiUrl(data?.attributes?.url) ?? PLACEHOLDER_IMAGE;
 }
 
 export function getStrapiMediaAlt(media: StrapiMediaSingle | undefined | null): string {

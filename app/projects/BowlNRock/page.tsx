@@ -35,7 +35,7 @@ export default function BowlNRock() {
               "section.featuredItems.img",
               "section.imageScroll",
             ],
-            revalidate: 0,
+            revalidate: 30,
           });
           setBrandData(data);
           setLoading(false);

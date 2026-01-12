@@ -37,7 +37,7 @@ export default function StarDistrict() {
           "section.featuredItems.img",
           "section.imageScroll",
         ],
-        revalidate: 0,
+        revalidate: 30,
       });
       setStarDistrictBrand(data);
       setLoading(false);

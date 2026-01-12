@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-export default function Process({ processSection }: { processSection: any }) {
+export default function Process({ processSection }: { processSection?: any }) {
   return (
     <section className="section-process h-2 tf-spacing-31 hover-active-step">
       <div className="tf-container position-relative">
@@ -14,14 +14,14 @@ export default function Process({ processSection }: { processSection: any }) {
                     href="#"
                     className="tag label text-btn-uppercase color-white"
                   >
-                    {processSection.miniTitle}
+                    {processSection?.miniTitle}
                   </a>
                 </div>
                 <h3 className="title-section mb-12 text-anime-wave">
-                  {processSection.title}
+                  {processSection?.title}
                 </h3>
                 <div className="sub-title body-2 text-anime-wave">
-                  {processSection.description}
+                  {processSection?.description}
                 </div>
               </div>
               {/* <div className="text-anime-wave-2">
@@ -46,11 +46,11 @@ export default function Process({ processSection }: { processSection: any }) {
               <div className="process-content">
                 <h5>
                   <a href="#" className="name-process">
-                    {processSection.featuredItems[0]?.title}
+                    {processSection?.featuredItems?.[0]?.title}
                   </a>
                 </h5>
                 <div className="desc">
-                {processSection.featuredItems[0]?.Body}
+                {processSection?.featuredItems?.[0]?.Body}
                 </div>
               </div>
             </div>
@@ -66,11 +66,11 @@ export default function Process({ processSection }: { processSection: any }) {
               <div className="process-content">
                 <h5>
                   <a href="#" className="name-process">
-                    {processSection.featuredItems[1]?.title}
+                    {processSection?.featuredItems?.[1]?.title}
                   </a>
                 </h5>
                 <div className="desc">
-                   {processSection.featuredItems[1]?.Body}
+                   {processSection?.featuredItems?.[1]?.Body}
                 </div>
               </div>
             </div>
@@ -86,11 +86,11 @@ export default function Process({ processSection }: { processSection: any }) {
               <div className="process-content">
                 <h5>
                   <a href="#" className="name-process">
-                    {processSection.featuredItems[2]?.title}
+                    {processSection?.featuredItems?.[2]?.title}
                   </a>
                 </h5>
                 <div className="desc">
-                  {processSection.featuredItems[2]?.Body}
+                  {processSection?.featuredItems?.[2]?.Body}
                 </div>
               </div>  
             </div>

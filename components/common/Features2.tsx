@@ -58,7 +58,7 @@ export default function Features( {
                 ) : null}
               </div>
               <div className="benefit-lists">
-                {(featuresSection.list).map((row, idx) => {
+                {(featuresSection.list).map((row: any, idx: number) => {
                   const point = typeof row === "string" ? row : row?.point;
 
                   return point ? (

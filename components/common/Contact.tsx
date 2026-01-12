@@ -3,7 +3,7 @@ import React from "react";
 
 
 export default function Contact({ contactSection }: { contactSection?: any }) {
-  const activities: string[] = contactSection?.list || [];
+  const activities: any[] = contactSection?.list || [];
   const half = Math.ceil(activities.length / 2);
   const leftCol = activities.slice(0, half);
   const rightCol = activities.slice(half);

@@ -4,6 +4,8 @@ import React from "react";
 import Link from "next/link";
 import { getBlogByDocumentId } from "@/lib/strapi/queries";
 
+export const dynamic = "force-dynamic";
+
 export async function generateMetadata({
   params,
 }: {

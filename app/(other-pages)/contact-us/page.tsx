@@ -15,35 +15,35 @@ export default function ContactUsPage() {
 
   useEffect(() => {
     const fetchData = async () => {
-          const data = await getPageByName({
-            pageName: "Contact Us - Page",
-            populate: [
-              "Hero",
-              "Hero.image",
-              "section",
-              "section.img",
-              "section.list",
-              "section.ButtonLinks",
-              "section.featuredItems",
-              "section.featuredItems.img",
-            ],
-            revalidate: 0,
-          });
-          setBrandData(data);
-        };
-        fetchData();
-      }, []);
+      const data = await getPageByName({
+        pageName: "Contact Us - Page",
+        populate: [
+          "Hero",
+          "Hero.image",
+          "section",
+          "section.img",
+          "section.list",
+          "section.ButtonLinks",
+          "section.featuredItems",
+          "section.featuredItems.img",
+        ],
+        revalidate: 30,
+      });
+      setBrandData(data);
+    };
+    fetchData();
+  }, []);
   return (
     <>
-      <div 
+      <div
         className="page-title style-1"
         style={{
-          backgroundImage: contactUsPage?.Hero?.image 
-            ? `url(${getStrapiMediaUrl(contactUsPage?.Hero?.image)})` 
-            : 'url(/image/page-title/bg-img-13.jpg)', 
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
+          backgroundImage: contactUsPage?.Hero?.image
+            ? `url(${getStrapiMediaUrl(contactUsPage?.Hero?.image)})`
+            : "url(/image/page-title/bg-img-13.jpg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
       >
         <div className="tf-container position-relative">
@@ -57,9 +57,7 @@ export default function ContactUsPage() {
         </div>
       </div>
       <div className="main-content">
-        <Contact 
-        contactUsSection={contactUsPage?.section[0]}
-        />
+        <Contact contactUsSection={contactUsPage?.section[0]} />
         <Map />
         {/* <Locations /> */}
       </div>

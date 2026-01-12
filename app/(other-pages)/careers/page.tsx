@@ -33,7 +33,7 @@ export default function page() {
           "section.featuredItems",
           "section.featuredItems.img",
         ],
-        revalidate: 0,
+        revalidate: 30,
       });
       setCareerPage(data);
       setLoading(false);

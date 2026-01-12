@@ -3,13 +3,13 @@ import Image from "next/image";
 import React from "react";
 import { sectionServices } from "@/data/services";
 import { get } from "http";
-import { getStrapiMediaAlt, getStrapiMediaUrl, StrapiMediaUrl } from "@/lib/strapi/media";    
+import { getStrapiMediaAlt, getStrapiMediaUrl } from "@/lib/strapi/media";    
 
 export default function Features3({
     parentClass = "section-why-choose h-2 tf-spacing-31",
     hasBorder = false,
     featuresSection
-}) {
+}: { parentClass?: string; hasBorder?: boolean; featuresSection?: any }) {
     return (
         <section className={parentClass}>
             <div className="tf-container position-relative">

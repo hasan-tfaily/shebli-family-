@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Benefits({ benefitsSection }: { benefitsSection: any }) {
+export default function Benefits({ benefitsSection }: { benefitsSection?: any }) {
   return (
     <section className="section-benefit h-3 h-8 section-one-page" id="about">
   <div className="tf-container">

@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { getStrapiMediaUrl } from "@/lib/strapi/media";
 
 
-export default function Hero({ heroData }: { heroData: any }) {  
+export default function Hero({ heroData }: { heroData?: any }) {  
   if (!heroData || !Array.isArray(heroData) || heroData.length === 0) {
     return null;
   }

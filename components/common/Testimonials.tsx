@@ -21,7 +21,7 @@ export default function Testimonials({ testimonialSection }: { testimonialSectio
             className="row"
             style={rowIndex < rows.length - 1 ? { marginBottom: "30px" } : {}}
           >
-            {row.map((item, index) => (
+            {row.map((item: any, index: number) => (
               <div className="col-12 col-md-4 d-flex" key={`${rowIndex}-${index}`}>
                 <div className="testimonial-item flex-grow-1">
                   <div className="testimonial-top">

@@ -4,7 +4,7 @@ import Image from "next/image";
 import React from "react";
 import ReactMarkdown from "react-markdown";
 
-export default function Services({ servicesSection }: { servicesSection: any }) {
+export default function Services({ servicesSection }: { servicesSection?: any }) {
   return (
     <section
       className="section-services h-7 bg-surface tf-spacing-31 section-one-page"

@@ -31,7 +31,7 @@ export default function Page() {
           "section.featuredItems.img",
           "section.ButtonLinks",
         ],
-        revalidate: 0,
+        revalidate: 30,
       });
       setFranchisePage(data);
       setLoading(false);
@@ -118,7 +118,7 @@ export default function Page() {
               <div className="col-xl-6">
                 <div className="image mr-15">
                   <Image
-                    src={getStrapiMediaUrl(franchisePage?.section?.[2]?.img)}
+                    src={getStrapiMediaUrl(franchisePage?.section?.[2]?.img) || "/image/placeholder.jpg"}
                     alt="Why partner with us"
                     width={615}
                     height={615}

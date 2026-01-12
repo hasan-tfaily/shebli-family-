@@ -35,7 +35,7 @@ export default function KarnavaliPage() {
           "section.featuredItems.img",
           "section.imageScroll",
         ],
-        revalidate: 0,
+        revalidate: 30,
       });
       setKarnavaliBrand(data);
       setLoading(false);

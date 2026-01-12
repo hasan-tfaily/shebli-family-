@@ -29,7 +29,7 @@ export default function ServicesPage() {
               "section.imageScroll",
               "section.ButtonLinks"
             ],
-            revalidate: 0,
+            revalidate: 30,
           });
           setBrandData(data);
           setLoading(false);
@@ -86,7 +86,7 @@ export default function ServicesPage() {
                   <div className="top">
                     <div className="icon">
                       <Image
-                        src={getStrapiMediaUrl(industriesWeServePage?.section[0]?.featuredItems[0]?.img)}
+                        src={getStrapiMediaUrl(industriesWeServePage?.section[0]?.featuredItems[0]?.img) || "/image/placeholder.jpg"}
                         alt="Leisure Architecture"
                         width={40}
                         height={40}
@@ -112,7 +112,7 @@ export default function ServicesPage() {
                   <div className="top">
                     <div className="icon">
                       <Image
-                        src={getStrapiMediaUrl(industriesWeServePage?.section[0]?.featuredItems[1]?.img)}
+                        src={getStrapiMediaUrl(industriesWeServePage?.section[0]?.featuredItems[1]?.img) || "/image/placeholder.jpg"}
                         alt="Hospitality and Leisure Resort"
                         width={40}
                         height={40}
@@ -138,7 +138,7 @@ export default function ServicesPage() {
                   <div className="top">
                     <div className="icon">
                       <Image
-                        src={getStrapiMediaUrl(industriesWeServePage?.section[0]?.featuredItems[2]?.img)}
+                        src={getStrapiMediaUrl(industriesWeServePage?.section[0]?.featuredItems[2]?.img) || "/image/placeholder.jpg"}
                         alt="Urban Realm and Leisure Landscape"
                         width={40}
                         height={40}
@@ -164,7 +164,7 @@ export default function ServicesPage() {
                   <div className="top">
                     <div className="icon">
                       <Image
-                        src={getStrapiMediaUrl(industriesWeServePage?.section[0]?.featuredItems[3]?.img)}
+                        src={getStrapiMediaUrl(industriesWeServePage?.section[0]?.featuredItems[3]?.img) || "/image/placeholder.jpg"}
                         alt="Family Leisure Destinations"
                         width={40}
                         height={40}
@@ -190,7 +190,7 @@ export default function ServicesPage() {
                   <div className="top">
                     <div className="icon">
                       <Image
-                        src={getStrapiMediaUrl(industriesWeServePage?.section[0]?.featuredItems[4]?.img)}
+                        src={getStrapiMediaUrl(industriesWeServePage?.section[0]?.featuredItems[4]?.img) || "/image/placeholder.jpg"}
                         alt="Shopping and Mixed-Use Environment"
                         width={40}
                         height={40}
@@ -216,7 +216,7 @@ export default function ServicesPage() {
                   <div className="top">
                     <div className="icon">
                       <Image
-                        src={getStrapiMediaUrl(industriesWeServePage?.section[0]?.featuredItems[5]?.img)}
+                        src={getStrapiMediaUrl(industriesWeServePage?.section[0]?.featuredItems[5]?.img) || "/image/placeholder.jpg"}
                         alt="Education and Working Environment"
                         width={40}
                         height={40}
@@ -242,7 +242,7 @@ export default function ServicesPage() {
                   <div className="top">
                     <div className="icon">
                       <Image
-                        src={getStrapiMediaUrl(industriesWeServePage?.section[0]?.featuredItems[6]?.img)}
+                        src={getStrapiMediaUrl(industriesWeServePage?.section[0]?.featuredItems[6]?.img) || "/image/placeholder.jpg"}
                         alt="Real Estate & Landlords"
                         width={40}
                         height={40}
@@ -268,7 +268,7 @@ export default function ServicesPage() {
                   <div className="top">
                     <div className="icon">
                       <Image
-                        src={getStrapiMediaUrl(industriesWeServePage?.section[0]?.featuredItems[7]?.img)}
+                        src={getStrapiMediaUrl(industriesWeServePage?.section[0]?.featuredItems[7]?.img) || "/image/placeholder.jpg"}
                         alt="Playful Attractions"
                         width={40}
                         height={40}

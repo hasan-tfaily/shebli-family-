@@ -19,6 +19,8 @@ export const metadata: Metadata = {
   description: "Kidz Holding - Franchise & Corporate Website",
 };
 
+export const dynamic = "force-dynamic";
+
 export default async function Page() {
   const aboutPageEntity = await getPageByName({
     pageName: "About Us",
@@ -31,7 +33,7 @@ export default async function Page() {
       "section.featuredItems",
       "section.featuredItems.img",
     ],
-    revalidate: 0,
+    revalidate: 30,
   });
 
   const aboutBrand = unwrapAttributes(aboutPageEntity);

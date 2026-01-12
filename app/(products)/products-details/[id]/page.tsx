@@ -4,6 +4,9 @@ import Details from "@/components/products/Details";
 import RelatedProducts from "@/components/products/RelatedProducts";
 import React from "react";
 import { products } from "@/data/products";
+
+export const dynamic = "force-dynamic";
+
 export async function generateMetadata({
   params,
 }: {

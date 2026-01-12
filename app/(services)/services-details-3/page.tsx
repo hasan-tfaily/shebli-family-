@@ -17,6 +17,8 @@ export const metadata: Metadata = {
     "Kidz Holding - Franchise & Corporate Website",
 };
 
+export const dynamic = "force-dynamic";
+
 export default function Page() {
   return (
     <>

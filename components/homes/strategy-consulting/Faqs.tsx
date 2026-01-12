@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Faqs({ faqs }: { faqs: any }) {
+export default function Faqs({ faqs }: { faqs?: any }) {
   return (
     <section className="section-faqs h-3 tf-spacing-17">
       <div className="tf-container position-relative">

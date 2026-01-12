@@ -17,7 +17,7 @@ export default async function TestBrandsPage() {
   const brand = await getPageByName({
     pageName: "About Us",
     populate: ["Hero", "section", "section.featuredItems"],
-    revalidate: 0,
+    revalidate: 30,
   });
   return (
     <main style={{ padding: 24 }}>

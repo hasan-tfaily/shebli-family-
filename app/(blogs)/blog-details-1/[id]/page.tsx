@@ -28,6 +28,8 @@ function getImageUrl(url?: string) {
   return `${STRAPI_URL}${url}`;
 }
 
+export const dynamic = "force-dynamic";
+
 export async function generateMetadata({
   params,
 }: {

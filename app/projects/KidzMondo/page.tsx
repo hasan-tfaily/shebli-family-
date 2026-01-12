@@ -36,7 +36,7 @@ export default function KidzMondoPage() {
           "section.imageScroll",
           "section.featuredItems.img",
         ],
-        revalidate: 0,
+        revalidate: 30,
       });
       setKidzMondoBrand(data);
       setLoading(false);

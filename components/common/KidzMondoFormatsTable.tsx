@@ -50,7 +50,7 @@ export default function KidzMondoFormatsTable({ kidzMondoTableSection }: any) {
           <thead>
             <tr>
               <th className="kidz-table__corner" scope="col" aria-hidden="true"></th>
-              {columns.map((c) => (
+              {columns.map((c: string) => (
                 <th key={c} scope="col" className="kidz-table__th">
                   {c}
                 </th>
@@ -59,17 +59,17 @@ export default function KidzMondoFormatsTable({ kidzMondoTableSection }: any) {
           </thead>
 
           <tbody>
-            {rows.map((row) => (
+            {rows.map((row: any) => (
               <tr key={row.label}>
                 <th scope="row" className="kidz-table__rowhead">
                   {row.label}
                 </th>
 
-                {row.values.map((cell, idx) => (
+                {row.values.map((cell: any, idx: number) => (
                   <td key={idx} className="kidz-table__td">
                     {cell.length > 1 ? (
                       <ul className="kidz-table__list">
-                        {cell.map((item, itemIdx: number) => (
+                        {cell.map((item: any, itemIdx: number) => (
                           <li key={`${idx}-${itemIdx}-${item}`}>{item}</li>
                         ))}
                       </ul>
@@ -86,11 +86,11 @@ export default function KidzMondoFormatsTable({ kidzMondoTableSection }: any) {
 
       {/* Mobile cards */}
       <div className="kidz-cards" aria-label="KidzMondo formats comparison cards">
-        {columns.map((col, colIndex) => (
+        {columns.map((col: string, colIndex: number) => (
           <div key={col} className="kidz-card">
             <div className="kidz-card__title">{col}</div>
 
-            {rows.map((row) => {
+            {rows.map((row: any) => {
               const cell = row.values[colIndex];
               return (
                 <div key={row.label} className="kidz-card__row">
@@ -98,7 +98,7 @@ export default function KidzMondoFormatsTable({ kidzMondoTableSection }: any) {
                   <div className="kidz-card__value">
                     {cell.length > 1 ? (
                       <ul className="kidz-card__list">
-                        {cell.map((item, itemIdx: number) => (
+                        {cell.map((item: any, itemIdx: number) => (
                           <li key={`card-${colIndex}-${row.label}-${itemIdx}-${item}`}>{item}</li>
                         ))}
                       </ul>

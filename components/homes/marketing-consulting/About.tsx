@@ -4,7 +4,7 @@ import React from "react";
 import OdometerComponent from "@/components/common/OdometerComponent";
 import { getStrapiMediaUrl } from "@/lib/strapi/media";
 
-export default function About({ aboutSection, testimonialSection }: { aboutSection: any; testimonialSection: any }) {
+export default function About({ aboutSection, testimonialSection }: { aboutSection?: any; testimonialSection?: any }) {
   const featureItems = testimonialSection?.featuredItems ?? [];
   const counters = featureItems.map((item: any) => ({
     value: item?.Body,
