@@ -27,8 +27,14 @@ export type StrapiMediaSingle =
 
 export function toAbsoluteStrapiUrl(url: string | undefined | null): string | undefined {
   if (!url) return undefined;
+  // If already an absolute URL pointing to Strapi, convert to proxy
+  if (url.startsWith("http://46.62.246.5:1337")) {
+    const path = url.replace("http://46.62.246.5:1337", "");
+    return `/api/images${path}`;
+  }
   if (url.startsWith("http://") || url.startsWith("https://")) return url;
-  return `http://46.62.246.5:1337${url}`;
+  // For relative paths (e.g., /uploads/...), use the proxy API
+  return `/api/images${url}`;
 }
 
 const PLACEHOLDER_IMAGE = "/image/placeholder.jpg";

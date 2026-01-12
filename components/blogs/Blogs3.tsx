@@ -6,8 +6,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { StrapiBlog } from "@/lib/strapi/queries";
 
-const STRAPI_URL = "http://46.62.246.5:1337";
-
 type Props = {
   blogs?: StrapiBlog[];
 };
@@ -21,11 +19,15 @@ function formatDate(dateString?: string) {
   return { day, month };
 }
 
-// Helper to get image URL
+// Helper to get image URL via proxy
 function getImageUrl(url?: string) {
   if (!url) return "/image/blog/blog1.jpg"; // fallback image
-  if (url.startsWith("http")) return url;
-  return `${STRAPI_URL}${url}`;
+  if (url.startsWith("/api/images")) return url;
+  if (url.startsWith("http://46.62.246.5:1337")) {
+    return `/api/images${url.replace("http://46.62.246.5:1337", "")}`;
+  }
+  if (url.startsWith("http://") || url.startsWith("https://")) return url;
+  return `/api/images${url}`;
 }
 
 // Helper to truncate description

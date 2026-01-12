@@ -4,17 +4,19 @@ import CommentForm from "./CommentForm";
 import Comments from "./Comments";
 import { StrapiBlog } from "@/lib/strapi/queries";
 
-const STRAPI_URL = "http://46.62.246.5:1337";
-
 interface Details2Props {
   blog: StrapiBlog;
 }
 
-// Helper to get image URL
+// Helper to get image URL via proxy
 function getImageUrl(url?: string) {
   if (!url) return "/image/blog/image-blog-4.jpg";
-  if (url.startsWith("http")) return url;
-  return `${STRAPI_URL}${url}`;
+  if (url.startsWith("/api/images")) return url;
+  if (url.startsWith("http://46.62.246.5:1337")) {
+    return `/api/images${url.replace("http://46.62.246.5:1337", "")}`;
+  }
+  if (url.startsWith("http://") || url.startsWith("https://")) return url;
+  return `/api/images${url}`;
 }
 
 // Helper to format date
