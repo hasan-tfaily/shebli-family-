@@ -9,7 +9,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import ParkandResortServices from "@/components/common/ParkandResortServices";
-import { getPageByName } from "@/lib/strapi/queries";
+import { fetchPageByName } from "@/lib/strapi/client";
 import { getStrapiMediaUrl } from "@/lib/strapi/media";
 import ReactMarkdown from "react-markdown";
 
@@ -20,7 +20,7 @@ export default function TheEscapeParkandResort() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await getPageByName({
+      const data = await fetchPageByName({
         pageName: "The Escape Park & Resort - Brand",
         populate: [
           "Hero",
@@ -35,7 +35,6 @@ export default function TheEscapeParkandResort() {
           "section.imageScroll",
           "section.featuredItems.img",
         ],
-        revalidate: 30,
       });
       setEscapeResortBrand(data);
       setLoading(false);

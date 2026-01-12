@@ -79,16 +79,9 @@ export async function POST(request) {
       );
     }
 
-    return Response.json(
-      { success: true, data: result.data },
-      { status: 201 }
-    );
+    return Response.json({ success: true, data: result.data }, { status: 201 });
   } catch (error) {
     console.error("Error creating lead:", error);
-    return Response.json(
-      { error: "Internal server error" },
-      { status: 500 }
-    );
+    return Response.json({ error: "Internal server error" }, { status: 500 });
   }
 }
-

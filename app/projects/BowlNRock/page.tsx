@@ -10,7 +10,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import Faqs from "@/components/homes/strategy-consulting/Faqs";
-import { getPageByName } from "@/lib/strapi/queries";
+import { fetchPageByName } from "@/lib/strapi/client";
 import { getStrapiMediaUrl } from "@/lib/strapi/media";
 import ReactMarkdown from "react-markdown";
 
@@ -21,7 +21,7 @@ export default function BowlNRock() {
 
   useEffect(() => {
     const fetchData = async () => {
-          const data = await getPageByName({
+          const data = await fetchPageByName({
             pageName: "BOWL N' ROCK - Brand",
             populate: [
               "Hero",
@@ -35,7 +35,6 @@ export default function BowlNRock() {
               "section.featuredItems.img",
               "section.imageScroll",
             ],
-            revalidate: 30,
           });
           setBrandData(data);
           setLoading(false);

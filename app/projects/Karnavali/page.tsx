@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 
 import Testimonials from "@/components/common/Testimonials";
 import Contact from "@/components/common/Contact";
-import { getPageByName } from "@/lib/strapi/queries";
+import { fetchPageByName } from "@/lib/strapi/client";
 import { getStrapiMediaUrl } from "@/lib/strapi/media";
 import ReactMarkdown from "react-markdown";
 
@@ -21,7 +21,7 @@ export default function KarnavaliPage() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await getPageByName({
+      const data = await fetchPageByName({
         pageName: "Karnavali - Brand",
         populate: [
           "Hero",
@@ -35,7 +35,6 @@ export default function KarnavaliPage() {
           "section.featuredItems.img",
           "section.imageScroll",
         ],
-        revalidate: 30,
       });
       setKarnavaliBrand(data);
       setLoading(false);

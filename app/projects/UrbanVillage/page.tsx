@@ -10,7 +10,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import UrbanVillageServices from "@/components/common/UrbanVillageServices";
-import { getPageByName } from "@/lib/strapi/queries";
+import { fetchPageByName } from "@/lib/strapi/client";
 import { getStrapiMediaUrl } from "@/lib/strapi/media";
 import ReactMarkdown from "react-markdown";
 
@@ -20,7 +20,7 @@ export default function UrbanVillage() {
 
   useEffect(() => {
     const fetchData = async () => {
-          const data = await getPageByName({
+          const data = await fetchPageByName({
             pageName: "Urban Village - Brand",
             populate: [
               "Hero",
@@ -34,7 +34,6 @@ export default function UrbanVillage() {
               "section.featuredItems.img",
               "section.imageScroll",
             ],
-            revalidate: 30,
           });
           setBrandData(data);
         };

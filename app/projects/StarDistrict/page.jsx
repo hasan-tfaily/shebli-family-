@@ -9,9 +9,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import StarDistrictSection from "@/components/common/StarDistrictSection";
-import { get } from "http";
 import { starDistrictData } from "@/data/starDistrictData";
-import { getPageByName } from "@/lib/strapi/queries";
+import { fetchPageByName } from "@/lib/strapi/client";
 import { getStrapiMediaUrl } from "@/lib/strapi/media";
 import ReactMarkdown from "react-markdown";
 
@@ -22,7 +21,7 @@ export default function StarDistrict() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await getPageByName({
+      const data = await fetchPageByName({
         pageName: "Star District - Brand",
         populate: [
           "Hero",
@@ -37,7 +36,6 @@ export default function StarDistrict() {
           "section.featuredItems.img",
           "section.imageScroll",
         ],
-        revalidate: 30,
       });
       setStarDistrictBrand(data);
       setLoading(false);
