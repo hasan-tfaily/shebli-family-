@@ -1,9 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import axios from "axios";
 import DropdownSelect from "../common/DropdownSelect";
-import Link from "next/link";
 // ---- TYPES ----
 interface ContactFormElements extends HTMLFormControlsCollection {
   name: HTMLInputElement;
@@ -89,15 +87,26 @@ export default function ContactForm() {
       return;
     }
 
-    const emailValue = email.value.trim();
-
     try {
-      const response = await axios.post(
-        "https://express-brevomail.vercel.app/api/contacts",
-        { email: emailValue }
-      );
+      const response = await fetch("/api/createLeads", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          data: {
+            name: name.value.trim(),
+            email: email.value.trim() || null,
+            phoneNumber: phone.value.trim() || null,
+            country: country,
+            city: city.value.trim(),
+            topic: topic,
+            message: message.value.trim(),
+          },
+        }),
+      });
 
-      if ([200, 201].includes(response.status)) {
+      if (response.ok) {
         // ✅ safely reset using the captured form reference
         form.reset();
         setCountry("");
@@ -105,15 +114,15 @@ export default function ContactForm() {
         setSuccess(true);
         handleShowMessage();
       } else {
+        const errorData = await response.json();
+        console.error("Lead creation failed:", errorData);
         setSuccess(false);
         handleShowMessage();
       }
     } catch (error) {
+      console.error("Error submitting form:", error);
       setSuccess(false);
       handleShowMessage();
-      form.reset();
-      setCountry("");
-      setTopic("");
     }
   };
 
@@ -150,12 +159,7 @@ export default function ContactForm() {
         {/* Row 2: Phone + Country */}
         <div className="cols">
           <fieldset className="item">
-            <input
-              type="number"
-              name="phone"
-              id="phone"
-              placeholder="Phone"
-            />
+            <input type="number" name="phone" id="phone" placeholder="Phone" />
           </fieldset>
           <fieldset className="item">
             <DropdownSelect
@@ -253,7 +257,6 @@ export default function ContactForm() {
           <span>Submit Inquiry</span>
         </button>
       </form>
-    
     </>
   );
 }
