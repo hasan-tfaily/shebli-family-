@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 
 import Details1 from "@/components/case-studies/Details1";
 import RelatedCaseStudies from "@/components/case-studies/RelatedCaseStudies";
-import { getPageByName } from "@/lib/strapi/queries";
+import { fetchPageByName } from "@/lib/strapi/client";
 import { getStrapiMediaUrl } from "@/lib/strapi/media";
 
 export default function InvestorRelationsPage() {
@@ -14,7 +14,7 @@ export default function InvestorRelationsPage() {
 
   useEffect(() => {
     const fetchData = async () => {
-          const data = await getPageByName({
+          const data = await fetchPageByName({
             pageName: "Investor Relations - Page",
             populate: [
               "Hero",
@@ -27,7 +27,6 @@ export default function InvestorRelationsPage() {
               "section.featuredItems.img",
               "section.imageScroll",
             ],
-            revalidate: 30,
           });
           setBrandData(data);
           setLoading(false);

@@ -10,7 +10,7 @@ import Services2 from "@/components/homes/digital-transformation/Services2";
 import Career from "@/components/otherPages/Career";
 import Features3 from "@/components/common/Features3";
 import Services from "@/components/homes/it-consulting/Services";
-import { getPageByName } from "@/lib/strapi/queries";
+import { fetchPageByName } from "@/lib/strapi/client";
 import { getStrapiMediaUrl } from "@/lib/strapi/media";
 
 export default function page() {
@@ -19,7 +19,7 @@ export default function page() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await getPageByName({
+      const data = await fetchPageByName({
         pageName: "Careers - Page",
         populate: [
           "Hero",
@@ -33,7 +33,6 @@ export default function page() {
           "section.featuredItems",
           "section.featuredItems.img",
         ],
-        revalidate: 30,
       });
       setCareerPage(data);
       setLoading(false);
@@ -50,25 +49,17 @@ export default function page() {
             <div className="sub-title body-2">
               {careerPage?.Hero?.description}
               <br />
-              
             </div>
           </div>
         </div>
       </div>
       <div className="main-content">
         {/* <Services2/> */}
-        <Features3 
-         featuresSection={careerPage?.section?.[0]}
-        />
- {/* <Services2/> */}
-        <Services 
-          servicesSection={careerPage?.section?.[1]}
-        />
+        <Features3 featuresSection={careerPage?.section?.[0]} />
+        {/* <Services2/> */}
+        <Services servicesSection={careerPage?.section?.[1]} />
 
-
-        <Career 
-         careerSection={careerPage?.section?.[2]}
-        />
+        <Career careerSection={careerPage?.section?.[2]} />
         {/* <Contact />
         <Map />
         <Locations /> */}

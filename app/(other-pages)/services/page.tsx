@@ -5,9 +5,8 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import Breadcumb from "@/components/common/Breadcumb";
 import Brands from "@/components/homes/tax-advisory/Brands";
-import { getPageByName } from "@/lib/strapi/queries";
+import { fetchPageByName } from "@/lib/strapi/client";
 import { getStrapiMediaUrl } from "@/lib/strapi/media";
-import { get } from "http";
 
 export default function ServicesPage() {
   const [industriesWeServePage, setBrandData] = useState<any>(null);
@@ -15,7 +14,7 @@ export default function ServicesPage() {
 
   useEffect(() => {
     const fetchData = async () => {
-          const data = await getPageByName({
+          const data = await fetchPageByName({
             pageName: "Industries We Serve - Page",
             populate: [
               "Hero",
@@ -29,7 +28,6 @@ export default function ServicesPage() {
               "section.imageScroll",
               "section.ButtonLinks"
             ],
-            revalidate: 30,
           });
           setBrandData(data);
           setLoading(false);

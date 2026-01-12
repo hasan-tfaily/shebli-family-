@@ -2,14 +2,13 @@
 
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { Metadata } from "next";
 import Features from "@/components/homes/tax-advisory/Features";
 import About from "@/components/homes/strategy-consulting/About";
 import Process from "@/components/homes/insurance-consultancy/Process";
 import Benefits from "@/components/homes/it-consulting/Benefits";
 import Services from "@/components/homes/tax-advisory/Services";
 import Image from "next/image";
-import { getPageByName } from "@/lib/strapi/queries";
+import { fetchPageByName } from "@/lib/strapi/client";
 import { getStrapiMediaUrl } from "@/lib/strapi/media";
 
 export default function Page() {
@@ -18,7 +17,7 @@ export default function Page() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await getPageByName({
+      const data = await fetchPageByName({
         pageName: "Franchise & Partnership - Page",
         populate: [
           "Hero",
@@ -31,7 +30,6 @@ export default function Page() {
           "section.featuredItems.img",
           "section.ButtonLinks",
         ],
-        revalidate: 30,
       });
       setFranchisePage(data);
       setLoading(false);

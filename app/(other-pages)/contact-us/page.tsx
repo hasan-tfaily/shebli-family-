@@ -7,7 +7,7 @@ import Contact from "@/components/otherPages/Contact";
 import Locations from "@/components/otherPages/Locations";
 import Map from "@/components/otherPages/Map";
 import Breadcumb from "@/components/common/Breadcumb";
-import { getPageByName } from "@/lib/strapi/queries";
+import { fetchPageByName } from "@/lib/strapi/client";
 import { getStrapiMediaUrl } from "@/lib/strapi/media";
 
 export default function ContactUsPage() {
@@ -15,7 +15,7 @@ export default function ContactUsPage() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await getPageByName({
+      const data = await fetchPageByName({
         pageName: "Contact Us - Page",
         populate: [
           "Hero",
@@ -27,7 +27,6 @@ export default function ContactUsPage() {
           "section.featuredItems",
           "section.featuredItems.img",
         ],
-        revalidate: 30,
       });
       setBrandData(data);
     };
