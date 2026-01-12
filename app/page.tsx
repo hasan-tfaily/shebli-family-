@@ -76,6 +76,7 @@ export default async function Page() {
         "Hero",
         "Hero.image",
         "section",
+        "blogs",
         "section.img",
         "section.list",
         "section.featuredItems.list",
@@ -116,6 +117,7 @@ export default async function Page() {
         {/* <Services /> */}
         <Blogs 
           blogSection={homePage?.section?.[4]}
+          blogsData={homePage?.blogs}
         />
         {/* <Team /> */}
         <Process 
