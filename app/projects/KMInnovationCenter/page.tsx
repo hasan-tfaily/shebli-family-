@@ -15,7 +15,7 @@ import { getStrapiMediaUrl } from "@/lib/strapi/media";
 
 export default function KMInnovationCenterPage() {
   const swiperRef = useRef<SwiperClass | null>(null);
-  const [brandData, setBrandData] = useState<any>(null);
+  const [KMInnovationBrand, setBrandData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -25,6 +25,7 @@ export default function KMInnovationCenterPage() {
         populate: [
           "Hero",
           "Hero.image",
+          "logo",
           "section",
           "section.img",
           "section.list",
@@ -57,26 +58,18 @@ export default function KMInnovationCenterPage() {
     };
   }, []);
 
-  const slides = [
-    "/image/KM-innovation/innovation center 3.jpg",
-    "/image/KM-innovation/innovation center 4.jpg",
-    "/image/KM-innovation/innovation center 5.jpg",
-    "/image/KM-innovation/innovation 5.jpg",
-    "/image/KM-innovation/innovation 6.jpg",
-  ];
-
   if (loading) {
     return <div>Loading...</div>;
   }
 
-  const sectionOne = brandData?.section?.[0];
+  const sectionOne = KMInnovationBrand?.section?.[0];
 
   return (
     <>
       {/* HERO IMAGE */}
       <div className="image img-top">
         <Image
-          src={getStrapiMediaUrl(brandData?.Hero?.image) || "/image/page-title/banner.jpg"}
+          src={getStrapiMediaUrl(KMInnovationBrand?.Hero?.image) || "/image/page-title/banner.jpg"}
           alt="KM Innovation Center Hero"
           className="lazyload"
           width={1920}
@@ -92,20 +85,27 @@ export default function KMInnovationCenterPage() {
             <div className="blog-content blog-details-2-content blog-details-content">
               {/* TITLE */}
               <div className="blog-details-top">
-                <h2
-                  style={{
-                    color: "#000",
-                    fontFamily: "Arial, Helvetica, sans-serif",
-                    fontSize: "32px",
-                    fontWeight: "bold",
-                    textAlign: "center",
-                    padding: "20px 0",
-                    margin: 0,
-                  }}
-                >
-                  {sectionOne?.title }
-                </h2>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  width: "100%",
+                  // padding: "0px 0",
+                  margin: 0,
+                  marginTop: "-60px",
+                }}
+              >
+                <Image
+                  src={getStrapiMediaUrl(KMInnovationBrand?.logo)}
+                  alt="KidzMondo"
+                  width={260}
+                  height={80}
+                  priority
+                  style={{ height: "auto" }}
+                />
               </div>
+            </div>
 
               {/* MAIN IMAGE */}
               <div className="image-blog">
@@ -171,12 +171,12 @@ export default function KMInnovationCenterPage() {
                 </div>
 
                 <h5 className="title-desc" style={{ marginTop: "90px" }}>
-                  {brandData?.section?.[1]?.title || "Activities:"}
+                  {KMInnovationBrand?.section?.[1]?.title || "Activities:"}
                 </h5>
               </div>
 
               <Benefits11 
-               benefitsSection={brandData?.section?.[1]}
+               benefitsSection={KMInnovationBrand?.section?.[1]}
               />
             </div>
           </div>

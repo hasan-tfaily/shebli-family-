@@ -27,6 +27,7 @@ export default function StarDistrict() {
         populate: [
           "Hero",
           "Hero.image",
+          "logo",
           "section",
           "section.img",
           "section.list",
@@ -62,14 +63,6 @@ export default function StarDistrict() {
     };
   }, []);
 
-  const slides = [
-    "/image/starDistrict/star district 2.jpg",
-    "/image/starDistrict/star district 3.jpg",
-    "/image/starDistrict/star 3.jpg",
-    "/image/starDistrict/star 4.jpg",
-    "/image/starDistrict/star 5.jpg",
-  ];
-
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -94,20 +87,27 @@ export default function StarDistrict() {
             <div className="blog-content blog-details-2-content blog-details-content">
               {/* Title */}
               <div className="blog-details-top">
-                <h2
-                  style={{
-                    color: "#000",
-                    fontFamily: "Arial, Helvetica, sans-serif",
-                    fontSize: "32px",
-                    fontWeight: "bold",
-                    textAlign: "center",
-                    padding: "20px 0",
-                    margin: 0,
-                  }}
-                >
-                  {starDistrictBrand?.section[0]?.title}
-                </h2>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  width: "100%",
+                  // padding: "0px 0",
+                  margin: 0,
+                  marginTop: "-60px",
+                }}
+              >
+                <Image
+                  src={getStrapiMediaUrl(starDistrictBrand?.logo)}
+                  alt="Star District"
+                  width={260}
+                  height={80}
+                  priority
+                  style={{ height: "auto" }}
+                />
               </div>
+            </div>
 
               {/* Main image */}
               <div className="image-blog">

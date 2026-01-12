@@ -26,6 +26,7 @@ export default function KarnavaliPage() {
         populate: [
           "Hero",
           "Hero.image",
+          "logo",
           "section",
           "section.img",
           "section.list",
@@ -80,21 +81,29 @@ export default function KarnavaliPage() {
         <div className="row">
           <div className="col-12">
             <div className="blog-content blog-details-2-content blog-details-content">
+              {/* Top Title */}
               <div className="blog-details-top">
-                <h2
-                  style={{
-                    color: "#000",
-                    fontFamily: "Arial, Helvetica, sans-serif",
-                    fontSize: "32px",
-                    fontWeight: "bold",
-                    textAlign: "center",
-                    padding: "20px 0",
-                    margin: 0,
-                  }}
-                >
-                  {karnavaliBrand.section?.[0]?.title}
-                </h2>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  width: "100%",
+                  // padding: "0px 0",
+                  margin: 0,
+                  marginTop: "-60px",
+                }}
+              >
+                <Image
+                  src={getStrapiMediaUrl(karnavaliBrand?.logo)}
+                  alt="Karnavali"
+                  width={260}
+                  height={80}
+                  priority
+                  style={{ height: "auto" }}
+                />
               </div>
+            </div>
 
               {/* Main Image */}
               <div className="image-blog">

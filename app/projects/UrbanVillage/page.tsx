@@ -25,6 +25,7 @@ export default function UrbanVillage() {
             populate: [
               "Hero",
               "Hero.image",
+              "logo",
               "section",
               "section.img",
               "section.featuredItems.list",
@@ -82,20 +83,27 @@ export default function UrbanVillage() {
           <div className="col-12">
             <div className="blog-content blog-details-2-content blog-details-content">
               <div className="blog-details-top">
-                <h2
-                  style={{
-                    color: "#000",
-                    fontFamily: "Arial, Helvetica, sans-serif",
-                    fontSize: "32px",
-                    fontWeight: "bold",
-                    textAlign: "center",
-                    padding: "20px 0",
-                    margin: 0,
-                  }}
-                >
-                  {urbanVillageBrand?.section?.[0]?.title}
-                </h2>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  width: "100%",
+                  // padding: "0px 0",
+                  margin: 0,
+                  marginTop: "-60px",
+                }}
+              >
+                <Image
+                  src={getStrapiMediaUrl(urbanVillageBrand?.logo)}
+                  alt="Urban Village"
+                  width={260}
+                  height={80}
+                  priority
+                  style={{ height: "auto" }}
+                />
               </div>
+            </div>
 
               {/* MAIN IMAGE */}
               <div className="image-blog">

@@ -17,6 +17,7 @@ import ReactMarkdown from "react-markdown";
 export default function BowlNRock() {
   const swiperRef = useRef<SwiperClass | null>(null);
   const [bowlNRockBrand, setBrandData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,6 +26,7 @@ export default function BowlNRock() {
             populate: [
               "Hero",
               "Hero.image",
+              "logo",
               "section",
               "section.img",
               "section.featuredItems.list",
@@ -36,6 +38,7 @@ export default function BowlNRock() {
             revalidate: 0,
           });
           setBrandData(data);
+          setLoading(false);
         };
         fetchData();
       }, []);
@@ -55,6 +58,10 @@ export default function BowlNRock() {
       window.removeEventListener("orientationchange", update);
     };
   }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <>
@@ -76,20 +83,27 @@ export default function BowlNRock() {
             <div className="blog-content blog-details-2-content blog-details-content">
               {/* Top Title */}
               <div className="blog-details-top">
-                <h2
-                  style={{
-                    color: "#000",
-                    fontFamily: "Arial, Helvetica, sans-serif",
-                    fontSize: "32px",
-                    fontWeight: "bold",
-                    textAlign: "center",
-                    padding: "20px 0",
-                    margin: 0,
-                  }}
-                >
-                  {bowlNRockBrand?.section?.[0]?.title}
-                </h2>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  width: "100%",
+                  // padding: "0px 0",
+                  margin: 0,
+                  marginTop: "-60px",
+                }}
+              >
+                <Image
+                  src={getStrapiMediaUrl(bowlNRockBrand?.logo)}
+                  alt="Bowl N Rock"
+                  width={260}
+                  height={80}
+                  priority
+                  style={{ height: "auto" }}
+                />
               </div>
+            </div>
 
               {/* Main Image */}
               <div className="image-blog">
