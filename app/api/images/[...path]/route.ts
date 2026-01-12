@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const STRAPI_BASE_URL = "http://46.62.246.5:1337";
+const STRAPI_BASE_URL = process.env.STRAPI_BASE_URL || "http://46.62.246.5:1337";
 
 export async function GET(
   request: NextRequest,
@@ -49,4 +49,3 @@ export async function GET(
     return new NextResponse(null, { status: 500 });
   }
 }
-

@@ -25,14 +25,29 @@ export type StrapiMediaSingle =
           }>;
     };
 
+/**
+ * Converts any Strapi media URL to use the local proxy.
+ * This ensures the actual Strapi URL is never exposed to the client.
+ */
 export function toAbsoluteStrapiUrl(url: string | undefined | null): string | undefined {
   if (!url) return undefined;
-  // If already an absolute URL pointing to Strapi, convert to proxy
-  if (url.startsWith("http://46.62.246.5:1337")) {
-    const path = url.replace("http://46.62.246.5:1337", "");
-    return `/api/images${path}`;
+  
+  // If already using the proxy, return as-is
+  if (url.startsWith("/api/images")) return url;
+  
+  // If it's an absolute URL to any external Strapi server, convert to proxy
+  // This handles any Strapi URL without hardcoding specific IPs
+  if (url.match(/^https?:\/\/[^/]+:\d+/)) {
+    // Extract the path after the host:port
+    const match = url.match(/^https?:\/\/[^/]+:\d+(\/.*)/);
+    if (match) {
+      return `/api/images${match[1]}`;
+    }
   }
+  
+  // If it's another absolute URL (CDN, etc.), return as-is
   if (url.startsWith("http://") || url.startsWith("https://")) return url;
+  
   // For relative paths (e.g., /uploads/...), use the proxy API
   return `/api/images${url}`;
 }
@@ -89,4 +104,13 @@ export function getStrapiMediaUrlOrFallback(
 ): string {
   const url = getStrapiMediaUrl(media);
   return url ?? fallback;
+}
+
+/**
+ * Helper function to convert any Strapi image URL to use the proxy.
+ * Use this in components to ensure URLs are always proxied.
+ */
+export function getProxiedImageUrl(url?: string, fallback?: string): string {
+  if (!url) return fallback || PLACEHOLDER_IMAGE;
+  return toAbsoluteStrapiUrl(url) ?? fallback ?? PLACEHOLDER_IMAGE;
 }

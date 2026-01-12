@@ -7,6 +7,7 @@ import {
   getAllBlogs,
   StrapiBlog,
 } from "@/lib/strapi/queries";
+import { getProxiedImageUrl } from "@/lib/strapi/media";
 
 // Helper to format date
 function formatDateLong(dateString?: string) {
@@ -21,13 +22,7 @@ function formatDateLong(dateString?: string) {
 
 // Helper to get image URL via proxy
 function getImageUrl(url?: string) {
-  if (!url) return "";
-  if (url.startsWith("/api/images")) return url;
-  if (url.startsWith("http://46.62.246.5:1337")) {
-    return `/api/images${url.replace("http://46.62.246.5:1337", "")}`;
-  }
-  if (url.startsWith("http://") || url.startsWith("https://")) return url;
-  return `/api/images${url}`;
+  return getProxiedImageUrl(url, "");
 }
 
 export const dynamic = "force-dynamic";

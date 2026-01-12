@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { StrapiBlog } from "@/lib/strapi/queries";
+import { getProxiedImageUrl } from "@/lib/strapi/media";
 
 type Props = {
   blogs?: StrapiBlog[];
@@ -21,13 +22,7 @@ function formatDate(dateString?: string) {
 
 // Helper to get image URL via proxy
 function getImageUrl(url?: string) {
-  if (!url) return "/image/blog/blog1.jpg"; // fallback image
-  if (url.startsWith("/api/images")) return url;
-  if (url.startsWith("http://46.62.246.5:1337")) {
-    return `/api/images${url.replace("http://46.62.246.5:1337", "")}`;
-  }
-  if (url.startsWith("http://") || url.startsWith("https://")) return url;
-  return `/api/images${url}`;
+  return getProxiedImageUrl(url, "/image/blog/blog1.jpg");
 }
 
 // Helper to truncate description
