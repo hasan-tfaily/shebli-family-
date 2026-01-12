@@ -187,28 +187,29 @@ export default function Details1({ investorRelationsPage }: any) {
               <div className="case-details-box mb-40">
                 <h5 className="color-on-suface-container">Downloads:</h5>
                 <div className="box-item client flex justify-content-between align-items-center">
-                  <span className="color-on-suface-variant-1">Investor Deck</span>
+                  <span className="color-on-suface-variant-1">{investorRelationsPage?.section[1]?.featuredItems?.[0]?.list[0].point}</span>
                   {/* <span className="text-btn color-on-suface-container">
                     Avitex Company
                   </span> */}
                 </div>
                 <div className="box-item flex justify-content-between align-items-center">
-                  <span className="color-on-suface-variant-1">Annual Reports</span>
+                  <span className="color-on-suface-variant-1">{investorRelationsPage?.section[1]?.featuredItems?.[0]?.list[1].point}</span>
                   {/* <span className="text-btn color-on-suface-container">
                     Planning, Estate
                   </span> */}
                 </div>
                 <div className="box-item flex justify-content-between align-items-center">
-                  <span className="color-on-suface-variant-1">Press Releases</span>
+                  <span className="color-on-suface-variant-1">{investorRelationsPage?.section[1]?.featuredItems?.[0]?.list[2].point}</span>
                   {/* <span className="text-btn color-on-suface-container">
                     10/26/2024
                   </span> */}
                 </div>
                 <Link
-                  href={`/contact-us`}
+                  href={getStrapiMediaUrl(investorRelationsPage?.section[1]?.featuredItems?.[0]?.img) || '#'}
                   className="tf-btnN style-1 bg-white bg-white-style-2 w-full text-center"
+                  download
                 >
-                  <span> Download Now </span>
+                  <span> {investorRelationsPage?.section[1]?.featuredItems?.[0]?.title} </span>
                 </Link>
                 {/* <div className="box-item flex justify-content-between align-items-center">
                   <span className="color-on-suface-variant-1">Duration:</span>
@@ -329,7 +330,7 @@ export default function Details1({ investorRelationsPage }: any) {
                   </div>
                 </div> */}
                 <Link
-                  href={`/contact-us`}
+                  href={investorRelationsPage?.section[1]?.ButtonLinks?.[0]?.link}
                   className="tf-btn style-1 bg-white bg-white-style-2 w-full text-center"
                 >
                   <span> {investorRelationsPage?.section[1]?.ButtonLinks?.[0]?.title} </span>

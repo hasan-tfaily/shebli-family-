@@ -12,12 +12,12 @@ export default function Blogs({ blogSection }: { blogSection?: any }) {
             <div className="heading-section text-center">
               <div className="text-anime-wave-1">
                 <a href="#" className="tag label text-btn-uppercase">
-                  READ OUR BLOG
+                  {blogSection?.miniTitle}
                 </a>
               </div>
-              <h3 className="text-anime-wave-1 mb-12">Insights From the World of Edutainment</h3>
+              <h3 className="text-anime-wave-1 mb-12">{blogSection?.title}</h3>
               <div className="sub-title body-2 text-anime-wave-1">
-                 Explore articles, interviews, and updates from the Kidz Holding community—where innovation in learning and play comes to life.
+                {blogSection?.description}
               </div>
             </div>
             <div className="row rg-30">
