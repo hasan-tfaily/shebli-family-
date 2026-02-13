@@ -2,35 +2,34 @@ import Image from "next/image";
 import React from "react";
 import ReactMarkdown from "react-markdown";
 
-import Testimonials from "@/components/common/Testimonials";
-import Contact from "@/components/common/Contact";
+import ParkandResortServices from "@/components/common/ParkandResortServices";
 import ProjectGallery from "../ProjectGallery";
 import { getPageByName } from "@/lib/strapi/queries";
 import { getStrapiMediaUrl } from "@/lib/strapi/media";
 
-export default async function KarnavaliPage() {
-  const karnavaliBrand: any = await getPageByName({
-    pageName: "Karnavali - Brand",
+export default async function TheEscapeParkandResortPage() {
+  const escapeResortBrand: any = await getPageByName({
+    pageName: "The Escape Park & Resort - Brand",
     populate: [
       "Hero",
-      "Hero.image",
       "logo",
+      "Hero.image",
       "section",
       "section.img",
       "section.list",
+      "section.featuredItems.list",
       "section.ButtonLinks",
       "section.featuredItems",
-      "section.featuredItems.img",
       "section.imageScroll",
+      "section.featuredItems.img",
     ],
   });
 
-  if (!karnavaliBrand) {
+  if (!escapeResortBrand) {
     return <div>Failed to load page data.</div>;
   }
 
-  const sectionOne = karnavaliBrand?.section?.[0];
-  const sectionTwo = karnavaliBrand?.section?.[1];
+  const sectionOne = escapeResortBrand?.section?.[0];
 
   // Pre-resolve gallery image URLs for the client component
   const galleryImages: string[] = (sectionOne?.imageScroll ?? []).map(
@@ -42,8 +41,8 @@ export default async function KarnavaliPage() {
       {/* HERO (full width) */}
       <div className="kidz-hero">
         <Image
-          src={getStrapiMediaUrl(karnavaliBrand.Hero.image)}
-          alt="Karnavali Hero"
+          src={getStrapiMediaUrl(escapeResortBrand.Hero.image)}
+          alt="The Escape Park & Resort Hero"
           width={1920}
           height={1080}
           style={{ width: "100%", height: "auto", maxWidth: "100%" }}
@@ -59,8 +58,8 @@ export default async function KarnavaliPage() {
             {/* Left: Logo */}
             <div className="kidz-overview__logo">
               <Image
-                src={getStrapiMediaUrl(karnavaliBrand?.logo)}
-                alt="Karnavali"
+                src={getStrapiMediaUrl(escapeResortBrand?.logo)}
+                alt="The Escape Park & Resort"
                 width={260}
                 height={90}
                 priority
@@ -96,9 +95,9 @@ export default async function KarnavaliPage() {
                 {/* GALLERY */}
                 <ProjectGallery
                   images={galleryImages}
-                  altPrefix="Karnavali"
-                  className="karnavali-gallery"
-                  sliderClassName="karnavali-slider"
+                  altPrefix="Escape Park"
+                  className="escapepark-gallery"
+                  sliderClassName="escapepark-slider"
                 />
 
                 {/* TEXT SECTIONS */}
@@ -108,19 +107,6 @@ export default async function KarnavaliPage() {
                       {sectionOne?.featuredItems?.[1]?.Body || ""}
                     </ReactMarkdown>
                   </div>
-
-                  <div className="desc-blog" style={{ marginTop: "50px" }}>
-                    <h5 className="title-desc">{sectionTwo?.title}</h5>
-                    <p className="body-2">{sectionTwo?.description}</p>
-                  </div>
-
-                  <Testimonials testimonialSection={sectionTwo} />
-
-                  <div className="desc-blog" style={{ marginTop: "50px" }}>
-                    <p className="body-2">
-                      {sectionTwo?.featuredItems?.[6]?.Body}
-                    </p>
-                  </div>
                 </div>
               </div>
             </div>
@@ -128,8 +114,10 @@ export default async function KarnavaliPage() {
         </div>
       </section>
 
-      {/* CONTACT */}
-      <Contact contactSection={karnavaliBrand?.section?.[2]} />
+      {/* SERVICES */}
+      <ParkandResortServices
+        activitiesSection={escapeResortBrand?.section?.[1]}
+      />
     </div>
   );
 }

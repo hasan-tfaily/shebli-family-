@@ -2793,6 +2793,190 @@ background-image: url("/image/page-title/our-ventures (1).png");
   margin: 0;
 }
 
+.escape-hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 992px) {
+  .escape-hero {
+    height: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .escape-hero {
+    height: 220px; 
+  }
+}
+@media (max-width: 768px) {
+  .escape-hero {
+    margin-top: 80px; 
+  }
+}
+@media (max-width: 768px) {
+  .kidz-hero {
+    margin-top: 80px; 
+  }
+}
+@media (max-width: 767.98px) {
+  .testimonial-item {
+    margin-bottom: 16px;
+  }
+
+  .testimonial-item:last-child {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .page-hero { margin-top: 80px; } 
+}
+
+
+/* ── KidzMondo page layout ─────────────────────────────── */
+
+.kidz-page {
+  width: 100%;
+}
+
+/* =======================
+   HERO
+======================= */
+.kidz-hero {
+  width: 100%;
+  overflow: hidden;
+}
+
+.kidz-hero__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 100%;
+}
+
+/* =======================
+   ✅ WIDTH NORMALIZER
+   Everything after hero = same width
+======================= */
+
+/* 1) kill theme max-width/padding on blog wrappers */
+.kidz-page .blog-details-content,
+.kidz-page .blog-details-2-content,
+.kidz-page .blog-content {
+  max-width: none !important;
+  width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* 2) if inner components add their own container inside tf-container (nested container issue) */
+.kidz-page .tf-container .container,
+.kidz-page .tf-container .tf-container {
+  max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* =======================
+   OVERVIEW
+======================= */
+.kidz-overview {
+  background: #fff;
+  margin-top: -70px;
+  padding: 70px 0 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.kidz-overview__grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 36px;
+  align-items: start;
+  padding-left: 150px;
+  padding-right: 200px;
+}
+
+.kidz-overview__logo img {
+  max-width: 260px;
+  height: auto;
+  display: block;
+}
+
+.kidz-overview__title {
+  margin: 0 0 12px 0;
+  line-height: 1.15;
+}
+
+.kidz-overview__h {
+  margin: 18px 0 10px 0;
+}
+
+.kidz-overview__p {
+  margin: 0 0 14px 0;
+  max-width: none;
+  opacity: 0.9;
+}
+
+/* =======================
+   MAIN
+======================= */
+.kidz-main {
+  margin-top: 22px;
+}
+
+.kidzmondo-gallery {
+  width: 100%;
+}
+
+.kidz-sections {
+  margin-top: 26px;
+
+  /* Respect CMS spacing: give headings breathing room */
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 1.4em;
+    margin-bottom: 0.6em;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  p + h1, p + h2, p + h3, p + h4, p + h5, p + h6 {
+    margin-top: 1.6em;
+  }
+}
+
+.kidz-sections__mt {
+  margin-top: 50px;
+}
+
+/* =======================
+   TABLE / CARDS
+======================= */
+.kidz-formats {
+  margin: 32px 0;
+}
+
+.kidz-formats__head {
+  max-width: 900px;
+  margin: 0 auto 18px;
+  text-align: center;
+}
+
+.kidz-formats__title {
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.kidz-formats__subtitle {
+  opacity: 0.75;
+  margin: 0;
+}
+
 .kidz-table-wrap {
   width: 100%;
   overflow-x: auto;
@@ -2829,7 +3013,7 @@ background-image: url("/image/page-title/our-ventures (1).png");
   font-weight: 800;
   border-bottom: 1px solid rgba(15, 23, 42, 0.12);
   background: rgba(15, 23, 42, 0.02);
-  position: sticky; /* nice when scrolling horizontally */
+  position: sticky;
   left: 0;
 }
 
@@ -2852,7 +3036,7 @@ background-image: url("/image/page-title/our-ventures (1).png");
 
 .kidz-table tbody tr:hover td,
 .kidz-table tbody tr:hover th {
-  background: #C9EFFC; /* soft yellow hover */
+  background: #c9effc;
 }
 
 .kidz-cards {
@@ -2909,47 +3093,44 @@ background-image: url("/image/page-title/our-ventures (1).png");
   }
 }
 
-
-.escape-hero {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
+/* =======================
+   BRANDS
+======================= */
+.kidz-brands {
+  padding: 40px 0;
 }
 
-@media (max-width: 992px) {
-  .escape-hero {
-    height: 320px;
+/* =======================
+   RESPONSIVE
+======================= */
+@media (max-width: 991px) {
+  .kidz-overview {
+    margin-top: -28px;
+    padding: 28px 0 18px;
+  }
+
+  .kidz-overview__grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    justify-items: center;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .kidz-overview__p {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
-@media (max-width: 768px) {
-  .escape-hero {
-    height: 220px; 
-  }
-}
-@media (max-width: 768px) {
-  .escape-hero {
-    margin-top: 80px; 
-  }
-}
 @media (max-width: 768px) {
   .kidz-hero {
-    margin-top: 80px; 
+    margin-top: 80px;
   }
-}
-@media (max-width: 767.98px) {
-  .testimonial-item {
-    margin-bottom: 16px;
-  }
-
-  .testimonial-item:last-child {
-    margin-bottom: 20px;
-  }
-}
-@media (max-width: 768px) {
-  .page-hero { margin-top: 80px; } 
 }
 
+/* ── end KidzMondo page layout ─────────────────────────── */
 
 /* stop vertical centering */
 .tab-content,
