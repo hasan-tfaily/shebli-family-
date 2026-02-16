@@ -125,6 +125,7 @@ export interface DropdownSelectProps {
   defaultOption?: string;
   selectedValue?: string;
   addtionalParentClass?: string;
+  searchable?: boolean;
 }
 
 export default function DropdownSelect({
@@ -133,18 +134,29 @@ export default function DropdownSelect({
   defaultOption = "",
   selectedValue,
   addtionalParentClass = "",
+  searchable = false,
 }: DropdownSelectProps) {
   const selectRef = useRef<HTMLDivElement | null>(null);
+  const searchInputRef = useRef<HTMLInputElement | null>(null);
   const [isOpen, setIsOpen] = useState(false);
   const [internalSelected, setInternalSelected] = useState<string>(
     defaultOption || options[0] || ""
   );
+  const [searchQuery, setSearchQuery] = useState("");
 
   const currentValue =
     selectedValue || internalSelected || defaultOption || options[0] || "";
 
   const toggleDropdown = () => {
-    setIsOpen((prev) => !prev);
+    setIsOpen((prev) => {
+      const nextOpen = !prev;
+      if (nextOpen && searchable) {
+        setSearchQuery("");
+        // Focus the search input after opening
+        setTimeout(() => searchInputRef.current?.focus(), 0);
+      }
+      return nextOpen;
+    });
   };
 
   // Close when clicking outside
@@ -155,6 +167,7 @@ export default function DropdownSelect({
         !selectRef.current.contains(event.target as Node)
       ) {
         setIsOpen(false);
+        setSearchQuery("");
       }
     };
 
@@ -170,7 +183,14 @@ export default function DropdownSelect({
     }
     onChange(value);
     setIsOpen(false);
+    setSearchQuery("");
   };
+
+  const filteredOptions = searchable && searchQuery
+    ? options.filter((opt) =>
+        opt.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    : options;
 
   return (
     <div
@@ -179,8 +199,45 @@ export default function DropdownSelect({
       onClick={toggleDropdown}
     >
       <span className="current">{currentValue}</span>
-      <ul className="list">
-        {options.map((elm, i) => {
+      <ul
+        className="list"
+        style={
+          searchable
+            ? { maxHeight: "250px", overflowY: "auto" }
+            : undefined
+        }
+      >
+        {searchable && (
+          <li
+            className="option search-option"
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              position: "sticky",
+              top: 0,
+              zIndex: 10,
+              background: "#fff",
+              padding: "6px 10px",
+            }}
+          >
+            <input
+              ref={searchInputRef}
+              type="text"
+              placeholder="Search..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onClick={(e) => e.stopPropagation()}
+              style={{
+                width: "100%",
+                padding: "6px 10px",
+                border: "1px solid #ccc",
+                borderRadius: "4px",
+                fontSize: "14px",
+                outline: "none",
+              }}
+            />
+          </li>
+        )}
+        {filteredOptions.map((elm, i) => {
           const isSelected = currentValue === elm;
           return (
             <li
@@ -195,6 +252,14 @@ export default function DropdownSelect({
             </li>
           );
         })}
+        {searchable && filteredOptions.length === 0 && (
+          <li
+            className="option text text-1"
+            style={{ pointerEvents: "none", opacity: 0.5 }}
+          >
+            No results found
+          </li>
+        )}
       </ul>
     </div>
   );
