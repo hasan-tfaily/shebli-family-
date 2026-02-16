@@ -22,7 +22,7 @@ export default async function Page() {
       "section.featuredItems.img",
       "section.ButtonLinks",
     ],
-    revalidate: 60,
+    revalidate: 2,
   });
 
   return (

@@ -132,7 +132,7 @@ function buildPageQueryParams(
 export async function getPageByName({
   pageName,
   populate,
-  revalidate = 0,
+  revalidate = 2,
 }: Options) {
   try {
     const { data } = await apiService.get<StrapiPageResponse>(
@@ -189,7 +189,7 @@ function buildPopulateParams(populate: StrapiPopulate = ["*"]) {
  */
 export async function getAllBlogs({
   populate = ["*"],
-  revalidate = 0,
+  revalidate = 2,
   limit,
 }: BlogQueryOptions = {}) {
   try {
@@ -220,7 +220,7 @@ export async function getAllBlogs({
 export async function getBlogByDocumentId({
   documentId,
   populate = ["*"],
-  revalidate = 0,
+  revalidate = 2,
 }: BlogByIdOptions) {
   try {
     const { data } = await apiService.get<StrapiBlogSingleResponse>(
@@ -266,7 +266,7 @@ type SingleTypeOptions = {
  */
 export async function getSingleType(
   endpoint: string,
-  { populate, revalidate = 0 }: SingleTypeOptions = {}
+  { populate, revalidate = 2 }: SingleTypeOptions = {}
 ) {
   try {
     const params = buildSingleTypeQueryParams(populate);

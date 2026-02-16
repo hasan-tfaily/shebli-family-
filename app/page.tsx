@@ -46,12 +46,12 @@ export default async function Page() {
           "section.featuredItems.img",
           "section.imageScroll",
         ],
-        revalidate: 30,
+        revalidate: 2,
       }),
       getAllBlogs({
         populate: ["coverImage", "category"],
         limit: 4,
-        revalidate: 30,
+        revalidate: 2,
       }),
     ]);
     homePage = homePageData;

@@ -29,8 +29,8 @@ export async function GET(
         "Content-Type": "application/json",
         ...(token ? { Authorization: `Bearer ${token}` } : {}),
       },
-      // Next.js caching - revalidate every 60 seconds
-      next: { revalidate: 60 },
+      // Next.js caching - revalidate every 2 seconds
+      next: { revalidate: 2 },
     });
 
     if (!response.ok) {
@@ -45,7 +45,7 @@ export async function GET(
 
     return NextResponse.json(data, {
       headers: {
-        "Cache-Control": "public, s-maxage=60, stale-while-revalidate=300",
+        "Cache-Control": "public, s-maxage=2, stale-while-revalidate=10",
       },
     });
   } catch (error) {

@@ -33,7 +33,7 @@ export default async function Page() {
       "section.featuredItems",
       "section.featuredItems.img",
     ],
-    revalidate: 30,
+    revalidate: 2,
   });
 
   const aboutBrand = unwrapAttributes(aboutPageEntity);
