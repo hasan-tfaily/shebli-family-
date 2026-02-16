@@ -1,45 +1,29 @@
-"use client";
-
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Features from "@/components/homes/tax-advisory/Features";
 import About from "@/components/homes/strategy-consulting/About";
-import Process from "@/components/homes/insurance-consultancy/Process";
 import Benefits from "@/components/homes/it-consulting/Benefits";
 import Services from "@/components/homes/tax-advisory/Services";
 import Image from "next/image";
-import { fetchPageByName } from "@/lib/strapi/client";
+import { getPageByName } from "@/lib/strapi/queries";
 import { getStrapiMediaUrl } from "@/lib/strapi/media";
 
-export default function Page() {
-  const [franchisePage, setFranchisePage] = useState<any>(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await fetchPageByName({
-        pageName: "Franchise & Partnership - Page",
-        populate: [
-          "Hero",
-          "Hero.image",
-          "section",
-          "section.img",
-          "section.list",
-          "section.featuredItems.list",
-          "section.featuredItems",
-          "section.featuredItems.img",
-          "section.ButtonLinks",
-        ],
-      });
-      setFranchisePage(data);
-      setLoading(false);
-    };
-    fetchData();
-  }, []);
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+export default async function Page() {
+  const franchisePage: any = await getPageByName({
+    pageName: "Franchise & Partnership - Page",
+    populate: [
+      "Hero",
+      "Hero.image",
+      "section",
+      "section.img",
+      "section.list",
+      "section.featuredItems.list",
+      "section.featuredItems",
+      "section.featuredItems.img",
+      "section.ButtonLinks",
+    ],
+    revalidate: 60,
+  });
 
   return (
     <>

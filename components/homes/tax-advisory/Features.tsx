@@ -6,6 +6,7 @@ import OdometerComponent from "@/components/common/OdometerComponent";
 import { getStrapiMediaUrl } from "@/lib/strapi/media";
 
 export default function Features({ featuresSection }: { featuresSection?: any }) {
+
   return (
     <section className="section-why-choose h-7 bg-surface tf-spacing-31">
       <div className="tf-container position-relative tf-spacing-3" style={{ paddingBottom: "0px"}}>
@@ -46,88 +47,16 @@ export default function Features({ featuresSection }: { featuresSection?: any })
 
               <div className="cols g-10 mb-36">
                 <div className="benefit-lists">
-                  <div className="benefit-items">
-                    <div className="icon wow fadeInUp">
-                      <i className="icon-checkbox" />
+                  {featuresSection?.list?.map((item: any, index: number) => (
+                    <div className="benefit-items" key={index}>
+                      <div className="icon wow fadeInUp">
+                        <i className="icon-checkbox" />
+                      </div>
+                      <div className="title wow fadeInUp" data-wow-delay=".1s">
+                        {item?.point}
+                      </div>
                     </div>
-                    <div className="title wow fadeInUp" data-wow-delay=".1s">
-                      {featuresSection?.list[0]?.point}
-                    </div>
-                  </div>
-
-                  <div className="benefit-items">
-                    <div className="icon wow fadeInUp">
-                      <i className="icon-checkbox" />
-                    </div>
-                    <div className="title wow fadeInUp" data-wow-delay=".1s">
-                      {featuresSection?.list[1]?.point}
-                    </div>
-                  </div>
-
-                  <div className="benefit-items">
-                    <div className="icon wow fadeInUp">
-                      <i className="icon-checkbox" />
-                    </div>
-                    <div className="title wow fadeInUp" data-wow-delay=".1s">
-                      {featuresSection?.list[2]?.point}
-                    </div>
-                  </div>
-
-                  <div className="benefit-items">
-                    <div className="icon wow fadeInUp">
-                      <i className="icon-checkbox" />
-                    </div>
-                    <div className="title wow fadeInUp" data-wow-delay=".1s">
-                      {featuresSection?.list[3]?.point}
-                    </div>
-                  </div>
-
-                  <div className="benefit-items">
-                    <div className="icon wow fadeInUp">
-                      <i className="icon-checkbox" />
-                    </div>
-                    <div className="title wow fadeInUp" data-wow-delay=".1s">
-                      {featuresSection?.list[4]?.point}
-                    </div>
-                  </div>
-
-                  <div className="benefit-items">
-                    <div className="icon wow fadeInUp">
-                      <i className="icon-checkbox" />
-                    </div>
-                    <div className="title wow fadeInUp" data-wow-delay=".1s">
-                      {featuresSection?.list[5]?.point}
-                    </div>
-                  </div>
-
-                  {/* item 6 (kept as requested) */}
-                  <div className="benefit-items">
-                    <div className="icon wow fadeInUp">
-                      <i className="icon-checkbox" />
-                    </div>
-                    <div className="title wow fadeInUp" data-wow-delay=".1s">
-                      {featuresSection?.list[6]?.point}
-                    </div>
-                  </div>
-
-                  {/*
-                  <div className="benefit-items">
-                    <div className="icon wow fadeInUp" data-wow-delay=".2s">
-                      <i className="icon-checkbox" />
-                    </div>
-                    <div className="title wow fadeInUp" data-wow-delay=".3s">
-                      Comprehensive training and launch support.
-                    </div>
-                  </div>
-                  <div className="benefit-items">
-                    <div className="icon wow fadeInUp" data-wow-delay=".2s">
-                      <i className="icon-checkbox" />
-                    </div>
-                    <div className="title wow fadeInUp" data-wow-delay=".3s">
-                      Strategic partnerships and sponsorship potential.
-                    </div>
-                  </div>
-                  */}
+                  ))}
                 </div>
               </div>
 
