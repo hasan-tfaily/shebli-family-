@@ -59,11 +59,12 @@ export default function page() {
         {/* <Services2/> */}
         <Services servicesSection={careerPage?.section?.[1]} />
 
-        <Career careerSection={careerPage?.section?.[2]} />
+        {/* <Career careerSection={careerPage?.section?.[2]} /> */}
         {/* <Contact />
         <Map />
         <Locations /> */}
       </div>
     </>
+    
   );
 }

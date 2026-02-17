@@ -50,8 +50,8 @@ export default function InquiryForm() {
       });
 
       if (response.ok) {
-    form.reset();
-    handleShowMessage(true);
+        form.reset();
+        handleShowMessage(true);
       } else {
         const errorData = await response.json();
         console.error("Franchise inquiry submission failed:", errorData);
@@ -102,7 +102,9 @@ export default function InquiryForm() {
                 </svg>
               </span>{" "}
               <span className="caption-1 page-breadkcum">Franchise Form</span>
-            </div>            <h2 className="title-page-title">Franchise Form</h2>
+
+            </div>   
+                     <h2 className="title-page-title">Franchise Form</h2>
           </div>
         </div>
       </div>
@@ -119,7 +121,7 @@ export default function InquiryForm() {
             // style={{ marginTop: "40px" }}
             >
               {/* Title */}
-              <h3 style={{ marginBottom: "24px" }}>Franchise Form</h3>
+              {/* <h3 style={{ marginBottom: "24px" }}>Franchise Form</h3> */}
 
               {/* Row 1: Full name + Country */}
               <div className="cols">

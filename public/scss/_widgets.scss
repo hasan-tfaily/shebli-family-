@@ -3490,3 +3490,19 @@
   justify-content: center;
   min-height: 180px; 
 }
+
+
+
+/* Make the textarea text bigger */
+.item.inputEntity textarea.form-control {
+  font-size: 16px;      /* try 16–18px */
+  line-height: 1.5;
+  padding: 12px 14px;   /* optional: makes it feel less cramped */
+}
+
+/* Optional: slightly bigger on desktop */
+@media (min-width: 992px) {
+  .item.inputEntity textarea.form-control {
+    font-size: 18px;
+  }
+}
