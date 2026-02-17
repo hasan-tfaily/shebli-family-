@@ -41,7 +41,7 @@ export default function MobileMenu() {
     { href: "/projects/StarDistrict", title: "Star District" },
     // { href: "/projects/KidzAcademy", title: "Kidz Academy" },
     { href: "/projects/KMInnovationCenter", title: "KM Innovation Center" },
-    { href: "/projects/UrbanVillage", title: "Urban Village" },
+    // { href: "/projects/UrbanVillage", title: "Urban Village" },
     { href: "/projects/BowlNRock", title: "BOWL N ROCK" },
   ];
 
@@ -169,8 +169,30 @@ export default function MobileMenu() {
                 Industries We Serve 
               </Link>
             </li>
-            {/* PARTNERSHIP (dropdown) */}
             <li
+        className={`menu-item ${
+          isMenuActive({ href: "/Franchise-Partnership" } as MenuLink)
+            ? "current-menu-item"
+            : ""
+        }`}
+      >
+        <Link href="/Franchise-Partnership" className="item-link">
+          Business Ventures
+        </Link>
+      </li>
+       <li
+              className={`menu-item ${
+                isMenuActive({ href: "/careers" } as MenuLink)
+                  ? "current-menu-mobile-item"
+                  : ""
+              }`}
+            >
+              <Link href="/careers" className="item-link">
+                Careers
+              </Link>
+            </li>
+            {/* PARTNERSHIP (dropdown) */}
+            {/* <li
               className={`menu-item menu-item-has-children-mobile ${
                 isMenuParentActive(partnershipLinks)
                   ? "current-menu-mobile-item"
@@ -204,7 +226,7 @@ export default function MobileMenu() {
                   ))}
                 </ul>
               </div>
-            </li>
+            </li> */}
 
             {/* OUR VENTURES */}
             {/* <li
@@ -221,7 +243,7 @@ export default function MobileMenu() {
 
 
             {/* BLOGS */}
-            <li
+            {/* <li
               className={`menu-item ${
                 isMenuActive({ href: "/blog" } as MenuLink)
                   ? "current-menu-mobile-item"
@@ -231,7 +253,7 @@ export default function MobileMenu() {
               <Link href="/blog" className="item-link">
                 Blogs
               </Link>
-            </li>
+            </li> */}
 
              {/* <li
               className={`menu-item ${

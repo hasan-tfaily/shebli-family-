@@ -58,7 +58,7 @@ export default function Footer1({ parentClass = "footer" }) {
                   </Link>
                 </div>
                 <div className="text caption-1">
-                 Kidz Holding is the parent company behind KidzMondo and a portfolio of leading family entertainment and leisure ventures across MENA, creating safe, engaging destinations and scalable franchise and investment opportunities.
+                  Kidz Holding is the parent company behind KidzMondo and a portfolio of leading family entertainment and leisure ventures across MENA, creating safe, engaging destinations and scalable franchise and investment opportunities.
                 </div>
                 {/* <div className="contact-footer">
                   <div className="address contact-top contact-footer-content">
@@ -85,36 +85,42 @@ export default function Footer1({ parentClass = "footer" }) {
                   </div>
                   <div className="tf-collapse-content">
                     <ul>
-                      {/* <li className="support-item-footer caption-1">
-                        <Link href={`/projects/BowlNRock`}>
-                          Bowi N Rock
-                        </Link>
-                      </li> */}
+
                       <li className="support-item-footer caption-1">
-                        <Link href={`/projects/Karnavali`}>Karnavali</Link>
+                        <Link href={`/projects/KidzMondo`}>KidzMondo</Link>
                       </li>
-                      {/* <li className="support-item-footer caption-1">
-                        <Link href={`/projects/KidzAcademy`}>Kidz Academy </Link>
-                      </li> */}
+
                       <li className="support-item-footer caption-1">
-                        <Link href={`/projects/KidzMondo`}>Kidz Mondo</Link>
-                      </li>
-                      {/* <li className="support-item-footer caption-1">
-                        <Link href={`/projects/KMInnovationCenter`}>
-                          KM Innovation Center
-                        </Link>
-                      </li>
-                      <li className="support-item-footer caption-1">
-                        <Link href={`/projects/StarDistrict`}>
-                          Star District
-                        </Link>
-                      </li> */}
-                      {/* <li className="support-item-footer caption-1">
                         <Link href={`/projects/TheEscapeParkandResort`}>
                           The Escape Park & Resort
                         </Link>
                       </li>
                       <li className="support-item-footer caption-1">
+                        <Link href={`/projects/Karnavali`}>Karnavali</Link>
+                      </li>
+                      <li className="support-item-footer caption-1">
+                        <Link href={`/projects/StarDistrict`}>
+                          Star District
+                        </Link>
+                      </li>
+                      <li className="support-item-footer caption-1">
+                        <Link href={`/projects/BowlNRock`}>
+                          Bowl N Rock
+                        </Link>
+                      </li>
+
+                      {/* <li className="support-item-footer caption-1">
+                        <Link href={`/projects/KidzAcademy`}>Kidz Academy </Link>
+                      </li> */}
+
+                      <li className="support-item-footer caption-1">
+                        <Link href={`/projects/KMInnovationCenter`}>
+                          KM Innovation Center
+                        </Link>
+                      </li>
+
+
+                      {/* <li className="support-item-footer caption-1">
                         <Link href={`/projects/UrbanVillage`}>
                           Urban Village
                         </Link>
@@ -141,16 +147,16 @@ export default function Footer1({ parentClass = "footer" }) {
                       <li className="support-item-footer caption-1">
                         <a href="/Franchise-Partnership">Franchise & Partnership</a>
                       </li>
-                      <li className="support-item-footer caption-1">
+                      {/* <li className="support-item-footer caption-1">
                         <a href="/blog">Blogs</a>
-                      </li>
+                      </li> */}
                       {/* <li className="support-item-footer caption-1">
                         <Link href={`/Business-Ventures`}>Business Ventures</Link>
                       </li> */}
                       <li className="support-item-footer caption-1">
                         <Link href={`/services`}>Industries We Serve</Link>
                       </li>
-                       {/* <li className="support-item-footer caption-1">
+                      {/* <li className="support-item-footer caption-1">
                         <Link href={`/blog`}>Blogs</Link>
                       </li> */}
                       <li className="support-item-footer caption-1">
@@ -170,11 +176,11 @@ export default function Footer1({ parentClass = "footer" }) {
                   </div>
                   {/* <NewsLetterForm /> */}
                   <Link
-                  href={`/contact-us`}
-                  className="tf-btn style-1 bg-white text-center"
-                >
-                  <span> Contact Us </span>
-                </Link>
+                    href={`/contact-us`}
+                    className="tf-btn style-1 bg-white text-center"
+                  >
+                    <span> Contact Us </span>
+                  </Link>
                   {/* <div className="text caption-2">
                     Sign up for updates on our latest news and events. No spam,
                     just valuable insights!
@@ -211,18 +217,18 @@ export default function Footer1({ parentClass = "footer" }) {
                         </div>
                       </a>
                     </li> */}
- <li className="item">
-  <a
-    href="https://www.linkedin.com/company/kidz-holding/"
-    target="_blank"
-    rel="noopener noreferrer"
-    style={{ backgroundColor: "white" }}
-  >
-    <div className="icon">
-      <FaLinkedinIn />
-    </div>
-  </a>
-</li>
+                    <li className="item">
+                      <a
+                        href="https://www.linkedin.com/company/kidz-holding/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ backgroundColor: "white" }}
+                      >
+                        <div className="icon">
+                          <FaLinkedinIn />
+                        </div>
+                      </a>
+                    </li>
 
                   </ul>
                 </div>
