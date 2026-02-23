@@ -15,8 +15,11 @@ export default function Hero({ heroData }: { heroData?: any }) {
     title: item.title,
     subtitle: item.description,
     buttonText: item.buttonText,
+    buttonLink: item.buttonLink,
     image: getStrapiMediaUrl(item.image),
   }));
+
+  console.log(heroData);
   return (
     <Swiper
       dir="ltr"
@@ -69,7 +72,9 @@ export default function Hero({ heroData }: { heroData?: any }) {
                     </div>
                     <div className="tf-fade-top fade-item-3">
                       <Link
-                        href={`/Franchise-Partnership`}
+                        href={slide.buttonLink || `/Franchise-Partnership`}
+                        target={slide.buttonLink?.startsWith("http") ? "_blank" : undefined}
+                        rel={slide.buttonLink?.startsWith("http") ? "noopener noreferrer" : undefined}
                         className="tf-btn style-1 bg-white"
                       >
                         <span>{slide.buttonText}</span>
